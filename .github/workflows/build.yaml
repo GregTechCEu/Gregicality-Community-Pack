@@ -1,0 +1,26 @@
+name: Super-Linter
+
+on: push
+
+jobs:
+  build:
+    name: buildPack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Runs the Super-Linter action
+      - name: Run Super-Linter
+      - uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - uses: actions/setup-python@v2
+      - name: setup python
+        with:
+          python-version: 3.9
+      
+      - name: build
+      - run: ls -l && python --version
