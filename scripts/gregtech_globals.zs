@@ -85,6 +85,12 @@ global emitters as IIngredient[] = [null, <metaitem:emitter.lv>, <metaitem:emitt
     <metaitem:emitter.zpm>, <metaitem:emitter.uv>, <metaitem:emitter.uhv>,
     <metaitem:emitter.uev>, <metaitem:emitter.uiv>, <metaitem:emitter.umv>,
     <metaitem:emitter.uxv>];
+	
+global sensors as IIngredient[] = [null, <metaitem:sensor.lv>, <metaitem:sensor.mv>, <metaitem:sensor.hv>, 
+    <metaitem:sensor.ev>, <metaitem:sensor.iv>, <metaitem:sensor.luv>, 
+    <metaitem:sensor.zpm>, <metaitem:sensor.uv>, <metaitem:sensor.uhv>,
+    <metaitem:sensor.uev>, <metaitem:sensor.uiv>, <metaitem:sensor.umv>,
+    <metaitem:sensor.uxv>];
 
 global motors as IIngredient[] = [null, <metaitem:electric.motor.lv>, <metaitem:electric.motor.mv>, <metaitem:electric.motor.hv>, 
     <metaitem:electric.motor.ev>, <metaitem:electric.motor.iv>, <metaitem:electric.motor.luv>, 
@@ -121,3 +127,9 @@ global tieredPlates as IIngredient[] = [null, <ore:plateSteel>, <ore:plateAlumin
     <ore:plateOsmiridium>, <ore:plateTritanium>, <ore:plateSeaborgium>,
     <ore:plateBohrium>, <ore:plateQuantum>, <ore:plateQuantum>,
     <ore:plateQuantum>];
+	
+global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtadditions:ga_transparent_casing>, <gtadditions:ga_transparent_casing:1>, 
+    <gtadditions:ga_transparent_casing:2>, <gtadditions:ga_transparent_casing:3>, <gtadditions:ga_transparent_casing:4>, 
+    <gtadditions:ga_transparent_casing:5>, <gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
+    <gtadditions:ga_transparent_casing:6> ,<gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
+    <gtadditions:ga_transparent_casing:6>];
