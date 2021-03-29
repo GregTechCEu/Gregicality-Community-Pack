@@ -2,3 +2,9 @@ mods/
 scripts/recipes.zs
 *buildOut/*
 *client.zip
+config/AppliedEnergistics2/CustomRecipes.cfg
+config/AppliedEnergistics2/items.csv
+config/InvTweaks.cfg
+config/jei/jei.cfg
+config/jei/worldSettings.cfg
+config/splash.properties
