@@ -1,2 +1,4 @@
 mods/
 scripts/recipes.zs
+*buildOut/*
+*client.zip
