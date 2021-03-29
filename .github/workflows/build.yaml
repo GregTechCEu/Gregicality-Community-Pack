@@ -1,0 +1,27 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Run Build
+      run: |
+        python build/main.py
+    - name: Automatic Releases
+      uses: marvinpinto/action-automatic-releases@v1.1.1
+      with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "prerelease Build"
+          files: |
+            build/client.zip
