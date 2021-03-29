@@ -4,7 +4,6 @@ import shutil
 
 basePath = os.path.realpath(__file__)[:-7] + ".."
 
-print(basePath)
 try:
     os.makedirs(basePath + "/buildOut/overrides")
 except Exception as e:
