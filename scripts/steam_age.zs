@@ -7,7 +7,7 @@ recipes.remove(<gregtech:machine:5>);
 recipes.remove(<gregtech:machine_casing:10>);
 recipes.removeByRecipeName("gtadditions:coke_brick");
 
-recipes.addShaped(<gtadditions:ga_meta_item:32036> * 8, [[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],[<ore:sand>, <ore:formWood>, <minecraft:sand>], [<ore:sand>, <ore:sand>, <ore:sand>]]);
+recipes.addShaped(<metaitem:compressed.coke.clay> * 8, [[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],[<ore:sand>, <ore:formWood>, <minecraft:sand>], [<ore:sand>, <ore:sand>, <ore:sand>]]);
 recipes.addShaped(<gregtech:machine_casing:10>, [[null, <ore:plateBronze>, null],[<ore:plateBronze>, <ore:craftingToolHardHammer>, <ore:plateBronze>], [null, <ore:plateBronze>, null]]);
 recipes.addShaped(<gregtech:machine:3>, [[null, <ore:blockGlassColorless>, null],[<ore:pipeSmallBronze>, <ore:plateSilver>, <ore:pipeSmallBronze>], [null, <gregtech:machine_casing:11>, null]]);
 recipes.addShaped(<gregtech:machine:1>, [[null, <ore:plateBronze>, null],[<ore:plateBronze>, <ore:craftingFurnace>, <ore:plateBronze>], [null, <ore:blockBrick>, null]]);
