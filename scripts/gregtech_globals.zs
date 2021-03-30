@@ -50,7 +50,7 @@ global packer as RecipeMap =                        RecipeMap.getByName("packer"
 global polarizer as RecipeMap =                     RecipeMap.getByName("polarizer");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
-
+global implosion_compressor as RecipeMap = 			RecipeMap.getByName("implosion_compressor");
 
 // Tiered Components
 
