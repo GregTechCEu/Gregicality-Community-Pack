@@ -415,6 +415,7 @@ assembler.recipeBuilder()
 	.inputs(<ore:plateRedstone>*2)
 	.inputs(tieredPlates[2] * 2)
 	.inputs(<ore:wireFineCopper> * 4)
+	.outputs(<appliedenergistics2:material:39>)
 	.EUt(120)
 	.duration(200)
 	.buildAndRegister();
