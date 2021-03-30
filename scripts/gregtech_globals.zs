@@ -133,3 +133,7 @@ global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtad
     <gtadditions:ga_transparent_casing:5>, <gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6> ,<gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6>];
+	
+function intCircuit(i as int) as IIngredient {
+	return <metaitem:circuit.integrated>.withTag({Configuration: i});
+}
