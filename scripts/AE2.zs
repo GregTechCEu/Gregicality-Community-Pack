@@ -16,10 +16,10 @@ val part_1k = <appliedenergistics2:material:35>;
 val part_4k = <appliedenergistics2:material:36>;
 val part_16k = <appliedenergistics2:material:37>;
 val part_64k = <appliedenergistics2:material:38>;
-val fluid_part_1k = <appliedenergistics2:material:35>;
-val fluid_part_4k = <appliedenergistics2:material:36>;
-val fluid_part_16k = <appliedenergistics2:material:37>;
-val fluid_part_64k = <appliedenergistics2:material:38>;
+val fluid_part_1k = <appliedenergistics2:material:54>;
+val fluid_part_4k = <appliedenergistics2:material:55>;
+val fluid_part_16k = <appliedenergistics2:material:56>;
+val fluid_part_64k = <appliedenergistics2:material:57>;
 
 //patterns
 recipes.removeByRecipeName("appliedenergistics2:network/crafting/patterns_blank");
