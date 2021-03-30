@@ -26,7 +26,7 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 //controller
-recipes.removeByRecipeName("appliedenergistics2:network/blocks/controller");
+recipes.removeByRecipeName("appliedenergistics2:network/blocks/energy_energy_acceptor");
 assembler.recipeBuilder()
 	.inputs(<ore:frameGtAluminium>)
 	.inputs(circuits[2])
@@ -36,10 +36,11 @@ assembler.recipeBuilder()
 	.inputs(sensors[2])
 	.inputs(emitters[2])
 	.inputs(engineering_processor * 8)
-	.outputs(<appliedenergistics2:controller> * 4)
+	.outputs(<appliedenergistics2:energy_acceptor>)
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
+	
 
 //molecular assembler
 recipes.removeByRecipeName("appliedenergistics2:network/crafting/molecular_assembler");
@@ -265,17 +266,7 @@ assembler.recipeBuilder()
 	.EUt(120)
 	.duration(200)
 	.buildAndRegister();
-	
-recipes.removeByRecipeName("appliedenergistics2:network/blocks/energy_energy_acceptor");
-assembler.recipeBuilder()
-	.inputs(<gregtech:machine:724>)
-	.inputs(<ore:plateFluix> * 2)
-	.inputs(tieredPlates[2] * 2)
-	.inputs(<appliedenergistics2:quartz_glass> * 4)
-	.outputs(<appliedenergistics2:energy_acceptor>)
-	.EUt(120)
-	.duration(200)
-	.buildAndRegister();
+
 	
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/energy_energy_cell");
 assembler.recipeBuilder()
