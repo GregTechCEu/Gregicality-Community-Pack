@@ -34,9 +34,9 @@ blast_furnace.recipeBuilder()
 	.buildAndRegister();
 
 blast_furnace.recipeBuilder()
-	.inputs(<ore:ingotFerroboron>)
+	.inputs(<ore:ingotFerroboron> * 2)
 	.inputs(<ore:dustLithium>)
-	.outputs(<ore:ingotTough>.firstItem * 2)
+	.outputs(<ore:ingotTough>.firstItem * 3)
 	.property("temperature", 3900)
 	.EUt(480)
 	.duration(1212)
@@ -51,6 +51,8 @@ blast_furnace.recipeBuilder()
 	.duration(809)
 	.buildAndRegister();
 
+// This is fine to be 1 each instead of 3 since it is reducible
+// i.e. (3 + 3 -> 6) is the same as (1 + 1 -> 2)
 blast_furnace.recipeBuilder()
 	.inputs(<ore:ingotHardCarbon>)
 	.inputs(<ore:ingotTough>)
@@ -91,23 +93,13 @@ blast_furnace.recipeBuilder()
 
 
 blast_furnace.recipeBuilder()
-	.inputs(<ore:dustRegularPyrolusite>)
+	.inputs(<ore:dustRegularPyrolusite> * 3)
 	.inputs(<ore:dustLithium>)
-	.outputs(<ore:ingotLithiumManganeseDioxide>.firstItem * 2)
+	.outputs(<ore:ingotLithiumManganeseDioxide>.firstItem * 4)
 	.property("temperature", 3500)
 	.EUt(480)
 	.duration(800)
 	.buildAndRegister();
-
-blast_furnace.recipeBuilder()
-	.inputs(<ore:dustRegularPyrolusite>)
-	.inputs(<ore:dustLithium>)
-	.outputs(<ore:ingotLithiumManganeseDioxide>.firstItem * 2)
-	.property("temperature", 3500)
-	.EUt(480)
-	.duration(800)
-	.buildAndRegister();
-
 
 blast_furnace.recipeBuilder()
 	.inputs(<ore:ingotZirconium> * 7)
@@ -127,19 +119,9 @@ blast_furnace.recipeBuilder()
 	.duration(800)
 	.buildAndRegister();
 
-
 blast_furnace.recipeBuilder()
-	.inputs(<ore:ingotSilicon>)
-	.inputs(<ore:dustCarbon>)
-	.outputs(<ore:ingotSiliconCarbide>.firstItem * 2)
-	.property("temperature", 3500)
-	.EUt(480)
-	.duration(800)
-	.buildAndRegister();
-
-blast_furnace.recipeBuilder()
-	.inputs(<ore:ingotIron> * 15)
-	.inputs(<ore:dustCarbonManganese>)
+	.inputs(<ore:ingotIron> * 14)
+	.inputs(<ore:dustCarbonManganese> * 2)
 	.outputs(<ore:ingotHSLASteel>.firstItem * 16)
 	.property("temperature", 4400)
 	.EUt(480)
