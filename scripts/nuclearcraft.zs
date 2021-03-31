@@ -93,7 +93,7 @@ blast_furnace.recipeBuilder()
 
 
 blast_furnace.recipeBuilder()
-	.inputs(<ore:dustRegularPyrolusite> * 3)
+	.inputs(<ore:dustManganeseDioxide> * 3)
 	.inputs(<ore:dustLithium>)
 	.outputs(<ore:ingotLithiumManganeseDioxide>.firstItem * 4)
 	.property("temperature", 3500)
