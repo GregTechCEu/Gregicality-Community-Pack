@@ -60,7 +60,8 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
 
 // Manganese Dioxide Compatibility
-<ore:dustManganeseDioxide>.add(<metaitem:dustRegularPyrolusite>);
+val pyrolusite = <gregtech:meta_item_1:2149>;
+<ore:dustManganeseDioxide>.add(pyrolusite);
 
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
