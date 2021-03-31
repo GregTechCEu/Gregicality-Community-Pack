@@ -65,6 +65,7 @@ function unify (ore as IOreDictEntry, p as int) {
 // NC Bioplastic -> Polystyrene
 <ore:bioplastic>.add(<ore:platePolystyrene>.firstItem); 
 
+
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
 unify_oredicts(<ore:block*>);
@@ -73,9 +74,9 @@ unify_oredicts(<ore:gear*>);
 unify_oredicts(<ore:stick*>);
 unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
-unify_oredicts(<ore:bioplastic>);
 
 
+unify(<ore:bioplastic>, 0);
 unify(<ore:itemSilicon>, 0);
 
             // Unification Blacklist
