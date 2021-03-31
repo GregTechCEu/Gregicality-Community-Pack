@@ -59,6 +59,9 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
 
+// Manganese Dioxide Compatibility
+<ore:dustManganeseDioxide>.add(<metaitem:dustRegularPyrolusite>);
+
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
 unify_oredicts(<ore:block*>);
@@ -67,6 +70,8 @@ unify_oredicts(<ore:gear*>);
 unify_oredicts(<ore:stick*>);
 unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
+
+
 unify(<ore:itemSilicon>, 0);
 
             // Unification Blacklist
