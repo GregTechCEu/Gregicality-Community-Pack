@@ -12,6 +12,7 @@ val printed_silicon = <appliedenergistics2:material:20>;
 val printed_engineering = <appliedenergistics2:material:17>;
 val printed_logic = <appliedenergistics2:material:18>;
 val printed_calculation = <appliedenergistics2:material:16>;
+val printed_parallel = <contenttweaker:printed_parallel>;
 val me_cable = <appliedenergistics2:part:16>;
 val part_1k = <appliedenergistics2:material:35>;
 val part_4k = <appliedenergistics2:material:36>;
@@ -33,6 +34,7 @@ val speculative_processor = <threng:material:14>;
 val fluix_steel = <threng:material>;
 val carbonic_fluix = <threng:material:1>;
 val resonating_crystal = <threng:material:5>;
+val fluix_logic_unit = <threng:material:4>;
 
 mods.jei.JEI.hideCategory("appliedenergistics2.inscriber");
 
@@ -615,6 +617,8 @@ assembler.recipeBuilder()
 Aggregator.removeRecipe(fluix_steel);
 Aggregator.removeRecipe(carbonic_fluix);
 Aggregator.removeRecipe(resonating_crystal);
+recipes.removeByRecipeName("threng:steel_process_dust");
+furnace.remove(fluix_steel);
 
 mixer.recipeBuilder()
 	.inputs(<ore:dustCoal>)
@@ -655,12 +659,12 @@ implosion_compressor.recipeBuilder()
 	
 Etcher.removeRecipe(parallel_processor);
 circuit_assembler.recipeBuilder()
-	.inputs(resonating_crystal)
+	.inputs(printed_parallel)
 	.inputs(printed_silicon * 4)
 	.inputs(circuits[3])
 	.inputs(<ore:wireFineRedAlloy> * 8)
 	.outputs(parallel_processor)
-	.EUt(1920)
+	.EUt(480)
 	.duration(100)
 	.buildAndRegister();
 
@@ -671,6 +675,71 @@ circuit_assembler.recipeBuilder()
 	.inputs(circuits[4])
 	.inputs(<ore:wireFineRedAlloy> * 16)
 	.outputs(speculative_processor)
+	.EUt(480)
+	.duration(100)
+	.buildAndRegister();
+	
+compressor.recipeBuilder()
+	.inputs(resonating_crystal * 9)
+	.outputs(<ore:blockResonatingCrystal>.firstItem)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+cutting_saw.recipeBuilder()
+	.inputs(<ore:blockResonatingCrystal>)
+	.outputs(<ore:plateResonatingCrystal>.firstItem * 9)
+	.EUt(120)
+	.duration(480)
+	.buildAndRegister();
+
+laser_engraver.recipeBuilder()
+	.inputs(<ore:plateResonatingCrystal>)
+	.notConsumable(<ore:lensSkystone>)
+	.outputs(printed_parallel)
 	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
+	
+metal_bender.recipeBuilder()
+	.inputs(fluix_steel)
+	.circuit(0)
+	.outputs(<ore:plateFluixSteel>.firstItem)
+	.EUt(1920)
+	.duration(50)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("threng:machine_core");
+circuit_assembler.recipeBuilder()
+	.inputs(logic_processor * 2)
+	.inputs(calculation_processor * 2)
+	.inputs(<ore:plateFluixSteel> * 2)
+	.inputs(tieredGlass[3])
+	.outputs(fluix_logic_unit)
+	.EUt(480)
+	.duration(150)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("threng:pau");
+assembler.recipeBuilder()
+	.inputs(<appliedenergistics2:interface>)
+	.inputs(<appliedenergistics2:crafting_accelerator> * 2)
+	.inputs(fluix_logic_unit)
+	.inputs(speculative_processor)
+	.inputs(<ore:plateFluixSteel> * 4)
+	.inputs(<ore:frameGtTitanium>)
+	.outputs(<threng:machine:3>)
+	.EUt(1920)
+	.duration(100)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("threng:level_maintainer");
+recipes.addShaped(<threng:machine:4>, [[<ore:plateFluixSteel>, <appliedenergistics2:part:280>, <ore:plateFluixSteel>],
+[logic_processor, fluix_logic_unit, logic_processor], 
+[<ore:plateFluixSteel>, <appliedenergistics2:material:53>, <ore:plateFluixSteel>]]);
+
+recipes.removeByRecipeName("threng:ma_frame");
+recipes.addShaped(<threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
+[logic_processor, null, logic_processor], 
+[<ore:plateFluixSteel>, <ore:frameGtStainlessSteel>, <ore:plateFluixSteel>]]);
+
