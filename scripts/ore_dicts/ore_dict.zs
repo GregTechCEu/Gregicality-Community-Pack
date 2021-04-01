@@ -58,6 +58,7 @@ function unify (ore as IOreDictEntry, p as int) {
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
+<ore:crystalChargedCertusQuartz>.add(<appliedenergistics2:material:1>);
 
 // Manganese Dioxide Compatibility
 <ore:dustManganeseDioxide>.add(<ore:dustRegularPyrolusite>.firstItem);

@@ -1,6 +1,8 @@
 import mods.appliedenergistics2.Inscriber;
 import mods.threng.Etcher;
 import mods.threng.Aggregator;
+import mods.threng.Centrifuge;
+import mods.threng.Energizer;
 
 
 val engineering_processor = <appliedenergistics2:material:24>;
@@ -301,7 +303,7 @@ recipes.removeByRecipeName("appliedenergistics2:network/blocks/energy_energy_cel
 assembler.recipeBuilder()
 	.inputs(<ore:plateCertusQuartz> * 4)
 	.inputs(<ore:plateFluix> * 4)
-	.inputs(<gregtech:meta_item_1:32527> | <gregtech:meta_item_1:32528> | <gregtech:meta_item_1:32529>)
+	.inputs(<metaitem:battery.re.mv.sodium> | <metaitem:battery.re.mv.lithium> | <metaitem:battery.re.mv.cadmium)
 	.inputs(<ore:frameGtAluminium>)
 	.outputs(<appliedenergistics2:energy_cell>.withTag({}))
 	.EUt(120)
@@ -401,16 +403,6 @@ assembler.recipeBuilder()
 	.duration(250)
 	.buildAndRegister();
 	
-assembler.recipeBuilder()
-	.inputs(calculation_processor)
-	.inputs(part_16k * 3)
-	.inputs(<metaitem:plate.central_processing_unit> * 8)
-	.inputs(<metaitem:plate.integrated_logic_circuit> * 8)
-	.notConsumable(scripts.gregtech_globals.intCircuit(0))
-	.outputs(part_64k)
-	.EUt(1920)
-	.duration(250)
-	.buildAndRegister();
 
 assembler.recipeBuilder()
 	.inputs(engineering_processor)
@@ -740,6 +732,289 @@ recipes.addShaped(<threng:machine:4>, [[<ore:plateFluixSteel>, <appliedenergisti
 
 recipes.removeByRecipeName("threng:ma_frame");
 recipes.addShaped(<threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
-[logic_processor, null, logic_processor], 
-[<ore:plateFluixSteel>, <ore:frameGtStainlessSteel>, <ore:plateFluixSteel>]]);
+[logic_processor, <ore:frameGtStainlessSteel>, logic_processor], 
+[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>]]);
 
+//speculation core 1x
+Aggregator.removeRecipe(<threng:material:7>);
+assembler.recipeBuilder()
+	.inputs(carbonic_fluix)
+	.inputs(<appliedenergistics2:material:6>) //matter ball
+	.inputs(<appliedenergistics2:material:45>) //sky stone dust
+	.outputs(<threng:material:7>)
+	.EUt(480)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("threng:spec_core_2");
+recipes.removeByRecipeName("threng:spec_core_4");
+
+//spec core 1x -> 2x
+assembler.recipeBuilder()
+	.inputs(<threng:material:7> * 2)
+	.inputs(<ore:plateRedstone>)
+	.outputs(<threng:material:8>)
+	.EUt(480)
+	.duration(50)
+	.buildAndRegister();
+
+//spec core 2x -> 4x
+assembler.recipeBuilder()
+	.inputs(<threng:material:8> * 2)
+	.inputs(<ore:plateSilicon>)
+	.outputs(<threng:material:9>)
+	.EUt(480)
+	.duration(50)
+	.buildAndRegister();
+
+//pure nether
+Centrifuge.removeRecipe(<appliedenergistics2:material:11> * 2);
+
+//pure fluix
+Centrifuge.removeRecipe(<appliedenergistics2:material:12> * 2);
+
+//pure quartz
+Centrifuge.removeRecipe(<appliedenergistics2:material:10> * 2);
+
+//sky stone
+Centrifuge.removeRecipe(<appliedenergistics2:material:45>);
+
+//ender pearl
+Centrifuge.removeRecipe(<appliedenergistics2:material:46>);
+
+//fluix crystal
+Aggregator.removeRecipe(<appliedenergistics2:material:7> * 2);
+
+recipes.removeByRecipeName("threng:centrifuge");
+
+macerator.recipeBuilder()
+	.inputs(<ore:crystalChargedCertusQuartz>)
+	.outputs(<ore:dustChargedCertus>.firstItem)
+	.EUt(8)
+	.duration(20)
+	.buildAndRegister();
+	
+mixer.recipeBuilder()
+	.inputs(<ore:dustRedstone>)
+	.inputs(<ore:dustNetherQuartz>)
+	.inputs(<ore:dustChargedCertus>)
+	.outputs(<ore:dustFluix>.firstItem * 3)
+	.EUt(30)
+	.duration(60)
+	.buildAndRegister();
+	
+chemical_bath.recipeBuilder()
+	.inputs(<ore:dustFluix>)
+	.fluidInputs(<liquid:water> * 250)
+	.outputs(<ore:crystalFluix>.firstItem)
+	.EUt(30)
+	.duration(10)
+	.buildAndRegister();
+
+autoclave.recipeBuilder()
+	.inputs(<ore:crystalFluix>)
+	.fluidInputs(<liquid:water> * 500)
+	.outputs(<ore:crystalPureFluix>.firstItem * 2)
+	.EUt(30)
+	.duration(80)
+	.buildAndRegister();
+	
+autoclave.recipeBuilder()
+	.inputs(<ore:crystalCertusQuartz>)
+	.fluidInputs(<liquid:water> * 500)
+	.outputs(<ore:crystalPureCertusQuartz>.firstItem * 2)
+	.EUt(30)
+	.duration(80)
+	.buildAndRegister();
+	
+autoclave.recipeBuilder()
+	.inputs(<ore:gemNetherQuartz>)
+	.fluidInputs(<liquid:water> * 500)
+	.outputs(<ore:crystalPureNetherQuartz>.firstItem * 2)
+	.EUt(30)
+	.duration(80)
+	.buildAndRegister();
+
+Energizer.removeRecipe(<ore:crystalChargedCertusQuartz>.firstItem);
+polarizer.recipeBuilder()
+	.inputs(<ore:crystalCertusQuartz>)
+	.outputs(<ore:crystalChargedCertusQuartz>.firstItem)
+	.EUt(30)
+	.duration(80)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:tools/network_biometric_card");
+assembler.recipeBuilder()
+	.inputs(engineering_processor)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(<ore:wireFineElectrum> * 8)
+	.outputs(<appliedenergistics2:biometric_card>.withTag({}))
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+	
+recipes.removeByRecipeName("appliedenergistics2:tools/network_memory_card");
+assembler.recipeBuilder()
+	.inputs(calculation_processor)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(<ore:wireFineElectrum> * 8)
+	.outputs(<appliedenergistics2:memory_card>.withTag({}))
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+	
+recipes.removeByRecipeName("appliedenergistics2:tools/misctools_entropy_manipulator");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> | <ore:crystalPureFluix>)
+	.inputs(engineering_processor)
+	.inputs(<appliedenergistics2:energy_cell>.withTag({}))
+	.inputs(<ore:stickLongAluminium>)
+	.inputs(<ore:wireFineRedAlloy> * 16)
+	.outputs(<appliedenergistics2:entropy_manipulator>.withTag({}))
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/cells/view_cell");
+recipes.removeByRecipeName("appliedenergistics2:materials/advancedcard");
+assembler.recipeBuilder()
+	.inputs(<ore:plateStainlessSteel> * 2)
+	.inputs(calculation_processor)
+	.inputs(engineering_processor)
+	.inputs(<ore:wireFineRedAlloy> * 16)
+	.outputs(<appliedenergistics2:material:28> * 4)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+
+
+recipes.removeByRecipeName("appliedenergistics2:materials/basiccard");
+assembler.recipeBuilder()
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(logic_processor)
+	.inputs(<ore:wireFineRedAlloy> * 8)
+	.outputs(<appliedenergistics2:material:28> * 4)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_fluid_alt");
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_fluid");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateLapis> * 3)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(annihilation_core)
+	.outputs(<appliedenergistics2:part:302>)
+	.circuit(0)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_fluid_alt");
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_fluid");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateLapis> * 3)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(formation_core)
+	.outputs(<appliedenergistics2:part:321>)
+	.circuit(0)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_alt2");
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_alt");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateRedstone> * 3)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(annihilation_core)
+	.outputs(<appliedenergistics2:part:300>)
+	.circuit(1)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation");
+recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_alt");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateRedstone> * 3)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(formation_core)
+	.outputs(<appliedenergistics2:part:320>)
+	.circuit(1)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("appliedenergistics2:network/parts/toggle_bus");
+assembler.recipeBuilder()
+	.inputs(<ore:wireFineRedAlloy> * 4)
+	.inputs(me_cable)
+	.inputs(<minecraft:lever>)
+	.outputs(<appliedenergistics2:part:80>)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/parts/tunnel_me");
+assembler.recipeBuilder()
+	.inputs(<ore:crystalFluix> * 3 | <ore:crystalPureFluix> * 3)
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(engineering_processor)
+	.outputs(<appliedenergistics2:part:460>)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/wireless_part");
+assembler.recipeBuilder()
+	.inputs(tieredPlates[3] * 2)
+	.inputs(<ore:pearlFluix>)
+	.inputs(circuits[3])
+	.outputs(<appliedenergistics2:material:41>)
+	.EUt(480)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("wct:wct");
+assembler.recipeBuilder()
+	.inputs(<ore:pearlFluix> * 2)
+	.inputs(<appliedenergistics2:part:360>)
+	.inputs(<appliedenergistics2:wireless_terminal>.withTag({}))
+	.inputs(tieredPlates[4] * 2)
+	.inputs(circuits[4])
+	.EUt(1920)
+	.duration(100)
+	.buildAndRegister();
+	
+recipes.removeByRecipeName("appliedenergistics2:network/blocks/quantum_ring");
+assembler.recipeBuilder()
+	.inputs(tieredPlates[5] * 4)
+	.inputs(parallel_processor * 2)
+	.inputs(speculative_processor * 2)
+	.inputs(circuits[5])
+	.inputs(<appliedenergistics2:energy_cell>.withTag({}))
+	.inputs(<appliedenergistics2:part:56> * 2)//smart
+	.outputs(<appliedenergistics2:quantum_ring>)
+	.EUt(7680)
+	.duration(100)
+	.buildAndRegister();
+
+recipes.removeByRecipeName("appliedenergistics2:network/blocks/quantum_link");
+assembler.recipeBuilder()
+	.inputs(tieredGlass[5] * 4)
+	.inputs(<ore:pearlFluix> * 4)
+	.inputs(<ore:wireFineTungsten> * 16)
+	.inputs(tieredPlates[5] * 4)
+	.inputs(circuits[5])
+	.outputs(<appliedenergistics2:quantum_link> * 4)
+	.EUt(7680)
+	.duration(200)
+	.buildAndRegister();

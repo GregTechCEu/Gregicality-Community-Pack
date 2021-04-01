@@ -11,3 +11,5 @@ Utils.registerItem("end_steel", 1006, 0xece7b6, "METALLIC", "plate");
 Utils.registerItem("dark_steel", 1007, 0x2c2c2c, "DULL", "stick");
 Utils.registerItem("dark_steel", 1008, 0xc4ccbf, "DULL", "plate");
 Utils.registerItem("stellar_alloy", 1009, 0xc4ccbf, "SHINY", "plate");
+Utils.registerItem("fluix", 1010, 0x6a4887, "SHINY", "dust");
+Utils.registerItem("charged_certus", 1011, 0xb6e0df, "SHINY", "dust");
