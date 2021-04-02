@@ -38,3 +38,8 @@ recipes.addShaped("OC_cable", oc_cable, [
     [<metaitem:plateRubber>, tieredCables[2], <metaitem:plateRubber>],
     [null, <metaitem:plateRubber>, null]
 ]);
+recipes.addShaped("OC_cable2_electric_boogaloo", oc_cable, [
+    [tieredWires[3], tieredWires[3], null],
+    [null, null, null],
+    [null, null, null]
+]);
