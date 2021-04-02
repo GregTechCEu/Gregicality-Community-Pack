@@ -1,5 +1,39 @@
 # GregTech
+metaitem.stellar_alloy_screw.name=Stellar Alloy Screw
+metaitem.stellar_alloy_plate.name=Stellar Alloy Plate
+metaitem.dark_steel_bolt.name=Dark Steel Bolt
+metaitem.dark_steel_dust.name=Dark Steel Dust
+metaitem.dark_steel_screw.name=Dark Steel Screw
+metaitem.dark_steel_plate.name=Dark Steel Plate
+metaitem.dark_steel_stick.name=Dark Steel Stick
+metaitem.end_steel_screw.name=End Steel Screw
+metaitem.end_steel_plate.name=End Steel Plate
+metaitem.end_steel_stick.name=End Steel Stick
+metaitem.fluix_steel_plate.name=Fluix Steel Plate
+metaitem.resonating_crystal_plate.name=Resonating Crystal Plate
+metaitem.resonating_crystal_dust.name=Resonating Crystal Dust
+metaitem.fluix_plate.name=Fluix Crystal Plate
+metaitem.skystone_lens.name=Skystone Lens
 
+
+
+
+metaitem.basic_coffee_unsorted_gem_chipped.name=Unsorted Raw Coffee Beans
+metaitem.basic_coffee_large_gem_chipped.name=Large Raw Coffee Beans
+metaitem.basic_coffee_small_gem_chipped.name=Small Raw Coffee Beans
+metaitem.wet_coffee_large_gem_chipped.name=Large Fermented Coffee Beans
+metaitem.wet_coffee_small_gem_chipped.name=Small Fermented Coffee Beans
+metaitem.dried_coffee_large_gem_chipped.name=Large Dried Coffee Beans
+metaitem.dried_coffee_small_gem_chipped.name=Small Dried Coffee Beans
+metaitem.hulled_coffee_large_gem_chipped.name=Large Hulled Coffee Beans
+metaitem.hulled_coffee_small_gem_chipped.name=Small Hulled Coffee Beans
+metaitem.graded_coffee_large_gem_chipped.name=Large Graded Coffee Beans
+metaitem.graded_coffee_small_gem_chipped.name=Small Graded Coffee Beans
+metaitem.roasted_coffee_large_gem_chipped.name=Large Roasted Coffee Beans
+metaitem.roasted_coffee_small_gem_chipped.name=Small Roasted Coffee Beans
+metaitem.coffee_grounds_dust.name=Coffee Grounds
+fluid.coffee=Coffee
+fluid.energized_coffee=Energizing Coffee
 
 
 # EnderIO

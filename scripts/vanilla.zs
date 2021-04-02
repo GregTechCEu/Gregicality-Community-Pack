@@ -38,28 +38,6 @@ chemical_bath.recipeBuilder().duration(100).EUt(20)
 // Hopper
 recipes.remove(<minecraft:hopper>);
 recipes.addShaped("gt_hopper", <minecraft:hopper>, [[<ore:plateIron>, <ore:gregWrenches>, <ore:plateIron>], [<ore:plateIron>, <ore:chestWood>, <ore:plateIron>], [null, <ore:plateIron>, null]]);
-
 // Nether Wart
 
 createGreenHouseRecipes(<ore:cropNetherWart>, <ore:cropNetherWart>.firstItem);
-/*
-green_house.recipeBuilder().duration(100).EUt(20)
-    .notConsumable(<ore:cropNetherWart>)
-    .fluidInputs([<fluid:water> * 2000])
-    .outputs(<ore:cropNetherWart>.firstItem)
-    .buildAndRegister();
-
-green_house.recipeBuilder().duration(100).EUt(20)
-    .inputs(<minecraft:dye:15>)
-    .notConsumable(<ore:cropNetherWart>)
-    .fluidInputs([<fluid:water> * 2000])
-    .outputs(<ore:cropNetherWart>.firstItem * 2)
-    .buildAndRegister();
-
-green_house.recipeBuilder().duration(100).EUt(20)
-    .inputs(<ore:dustRegularOrganicFertilizer>)
-    .notConsumable(<ore:cropNetherWart>)
-    .fluidInputs([<fluid:water> * 2000])
-    .outputs(<ore:cropNetherWart>.firstItem * 3)
-    .buildAndRegister();
-*/

@@ -30,6 +30,7 @@ global cluster_mill as RecipeMap = 					RecipeMap.getByName("cluster_mill");
 global compressor as RecipeMap =                    RecipeMap.getByName("compressor");
 global cracker as RecipeMap =                       RecipeMap.getByName("cracker");
 global cutting_saw as RecipeMap =                   RecipeMap.getByName("cutting_saw");
+global disassembler as RecipeMap =                  RecipeMap.getByName("disassembler");
 global decay_chamber as RecipeMap =                 RecipeMap.getByName("decay_chamber");
 global disassembler as RecipeMap =                  RecipeMap.getByName("disassembler");
 global distillery as RecipeMap =                    RecipeMap.getByName("distillery");
@@ -186,5 +187,4 @@ global createGreenHouseRecipes as function(IIngredient, IItemStack)void = functi
 		.outputs(output * 3)
 		.EUt(16)
 		.duration(1000)
-		.buildAndRegister();
 };
