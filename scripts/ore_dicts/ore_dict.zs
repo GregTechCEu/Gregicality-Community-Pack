@@ -58,14 +58,13 @@ function unify (ore as IOreDictEntry, p as int) {
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
-<ore:crystalChargedCertusQuartz>.add(<appliedenergistics2:material:1>);
 
-// Manganese Dioxide Compatibility
-<ore:dustManganeseDioxide>.add(<ore:dustRegularPyrolusite>.firstItem);
+// Silicon Compatability
+<ore:itemSilicon>.add(<metaitem:plateSilicon>);
+<ore:itemSilicon>.remove(<ore:itemSilicon>.firstItem);
 
-// NC Bioplastic -> Polystyrene
-<ore:bioplastic>.add(<ore:platePolystyrene>.firstItem); 
-
+// Ender Pearl Powder Compatability
+<ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
 
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
@@ -77,16 +76,5 @@ unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
 
 
-unify(<ore:bioplastic>, 0);
 unify(<ore:itemSilicon>, 0);
-
-            // Unification Blacklist
-            // if (ore.name != <ore:blockGlass>.name && ore.name != <ore:blockGlassColorless>.name && ore.name != <ore:blockGlassWhite>.name && ore.name != <ore:blockGlassOrange>.name && ore.name != <ore:blockGlassMagenta>.name
-            // && ore.name != <ore:blockGlassLightBlue>.name && ore.name != <ore:blockGlassYellow>.name && ore.name != <ore:blockGlassLime>.name && ore.name != <ore:blockGlassPink>.name && ore.name != <ore:blockGlassGray>.name
-            // && ore.name != <ore:blockGlassLightGray>.name && ore.name != <ore:blockGlassCyan>.name && ore.name != <ore:blockGlassPurple>.name && ore.name != <ore:blockGlassBlue>.name && ore.name != <ore:blockGlassBrown>.name
-            // && ore.name != <ore:blockGlassGreen>.name && ore.name != <ore:blockGlassRed>.name && ore.name != <ore:blockGlassBlack>.name && ore.name != <ore:fusedQuartz>.name && ore.name != <ore:blockGlassHardened>.name
-            // && ore.name != <ore:blockGlassHardenedWhite>.name && ore.name != <ore:blockGlassHardenedOrange>.name && ore.name != <ore:blockGlassHardenedMagenta>.name && ore.name != <ore:blockGlassHardenedLightBlue>.name
-            // && ore.name != <ore:blockGlassHardenedYellow>.name && ore.name != <ore:blockGlassHardenedLime>.name && ore.name != <ore:blockGlassHardenedPink>.name && ore.name != <ore:blockGlassHardenedGray>.name
-            // && ore.name != <ore:blockGlassHardenedLightGray>.name && ore.name != <ore:blockGlassHardenedCyan>.name && ore.name != <ore:blockGlassHardenedPurple>.name && ore.name != <ore:blockGlassHardenedBlue>.name
-            // && ore.name != <ore:blockGlassHardenedBrown>.name && ore.name != <ore:blockGlassHardenedGreen>.name && ore.name != <ore:blockGlassHardenedRed>.name && ore.name != <ore:blockGlassHardenedBlack>.name
-            // && ore.name != <ore:blockGlassHardened>.name) {
+unify(<ore:bioplastic>, 0);
