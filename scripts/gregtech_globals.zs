@@ -5,6 +5,7 @@ import mods.gtadditions.recipe.Utils;
 import mods.gtadditions.recipe.LargeRecipeMap;
 import mods.gtadditions.recipe.GARecipeMaps;
 import crafttweaker.item.IIngredient;
+import crafttweaker.liquid.ILiquidStack;
 
 global alloy_smelter as RecipeMap =                 RecipeMap.getByName("alloy_smelter");
 global arc_furnace as RecipeMap =                   RecipeMap.getByName("arc_furnace");
@@ -143,6 +144,7 @@ global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconduct
 
 global cuttingFluids as ILiquidStack[] = [<liquid:water> * 42, <liquid:distilled_water> * 31, <liquid:lubricant> * 10];
 
+global soldering_alloys as ILiquidStack[] = [<liquid:tin>, <liquid:soldering_alloy>];
 
 function intCircuit(i as int) as IIngredient {
 	return <metaitem:circuit.integrated>.withTag({Configuration: i});
