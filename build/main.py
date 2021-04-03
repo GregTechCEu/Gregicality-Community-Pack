@@ -16,7 +16,7 @@ except Exception as e:
 
 r = requests.get(ae2url)
 
-with open(basePath + "/mods/appliedenergistics2-rv6-stable-7.omni-fixes.jar", "w") as jar:
+with open(basePath + "/mods/appliedenergistics2-rv6-stable-7.omni-fixes.jar", "wb") as jar:
     jar.write(r.content)
 
 for dir in copyDirs:
