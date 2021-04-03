@@ -1,0 +1,30 @@
+
+
+# GregTech
+
+
+
+# EnderIO
+item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
+item.item_capacitor_energetic_silver.name=Endergetic Capacitor V2.0
+item.item_capacitor_vivid.name=Vivid Capacitor V3.0
+item.item_capacitor_melodic.name=Melodic Capacitor V4.0
+item.item_capacitor_stellar.name=Stellar Capacitor V5.0
+item.item_alloy_ingot_construction_alloy.name=Construction Alloy Ingot
+tile.block_alloy.construction_alloy.name=Construction Alloy Block
+item.item_material.chassi_parts.name=Industrial Chassis Parts
+enderio.item_endergy_conduit_cobble.name=ULV Energy Conduit
+enderio.item_endergy_conduit_iron.name=LV Energy Conduit
+enderio.item_endergy_conduit_alu.name=MV Energy Conduit
+enderio.item_endergy_conduit_gold.name=HV Energy Conduit
+enderio.item_endergy_conduit_copper.name=EV Energy Conduit
+enderio.item_endergy_conduit_silver.name=IV Energy Conduit
+enderio.item_endergy_conduit_electrum.name=LuV Energy Conduit
+enderio.item_endergy_conduit_energetic_silver.name=ZPM Energy Conduit
+enderio.item_endergy_conduit_crystalline.name=UV Energy Conduit
+enderio.item_power_conduit.name=UHV Energy Conduit
+enderio.item_power_conduit_enhanced.name=UEV Energy Conduit
+enderio.item_power_conduit_ender.name=UIV Energy Conduit
+enderio.item_endergy_conduit_pink_slime.name=UMV Energy Conduit
+enderio.item_endergy_conduit_melodic.name=UXV Energy Conduit
+enderio.item_endergy_conduit_stellar.name=MAX Energy Conduit

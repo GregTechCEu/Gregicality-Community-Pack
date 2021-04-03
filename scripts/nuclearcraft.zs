@@ -8,9 +8,7 @@ val hard_carbon = <nuclearcraft:alloy:2> * 2;
 val thermoconducting = <nuclearcraft:alloy:11> * 2;
 val extreme = <nuclearcraft:alloy:10> * 2;
 
-//Furnace rerecipifying
 var furnace_removals = [
-    // throw outputs here then add a comma and put the next one on a new line
 	boron_ingot
 ] as IIngredient[];
 

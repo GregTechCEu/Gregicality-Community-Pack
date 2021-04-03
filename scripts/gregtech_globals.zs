@@ -5,6 +5,7 @@ import mods.gtadditions.recipe.Utils;
 import mods.gtadditions.recipe.LargeRecipeMap;
 import mods.gtadditions.recipe.GARecipeMaps;
 import crafttweaker.item.IIngredient;
+import crafttweaker.liquid.ILiquidStack;
 
 global alloy_smelter as RecipeMap =                 RecipeMap.getByName("alloy_smelter");
 global arc_furnace as RecipeMap =                   RecipeMap.getByName("arc_furnace");
@@ -27,6 +28,7 @@ global compressor as RecipeMap =                    RecipeMap.getByName("compres
 global cracker as RecipeMap =                       RecipeMap.getByName("cracker");
 global cutting_saw as RecipeMap =                   RecipeMap.getByName("cutting_saw");
 global decay_chamber as RecipeMap =                 RecipeMap.getByName("decay_chamber");
+global disassembler as RecipeMap =                  RecipeMap.getByName("disassembler");
 global distillery as RecipeMap =                    RecipeMap.getByName("distillery");
 global efurnace as RecipeMap =                      RecipeMap.getByName("furnace");
 global extractor as RecipeMap =                     RecipeMap.getByName("extractor");
@@ -38,6 +40,8 @@ global fluid_solidifier as RecipeMap =              RecipeMap.getByName("fluid_s
 global forge_hammer as RecipeMap =                  RecipeMap.getByName("forge_hammer");
 global forming_press as RecipeMap =                 RecipeMap.getByName("forming_press");
 global fusion_reactor as RecipeMap =                RecipeMap.getByName("fusion_reactor");
+global green_house as RecipeMap =                   RecipeMap.getByName("green_house");
+global implosion_compressor as RecipeMap =          RecipeMap.getByName("implosion_compressor");
 global large_centrifuge as RecipeMap =              LargeRecipeMap.of(GARecipeMaps.LARGE_CENTRIFUGE_RECIPES);
 global large_chemical_reactor as RecipeMap =        RecipeMap.getByName("large_chemical_reactor");
 global large_mixer as RecipeMap =                   RecipeMap.getByName("large_mixer");
@@ -50,7 +54,7 @@ global packer as RecipeMap =                        RecipeMap.getByName("packer"
 global polarizer as RecipeMap =                     RecipeMap.getByName("polarizer");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
-global implosion_compressor as RecipeMap = 			RecipeMap.getByName("implosion_compressor");
+
 
 // Tiered Components
 
@@ -122,7 +126,7 @@ global tieredWires as IIngredient[] = [<ore:wireGtSingleRedAlloy>, <ore:wireGtSi
     <ore:wireGtSingleEnrichedNaquadahAlloy>, <ore:wireGtSingleEnrichedNaquadahAlloy>, <ore:wireGtSingleEnrichedNaquadahAlloy>,
     <ore:wireGtSingleEnrichedNaquadahAlloy>];
 
-global tieredPlates as IIngredient[] = [null, <ore:plateSteel>, <ore:plateAluminium>, <ore:plateStainlessSteel>, 
+global tieredPlates as IIngredient[] = [<ore:plateWroughtIron>, <ore:plateSteel>, <ore:plateAluminium>, <ore:plateStainlessSteel>, 
     <ore:plateTitanium>, <ore:plateTungstenSteel>, <ore:plateRhodiumPlatedPalladium>, 
     <ore:plateOsmiridium>, <ore:plateTritanium>, <ore:plateSeaborgium>,
     <ore:plateBohrium>, <ore:plateQuantum>, <ore:plateQuantum>,
@@ -134,6 +138,14 @@ global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtad
     <gtadditions:ga_transparent_casing:6> ,<gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6>];
 	
+global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleHvSuperconductor>, <ore:wireGtSingleEvSuperconductor>, <ore:wireGtSingleIvSuperconductor>, 
+    <ore:wireGtSingleLuvSuperconductor>, <ore:wireGtSingleZpmSuperconductor>, <ore:wireGtSingleUvSuperconductor>, <ore:wireGtSingleUhvSuperconductor>, <ore:wireGtSingleUevSuperconductor>, <ore:wireGtSingleUivSuperconductor>,
+    <ore:wireGtSingleUmvSuperconductor>, <ore:wireGtSingleUxvSuperconductor>, <ore:wireGtSingleSuperconductor>];
+
+global cuttingFluids as ILiquidStack[] = [<liquid:water> * 42, <liquid:distilled_water> * 31, <liquid:lubricant> * 10];
+
+global soldering_alloys as ILiquidStack[] = [<liquid:tin>, <liquid:soldering_alloy>];
+
 function intCircuit(i as int) as IIngredient {
 	return <metaitem:circuit.integrated>.withTag({Configuration: i});
 }
