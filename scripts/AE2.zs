@@ -757,7 +757,8 @@ recipes.addShaped("me_lever_maintainer", <threng:machine:4>, [[<ore:plateFluixSt
 
 recipes.removeByRecipeName("threng:ma_frame");
 recipes.addShaped("mass_assembler_frame", <threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
-
+[logic_processor, <ore:frameGtStainlessSteel>, logic_processor], 
+[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>]]);
 
 //speculation core 1x
 Aggregator.removeRecipe(<threng:material:7>);
