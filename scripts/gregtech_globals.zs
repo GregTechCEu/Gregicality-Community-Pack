@@ -30,7 +30,6 @@ global cluster_mill as RecipeMap = 					RecipeMap.getByName("cluster_mill");
 global compressor as RecipeMap =                    RecipeMap.getByName("compressor");
 global cracker as RecipeMap =                       RecipeMap.getByName("cracker");
 global cutting_saw as RecipeMap =                   RecipeMap.getByName("cutting_saw");
-global disassembler as RecipeMap =                  RecipeMap.getByName("disassembler");
 global decay_chamber as RecipeMap =                 RecipeMap.getByName("decay_chamber");
 global disassembler as RecipeMap =                  RecipeMap.getByName("disassembler");
 global distillery as RecipeMap =                    RecipeMap.getByName("distillery");
@@ -149,12 +148,6 @@ global tieredCables as IIngredient[] = [<ore:cableGtSingleRedAlloy>, <ore:cableG
     <ore:cableGtSingleEnrichedNaquadahAlloy>, <ore:cableGtSingleEnrichedNaquadahAlloy>, <ore:cableGtSingleEnrichedNaquadahAlloy>,
     <ore:cableGtSingleEnrichedNaquadahAlloy>];
 
-global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleHvSuperconductor>, <ore:wireGtSingleEvSuperconductor>, <ore:wireGtSingleIvSuperconductor>, 
-    <ore:wireGtSingleLuvSuperconductor>, <ore:wireGtSingleZpmSuperconductor>, <ore:wireGtSingleUvSuperconductor>, <ore:wireGtSingleUhvSuperconductor>, <ore:wireGtSingleUevSuperconductor>, <ore:wireGtSingleUivSuperconductor>,
-    <ore:wireGtSingleUmvSuperconductor>, <ore:wireGtSingleUxvSuperconductor>, <ore:wireGtSingleSuperconductor>];
-
-global cuttingFluids as ILiquidStack[] = [<liquid:water> * 42, <liquid:distilled_water> * 31, <liquid:lubricant> * 10];
-	
 global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleHvSuperconductor>, <ore:wireGtSingleEvSuperconductor>, <ore:wireGtSingleIvSuperconductor>, 
     <ore:wireGtSingleLuvSuperconductor>, <ore:wireGtSingleZpmSuperconductor>, <ore:wireGtSingleUvSuperconductor>, <ore:wireGtSingleUhvSuperconductor>, <ore:wireGtSingleUevSuperconductor>, <ore:wireGtSingleUivSuperconductor>,
     <ore:wireGtSingleUmvSuperconductor>, <ore:wireGtSingleUxvSuperconductor>, <ore:wireGtSingleSuperconductor>];
