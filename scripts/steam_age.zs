@@ -5,7 +5,10 @@ import mods.gregtech.recipe.PBFRecipeBuilder;
 val name_removals = [
     "gtadditions:ga_steam_boiler_solar_bronze",
     "gtadditions:ga_steam_boiler_lava_bronze",
+    "gregtech:steam_boiler_coal_bronze",
+    "gregtech:steam_boiler_lava_bronze",
     "gregtech:bronze_hull",
+    "gregtech:bronze_bricks_hull",
     "gtadditions:coke_brick",
     "gregtech:workbench_bronze",
     "gtadditions:resistor_coal",

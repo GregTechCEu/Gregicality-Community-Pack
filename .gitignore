@@ -7,6 +7,7 @@ config/AppliedEnergistics2/items.csv
 config/InvTweaks.cfg
 config/jei/jei.cfg
 config/jei/worldSettings.cfg
+config/jei/bookmarks.ini
 config/jei/itemBlacklist.cfg
 config/splash.properties
 usercache.json
