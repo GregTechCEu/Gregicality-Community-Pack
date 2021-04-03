@@ -11,7 +11,7 @@ Utils.registerItem("resonating_crystal", 1002, 0x6146c2, "GEM_VERTICAL", "dust")
 Utils.registerItem("fluix_steel", 1004, 0x6146c2, "SHINY", "plate");
 Utils.registerItem("end_steel", 1005, 0xece7b6, "METALLIC", "stick");
 Utils.registerItem("end_steel", 1006, 0xece7b6, "METALLIC", "plate");
-+Utils.registerItem("end_steel", 1007, 0xece7b6, "METALLIC", "screw");
+Utils.registerItem("end_steel", 1007, 0xece7b6, "METALLIC", "screw");
 Utils.registerItem("dark_steel", 1008, 0x2c2c2c, "DULL", "stick");
 Utils.registerItem("dark_steel", 1009, 0x2c2c2c, "DULL", "plate");
 Utils.registerItem("dark_steel", 1010, 0x2c2c2c, "DULL", "screw");

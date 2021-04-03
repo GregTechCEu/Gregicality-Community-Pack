@@ -5,7 +5,9 @@ import mods.gtadditions.recipe.Utils;
 import mods.gtadditions.recipe.LargeRecipeMap;
 import mods.gtadditions.recipe.GARecipeMaps;
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+
 
 global alloy_smelter as RecipeMap =                 RecipeMap.getByName("alloy_smelter");
 global arc_furnace as RecipeMap =                   RecipeMap.getByName("arc_furnace");
@@ -188,7 +190,7 @@ function createGreenHouseRecipes(seed as IItemStack, output as IItemStack) {
 		.notConsumable(seed)
 		.inputs(<ore:dustOrganicFertilizer>)
 		.fluidInputs(<liquid:water> * 2000)
-		.notConsumable(2))
+		.notConsumable(intCircuit(2))
 		.outputs(output * 3)
 		.EUt(16)
 		.duration(1000)
