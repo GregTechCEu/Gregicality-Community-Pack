@@ -14,7 +14,7 @@ try:
 except Exception as e:
     print("Directory exists, skipping")
 
-r = requests.GET(ae2url)
+r = requests.get(ae2url)
 
 with open(baseDir + "/mods/appliedenergistics2-rv6-stable-7.omni-fixes.jar", "w") as jar:
     jar.write(r.content)
