@@ -261,11 +261,11 @@ recipes.addShaped("gregified_item_interface", item_interface,
 // Add springs for relays
 
 
-recipes.addShaped("gregtech_spring_small_annealed_copper", <ore:springSmallAnnealedCopper>.firstItem, [
+recipes.addShaped("gregtech_spring_small_annealed_copper", <metaitem:springSmallAnnealedCopper>, [
     [null, <ore:gregSaws>, null],
     [<ore:gregFiles>, <ore:stickAnnealedCopper>, <ore:gregWireCutters>]
 ]);
-recipes.addShaped("gregtech_spring_small_aluminium", <ore:springSmallAluminium>.firstItem, [
+recipes.addShaped("gregtech_spring_small_aluminium", <metaitem:springSmallAluminium>, [
     [null, <ore:gregSaws>, null],
     [<ore:gregFiles>, <ore:stickAluminium>, <ore:gregWireCutters>]
 ]);
