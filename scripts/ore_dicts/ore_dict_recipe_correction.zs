@@ -94,7 +94,8 @@ var furnace_removals = [
     <metaitem:ingotBlackSteel>,
     <metaitem:ingotTungsten>,
     <metaitem:ingotTitanium>,
-    <metaitem:ingotOsmium>
+    <metaitem:ingotOsmium>,
+    <ore:itemCharcoal>.firstItem
 ] as IIngredient[];
 
 for item in furnace_removals {
