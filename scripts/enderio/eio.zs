@@ -81,7 +81,8 @@ val name_removals = [
     "enderio:auto_dark_steel_9_ingots_to_1_block",
     "enderio:auto_end_steel_9_ingots_to_1_block",
     "enderio:auto_stellar_alloy_9_ingots_to_1_block",
-    "enderio:exit_rail"
+    "enderio:exit_rail",
+    "enderio:weather_crystal"
 ] as string[];
 
 for item in name_removals {
@@ -392,12 +393,12 @@ arc_furnace.recipeBuilder().EUt(30).duration(400)
     .buildAndRegister();
 
 // Crafter
-recipes.addShaped("eio_crafter", <enderio:block_crafter>, [[<ore:plateDarkSteel>, <ore:craftingTableWood>, <ore:plateDarkSteel>], [robotArms[2], <ore:itemMachineChassi>, robotArms[2]], [<ore:plateDarkSteel>, circuits[2], <ore:plateDarkSteel>]]);
+recipes.addShaped("eio_crafter", <enderio:block_crafter>, [[<ore:plateDarkSteel>, <ore:craftingTableWood>, <ore:plateDarkSteel>], [robotArms[2], <ore:itemMachineChassi>, robotArms[2]], [<ore:gearWood>, circuits[2], <ore:gearWood>]]);
 
 // Simple Crafter Disassembly
 disassembler.recipeBuilder().EUt(32).duration(1200)
     .inputs(<enderio:block_simple_crafter>)
-    .outputs(<metaitem:plateWroughtIron>, <metaitem:dustTinyAsh>, <metaitem:plateWroughtIron>, <metaitem:dustTinyAsh>, <ore:itemSimpleMachineChassi>.firstItem, <metaitem:dustTinyAsh>, <metaitem:dustTinyAsh>, <metaitem:circuit.basic>, <metaitem:dustTinyAsh>)
+    .outputs(<metaitem:plateWroughtIron>, <metaitem:dustTinyAsh>, <metaitem:plateWroughtIron>, <metaitem:dustTinyAsh>, <ore:itemSimpleMachineChassi>.firstItem, <metaitem:dustTinyAsh>, <metaitem:gearWood>, <metaitem:circuit.basic>, <metaitem:gearWood>)
     .buildAndRegister();
 
 // Simple Chassis Recycling
@@ -722,6 +723,18 @@ assembler.recipeBuilder().EUt(30).duration(200)
 // Skeletal Contractor
 recipes.addShaped("eio_skeletal_contractor", <ore:skullSkeletalContractor>.firstItem, [[<ore:plateMaragingSteelA>, <ore:stickBone>]]);
 
+// Grains
+val crystals = [<ore:itemPrecientCrystal>, <ore:itemVibrantCrystal>, <ore:itemPulsatingCrystal>, <ore:itemEnderCrystal>] as IIngredient[];
+val grains = [<ore:itemPrecientPowder>, <ore:itemVibrantPowder>, <ore:itemPulsatingPowder>, <ore:itemEnderCrystalPowder>] as IIngredient[];
+
+for i in 0 to crystals.length {
+    macerator.recipeBuilder().EUt(8).duration(30)
+        .inputs(crystals[i])
+        .outputs(grains[i].itemArray[0])
+        .chancedOutput(grains[i].itemArray[0], 6500, 1500)
+        .chancedOutput(grains[i].itemArray[0], 3500, 1500)
+        .buildAndRegister();
+}
 
 // Capacitors
 // Basic
@@ -777,7 +790,7 @@ chemical_reactor.recipeBuilder().EUt(480).duration(200)
 
 // Vapor of Levity
 chemical_reactor.recipeBuilder().EUt(480).duration(200)
-    .inputs(<ore:itemPulsatingPowder>, <ore:itemPrecientPowder>)
+    .inputs(<ore:itemVibrantPowder>, <ore:itemPrecientPowder>)
     .fluidInputs([<fluid:ender_distillation> * 5000])
     .fluidOutputs([<fluid:vapor_of_levity> * 5000])
     .buildAndRegister();

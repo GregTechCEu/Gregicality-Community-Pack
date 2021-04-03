@@ -126,7 +126,7 @@ global tieredWires as IIngredient[] = [<ore:wireGtSingleRedAlloy>, <ore:wireGtSi
     <ore:wireGtSingleEnrichedNaquadahAlloy>, <ore:wireGtSingleEnrichedNaquadahAlloy>, <ore:wireGtSingleEnrichedNaquadahAlloy>,
     <ore:wireGtSingleEnrichedNaquadahAlloy>];
 
-global tieredPlates as IIngredient[] = [null, <ore:plateSteel>, <ore:plateAluminium>, <ore:plateStainlessSteel>, 
+global tieredPlates as IIngredient[] = [<ore:plateWroughtIron>, <ore:plateSteel>, <ore:plateAluminium>, <ore:plateStainlessSteel>, 
     <ore:plateTitanium>, <ore:plateTungstenSteel>, <ore:plateRhodiumPlatedPalladium>, 
     <ore:plateOsmiridium>, <ore:plateTritanium>, <ore:plateSeaborgium>,
     <ore:plateBohrium>, <ore:plateQuantum>, <ore:plateQuantum>,

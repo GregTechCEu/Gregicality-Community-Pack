@@ -16,3 +16,4 @@ Utils.registerItem("dark_steel", 1011, 0x2c2c2c, "DULL", "dust");
 Utils.registerItem("dark_steel", 1012, 0x2c2c2c, "DULL", "bolt");
 Utils.registerItem("stellar_alloy", 1013, 0xc4ccbf, "SHINY", "plate");
 Utils.registerItem("stellar_alloy", 1014, 0xc4ccbf, "SHINY", "screw");
+Utils.registerItem("copper", 1015, 0xFF8000, "SHINY", "springSmall");
