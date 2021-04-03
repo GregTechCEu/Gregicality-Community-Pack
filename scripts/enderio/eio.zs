@@ -82,7 +82,8 @@ val name_removals = [
     "enderio:auto_end_steel_9_ingots_to_1_block",
     "enderio:auto_stellar_alloy_9_ingots_to_1_block",
     "enderio:exit_rail",
-    "enderio:weather_crystal"
+    "enderio:weather_crystal",
+    "enderio:soul_vial"
 ] as string[];
 
 for item in name_removals {
@@ -569,7 +570,7 @@ val crystal_outputs = [<ore:itemPulsatingCrystal>.firstItem, <ore:itemVibrantCry
 for i in 0 to crystal_inputs.length {
     autoclave.recipeBuilder().EUt(30).duration(160)
         .inputs(crystal_inputs[i])
-        .fluidInputs([<fluid:deuterium> * 20])
+        .fluidInputs([<fluid:glowstone> * 16])
         .outputs(crystal_outputs[i])
         .buildAndRegister();
 }

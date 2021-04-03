@@ -2,6 +2,7 @@ import mods.appliedenergistics2.Inscriber;
 import mods.threng.Etcher;
 import mods.threng.Aggregator;
 import mods.threng.Centrifuge;
+import crafttweaker.item.IItemStack;
 
 val engineering_processor = <appliedenergistics2:material:24>;
 val logic_processor = <appliedenergistics2:material:22>;
@@ -82,7 +83,7 @@ val name_removals = [
 	"extracells:storagecells/item/owncasing/256k",
 	"extracells:storagecells/item/owncasing/1024k",
 	"extracells:storagecells/item/owncasing/4096k",
-	"extracells:storagecells/item/owncasing/16384",
+	"extracells:storagecells/item/owncasing/16384k",
 	"extracells:storagecells/fluid/owncasing/256k",
 	"extracells:storagecells/fluid/owncasing/1024k",
 	"extracells:storagecells/fluid/owncasing/4096k",
@@ -123,11 +124,41 @@ val name_removals = [
 	"ae2fc:fluid_pattern_encoder",
 	"ae2fc:fluid_packet_decoder",
 	"ae2fc:ingredient_buffer",
-	"ae2fc:burette"
+	"ae2fc:burette",
+	"extracells:misc/parttointerface",
+	"extracells:misc/interface",
+	"extracells:parts/fluidexportbus",
+	"extracells:parts/fluidimportbus",
+	"extracells:parts/fluidstoragebus",
+	"extracells:parts/fluidterminal",
+	"extracells:parts/fluidlevelemitter",
+	"extracells:parts/fluidannililationplane",
+	"extracells:parts/fluidformationplane",
+	"extracells:storagecells/case/fluid",
+	"extracells:storagecells/fluid/a2ecasing",
+	"extracells:storagecells/fluid/e2acasing",
+	"extracells:storagecomponent/fluid/1k",
+	"extracells:storagecomponent/fluid/4k",
+	"extracells:storagecomponent/fluid/16k",
+	"extracells:storagecomponent/fluid/64k"
 ] as string[];
 
 for item in name_removals {
 	recipes.removeByRecipeName(item);
+}
+
+val disables = [
+	<extracells:part.base:7>,
+	<extracells:part.base:8>,
+	<extracells:part.base:10>,
+	<extracells:part.base:11>,
+	<extracells:certustank>,
+	<extracells:hardmedrive>,
+	<extracells:walrus>
+] as IItemStack[];
+
+for item in disables {
+	mods.jei.JEI.removeAndHide(item);
 }
 
 //patterns
