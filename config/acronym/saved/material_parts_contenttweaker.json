@@ -1,3 +1,5 @@
 {
-  "materialMappings": {}
+  "materialMappings": {
+    "resonating_crystal_block": 0
+  }
 }

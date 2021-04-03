@@ -65,6 +65,13 @@ function unify (ore as IOreDictEntry, p as int) {
 
 // Ender Pearl Powder Compatability
 <ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
+// Silicon Compatability
+<ore:itemSilicon>.add(<metaitem:plateSilicon>);
+<ore:itemSilicon>.remove(<ore:itemSilicon>.firstItem);
+
+// Ender Pearl Powder Compatability
+<ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
+
 
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
@@ -76,5 +83,6 @@ unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
 
 
-unify(<ore:itemSilicon>, 0);
 unify(<ore:bioplastic>, 0);
+unify(<ore:itemSilicon>, 0);
+
