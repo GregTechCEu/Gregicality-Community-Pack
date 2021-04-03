@@ -212,7 +212,7 @@ recipes.removeByRecipeName("appliedenergistics2:misc/tint_tnt");
 recipes.addShapeless(<appliedenergistics2:tiny_tnt> * 4, [<minecraft:tnt>]);
 
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/security_station");
-recipes.addShaped(<appliedenergistics2:security_station>, [[<ore:plateAluminium>, <appliedenergistics2:chest>, <ore:plateAluminium>],[me_cable, <appliedenergistics2:material:37>, me_cable], [<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
+recipes.addShaped("security_station", <appliedenergistics2:security_station>, [[<ore:plateAluminium>, <appliedenergistics2:chest>, <ore:plateAluminium>],[me_cable, <appliedenergistics2:material:37>, me_cable], [<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
 
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/storage_drive");
 assembler.recipeBuilder()
@@ -225,7 +225,7 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/storage_chest");
-recipes.addShaped(<appliedenergistics2:chest>, [[<ore:blockGlass>, <appliedenergistics2:part:380>, <ore:blockGlass>],[me_cable, null, me_cable], [<ore:plateAluminium>, <ore:crystalPureFluix> | <ore:crystalFluix>, <ore:plateAluminium>]]);
+recipes.addShaped("me_chest", <appliedenergistics2:chest>, [[<ore:blockGlass>, <appliedenergistics2:part:380>, <ore:blockGlass>],[me_cable, null, me_cable], [<ore:plateAluminium>, <ore:plateFluix>, <ore:plateAluminium>]]);
 
 recipes.removeByRecipeName("appliedenergistics2:network/parts/panels_semi_dark_monitor");
 assembler.recipeBuilder()
@@ -726,12 +726,12 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 recipes.removeByRecipeName("threng:level_maintainer");
-recipes.addShaped(<threng:machine:4>, [[<ore:plateFluixSteel>, <appliedenergistics2:part:280>, <ore:plateFluixSteel>],
+recipes.addShaped("me_lever_maintainer", <threng:machine:4>, [[<ore:plateFluixSteel>, <appliedenergistics2:part:280>, <ore:plateFluixSteel>],
 [logic_processor, fluix_logic_unit, logic_processor], 
 [<ore:plateFluixSteel>, <appliedenergistics2:material:53>, <ore:plateFluixSteel>]]);
 
 recipes.removeByRecipeName("threng:ma_frame");
-recipes.addShaped(<threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
+recipes.addShaped("mass_assembler_frame", <threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
 [logic_processor, <ore:frameGtStainlessSteel>, logic_processor], 
 [<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>]]);
 
@@ -867,7 +867,7 @@ assembler.recipeBuilder()
 	
 recipes.removeByRecipeName("appliedenergistics2:tools/misctools_entropy_manipulator");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> | <ore:crystalPureFluix>)
+	.inputs(<ore:plateFluix>)
 	.inputs(engineering_processor)
 	.inputs(<appliedenergistics2:energy_cell>.withTag({}))
 	.inputs(<ore:stickLongAluminium>)
@@ -904,7 +904,7 @@ assembler.recipeBuilder()
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_fluid_alt");
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_fluid");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateLapis> * 3)
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(annihilation_core)
@@ -917,7 +917,7 @@ assembler.recipeBuilder()
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_fluid_alt");
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_fluid");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateLapis> * 3)
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(formation_core)
@@ -930,7 +930,7 @@ assembler.recipeBuilder()
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_alt2");
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_annihilation_alt");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateRedstone> * 3)
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(annihilation_core)
@@ -943,7 +943,7 @@ assembler.recipeBuilder()
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation");
 recipes.removeByRecipeName("appliedenergistics2:network/parts/planes_formation_alt");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> * 2 | <ore:crystalPureFluix> * 2)
+	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateRedstone> * 3)
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(formation_core)
@@ -965,7 +965,7 @@ assembler.recipeBuilder()
 	
 recipes.removeByRecipeName("appliedenergistics2:network/parts/tunnels_me");
 assembler.recipeBuilder()
-	.inputs(<ore:crystalFluix> * 3 | <ore:crystalPureFluix> * 3)
+	.inputs(<ore:plateFluix> * 4)
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(engineering_processor)
 	.outputs(<appliedenergistics2:part:460>)
@@ -1117,15 +1117,15 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 		
 //invisible jei recipes :)		
-recipes.addShaped(<ae2fc:fluid_pattern_encoder>, [[<ore:plateAluminium>, <ore:plateLapis>, <ore:plateAluminium>],
+recipes.addShaped("fluid_pattern_encoder", <ae2fc:fluid_pattern_encoder>, [[<ore:plateAluminium>, <ore:plateLapis>, <ore:plateAluminium>],
 [<ore:plateLapis>, <ore:workbench>, <ore:plateLapis>], 
 [<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
 
-recipes.addShaped(<ae2fc:burette>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
+recipes.addShaped("burette", <ae2fc:burette>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
 [<gtadditions:ga_transparent_casing:1>, <minecraft:bucket>, <gtadditions:ga_transparent_casing:1>], 
 [<appliedenergistics2:part:16>, <appliedenergistics2:material:23>, <appliedenergistics2:part:16>]]);
 
-recipes.addShaped(<ae2fc:fluid_packet_decoder>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
+recipes.addShaped("fluid_packet_decoder", <ae2fc:fluid_packet_decoder>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
 [<appliedenergistics2:part:16>, <appliedenergistics2:fluid_interface>, <appliedenergistics2:part:16>], 
 [<ore:plateAluminium>, <appliedenergistics2:material:23>, <ore:plateAluminium>]]);
 
