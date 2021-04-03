@@ -163,12 +163,11 @@ global cuttingFluids as ILiquidStack[] = [<liquid:water> * 42, <liquid:distilled
 
 global soldering_alloys as ILiquidStack[] = [<liquid:tin>, <liquid:soldering_alloy>];
 
-function intCircuit(i as int) as IIngredient {
+global intCircuit as function(int)IIngredient = function(i as int) as IIngredient {
 	return <metaitem:circuit.integrated>.withTag({Configuration: i});
-}
+};
 
-
-function createGreenHouseRecipes(seed as IItemStack, output as IItemStack) {
+global createGreenHouseRecipes as function(IIngredient, IItemStack)void = function(seed as IIngredient, output as IItemStack) as void {
 	green_house.recipeBuilder()
 		.notConsumable(seed)
 		.fluidInputs(<liquid:water> * 2000)
@@ -195,4 +194,4 @@ function createGreenHouseRecipes(seed as IItemStack, output as IItemStack) {
 		.EUt(16)
 		.duration(1000)
 		.buildAndRegister();
-}
+};

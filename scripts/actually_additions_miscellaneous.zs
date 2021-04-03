@@ -166,35 +166,12 @@ mods.jei.JEI.removeAndHide(<actuallyadditions:item_small_to_medium_crate_upgrade
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_medium_to_large_crate_upgrade>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_tele_staff>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_wings_of_the_bats>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:0>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:1>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:2>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:3>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:4>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:5>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:6>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:7>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:8>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:9>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:10>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:11>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:12>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:13>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:14>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill:15>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_battery>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_battery_double>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_battery_triple>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_battery_quadruple>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_battery_quintuple>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_speed>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_speed_ii>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_speed_iii>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_silk_touch>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_fortune>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_fortune_ii>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_three_by_three>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_five_by_five>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_fertilizer>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_resonant_rice>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_jam:0>);
@@ -232,7 +209,6 @@ mods.jei.JEI.removeAndHide(<actuallyadditions:item_hairy_ball>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_growth_ring>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_suction_ring>);
 mods.jei.JEI.removeAndHide(<actuallyadditions:item_water_removal_ring>);
-mods.jei.JEI.removeAndHide(<actuallyadditions:item_drill_upgrade_block_placing>);
 
 //Time to add recipes back!
 
@@ -269,6 +245,11 @@ recipes.addShaped("gregtech_spring_small_aluminium", <metaitem:springSmallAlumin
     [null, <ore:gregSaws>, null],
     [<ore:gregFiles>, <ore:stickAluminium>, <ore:gregWireCutters>]
 ]);
+recipes.addShaped("gregtech_spring_small_tungsten_steel", <metaitem:springSmallZirconiumCarbide>, [
+    [null, <ore:gregSaws>, null],
+    [<ore:gregFiles>, <ore:stickZirconiumCarbide>, <ore:gregWireCutters>]
+]);
+
 
 metal_bender.recipeBuilder()
     .inputs(<ore:stickAnnealedCopper>)
@@ -283,6 +264,14 @@ metal_bender.recipeBuilder()
     .property("circuit", 1)
     .outputs(<ore:springSmallAluminium>.firstItem * 2)
     .duration(26)
+    .EUt(8)
+    .buildAndRegister();
+	
+metal_bender.recipeBuilder()
+    .inputs(<ore:stickZirconiumCarbide>)
+    .property("circuit", 1)
+    .outputs(<ore:springSmallZirconiumCarbide>.firstItem * 2)
+    .duration(118)
     .EUt(8)
     .buildAndRegister();
 
@@ -502,6 +491,83 @@ recipes.addShaped("gregified_pre_dropper", pre_dropper,
 [[<ore:gtMetalCasingIron>,<ore:gtMetalCasingIron>,<ore:gtMetalCasingIron>],
 [diamatine,<minecraft:dropper>,diamatine],
 [diamatine,<minecraft:hopper>,diamatine]]);
+
+val drill = <actuallyadditions:item_drill:3>;
+val large_cadmium_battery = <gregtech:meta_item_1:32537>;
+recipes.removeByRecipeName("actuallyadditions:recipes27");
+recipes.addShaped("gregified_drill", drill,
+[[<ore:screwStainlessSteel>,<ore:toolHeadDrillBlackBronze>,<ore:screwStainlessSteel>],
+[diamatine,motors[3],diamatine],
+[<ore:plateStainlessSteel>,large_cadmium_battery,<ore:plateStainlessSteel>]]);
+
+val speedi = <actuallyadditions:item_drill_upgrade_speed>;
+recipes.removeByRecipeName("actuallyadditions:recipes30");
+recipes.addShaped("gregified_speedi", speedi,
+[[null,null,null],
+[<ore:springSmallAluminium>,motors[3],<ore:springSmallAluminium>],
+[null,null,null]]);
+
+val speedii = <actuallyadditions:item_drill_upgrade_speed_ii>;
+recipes.removeByRecipeName("actuallyadditions:recipes31");
+recipes.addShaped("gregified_speedii", speedii,
+[[null,null,null],
+[<ore:springSmallAnnealedCopper>,motors[4],<ore:springSmallAnnealedCopper>],
+[null,null,null]]);
+
+val speediii = <actuallyadditions:item_drill_upgrade_speed_iii>;
+recipes.removeByRecipeName("actuallyadditions:recipes32");
+recipes.addShaped("gregified_speediii", speediii,
+[[null,null,null],
+[<ore:springSmallZirconiumCarbide>,motors[5],<ore:springSmallZirconiumCarbide>],
+[null,null,null]]);
+
+val rangethree = <actuallyadditions:item_drill_upgrade_three_by_three>;
+recipes.removeByRecipeName("actuallyadditions:recipes35");
+assembler.recipeBuilder()
+	.inputs(pistons[3] * 4)
+	.inputs(<ore:toolHeadDrillBlackBronze> * 4)
+	.inputs(<ore:plateKanthal> * 12)
+	.outputs(rangethree)
+	.EUt(480)
+	.duration(100)
+	.buildAndRegister();
+	
+val rangefive = <actuallyadditions:item_drill_upgrade_five_by_five>;
+recipes.removeByRecipeName("actuallyadditions:recipes36");
+assembler.recipeBuilder()
+	.inputs(pistons[3] * 8)
+	.inputs(<ore:toolHeadDrillBlackBronze> * 16)
+	.inputs(<ore:plateStaballoy> * 20)
+	.inputs(rangethree)
+	.outputs(rangefive)
+	.EUt(1920)
+	.duration(100)
+	.buildAndRegister();
+
+val silktouch = <actuallyadditions:item_drill_upgrade_silk_touch>;
+recipes.removeByRecipeName("actuallyadditions:recipes37");
+recipes.addShaped("gregified_silktouch", silktouch,
+[[null,<ore:foilReinforcedEpoxyResin>,null],
+[null,motors[5],null],
+[null,<ore:ringIridium>,null]]);
+
+val fortuneiii = <actuallyadditions:item_drill_upgrade_fortune_ii>;
+val tungsten_grinder = <gregtech:meta_item_1:32723>;
+recipes.removeByRecipeName("actuallyadditions:recipes34");
+recipes.addShaped("gregified_fortuneiii", fortuneiii,
+[[emp_restonia,restonia,emp_restonia],
+[restonia,tungsten_grinder,restonia],
+[emp_restonia,restonia,emp_restonia]]);
+
+val drill_placer = <actuallyadditions:item_drill_upgrade_block_placing>;
+recipes.removeByRecipeName("actuallyadditions:recipes38");
+assembler.recipeBuilder()
+	.inputs(robotArms[3] * 1)
+	.inputs(<ore:plateNichrome> * 5)
+	.outputs(drill_placer)
+	.EUt(1920)
+	.duration(100)
+	.buildAndRegister();
 
 /*
 recipes.addShaped("gregified_farmer", farmer,

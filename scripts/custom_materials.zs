@@ -38,12 +38,13 @@ Utils.registerItem("basic_coffee_unsorted", 1028, 0x422003, "GEM_VERTICAL", "gem
 //Adding flags
 
 <material:copper>.addFlags(["GENERATE_SPRING_SMALL"]);
-<material:vanadium>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
+<material:vanadium>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING", "GENERATE_DENSE"]);
 <material:maraging_steel_a>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
 <material:annealed_copper>.addFlags(["GENERATE_SPRING_SMALL"]);
 <material:aluminium>.addFlags(["GENERATE_SPRING_SMALL"]);
+<material:zirconium_carbide>.addFlags(["GENERATE_SPRING_SMALL"]);
 <material:electrum>.addFlags(["GENERATE_DENSE"]);
-<material:vanadium>.addFlags(["GENERATE_DENSE"]);
+
 
 //ContentTweaking
 
