@@ -114,7 +114,7 @@ global robotArms as IIngredient[] = [null, <metaitem:robot.arm.lv>, <metaitem:ro
     <metaitem:robot.arm.uev>, <metaitem:robot.arm.uiv>, <metaitem:robot.arm.umv>,
     <metaitem:robot.arm.uxv>];
 
-global hulls as IIngredient[] = [<meta_tile_entity:hull.ulv>, <meta_tile_entity:hull.lv>, <meta_tile_entity:hull.mv>, <meta_tile_entity:hull.mhv>, 
+global hulls as IIngredient[] = [<meta_tile_entity:hull.ulv>, <meta_tile_entity:hull.lv>, <meta_tile_entity:hull.mv>, <meta_tile_entity:hull.hv>, 
     <meta_tile_entity:hull.ev>, <meta_tile_entity:hull.iv>, <meta_tile_entity:hull.luv>,
     <meta_tile_entity:hull.zpm>, <meta_tile_entity:hull.uv>, <meta_tile_entity:gtadditions:hull.uhv>,
     <meta_tile_entity:gtadditions:hull.uev>, <meta_tile_entity:gtadditions:hull.uiv>, <meta_tile_entity:gtadditions:hull.umv>,
@@ -137,6 +137,12 @@ global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtad
     <gtadditions:ga_transparent_casing:5>, <gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6> ,<gtadditions:ga_transparent_casing:6>, <gtadditions:ga_transparent_casing:6>,
     <gtadditions:ga_transparent_casing:6>];
+    
+global tieredCables as IIngredient[] = [<ore:cableGtSingleRedAlloy>, <ore:cableGtSingleTin>, <ore:cableGtSingleCopper>, <ore:cableGtSingleGold>, 
+    <ore:cableGtSingleAluminium>, <ore:cableGtSingleTungsten>, <ore:cableGtSingleVanadiumGallium>, 
+    <ore:cableGtSingleNaquadah>, <ore:cableGtSingleNaquadahAlloy>, <ore:cableGtSingleEnrichedNaquadahAlloy>,
+    <ore:cableGtSingleEnrichedNaquadahAlloy>, <ore:cableGtSingleEnrichedNaquadahAlloy>, <ore:cableGtSingleEnrichedNaquadahAlloy>,
+    <ore:cableGtSingleEnrichedNaquadahAlloy>];
 	
 global superconductors as IIngredient[] = [null, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleMvSuperconductor>, <ore:wireGtSingleHvSuperconductor>, <ore:wireGtSingleEvSuperconductor>, <ore:wireGtSingleIvSuperconductor>, 
     <ore:wireGtSingleLuvSuperconductor>, <ore:wireGtSingleZpmSuperconductor>, <ore:wireGtSingleUvSuperconductor>, <ore:wireGtSingleUhvSuperconductor>, <ore:wireGtSingleUevSuperconductor>, <ore:wireGtSingleUivSuperconductor>,
