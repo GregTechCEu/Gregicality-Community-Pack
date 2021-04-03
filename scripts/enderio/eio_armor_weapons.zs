@@ -210,7 +210,7 @@ recipes.addShaped("eio_step_travel_upgrade", <enderio:item_dark_steel_upgrade:1>
 recipes.addShaped("eio_step_explosive_upgrade_1", <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:tnt", "enderio:enabled": 1 as byte}), [[<ore:gearSteel>, <ore:gregHardHammers>], [base, <appliedenergistics2:tiny_tnt>]]);
 
 // Explosive 2
-recipes.addShaped("eio_step_explosive_upgrade_2", <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:tnt1", "enderio:enabled": 1 as byte}), [[<ore:gearMaragingSteelA>, <ore:gregHardHammers>], [base, <minecraft:tnt>]]);
+recipes.addShaped("eio_step_explosive_upgrade_2", <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:tnt1", "enderio:enabled": 1 as byte}), [[<ore:gearBlackBronze>, <ore:gregHardHammers>], [base, <minecraft:tnt>]]);
 
 // Explosive 3
 recipes.addShaped("eio_step_explosive_upgrade_3", <enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:tnt2", "enderio:enabled": 1 as byte}), [[<ore:gearTungstenSteel>, <ore:gregHardHammers>], [base, <minecraft:tnt>]]);

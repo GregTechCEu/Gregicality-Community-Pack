@@ -37,7 +37,7 @@ chemical_bath.recipeBuilder().duration(100).EUt(20)
 
 // Hopper
 recipes.remove(<minecraft:hopper>);
-recipes.addShaped("hopper", <minecraft:hopper>, [[<ore:plateIron>, <ore:gregWrenches>, <ore:plateIron>], [<ore:plateIron>, <ore:chestWood>, <ore:plateIron>], [null, <ore:plateIron>, null]]);
+recipes.addShaped("gt_hopper", <minecraft:hopper>, [[<ore:plateIron>, <ore:gregWrenches>, <ore:plateIron>], [<ore:plateIron>, <ore:chestWood>, <ore:plateIron>], [null, <ore:plateIron>, null]]);
 
 // Nether Wart
 green_house.recipeBuilder().duration(100).EUt(20)
