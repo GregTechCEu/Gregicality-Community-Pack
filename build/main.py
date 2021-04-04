@@ -1,12 +1,14 @@
+# if there is a problem with building, please ping htmlcsjs#0209 on discord
 import os
 import shutil
 import requests
+import json
 
-# if there is a problem with building, please ping htmlcsjs#0209 on discord
-
-ae2url = "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v34b/appliedenergistics2-rv6-stable-7.omni-fixes-v34b.jar"
 basePath = os.path.realpath(__file__)[:-7] + ".."
 copyDirs = ["/scripts", "/resources", "/config", "/mods"]
+
+with open(basePath + "/manifest.json") as file:
+    manifest = json.load(file)
 
 try:
     os.makedirs(basePath + "/buildOut/overrides")
@@ -14,10 +16,10 @@ try:
 except Exception as e:
     print("Directory exists, skipping")
 
-r = requests.get(ae2url)
-
-with open(basePath + "/mods/appliedenergistics2-rv6-stable-7.omni-fixes.jar", "wb") as jar:
-    jar.write(r.content)
+for mod in manifest["externalDeps"]:
+    r = requests.get(mod)
+    with open(basePath + "/mods/" + mod.split("/")[-1], "wb") as jar:
+        jar.write(r.content)
 
 for dir in copyDirs:
     try:
