@@ -704,9 +704,17 @@ implosion_compressor.recipeBuilder()
 	.duration(10)
 	.inputs(<ore:dustResonatingCrystal> * 4)
 	.outputs(resonating_crystal * 4)
-	.property("explosives", 1)
+	.property("explosives", 4)
 	.buildAndRegister();
-	
+
+implosion_compressor.recipeBuilder()
+	.EUt(480)
+	.duration(10)
+	.inputs(<ore:dustResonatingCrystal> * 4)
+	.outputs(resonating_crystal * 4)
+	.property("explosives", 2)
+	.buildAndRegister();
+
 Etcher.removeRecipe(parallel_processor);
 circuit_assembler.recipeBuilder()
 	.inputs(printed_parallel)
