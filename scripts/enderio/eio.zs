@@ -648,9 +648,16 @@ assembler.recipeBuilder().EUt(2048).duration(400)
     .buildAndRegister();
 
 // Weather Crystal
-implosion_compressor.recipeBuilder().EUt(7680).duration(400)
+implosion_compressor.recipeBuilder().EUt(7680).duration(1200)
     .inputs(<ore:itemEnderCrystalPowder> * 32, <ore:itemPulsatingPowder> * 32)
     .property("explosives", 64)
+    .outputs(<ore:itemWeatherCrystal>.firstItem)
+    .buildAndRegister();
+
+// Weather Crystal
+implosion_compressor.recipeBuilder().EUt(7680).duration(1200)
+    .inputs(<ore:itemEnderCrystalPowder> * 32, <ore:itemPulsatingPowder> * 32)
+    .property("explosives", <metaitem:dynamite> * 32)
     .outputs(<ore:itemWeatherCrystal>.firstItem)
     .buildAndRegister();
 
@@ -690,7 +697,7 @@ canner.recipeBuilder().EUt(16).duration(20)
 // Wireless Electric Light
 canner.recipeBuilder().EUt(16).duration(20)
     .inputs(<enderio:block_holy_fog>, <metaitem:large_fluid_cell.steel>)
-    .outputs(<enderio:block_electric_light> * 64)
+    .outputs(<enderio:block_electric_light:4> * 64)
     .buildAndRegister();
 
 // Light Inversion
@@ -935,6 +942,12 @@ cutting_saw.recipeBuilder().EUt(30).duration(760)
 implosion_compressor.recipeBuilder().EUt(7680).duration(400)
     .inputs(<ore:ingotEndSteel>, <ore:gemNetherStar>)
     .property("explosives", 24)
+    .outputs(<ore:ingotStellarAlloy>.firstItem)
+    .buildAndRegister();
+
+implosion_compressor.recipeBuilder().EUt(7680).duration(400)
+    .inputs(<ore:ingotEndSteel>, <ore:gemNetherStar>)
+    .property("explosives", <metaitem:dynamite> * 12)
     .outputs(<ore:ingotStellarAlloy>.firstItem)
     .buildAndRegister();
 
