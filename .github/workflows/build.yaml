@@ -2,6 +2,8 @@ name: Build
 
 on: [push]
 
+git_hash=$(git rev-parse --short "$GITHUB_SHA")
+
 jobs:
   build:
 
@@ -25,6 +27,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
-          title: "prerelease Build"
+          title: "prerelease Build - " + git_hash
           files: |
             build/client.zip
