@@ -5,22 +5,22 @@
 //Holdy thing
 recipes.removeByRecipeName("openglider:glider_scaffolding");
 recipes.addShaped(<openglider:hang_glider_part:2>, [
-    [<ore:craftingToolFile>, <gregtech:meta_item_1:14033>, <ore:craftingToolWrench>],
-    [<gregtech:meta_item_1:14033>, <ore:craftingToolHardHammer>, <gregtech:meta_item_1:14033>], 
-    [<gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>, <gregtech:meta_item_1:14033>]]);
+    [<ore:craftingToolFile>, <ore:stickIron>, <ore:craftingToolWrench>],
+    [<ore:stickIron>, <ore:craftingToolHardHammer>, <ore:stickIron>], 
+    [<ore:stickIron>, <ore:stickIron>, <ore:stickIron>]]);
 
 //Wing Right
 recipes.removeByRecipeName("openglider:glider_wing_right");
 recipes.addShaped(<openglider:hang_glider_part:1>, [
-    [<minecraft:leather>, <gregtech:meta_item_1:14033>, <ore:craftingToolFile>],
-    [<minecraft:leather>, <minecraft:leather>, <gregtech:meta_item_1:14033>], 
+    [<minecraft:leather>, <ore:stickIron>, <ore:craftingToolFile>],
+    [<minecraft:leather>, <minecraft:leather>, <ore:stickIron>], 
     [<minecraft:leather>, <minecraft:leather>, <minecraft:leather>]]);
 
 //Wing Left
 recipes.removeByRecipeName("openglider:glider_wing_left");
 recipes.addShaped(<openglider:hang_glider_part>, [
-    [<ore:craftingToolFile>, <gregtech:meta_item_1:14033>, <minecraft:leather>],
-    [<gregtech:meta_item_1:14033>, <minecraft:leather>, <minecraft:leather>], 
+    [<ore:craftingToolFile>, <ore:stickIron>, <minecraft:leather>],
+    [<ore:stickIron>, <minecraft:leather>, <minecraft:leather>], 
     [<minecraft:leather>, <minecraft:leather>, <minecraft:leather>]]);
 
 //Advaned Hang Glider
