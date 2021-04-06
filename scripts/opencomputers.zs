@@ -62,6 +62,16 @@ val smd_diode = <metaitem:component.smd.diode>;
 val smd_transistor  = <metaitem:component.smd.transistor>;
 val smd_resistor = <metaitem:component.smd.resistor>;
 val transistor = <metaitem:component.transistor>;
+val chest_steel = <gregtech:machine:803>;
+val chest_stainless_steel = <gregtech:machine:804>;
+val chest_titanium = <gregtech:machine:805>;
+val crafting_station = <gregtech:machine:825>;
+val lv_solar_panel = <metaitem:cover.solar.panel.lv>;
+val oc_hdd_1 = <opencomputers:storage:2>;
+val oc_hdd_2 = <opencomputers:storage:3>;
+val oc_hdd_3 = <opencomputers:storage:4>;
+val steel_tank = <gregtech:machine:813>;
+val stainless_steel_tank = <gregtech:machine:814>;
 
 
 
@@ -154,7 +164,38 @@ val name_removals = [
     "opencomputers:upgrade124",
     "opencomputers:card87",
     "opencomputers:hologram213",
-    "opencomputers:motionsensor15"
+    "opencomputers:motionsensor15",
+        "opencomputers:motionsensor15",
+    "opencomputers:upgrade93",
+    "opencomputers:upgrade94",
+    "opencomputers:upgrade95",
+    "opencomputers:upgrade96",
+    "opencomputers:upgrade97",
+    "opencomputers:upgrade98",
+    "opencomputers:upgrade99",
+    "opencomputers:upgrade100",
+    "opencomputers:upgrade101",
+    "opencomputers:upgrade102",
+    "opencomputers:upgrade103",
+    "opencomputers:upgrade104",
+    "opencomputers:upgrade105",
+    "opencomputers:upgrade106",
+    "opencomputers:upgrade107",
+    "opencomputers:upgrade108",
+    "opencomputers:upgrade109",
+    "opencomputers:upgrade120",
+    "opencomputers:upgrade121",
+    "opencomputers:upgrade110",
+    "opencomputers:upgrade111",
+    "opencomputers:upgrade119",
+    "opencomputers:upgrade123",
+    "opencomputers:upgrade113",
+    "opencomputers:upgrade114",
+    "opencomputers:upgrade115",
+    "opencomputers:upgrade116",
+    "opencomputers:upgrade117",
+    "opencomputers:upgrade118",
+    "opencomputers:upgrade122"
 ] as string[];
 
 for item in name_removals {
@@ -1208,4 +1249,395 @@ assembler.recipeBuilder()
     .outputs(<opencomputers:card:7>)
     .EUt(360)
     .duration(300)
+    .buildAndRegister();  
+
+// UPGRADES--------------------------------------------------------------------------------------------------
+
+//Angel Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(hv_piston)
+    .inputs(<ore:gemEnderPearl> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Battery Upgrade Tier 1
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(<opencomputers:capacitor> * 2)
+    .inputs(<ore:plateAluminium> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:1>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Battery Upgrade Tier 2
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 1)
+    .inputs(<opencomputers:capacitor> * 4)
+    .inputs(<ore:plateStainlessSteel> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:2>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Battery Upgrade Tier 3
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 1)
+    .inputs(<opencomputers:capacitor> * 8)
+    .inputs(<ore:plateTitanium> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:3>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+//Card container upgrade Tier 1
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(mv_piston)
+    .inputs(oc_card_base)
+    .inputs(chest_steel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:5>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Card container upgrade Tier 2
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 1)
+    .inputs(hv_piston)
+    .inputs(oc_card_base)
+    .inputs(chest_stainless_steel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:6>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Card container upgrade Tier 3
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 1)
+    .inputs(ev_piston)
+    .inputs(oc_card_base)
+    .inputs(chest_titanium)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:7>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+
+//Crafting Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(crafting_station)
+    .inputs(hv_robot_arm)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:11>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Chunkloader Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 2)
+    .inputs(<ore:blockEnderPearl>)
+    .inputs(<ore:plateTitanium> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:4>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Database Tier 1
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 2)
+    .inputs(oc_hdd_1)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:12>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Database Tier 2
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(oc_hdd_2)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:13>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Database Tier 3
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 2)
+    .inputs(oc_hdd_3)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:14>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Experience Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 2)
+    .inputs(<ore:plateGold> * 8)
+    .inputs(<ore:blockEmerald>)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:15>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Generator Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced>)
+    .inputs(<ore:craftingFurnace>)
+    .inputs(<ore:plateStainlessSteel> * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:16>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Hover Upgrade tier 1
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 2)
+    .inputs(power_thruster * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:27>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Hover upgrade Tier 2
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(advanced_power_thruster * 4)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:28>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister();
+
+
+//Inventory upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(mv_piston)
+    .inputs(<minecraft:hopper>)
+    .inputs(chest_steel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:17>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Inventory controller upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(<opencomputers:tool>)
+    .inputs(hv_robot_arm)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:18>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Leash Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(<minecraft:lead> * 4)
+    .inputs(oc_control_unit)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:26>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//MFU Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 1)
+    .inputs(<opencomputers:card:9> * 2)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:30>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Piston upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood>)
+    .inputs(mv_piston)
+    .inputs(<ore:craftingPiston>)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:20>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+
+//Sign upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 2)
+    .inputs(<opencomputers:material:27>)
+    .inputs(<ore:gemEnderEye>)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:21>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Solar Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 4)
+    .inputs(lv_solar_panel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:22>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+
+//Tank Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(mv_piston)
+    .inputs(<minecraft:hopper>)
+    .inputs(steel_tank)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:23>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Tank Controller Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 2)
+    .inputs(<opencomputers:tool>)
+    .inputs(stainless_steel_tank)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:24>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Tractor beam upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 3)
+    .inputs(<ore:ingotDoubleSteelMagnetic>)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:25>)
+    .EUt(1440)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Trading Upgrade
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 4)
+    .inputs(<ore:blockEmerald> * 2)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:29>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+//Upgrade container upgrade Tier 1
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtAluminium>)
+    .inputs(<ore:circuitGood> * 1)
+    .inputs(mv_piston)
+    .inputs(oc_printed_circuit_board)
+    .inputs(chest_steel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:8>)
+    .EUt(90)
+    .duration(600)
+    .buildAndRegister();  
+
+
+//Upgrade container upgrade Tier 2
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtStainlessSteel>)
+    .inputs(<ore:circuitAdvanced> * 1)
+    .inputs(hv_piston)
+    .inputs(oc_printed_circuit_board)
+    .inputs(chest_stainless_steel)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:9>)
+    .EUt(360)
+    .duration(600)
+    .buildAndRegister(); 
+
+
+//Upgrade container upgrade Tier 3
+assembler.recipeBuilder()
+    .inputs(<ore:frameGtTitanium>)
+    .inputs(<ore:circuitExtreme> * 1)
+    .inputs(ev_piston)
+    .inputs(oc_printed_circuit_board)
+    .inputs(chest_titanium)
+    .fluidInputs([<liquid:soldering_alloy> * 144])
+    .outputs(<opencomputers:upgrade:10>)
+    .EUt(1440)
+    .duration(600)
     .buildAndRegister();  
