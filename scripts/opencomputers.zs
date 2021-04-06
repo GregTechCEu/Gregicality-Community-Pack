@@ -705,6 +705,15 @@ assembler.recipeBuilder()
     .property("circuit", 17 )
 	.buildAndRegister();
 
+
+// Platter
+forming_press.recipeBuilder()
+    .inputs(<ore:ringIronMagnetic> * 2)
+    .notConsumable(<metaitem:shape.mold.cylinder>)
+    .outputs(oc_disk_platter)
+    .EUt(18)
+    .duration(56)
+    .buildAndRegister();
     
     
 // COMPONENTS/TOOLS/CARDS ----------------------------------------------------------------------------------------------
