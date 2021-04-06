@@ -34,6 +34,7 @@ Utils.registerItem("wet_coffee_large", 1025, 0x756452, "GEM_VERTICAL", "gemChipp
 Utils.registerItem("basic_coffee_small", 1026, 0x3b220d, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("basic_coffee_large", 1027, 0x3b220d, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("basic_coffee_unsorted", 1028, 0x422003, "GEM_VERTICAL", "gemChipped");
+Utils.registerItem("charged_certus", 1029, 0xD2D2E6, "QUARTZ", "dust");
 
 
 //Adding flags
