@@ -45,6 +45,9 @@ val name_removals = [
 	"appliedenergistics2:network/blocks/fluid_interfaces_interface",
 	"ae2fc:dual_interface",
 	"appliedenergistics2:misc/tint_tnt",
+	"appliedenergistics2:decorative/quartz_glass",
+	"appliedenergistics2:network/parts/quartz_fiber_part",
+	"appliedenergistics2:network/cables/glass_fluix",
 	"appliedenergistics2:network/blocks/security_station",
 	"appliedenergistics2:network/blocks/storage_drive",
 	"appliedenergistics2:network/blocks/storage_chest",
@@ -164,11 +167,21 @@ for item in disables {
 //patterns
 assembler.recipeBuilder()
 	.inputs(circuits[3] * 1)
-	.inputs(<ore:platePlastic> * 2)
 	.inputs(tieredPlates[3] * 2)
-	.inputs(<ore:wireFineGold> * 8)
-	.outputs(<appliedenergistics2:material:52> * 8)
+	.inputs(<ore:wireFineElectrum> * 8)
+	.fluidInputs(<fluid:plastic> * 288)
+	.outputs(<appliedenergistics2:material:52> * 4)
 	.EUt(480)
+	.duration(100)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(circuits[4] * 1)
+	.inputs(tieredPlates[4] * 2)
+	.inputs(<ore:wireFinePlatinum> * 8)
+	.fluidInputs(<fluid:polytetrafluoroethylene> * 288)
+	.outputs(<appliedenergistics2:material:52> * 16)
+	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
 
@@ -204,12 +217,48 @@ assembler.recipeBuilder()
 assembler.recipeBuilder()
 	.inputs(formation_core * 1)
 	.inputs(annihilation_core * 1)
+	.inputs(<ore:frameGtAluminium> * 1)
+	.inputs(robotArms[2] * 1)
+	.inputs(circuits[2] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(0))
+	.outputs(<appliedenergistics2:interface> * 1)
+	.EUt(120)
+	.duration(50)
+	.buildAndRegister();
+	
+assembler.recipeBuilder()
+	.inputs(formation_core * 2)
+	.inputs(annihilation_core * 2)
 	.inputs(<ore:frameGtStainlessSteel> * 1)
 	.inputs(robotArms[3] * 1)
 	.inputs(circuits[3] * 1)
 	.notConsumable(scripts.gregtech_globals.intCircuit(0))
-	.outputs(<appliedenergistics2:interface>)
+	.outputs(<appliedenergistics2:interface> * 2)
 	.EUt(480)
+	.duration(50)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(formation_core * 3)
+	.inputs(annihilation_core * 3)
+	.inputs(<ore:frameGtTitanium> * 1)
+	.inputs(robotArms[4] * 1)
+	.inputs(circuits[4] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(0))
+	.outputs(<appliedenergistics2:interface> * 4)
+	.EUt(1920)
+	.duration(50)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(formation_core * 4)
+	.inputs(annihilation_core * 4)
+	.inputs(<ore:frameGtTungstenSteel> * 1)
+	.inputs(robotArms[5] * 1)
+	.inputs(circuits[5] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(0))
+	.outputs(<appliedenergistics2:interface> * 6)
+	.EUt(7680)
 	.duration(50)
 	.buildAndRegister();
 	
@@ -217,24 +266,56 @@ assembler.recipeBuilder()
 assembler.recipeBuilder()
 	.inputs(formation_core * 1)
 	.inputs(annihilation_core * 1)
+	.inputs(<ore:frameGtAluminium> * 1)
+	.inputs(pumps[2] * 1)
+	.inputs(circuits[2] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(1))
+	.outputs(<appliedenergistics2:fluid_interface> * 1)
+	.EUt(120)
+	.duration(50)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(formation_core * 2)
+	.inputs(annihilation_core * 2)
 	.inputs(<ore:frameGtStainlessSteel> * 1)
 	.inputs(pumps[3] * 1)
 	.inputs(circuits[3] * 1)
 	.notConsumable(scripts.gregtech_globals.intCircuit(1))
-	.outputs(<appliedenergistics2:fluid_interface>)
+	.outputs(<appliedenergistics2:fluid_interface> * 2)
 	.EUt(480)
+	.duration(50)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(formation_core * 3)
+	.inputs(annihilation_core * 3)
+	.inputs(<ore:frameGtTitanium> * 1)
+	.inputs(pumps[4] * 1)
+	.inputs(circuits[4] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(1))
+	.outputs(<appliedenergistics2:fluid_interface> * 4)
+	.EUt(1920)
+	.duration(50)
+	.buildAndRegister();
+
+assembler.recipeBuilder()
+	.inputs(formation_core * 4)
+	.inputs(annihilation_core * 4)
+	.inputs(<ore:frameGtTungstenSteel> * 1)
+	.inputs(pumps[5] * 1)
+	.inputs(circuits[5] * 1)
+	.notConsumable(scripts.gregtech_globals.intCircuit(1))
+	.outputs(<appliedenergistics2:fluid_interface> * 6)
+	.EUt(7680)
 	.duration(50)
 	.buildAndRegister();
 
 //dual interface
 assembler.recipeBuilder()
-	.inputs(formation_core * 1)
-	.inputs(annihilation_core * 1)
+	.inputs(<appliedenergistics2:fluid_interface> * 1)
 	.inputs(<ore:frameGtTitanium> * 1)
-	.inputs(pumps[3] * 1)
-	.inputs(robotArms[3] * 1)
-	.inputs(circuits[3] * 1)
-	.notConsumable(scripts.gregtech_globals.intCircuit(2))
+	.inputs(<appliedenergistics2:interface> * 1)
 	.outputs(<ae2fc:dual_interface>)
 	.EUt(1920)
 	.duration(50)
@@ -317,9 +398,11 @@ circuit_assembler.recipeBuilder()
 
 recipes.addShapeless(<appliedenergistics2:tiny_tnt> * 4, [<minecraft:tnt>]);
 
+//Security Station
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/security_station");
 recipes.addShaped("security_station", <appliedenergistics2:security_station>, [[<ore:plateAluminium>, <appliedenergistics2:chest>, <ore:plateAluminium>],[me_cable, <appliedenergistics2:material:37>, me_cable], [<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
 
+//ME Drive
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 2)
 	.inputs(tieredPlates[2] * 4)
@@ -329,9 +412,11 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//ME Chest
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/storage_chest");
 recipes.addShaped("me_chest", <appliedenergistics2:chest>, [[<ore:blockGlass>, <appliedenergistics2:part:380>, <ore:blockGlass>],[me_cable, null, me_cable], [<ore:plateAluminium>, <ore:plateFluix>, <ore:plateAluminium>]]);
 
+//Illuminated Panel
 assembler.recipeBuilder()
 	.inputs(tieredPlates[2] * 1)
 	.inputs(<ore:plateGlowstone> * 2)
@@ -341,14 +426,8 @@ assembler.recipeBuilder()
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
-	
-compressor.recipeBuilder()
-	.inputs(<ore:crystalPureFluix> | <ore:crystalFluix>)
-	.outputs(<ore:plateFluix>.firstItem)
-	.EUt(120)
-	.duration(100)
-	.buildAndRegister();
 
+//Annihilation Core
 assembler.recipeBuilder()
 	.inputs(<ore:plateNetherQuartz>)
 	.inputs(<ore:plateFluix>)
@@ -358,6 +437,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 	
+//Formation Core
 assembler.recipeBuilder()
 	.inputs(<ore:plateCertusQuartz>)
 	.inputs(<ore:plateFluix>)
@@ -367,6 +447,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+//Cell Workbench
 assembler.recipeBuilder()
 	.inputs(<ore:frameGtStainlessSteel>)
 	.inputs(calculation_processor)
@@ -376,6 +457,7 @@ assembler.recipeBuilder()
 	.duration(150)
 	.buildAndRegister();
 
+//ME IO Port
 assembler.recipeBuilder()
 	.inputs(me_cable * 2)
 	.inputs(tieredGlass[2] * 2)
@@ -387,6 +469,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+//Matter Condenser
 assembler.recipeBuilder()
 	.inputs(tieredPlates[2] * 2)
 	.inputs(tieredGlass[2] * 2)
@@ -397,16 +480,18 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+//Energy Cell
 assembler.recipeBuilder()
 	.inputs(<ore:plateCertusQuartz> * 4)
 	.inputs(<ore:plateFluix> * 4)
-	.inputs(<metaitem:battery.re.mv.sodium> | <metaitem:battery.re.mv.lithium> | <metaitem:battery.re.mv.cadmium)
+	.inputs(<metaitem:battery.re.mv.sodium> | <metaitem:battery.re.mv.lithium> | <metaitem:battery.re.mv.cadmium>)
 	.inputs(<ore:frameGtAluminium>)
 	.outputs(<appliedenergistics2:energy_cell>.withTag({}))
 	.EUt(120)
 	.duration(200)
 	.buildAndRegister();
 	
+//Crafting Unit
 assembler.recipeBuilder()
 	.inputs(logic_processor)
 	.inputs(calculation_processor)
@@ -418,33 +503,38 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//1k
 assembler.recipeBuilder()
 	.inputs(logic_processor)
 	.inputs(<ore:plateCertusQuartz> * 4)
 	.inputs(<ore:plateRedstone> * 4)
 	.inputs(<ore:wireFineCopper> * 4)
+	.inputs(circuits[1])
+	.notConsumable(scripts.gregtech_globals.intCircuit(0))
 	.outputs(part_1k)
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
 
+//4k
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(part_1k * 3)
 	.inputs(<metaitem:plate.random_access_memory> * 2)
-	.inputs(circuits[1])
+	.inputs(circuits[2])
 	.notConsumable(scripts.gregtech_globals.intCircuit(0))
 	.outputs(part_4k)
 	.EUt(120)
 	.duration(150)
 	.buildAndRegister();
 	
+//16k
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(part_4k * 3)
 	.inputs(<metaitem:plate.nor_memory_chip> * 4)
 	.inputs(<metaitem:plate.nand_memory_chip> * 4)
-	.inputs(circuits[2])
+	.inputs(circuits[3])
 	.notConsumable(scripts.gregtech_globals.intCircuit(0))
 	.outputs(part_16k)
 	.EUt(480)
@@ -462,18 +552,20 @@ assembler.recipeBuilder()
 	.duration(20)
 	.buildAndRegister();
 	
+//64k
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(part_16k * 3)
 	.inputs(<metaitem:plate.central_processing_unit> * 8)
 	.inputs(<metaitem:plate.integrated_logic_circuit> * 8)
+	.inputs(circuits[4])
 	.notConsumable(scripts.gregtech_globals.intCircuit(0))
 	.outputs(part_64k)
 	.EUt(1920)
 	.duration(250)
 	.buildAndRegister();
 	
-
+//256k
 assembler.recipeBuilder()
 	.inputs(engineering_processor)
 	.inputs(logic_processor)
@@ -484,7 +576,6 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-		
 assembler.recipeBuilder()
 	.inputs(parallel_processor * 16)
 	.inputs(speculative_processor * 16)
@@ -496,7 +587,7 @@ assembler.recipeBuilder()
 	.duration(20)
 	.buildAndRegister();
 	
-	
+//1024k
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 2)
 	.inputs(logic_processor * 2)
@@ -507,7 +598,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//4096k
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 4)
 	.inputs(logic_processor * 4)
@@ -518,7 +609,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//16384k
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 8)
 	.inputs(logic_processor * 8)
@@ -529,45 +620,51 @@ assembler.recipeBuilder()
 	.duration(250)
 	.buildAndRegister();
 	
-
+//1k fluid
 assembler.recipeBuilder()
 	.inputs(logic_processor)
 	.inputs(<ore:plateCertusQuartz> * 4)
 	.inputs(<ore:plateLapis> * 4)
 	.inputs(<ore:wireFineCopper> * 4)
+	.inputs(circuits[1])
+	.notConsumable(scripts.gregtech_globals.intCircuit(1))
 	.outputs(fluid_part_1k)
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
 	
+//4k fluid
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(fluid_part_1k * 3)
 	.inputs(<metaitem:plate.random_access_memory> * 2)
-	.inputs(circuits[1])
+	.inputs(circuits[2])
 	.notConsumable(scripts.gregtech_globals.intCircuit(1))
 	.outputs(fluid_part_4k)
 	.EUt(120)
 	.duration(150)
 	.buildAndRegister();
 	
+//16k fluid
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(fluid_part_4k * 3)
 	.inputs(<metaitem:plate.nor_memory_chip> * 4)
 	.inputs(<metaitem:plate.nand_memory_chip> * 4)
-	.inputs(circuits[2])
+	.inputs(circuits[3])
 	.notConsumable(scripts.gregtech_globals.intCircuit(1))
 	.outputs(fluid_part_16k)
 	.EUt(480)
 	.duration(200)
 	.buildAndRegister();
 	
+//64k fluid
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(fluid_part_16k * 3)
 	.inputs(<metaitem:plate.central_processing_unit> * 8)
 	.inputs(<metaitem:plate.integrated_logic_circuit> * 8)
+	.inputs(circuits[4])
 	.notConsumable(scripts.gregtech_globals.intCircuit(1))
 	.outputs(fluid_part_64k)
 	.EUt(1920)
@@ -585,7 +682,7 @@ assembler.recipeBuilder()
 	.duration(20)
 	.buildAndRegister();
 	
-	
+//256k fluid
 assembler.recipeBuilder()
 	.inputs(engineering_processor)
 	.inputs(logic_processor)
@@ -596,7 +693,6 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-		
 assembler.recipeBuilder()
 	.inputs(parallel_processor * 16)
 	.inputs(speculative_processor * 16)
@@ -608,7 +704,7 @@ assembler.recipeBuilder()
 	.duration(20)
 	.buildAndRegister();
 	
-	
+//1024k fluid
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 2)
 	.inputs(logic_processor * 2)
@@ -619,7 +715,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//4096k fluid
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 4)
 	.inputs(logic_processor * 4)
@@ -630,7 +726,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//Storage Housing
 assembler.recipeBuilder()
 	.inputs(tieredGlass[2])
 	.inputs(<ore:plateRedstone>*2)
@@ -641,6 +737,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+//Advanced Storage Housing
 assembler.recipeBuilder()
 	.inputs(tieredPlates[5] * 4)
 	.inputs(tieredGlass[5] * 2)
@@ -652,7 +749,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
-
+//Fluid Storage Housing
 assembler.recipeBuilder()
 	.inputs(tieredPlates[5] * 4)
 	.inputs(tieredGlass[5] * 2)
@@ -670,6 +767,7 @@ Aggregator.removeRecipe(carbonic_fluix);
 Aggregator.removeRecipe(resonating_crystal);
 furnace.remove(fluix_steel);
 
+//Carbonic Fluix
 mixer.recipeBuilder()
 	.inputs(<ore:dustCoal>)
 	.inputs(<ore:dustFluix>)
@@ -680,6 +778,7 @@ mixer.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Fluix Steel
 blast_furnace.recipeBuilder()
 	.inputs(carbonic_fluix)
 	.inputs(<ore:ingotSteel>)
@@ -689,6 +788,7 @@ blast_furnace.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Resonating dust
 mixer.recipeBuilder()
 	.inputs(<ore:dustDiamond>)
 	.inputs(<ore:dustEnderPearl>)
@@ -699,6 +799,7 @@ mixer.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Resonating Crystal
 implosion_compressor.recipeBuilder()
 	.EUt(480)
 	.duration(10)
@@ -715,6 +816,7 @@ implosion_compressor.recipeBuilder()
 	.property("explosives", 2)
 	.buildAndRegister();
 
+//Parallel Processor
 Etcher.removeRecipe(parallel_processor);
 circuit_assembler.recipeBuilder()
 	.inputs(printed_parallel)
@@ -726,6 +828,7 @@ circuit_assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Speculative Processor
 Etcher.removeRecipe(speculative_processor);
 circuit_assembler.recipeBuilder()
 	.inputs(<threng:material:13>)
@@ -737,6 +840,7 @@ circuit_assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Resonating Crystal
 compressor.recipeBuilder()
 	.inputs(resonating_crystal * 9)
 	.outputs(<ore:blockResonatingCrystal>.firstItem)
@@ -744,6 +848,7 @@ compressor.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Resonating Plate
 cutting_saw.recipeBuilder()
 	.inputs(<ore:blockResonatingCrystal>)
 	.outputs(<ore:plateResonatingCrystal>.firstItem * 9)
@@ -751,6 +856,7 @@ cutting_saw.recipeBuilder()
 	.duration(480)
 	.buildAndRegister();
 
+//Printed Parallel Circuit
 laser_engraver.recipeBuilder()
 	.inputs(<ore:plateResonatingCrystal>)
 	.notConsumable(<ore:lensSkystone>)
@@ -759,6 +865,7 @@ laser_engraver.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Fluix Steel Plate
 metal_bender.recipeBuilder()
 	.inputs(fluix_steel)
 	.circuit(0)
@@ -767,6 +874,7 @@ metal_bender.recipeBuilder()
 	.duration(50)
 	.buildAndRegister();
 
+//Fluix Logic Unit
 circuit_assembler.recipeBuilder()
 	.inputs(logic_processor * 2)
 	.inputs(calculation_processor * 2)
@@ -777,6 +885,7 @@ circuit_assembler.recipeBuilder()
 	.duration(150)
 	.buildAndRegister();
 
+//Preemptive Assembly Unit
 assembler.recipeBuilder()
 	.inputs(<appliedenergistics2:interface>)
 	.inputs(<appliedenergistics2:crafting_accelerator> * 2)
@@ -789,11 +898,13 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Level Maintainer
 recipes.removeByRecipeName("threng:level_maintainer");
 recipes.addShaped("me_lever_maintainer", <threng:machine:4>, [[<ore:plateFluixSteel>, <appliedenergistics2:part:280>, <ore:plateFluixSteel>],
 [logic_processor, fluix_logic_unit, logic_processor], 
 [<ore:plateFluixSteel>, <appliedenergistics2:material:53>, <ore:plateFluixSteel>]]);
 
+//Mass Assembler Frame
 recipes.removeByRecipeName("threng:ma_frame");
 recipes.addShaped("mass_assembler_frame", <threng:big_assembler> * 4, [[<ore:plateFluixSteel>, <ore:craftingTableWood>, <ore:plateFluixSteel>],
 [logic_processor, <ore:frameGtStainlessSteel>, logic_processor], 
@@ -846,13 +957,42 @@ Centrifuge.removeRecipe(<appliedenergistics2:material:46>);
 //fluix crystal
 Aggregator.removeRecipe(<appliedenergistics2:material:7> * 2);
 
+//Quartz Glass
+alloy_smelter.recipeBuilder()
+	.inputs(<ore:dustCertusQuartz> | <ore:dustNetherQuartz>)
+	.inputs(<ore:blockGlass>)
+	.outputs(<appliedenergistics2:quartz_glass>)
+	.EUt(16)
+	.duration(50)
+	.buildAndRegister();
+
+//Fluix Cable
+assembler.recipeBuilder()
+	.inputs(<appliedenergistics2:quartz_glass> * 1)
+	.inputs((<ore:crystalFluix> | <ore:crystalPureFluix>) * 4)
+	.inputs(<ore:wireFineRedAlloy> * 8)
+	.outputs(<appliedenergistics2:part:16> * 8)
+	.EUt(30)
+	.duration(80)
+	.buildAndRegister();
+
+//Charged Certus dust -- BUG: item nonexistant
 macerator.recipeBuilder()
 	.inputs(<ore:crystalChargedCertusQuartz>)
 	.outputs(<ore:dustChargedCertus>.firstItem)
 	.EUt(8)
 	.duration(20)
 	.buildAndRegister();
+
+//Fluix Plate
+compressor.recipeBuilder()
+	.inputs(<ore:dustFluix>)
+	.outputs(<ore:plateFluix>.firstItem)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
 	
+//Fluix dust -- BUG: Charged dust nonexistant
 mixer.recipeBuilder()
 	.inputs(<ore:dustRedstone>)
 	.inputs(<ore:dustNetherQuartz>)
@@ -861,7 +1001,15 @@ mixer.recipeBuilder()
 	.EUt(30)
 	.duration(60)
 	.buildAndRegister();
+
+macerator.recipeBuilder()
+	.inputs(<ore:crystalFluix>)
+	.outputs(<ore:dustFluix>.firstItem)
+	.EUt(8)
+	.duration(20)
+	.buildAndRegister();
 	
+//Fluix Crystal
 chemical_bath.recipeBuilder()
 	.inputs(<ore:dustFluix>)
 	.fluidInputs(<liquid:water> * 250)
@@ -870,12 +1018,13 @@ chemical_bath.recipeBuilder()
 	.duration(10)
 	.buildAndRegister();
 
+//Pure Crystals
 autoclave.recipeBuilder()
 	.inputs(<ore:crystalFluix>)
 	.fluidInputs(<liquid:water> * 500)
 	.outputs(<ore:crystalPureFluix>.firstItem * 2)
 	.EUt(30)
-	.duration(80)
+	.duration(800)
 	.buildAndRegister();
 	
 autoclave.recipeBuilder()
@@ -883,7 +1032,7 @@ autoclave.recipeBuilder()
 	.fluidInputs(<liquid:water> * 500)
 	.outputs(<ore:crystalPureCertusQuartz>.firstItem * 2)
 	.EUt(30)
-	.duration(80)
+	.duration(800)
 	.buildAndRegister();
 	
 autoclave.recipeBuilder()
@@ -891,16 +1040,18 @@ autoclave.recipeBuilder()
 	.fluidInputs(<liquid:water> * 500)
 	.outputs(<ore:crystalPureNetherQuartz>.firstItem * 2)
 	.EUt(30)
-	.duration(80)
+	.duration(800)
 	.buildAndRegister();
 
+//Charged Certus Quartz
 polarizer.recipeBuilder()
 	.inputs(<ore:crystalCertusQuartz>)
-	.outputs(<ore:crystalChargedCertusQuartz>.firstItem)
+	.outputs(<appliedenergistics2:material:1>)
 	.EUt(30)
 	.duration(80)
 	.buildAndRegister();
 
+//Biometric Card
 assembler.recipeBuilder()
 	.inputs(engineering_processor)
 	.inputs(<ore:plateAluminium> * 2)
@@ -910,7 +1061,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//Memory Card
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(<ore:plateAluminium> * 2)
@@ -920,7 +1071,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-	
+//Entropy Manipulator
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix>)
 	.inputs(engineering_processor)
@@ -931,7 +1082,18 @@ assembler.recipeBuilder()
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
+
+//Basic card
+assembler.recipeBuilder()
+	.inputs(<ore:plateAluminium> * 2)
+	.inputs(logic_processor)
+	.inputs(<ore:wireFineRedAlloy> * 8)
+	.outputs(<appliedenergistics2:material:25> * 4)
+	.EUt(120)
+	.duration(100)
+	.buildAndRegister();
 	
+//Advanced Card
 assembler.recipeBuilder()
 	.inputs(<ore:plateStainlessSteel> * 2)
 	.inputs(calculation_processor)
@@ -941,17 +1103,8 @@ assembler.recipeBuilder()
 	.EUt(120)
 	.duration(100)
 	.buildAndRegister();
-
-
-assembler.recipeBuilder()
-	.inputs(<ore:plateAluminium> * 2)
-	.inputs(logic_processor)
-	.inputs(<ore:wireFineRedAlloy> * 8)
-	.outputs(<appliedenergistics2:material:28> * 4)
-	.EUt(120)
-	.duration(100)
-	.buildAndRegister();
 	
+//Fluid Annihilation Plane
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateLapis> * 3)
@@ -963,6 +1116,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Fluid Formation Plane
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateLapis> * 3)
@@ -974,6 +1128,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Annihilation Plane
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateRedstone> * 3)
@@ -985,6 +1140,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Formation Plane
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix> * 2)
 	.inputs(<ore:plateRedstone> * 3)
@@ -996,6 +1152,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Toggle Bus
 assembler.recipeBuilder()
 	.inputs(<ore:wireFineRedAlloy> * 4)
 	.inputs(me_cable)
@@ -1005,6 +1162,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//P2P Tunnel
 assembler.recipeBuilder()
 	.inputs(<ore:plateFluix> * 4)
 	.inputs(<ore:plateAluminium> * 2)
@@ -1014,6 +1172,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Wireless Receiver
 assembler.recipeBuilder()
 	.inputs(tieredPlates[3] * 2)
 	.inputs(<ore:pearlFluix>)
@@ -1023,6 +1182,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Wireless Crafting Terminal
 assembler.recipeBuilder()
 	.inputs(<ore:pearlFluix> * 2)
 	.inputs(<appliedenergistics2:part:360>)
@@ -1034,6 +1194,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Quantum Ring
 assembler.recipeBuilder()
 	.inputs(tieredPlates[5] * 4)
 	.inputs(parallel_processor * 2)
@@ -1046,6 +1207,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Quantum Link
 assembler.recipeBuilder()
 	.inputs(tieredGlass[5] * 4)
 	.inputs(<ore:pearlFluix> * 4)
@@ -1057,6 +1219,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+//Import Bus
 assembler.recipeBuilder()
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(annihilation_core)
@@ -1067,6 +1230,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Fluid Import Bus
 assembler.recipeBuilder()
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(annihilation_core)
@@ -1078,6 +1242,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Fluid Export Bus
 assembler.recipeBuilder()
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(formation_core)
@@ -1089,6 +1254,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
+//Export Bus
 assembler.recipeBuilder()
 	.inputs(<ore:plateAluminium> * 2)
 	.inputs(annihilation_core)
@@ -1099,6 +1265,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
+//Discretizer
 assembler.recipeBuilder()
 	.inputs(engineering_processor * 2)
 	.inputs(tieredPlates[2] * 2)
@@ -1110,33 +1277,36 @@ assembler.recipeBuilder()
 	.outputs(<ae2fc:fluid_discretizer>)
 	.buildAndRegister();
 
+//Fluid Pattern Encoder -- BUG: invis in JEI
 assembler.recipeBuilder()
 	.inputs(engineering_processor)
 	.inputs(tieredPlates[2] * 2)
 	.inputs(<ore:plateLapis> * 4)
-	.inputs(<ore:craftingTableWood>)
+	.inputs(<minecraft:crafting_table>)
 	.EUt(480)
 	.duration(100)
 	.outputs(<ae2fc:fluid_pattern_encoder>)
 	.buildAndRegister();
 
+//Fluid Packet Decoder -- BUG: invis in JEI
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(tieredPlates[2] * 2)
 	.inputs(me_cable * 2)
 	.inputs(<appliedenergistics2:fluid_interface>)
-	.inputs(<ore:blockHopper>)
+	.inputs(<minecraft:hopper>)
 	.EUt(480)
 	.duration(100)
 	.outputs(<ae2fc:fluid_packet_decoder>)
 	.buildAndRegister();
 
+//Precision Burrette -- BUG: invis in JEI
 assembler.recipeBuilder()
 	.inputs(calculation_processor)
 	.inputs(tieredPlates[2] * 2)
 	.inputs(me_cable * 2)
 	.inputs(<minecraft:bucket>)
-	.inputs(<ore:blockHopper>)
+	.inputs(<minecraft:hopper>)
 	.inputs(tieredGlass[3] * 2)
 	.EUt(480)
 	.duration(100)
@@ -1144,16 +1314,16 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 		
 //invisible jei recipes :)		
-recipes.addShaped("fluid_pattern_encoder", <ae2fc:fluid_pattern_encoder>, [[<ore:plateAluminium>, <ore:plateLapis>, <ore:plateAluminium>],
-[<ore:plateLapis>, <ore:workbench>, <ore:plateLapis>], 
-[<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
+// recipes.addShaped("fluid_pattern_encoder", <ae2fc:fluid_pattern_encoder>, [[<ore:plateAluminium>, <ore:plateLapis>, <ore:plateAluminium>],
+// [<ore:plateLapis>, <ore:workbench>, <ore:plateLapis>], 
+// [<ore:plateAluminium>, <appliedenergistics2:material:24>, <ore:plateAluminium>]]);
 
-recipes.addShaped("burette", <ae2fc:burette>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
-[<gtadditions:ga_transparent_casing:1>, <minecraft:bucket>, <gtadditions:ga_transparent_casing:1>], 
-[<appliedenergistics2:part:16>, <appliedenergistics2:material:23>, <appliedenergistics2:part:16>]]);
+// recipes.addShaped("burette", <ae2fc:burette>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
+// [<gtadditions:ga_transparent_casing:1>, <minecraft:bucket>, <gtadditions:ga_transparent_casing:1>], 
+// [<appliedenergistics2:part:16>, <appliedenergistics2:material:23>, <appliedenergistics2:part:16>]]);
 
-recipes.addShaped("fluid_packet_decoder", <ae2fc:fluid_packet_decoder>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
-[<appliedenergistics2:part:16>, <appliedenergistics2:fluid_interface>, <appliedenergistics2:part:16>], 
-[<ore:plateAluminium>, <appliedenergistics2:material:23>, <ore:plateAluminium>]]);
+// recipes.addShaped("fluid_packet_decoder", <ae2fc:fluid_packet_decoder>, [[<ore:plateAluminium>, <ore:blockHopper>, <ore:plateAluminium>],
+// [<appliedenergistics2:part:16>, <appliedenergistics2:fluid_interface>, <appliedenergistics2:part:16>], 
+// [<ore:plateAluminium>, <appliedenergistics2:material:23>, <ore:plateAluminium>]]);
 
 		
