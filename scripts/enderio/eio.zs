@@ -563,6 +563,8 @@ mixer.recipeBuilder().EUt(30).duration(100)
     .outputs(<ore:itemBinderComposite>.firstItem * 8)
     .buildAndRegister();
 
+recipes.addShapeless("eio_conduit_binder_manual", <ore:itemBinderComposite>.firstItem * 8, [<ore:sand>, <ore:sand>, <ore:sand>, <ore:sand>, <ore:gravel>, <ore:gravel>, <ore:gravel>, <ore:gravel>, <forge:bucketfilled>.withTag({FluidName: "concrete", Amount: 1000}).giveBack(<minecraft:bucket>)]);
+
 // Crytals
 val crystal_inputs = [<ore:dustDiamond>, <ore:dustEmerald>, <ore:dustRegularEnderEye>, <ore:dustAmethyst>, <ore:dustVinteum>] as IIngredient[];
 val crystal_outputs = [<ore:itemPulsatingCrystal>.firstItem, <ore:itemVibrantCrystal>.firstItem, <ore:itemEnderCrystal>.firstItem, <ore:itemAttractorCrystal>.firstItem, <ore:itemPrecientCrystal>.firstItem] as IItemStack[];
