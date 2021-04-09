@@ -187,4 +187,5 @@ global createGreenHouseRecipes as function(IIngredient, IItemStack)void = functi
 		.outputs(output * 3)
 		.EUt(16)
 		.duration(1000)
+		.buildAndRegister();
 };
