@@ -76,10 +76,6 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:itemSilicon>.add(<metaitem:plateSilicon>);
 <ore:itemSilicon>.remove(<ore:itemSilicon>.firstItem);
 
-// Ender Pearl Powder Compatability
-<ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
-
-
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
 unify_oredicts(<ore:block*>);
