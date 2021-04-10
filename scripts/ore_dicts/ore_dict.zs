@@ -66,6 +66,17 @@ function unify (ore as IOreDictEntry, p as int) {
 // Ender Pearl Powder Compatability
 <ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
 
+// Remove LazyAE2 Coal Dust
+<ore:dustCoal>.remove(<threng:material:3>);
+
+// EnderIO Dusts
+<ore:dustCopper>.remove(<enderio:item_material:26>);
+JEI.hide(<enderio:item_material:26>);
+<ore:dustTin>.remove(<enderio:item_material:27>);
+JEI.hide(<enderio:item_material:27>);
+<ore:dustCobalt>.remove(<enderio:item_material:31>);
+JEI.hide(<enderio:item_material:31>);
+
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
 unify_oredicts(<ore:block*>);
@@ -74,6 +85,7 @@ unify_oredicts(<ore:gear*>);
 unify_oredicts(<ore:stick*>);
 unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
+unify_oredicts(<ore:egg*>);
 
 
 unify(<ore:bioplastic>, 0);

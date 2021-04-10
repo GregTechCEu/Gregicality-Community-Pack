@@ -187,14 +187,14 @@ assembler.recipeBuilder()
 
 //controller
 assembler.recipeBuilder()
-	.inputs(<ore:frameGtAluminium>)
+	.inputs(<ore:frameGtBlackSteel>)
 	.inputs(circuits[2])
 	.inputs(<ore:wireFineCopper> * 16)
 	.inputs(tieredPlates[2] * 4)
-	.inputs(<ore:platePlastic> * 4)
 	.inputs(sensors[2])
 	.inputs(emitters[2])
 	.inputs(engineering_processor * 8)
+	.fluidInputs(<fluid:plastic> * 576)
 	.outputs(<appliedenergistics2:energy_acceptor>)
 	.EUt(120)
 	.duration(100)
@@ -971,14 +971,14 @@ assembler.recipeBuilder()
 	.inputs(<appliedenergistics2:quartz_glass> * 1)
 	.inputs((<ore:crystalFluix> | <ore:crystalPureFluix>) * 4)
 	.inputs(<ore:wireFineRedAlloy> * 8)
-	.outputs(<appliedenergistics2:part:16> * 8)
+	.outputs(<appliedenergistics2:part:16> * 4)
 	.EUt(30)
 	.duration(80)
 	.buildAndRegister();
 
-//Charged Certus dust -- BUG: item nonexistant
+//Charged Certus dust
 macerator.recipeBuilder()
-	.inputs(<ore:crystalChargedCertusQuartz>)
+	.inputs(<appliedenergistics2:material:1>)
 	.outputs(<ore:dustChargedCertus>.firstItem)
 	.EUt(8)
 	.duration(20)
@@ -992,7 +992,7 @@ compressor.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-//Fluix dust -- BUG: Charged dust nonexistant
+//Fluix dust
 mixer.recipeBuilder()
 	.inputs(<ore:dustRedstone>)
 	.inputs(<ore:dustNetherQuartz>)

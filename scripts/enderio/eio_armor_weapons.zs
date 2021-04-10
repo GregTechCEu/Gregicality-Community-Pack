@@ -1,83 +1,13 @@
 import crafttweaker.item.IIngredient;
 
-val name_removals = [
-    "enderio:dark_steel_upgrade_anvil",
-    "enderio:dark_steel_upgrade_anvil_i_i",
-    "enderio:dark_steel_upgrade_anvil_i_i_i",
-    "enderio:dark_steel_upgrade_direct",
-    "enderio:dark_steel_upgrade_elytra",
-    "enderio:dark_steel_upgrade_empowered",
-    "enderio:dark_steel_upgrade_empowered_ii",
-    "enderio:dark_steel_upgrade_empowered_iii",
-    "enderio:dark_steel_upgrade_empowered_iv",
-    "enderio:dark_steel_upgrade_empowered_v",
-    "enderio:dark_steel_upgrade_glide",
-    "enderio:dark_steel_upgrade_fork",
-    "enderio:dark_steel_upgrade_inventory",
-    "enderio:dark_steel_upgrade_inventory_i_i",
-    "enderio:dark_steel_upgrade_inventory_i_i_i",
-    "enderio:dark_steel_upgrade_jump_boost",
-    "enderio:dark_steel_upgrade_jump_boost_2",
-    "enderio:dark_steel_upgrade_jump_boost_3",
-    "enderio:dark_steel_upgrade_nightvision",
-    "enderio:dark_steel_upgrade_padding",
-    "enderio:dark_steel_upgrade_solar",
-    "enderio:dark_steel_upgrade_solar_1",
-    "enderio:dark_steel_upgrade_solar_2",
-    "enderio:dark_steel_upgrade_solar_3",
-    "enderio:dark_steel_upgrade_sound_detector",
-    "enderio:dark_steel_upgrade_speed_boost",
-    "enderio:dark_steel_upgrade_speed_boost_2",
-    "enderio:dark_steel_upgrade_speed_boost_3",
-    "enderio:dark_steel_upgrade_spoon",
-    "enderio:dark_steel_upgrade_step_assist",
-    "enderio:dark_steel_upgrade_flippers",
-    "enderio:dark_steel_upgrade_travel",
-    "enderio:dark_steel_upgrade_t_n_t",
-    "enderio:dark_steel_upgrade_t_n_t_2",
-    "enderio:dark_steel_upgrade_t_n_t_3",
-    "enderio:dark_steel_upgrade_t_n_t_4",
-    "enderio:dark_steel_upgrade_t_n_t_5",
-    "enderio:dark_steel_upgrade_carpet",
-    "enderio:dark_steel_upgrade_depth",
-    "enderio:dark_steel_helmet",
-    "enderio:dark_steel_chestplate",
-    "enderio:dark_steel_leggings",
-    "enderio:dark_steel_boots",
-    "enderio:the_ender",
-    "enderio:dark_bow",
-    "enderio:dark_pickaxe",
-    "enderio:dark_axe",
-    "enderio:dark_crook",
-    "enderio:end_steel_helmet",
-    "enderio:end_steel_chestplate",
-    "enderio:end_steel_leggings",
-    "enderio:end_steel_boots",
-    "enderio:end_steel_sword",
-    "enderio:ender_bow",
-    "enderio:end_pickaxe",
-    "enderio:end_axe",
-    "enderio:stellar_steel_helmet",
-    "enderio:stellar_steel_chestplate",
-    "enderio:stellar_steel_leggings",
-    "enderio:stellar_steel_boots",
-    "enderio:stellar_alloy_sword",
-    "enderio:stellar_alloy_pickaxe",
-    "enderio:stellar_alloy_axe",
-    "enderio:item_dark_steel_shield",
-    "enderio:item_end_steel_shield"
-] as string[];
-
-for item in name_removals {
-    recipes.removeByRecipeName(item);
-}
-
 // Probe Upgrade
-mods.jei.JEI.removeAndHide(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:top"}));
+mods.jei.JEI.hide(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:top"}));
 
 
 val base = <enderio:item_dark_steel_upgrade> as IIngredient;
 
+// Base
+recipes.addShaped("eio_base_upgrade", <enderio:item_dark_steel_upgrade>, [[<ore:screwDarkSteel>, <ore:plateDarkSteel>, <ore:screwDarkSteel>], [<ore:plateDarkSteel>, circuits[1], <ore:plateDarkSteel>], [<ore:screwDarkSteel>, <ore:plateDarkSteel>, <ore:screwDarkSteel>]]);
 
 // Anvil Upgrades
 // Micro Anvil
