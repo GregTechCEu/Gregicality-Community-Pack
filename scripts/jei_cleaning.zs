@@ -27,7 +27,6 @@ val hidden = [
     <minecraft:redstone_ore>,
     <minecraft:emerald_ore>,
     <minecraft:quartz_ore>,
-    <ore:ingotEnderiumBase>.firstItem,
     <ore:itemGrindingBallSignalum>.firstItem,
     <ore:itemGrindingBallEnderium>.firstItem,
     <ore:itemGrindingBallLumium>.firstItem,
