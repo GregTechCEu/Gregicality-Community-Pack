@@ -1,13 +1,45 @@
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IItemDefinition;
+import crafttweaker.item.IIngredient;
 
 val name_removals = [
-    "minecraft:cake"
+    "minecraft:cake",
+    "minecraft:tripwire_hook",
+    "minecraft:bread",
+    "minecraft:compass",
+    "minecraft:clock",
+    "minecraft:cookie",
+    "minecraft:mushroom_stew",
+    "minecraft:golden_apple",
+    "minecraft:trapdoor",
+    "minecraft:daylight_detector",
+    "minecraft:comparator",
+    "minecraft:blaze_powder",
+    "minecraft:ender_eye",
+    "minecraft:speckled_melon",
+    "minecraft:golden_carrot",
+    "gregtech:oak_planks_saw",
+    "gregtech:spruce_planks_saw",
+    "gregtech:birch_planks_saw",
+    "gregtech:jungle_planks_saw",
+    "gregtech:acacia_planks_saw",
+    "gregtech:dark_oak_planks_saw",
+    "minecraft:enchanting_table",
+    "minecraft:anvil",
+    "minecraft:piston",
+    "gregtech:piston_bronze",
+    "gregtech:piston_aluminium",
+    "gregtech:piston_steel",
+    "gregtech:piston_titanium"
 ] as string[];
 
 for item in name_removals {
     recipes.removeByRecipeName(item);
 }
+recipes.remove(<minecraft:hopper>);
 
+// Fix Wheat Conflict
+compressor.findRecipe(2, [<minecraft:wheat> * 9], null).remove();
 
 // Shulker Shell
 implosion_compressor.recipeBuilder().duration(20).EUt(30)
@@ -36,8 +68,82 @@ chemical_bath.recipeBuilder().duration(100).EUt(20)
     .buildAndRegister();
 
 // Hopper
-recipes.remove(<minecraft:hopper>);
 recipes.addShaped("gt_hopper", <minecraft:hopper>, [[<ore:plateIron>, <ore:gregWrenches>, <ore:plateIron>], [<ore:plateIron>, <ore:chestWood>, <ore:plateIron>], [null, <ore:plateIron>, null]]);
-// Nether Wart
 
+// Nether Wart
 createGreenHouseRecipes(<ore:cropNetherWart>, <ore:cropNetherWart>.firstItem);
+
+// Flint
+sifter.recipeBuilder().duration(400).EUt(16)
+    .inputs(<ore:gravel>)
+    .chancedOutput(<minecraft:flint>, 300, 60)
+    .chancedOutput(<minecraft:flint>, 1200, 180)
+    .chancedOutput(<minecraft:flint>, 1400, 240)
+    .chancedOutput(<minecraft:flint>, 2800, 320)
+    .chancedOutput(<minecraft:flint>, 3500, 500)
+    .chancedOutput(<minecraft:flint>, 4500, 540)
+    .buildAndRegister();
+
+// Snow Block
+compressor.findRecipe(2, [<minecraft:snowball> * 4], null).remove();
+macerator.findRecipe(8, [<minecraft:snow>], null).remove();
+
+// Book
+forming_press.recipeBuilder().duration(200).EUt(20)
+    .inputs(<ore:plateWood> * 2)
+    .inputs(<minecraft:paper> * 3)
+    .outputs(<minecraft:book>)
+    .buildAndRegister();
+
+// Compass
+recipes.addShaped("minecraft_compass", <minecraft:compass>, [[<ore:gregHardHammers>, <ore:plateIron>, null], [<ore:plateIron>, <ore:dustRedstone>, <ore:plateIron>], [null, <ore:plateIron>, <ore:gregScrewDrivers>]]);
+
+// Clock
+recipes.addShaped("minecraft_clock", <minecraft:clock>, [[<ore:gregHardHammers>, <ore:plateGold>, null], [<ore:plateGold>, <ore:dustRedstone>, <ore:plateGold>], [null, <ore:plateGold>, <ore:gregScrewDrivers>]]);
+
+// Wood
+// TODO Figure out how to remove GTCE saw recipes
+val plank = <minecraft:planks>.definition as IItemDefinition;
+val log = <minecraft:log>.definition as IItemDefinition;
+val log2 = <minecraft:log2>.definition as IItemDefinition;
+
+for i in 0 to 4 {
+    recipes.addShaped("minecraft_planks_saw_"~i, plank.makeStack(i)*6, [[<ore:gregSaws>], [log.makeStack(i)]]);
+}
+
+for i in 0 to 2 {
+    recipes.addShaped("minecraft_planks_saw_"~(i+4), plank.makeStack(i)*6, [[<ore:gregSaws>], [log2.makeStack(i)]]);
+}
+
+// Concrete
+val concrete_powder = <minecraft:concrete_powder>.definition as IItemDefinition;
+val concrete = <minecraft:concrete>.definition as IItemDefinition;
+
+for i in 0 to 16 {
+    chemical_bath.recipeBuilder().duration(50).EUt(8)
+        .fluidInputs([<fluid:water> * 50])
+        .inputs(concrete_powder.makeStack(i))
+        .outputs(concrete.makeStack(i))
+        .buildAndRegister();
+}
+
+// Dead Bush
+decay_chamber.recipeBuilder().duration(200).EUt(16)
+    .inputs(<minecraft:tallgrass:1>)
+    .outputs(<minecraft:deadbush>)
+    .buildAndRegister();
+
+// Enchantment Table
+recipes.addShaped("minecraft_enchantment_table", <minecraft:enchanting_table>, [[<ore:gregHardHammers>, <minecraft:book>, <ore:gregWrenches>], [<ore:gemDiamond>, <ore:blockObsidian>, <ore:gemDiamond>], [<ore:blockObsidian>, <ore:blockObsidian>, <ore:blockObsidian>]]);
+
+// Anvil
+recipes.addShaped("minecraft_anvil", <minecraft:anvil>, [[<ore:blockIron>, <ore:blockIron>, <ore:blockIron>], [<ore:gregHardHammers>, <ore:ingotIron>, <ore:gregWrenches>], [<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>]]);
+
+// Pistons
+val small_gears = [<ore:gearSmallSteel>, <ore:gearSmallAluminium>, <ore:gearSmallStainlessSteel>, <ore:gearSmallTitanium>, <ore:gearSmallHssg>] as IIngredient[];
+
+recipes.addShaped("minecraft_piston", <minecraft:piston>, [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<ore:cobblestone>, <ore:gearSmallIron>, <ore:cobblestone>], [<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]]);
+
+for i in 0 to small_gears.length {
+    recipes.addShaped("minecraft_piston_"~i, <minecraft:piston> * pow(2, i + 2), [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<ore:cobblestone>, small_gears[i], <ore:cobblestone>], [<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]]);
+}

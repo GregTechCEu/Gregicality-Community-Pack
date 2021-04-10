@@ -3,40 +3,8 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 import mods.chisel.Carving;
 
-var name_removals = [
-    "enderio:filter_big",
-    "enderio:filter_big_advanced",
-    "enderio:filter_counting",
-    "enderio:filter_existing",
-    "enderio:filter_power",
-    "enderio:filter_fluid",
-    "enderio:filter_mod",
-    "enderio:filter_advanced",
-    "enderio:filter_basic",
-    "enderio:conduit_facade_transparent",
-    "enderio:conduit_facade_transparent_hardened",
-    "enderio:conduit_facade",
-    "enderio:conduit_open_computers",
-    "enderio:conduit_liquid_ender",
-    "enderio:conduit_liquid_ender_upgrade",
-    "enderio:conduit_item",
-    "enderio:conduit_redstone_insulated",
-    "enderio:conduit_m_e_conduit",
-    "enderio:conduit_m_e_conduit_pure",
-    "enderio:conduit_m_e_conduit_alt",
-    "enderio:conduit_liquid_advanced",
-    "enderio:conduit_liquid_advanced_upgrade",
-    "enderio:upgrade_slowness",
-    "enderio:upgrade_speed",
-    "enderio:conduit_endergy_cobble"
-] as string[];
-
-for item in name_removals {
-    recipes.removeByRecipeName(item);
-}
-
 // Remove Regular Fluid Conduits
-mods.jei.JEI.removeAndHide(<enderio:item_liquid_conduit>);
+mods.jei.JEI.hide(<enderio:item_liquid_conduit>);
 
 // Big Item Filter
 val filter_screws = [<ore:screwWroughtIron>, <ore:screwSteel>, <ore:screwAluminium>, <ore:screwStainlessSteel>] as IIngredient[];
@@ -73,6 +41,9 @@ recipes.addShaped("eio_mod_filter", <enderio:item_mod_item_filter>, [[null, tier
 // Fluid Filter
 recipes.addShapeless("eio_fluid_filter", <enderio:item_fluid_filter>, [<metaitem:fluid_filter>]);
 recipes.addShaped("eio_fluid_filter_revert", <metaitem:fluid_filter>, [[<enderio:item_fluid_filter>]]);
+
+// Enchantment Filter
+recipes.addShaped("eio_enchant_filter", <enderio:item_enchantment_filter_big>, [[<enderio:item_big_item_filter>, <minecraft:book>]]);
 
 // Redstone Filters
 val redstone_filters as IItemStack[] = [

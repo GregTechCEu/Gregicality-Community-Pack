@@ -76,6 +76,7 @@ var name_removals = [
     "advancedrocketry:packblocksteel",
     "advancedrocketry:packblockiridium",
     "advancedrocketry:packblocktitanium",
+    "appliedenergistics2:decorative/quartz_block_pure",
     // Other
     "quark:hopper",
     "enderio:tweak_wood_hopper",

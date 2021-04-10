@@ -57,6 +57,7 @@ global mixer as RecipeMap =                         RecipeMap.getByName("mixer")
 global packer as RecipeMap =                        RecipeMap.getByName("packer");
 global polarizer as RecipeMap =                     RecipeMap.getByName("polarizer");
 global pyro as RecipeMap =                          RecipeMap.getByName("pyro");
+global sifter as RecipeMap =                        RecipeMap.getByName("sifter");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
 
