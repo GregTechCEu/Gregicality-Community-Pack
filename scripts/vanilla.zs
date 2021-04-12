@@ -147,3 +147,6 @@ recipes.addShaped("minecraft_piston", <minecraft:piston>, [[<ore:plankWood>, <or
 for i in 0 to small_gears.length {
     recipes.addShaped("minecraft_piston_"~i, <minecraft:piston> * pow(2, i + 2), [[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>], [<ore:cobblestone>, small_gears[i], <ore:cobblestone>], [<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]]);
 }
+
+// Door
+recipes.addShaped("minecraft_door", <minecraft:wooden_door>, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
