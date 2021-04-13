@@ -1,6 +1,4 @@
-
-
-# Open Glider something something bad oredict
+# OpenBlocks Glider
 
 //Holdy thing
 recipes.removeByRecipeName("openglider:glider_scaffolding");
@@ -36,7 +34,7 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 
-// More Furnaces ==============================================
+// More Furnaces ==============================================================
 mods.jei.JEI.hide(<morefurnaces:upgrade:0>);
 mods.jei.JEI.hide(<morefurnaces:upgrade:1>);
 mods.jei.JEI.hide(<morefurnaces:upgrade:2>);
@@ -106,10 +104,8 @@ recipes.addShaped(<morefurnaces:furnaceblock:4>, [
     [<minecraft:flint>, <minecraft:flint>, <minecraft:flint>],
     [<minecraft:nether_brick>, <minecraft:nether_brick>, <minecraft:nether_brick>]]);
 
-/*
-// Thut's Elevators =====================================================================
-       Re-enable these if the mod stops registering in postInit
-recipes.removeByRecipeName("thuttech:linker");
+
+// Thut's Elevators ===========================================================
 assembler.recipeBuilder()
     .inputs(<ore:circuitBasic>)
     .inputs(<ore:cableGtSingleSilver> * 2)
@@ -119,7 +115,6 @@ assembler.recipeBuilder()
     .duration(600)
     .buildAndRegister();
 
-recipes.removeByRecipeName("thuttech:lift");
 recipes.addShaped(<thuttech:lift>, [
     [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>],
     [<ore:gregScrewDrivers>, <ore:frameGtIron>, <ore:gregWrenches>],
@@ -128,23 +123,24 @@ assembler.recipeBuilder()
     .inputs(<ore:frameGtIron>)
     .inputs(<ore:plateIron> * 2)
     .inputs(<ore:screwIron> * 2)
-    .outputs(<thuttech:lift>)
+    .outputs(<thuttech:lift:0>)
     .EUt(16)
     .duration(80)
     .buildAndRegister();
 
-recipes.removeByRecipeName("thuttech:controller");
 assembler.recipeBuilder()
     .inputs(<ore:circuitBasic>)
     .inputs(<ore:plateIron> * 4)
     .notConsumable(<thuttech:devicelinker>)
-    .outputs(<thuttech:lift>)
+    .outputs(<thuttech:lift:1>)
     .EUt(16)
     .duration(200)
     .buildAndRegister();
-*/
 
-// OpenBlocks Elevators ==================================================
+// Metadata removing recipe for the tool
+recipes.addShapeless(<thuttech:devicelinker>, [<thuttech:devicelinker>]);
+
+// OpenBlocks Elevators =======================================================
 val removals = [
     "elevatorid:elevator_white",
     "elevatorid:elevator_orange",
@@ -162,14 +158,13 @@ val removals = [
     "elevatorid:elevator_green",
     "elevatorid:elevator_red",
     "elevatorid:elevator_black"
-] as String[];
+] as string[];
 
 for name in removals {
-    recipes.removeByName(name);
+    recipes.removeByRecipeName(name);
 }
 
 recipes.addShaped(<elevatorid:elevator_white>, [
     [<ore:plateSteel>, <ore:plateEnderPearl>, <ore:plateSteel>],
     [<ore:springSmallAluminium>, <ore:frameGtSteel>, <ore:springSmallAluminium>],
     [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
-
