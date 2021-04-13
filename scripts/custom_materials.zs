@@ -37,7 +37,9 @@ Utils.registerItem("basic_coffee_small", 1028, 0x3b220d, "GEM_VERTICAL", "gemChi
 Utils.registerItem("basic_coffee_large", 1029, 0x3b220d, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("basic_coffee_unsorted", 1030, 0x422003, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("charged_certus", 1031, 0xD2D2E6, "QUARTZ", "dust");
-
+Utils.registerItem("HSLASteel", 1032, 0x687bbe, "METALLIC", "plate");
+Utils.registerItem("Tough", 1033, 0x0c090a, "METALLIC", "plate");
+Utils.registerItem("Extreme", 1034, 0x0c090a, "METALLIC", "plate");
 
 //Adding flags
 
@@ -49,6 +51,8 @@ Utils.registerItem("charged_certus", 1031, 0xD2D2E6, "QUARTZ", "dust");
 <material:zirconium_carbide>.addFlags(["GENERATE_SPRING_SMALL"]);
 <material:electrum>.addFlags(["GENERATE_DENSE"]);
 <material:iron>.addFlags(["GENERATE_SMALL_GEAR"]);
+<material:magnesium>.addFlags(["GENERATE_FINE_WIRE"]);
+<material:beryllium>.addFlags(["GENERATE_FINE_WIRE"]);
 
 
 //ContentTweaking
