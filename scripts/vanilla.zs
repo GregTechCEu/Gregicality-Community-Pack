@@ -30,7 +30,9 @@ val name_removals = [
     "gregtech:piston_bronze",
     "gregtech:piston_aluminium",
     "gregtech:piston_steel",
-    "gregtech:piston_titanium"
+    "gregtech:piston_titanium",
+    "vanillatools:tool.hammer_iron",
+    "vanillatools:tool.hammer_diamond"
 ] as string[];
 
 for item in name_removals {
@@ -150,3 +152,8 @@ for i in 0 to small_gears.length {
 
 // Door
 recipes.addShaped("minecraft_door", <minecraft:wooden_door>, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
+
+
+// Hammers
+recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron:72>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
+recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond:36>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
