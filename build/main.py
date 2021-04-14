@@ -5,6 +5,7 @@ import requests
 import json
 import hashlib
 
+modlist = []
 basePath = os.path.realpath(__file__)[:-7] + ".."
 copyDirs = ["/scripts", "/resources", "/config", "/mods"]
 
@@ -18,8 +19,8 @@ except Exception as e:
     print("Directory exists, skipping")
 
 for mod in manifest["externalDeps"]:
-    r = requests.get(mod["url"])
     with open(basePath + "/mods/" + mod["url"].split("/")[-1], "w+b") as jar:
+        r = requests.get(mod["url"])
         for i in range(1,100):
             if i == 99:
                 raise Exception("Download failed")
@@ -27,6 +28,7 @@ for mod in manifest["externalDeps"]:
             hash = hashlib.sha256(jar.read()).hexdigest()
             if str(hash) == mod["hash"]:
                 jar.write(r.content)
+                modlist.append(mod["name"])
                 break
             else:
                 pass
@@ -40,4 +42,15 @@ for dir in copyDirs:
 shutil.copy(basePath + "/manifest.json", basePath + "/buildOut/manifest.json")
 shutil.make_archive("build/client", "zip", basePath + "/buildOut")
 
+for mod in manifest["files"]:
+    r = requests.get("https://cursemeta.dries007.net/" + str(mod["projectID"]) + "/" + str(mod["fileID"]) + ".json")
+    metadata = json.loads(r.text)
+    modlist.append(metadata["FileName"])
+
+with open(basePath + "/build/modlist.html", "w") as file:
+    data = "<html><body><h1>Gregicality Community Pach modlist</h1><ul>"
+    for mod in modlist:
+        data += "<li>" + mod + "</li>"
+    data += "</ul></body></html>"
+    file.write(data)
 
