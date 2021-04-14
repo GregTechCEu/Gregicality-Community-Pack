@@ -3,6 +3,7 @@ import os
 import shutil
 import requests
 import json
+import hashlib
 
 basePath = os.path.realpath(__file__)[:-7] + ".."
 copyDirs = ["/scripts", "/resources", "/config", "/mods"]
@@ -17,9 +18,18 @@ except Exception as e:
     print("Directory exists, skipping")
 
 for mod in manifest["externalDeps"]:
-    r = requests.get(mod)
-    with open(basePath + "/mods/" + mod.split("/")[-1], "wb") as jar:
-        jar.write(r.content)
+    r = requests.get(mod["url"])
+    with open(basePath + "/mods/" + mod["url"].split("/")[-1], "w+b") as jar:
+        for i in range(1,100):
+            if i == 99:
+                raise Exception("Download failed")
+
+            hash = hashlib.sha256(jar.read()).hexdigest()
+            if str(hash) == mod["hash"]:
+                jar.write(r.content)
+                break
+            else:
+                pass
 
 for dir in copyDirs:
     try:
