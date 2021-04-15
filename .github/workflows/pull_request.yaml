@@ -1,0 +1,36 @@
+name: Build
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Declare some variables
+      id: vars
+      shell: bash
+      run: |
+        echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
+    - name: Install requests
+      run: |
+       pip install requests
+    - name: Run Build
+      run: |
+        python build/main.py
+    - name: 'Upload Client'
+      uses: actions/upload-artifact@v2
+      with:
+        name: client
+        path: build/client.zip
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: modlist
+        path: build/modlist.html
