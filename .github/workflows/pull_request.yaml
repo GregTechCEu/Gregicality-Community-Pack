@@ -28,7 +28,7 @@ jobs:
       with:
         name: client
         path: build/client.zip
-    - name: 'Upload Artifact'
+    - name: 'Upload Modlist'
       uses: actions/upload-artifact@v2
       with:
         name: modlist

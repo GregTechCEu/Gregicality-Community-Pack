@@ -43,12 +43,14 @@ shutil.copy(basePath + "/manifest.json", basePath + "/buildOut/manifest.json")
 shutil.make_archive("build/client", "zip", basePath + "/buildOut")
 
 for mod in manifest["files"]:
-    r = requests.get("https://cursemeta.dries007.net/" + str(mod["projectID"]) + "/" + str(mod["fileID"]) + ".json")
+    url = "https://cursemeta.dries007.net/" + \
+        str(mod["projectID"]) + "/" + str(mod["fileID"]) + ".json"
+    r = requests.get(url)
     metadata = json.loads(r.text)
     modlist.append(metadata["FileName"])
 
 with open(basePath + "/build/modlist.html", "w") as file:
-    data = "<html><body><h1>Gregicality Community Pach modlist</h1><ul>"
+    data = "<html><body><h1>Gregicality Community Pack modlist</h1><ul>"
     for mod in modlist:
         data += "<li>" + mod + "</li>"
     data += "</ul></body></html>"
