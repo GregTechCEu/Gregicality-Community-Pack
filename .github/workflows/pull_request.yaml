@@ -27,7 +27,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: client
-        path: buildOut/client/*
+        path: buildOut/*
     - name: 'Upload Modlist'
       uses: actions/upload-artifact@v2
       with:
