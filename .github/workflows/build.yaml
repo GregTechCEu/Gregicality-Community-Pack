@@ -1,21 +1,12 @@
 name: Build
 
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-
-
+on: [push]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -26,7 +17,6 @@ jobs:
       id: vars
       shell: bash
       run: |
-
         echo "::set-output name=sha_short::$(git rev-parse --short $GITHUB_SHA)"
     - name: Install requests
       run: |
