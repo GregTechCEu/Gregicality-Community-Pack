@@ -10,7 +10,8 @@ val name_removals = [
     "enderio:tweak_stick_from_wood",
     "enderio:ender_defragmentation",
     "minecraft:bookshelf",
-    "minecraft:chest"
+    "minecraft:chest",
+    "buildinggadgets:templatemanager"
 ] as string[];
 
 for item in name_removals {
@@ -56,7 +57,10 @@ val hidden = [
     <ore:blockEnergeticSilver>.firstItem,
     <ore:toolTreetap>.firstItem,
     <enderio:item_capacitor_grainy>,
-    <enderio:item_capacitor_totemic>
+    <enderio:item_capacitor_totemic>,
+    <buildinggadgets:constructionblock>,
+    <buildinggadgets:template>,
+    <buildinggadgets:templatemanager>
 ] as IItemStack[];
 
 for item in hidden {

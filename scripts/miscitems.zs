@@ -168,3 +168,96 @@ recipes.addShaped(<elevatorid:elevator_white>, [
     [<ore:plateSteel>, <ore:plateEnderPearl>, <ore:plateSteel>],
     [<ore:springSmallAluminium>, <ore:frameGtSteel>, <ore:springSmallAluminium>],
     [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+
+// Building gadgets ===========================================================
+
+// Constrution paste cans
+recipes.removeByRecipeName("buildinggadgets:constructionpastecontainer");
+recipes.removeByRecipeName("buildinggadgets:constructionpastecontainert2");
+recipes.removeByRecipeName("buildinggadgets:constructionpastecontainert3");
+canner.recipeBuilder()
+    .inputs(<metaitem:fluid_cell>)
+    .inputs(<buildinggadgets:constructionpaste>)
+    .outputs(<buildinggadgets:constructionpastecontainer>)
+    .EUt(20)
+    .duration(50)
+    .buildAndRegister();
+canner.recipeBuilder()
+    .inputs(<metaitem:large_fluid_cell.steel>)
+    .inputs(<buildinggadgets:constructionpaste>)
+    .outputs(<buildinggadgets:constructionpastecontainert2>)
+    .EUt(20)
+    .duration(50)
+    .buildAndRegister();
+canner.recipeBuilder()
+    .inputs(<metaitem:large_fluid_cell.tungstensteel>)
+    .inputs(<buildinggadgets:constructionpaste>)
+    .outputs(<buildinggadgets:constructionpastecontainert3>)
+    .EUt(20)
+    .duration(50)
+    .buildAndRegister();
+
+// Dense paste
+macerator.recipeBuilder()
+    .inputs(<buildinggadgets:construction_chunk_dense>)
+    .outputs(<buildinggadgets:constructionpaste> * 2)
+    .EUt(20)
+    .duration(20)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .outputs(<buildinggadgets:construction_chunk_dense> * 9)
+    .inputs(<buildinggadgets:constructionblock_dense>)
+    .EUt(20)
+    .duration(20)
+    .buildAndRegister();
+
+compressor.recipeBuilder()
+    .outputs(<buildinggadgets:construction_chunk_dense>)
+    .inputs(<buildinggadgets:constructionpaste> * 2)
+    .EUt(20)
+    .duration(20)
+    .buildAndRegister();
+
+// Construction powder
+recipes.removeByRecipeName("buildinggadgets:constructionpastepowder");
+recipes.addShaped(<buildinggadgets:constructionblockpowder>, [
+    [null, <ore:sand> , null],
+    [<ore:sand>, <ore:itemClay>, <ore:sand>],
+    [null, <ore:sand> , null]
+]);
+
+// Gadgets
+recipes.removeByRecipeName("buildinggadgets:buildingtool");
+recipes.removeByRecipeName("buildinggadgets:exchangingtool");
+recipes.removeByRecipeName("buildinggadgets:copypastetool");
+recipes.removeByRecipeName("buildinggadgets:destructiontool");
+
+recipes.addShaped(<buildinggadgets:buildingtool>, [
+    [<metaitem:plateIron>, tieredCables[1], <metaitem:plateIron>],
+    [<metaitem:plateSapphire>, <ore:circuitBasic>, <metaitem:plateSapphire>],
+    [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
+]);
+
+recipes.addShaped(<buildinggadgets:exchangertool>, [
+    [<metaitem:plateIron>, tieredCables[1], <metaitem:plateIron>],
+    [<metaitem:plateTopaz>, <ore:circuitBasic>, <metaitem:plateTopaz>],
+    [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
+]);
+
+recipes.addShaped(<buildinggadgets:copypastetool>, [
+    [<metaitem:plateIron>, tieredCables[1], <metaitem:plateIron>],
+    [<metaitem:plateEmerald>, <ore:circuitBasic>, <metaitem:plateEmerald>],
+    [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
+]);
+recipes.addShaped(<buildinggadgets:copypastetool>, [
+    [<metaitem:plateIron>, tieredCables[1], <metaitem:plateIron>],
+    [<metaitem:plateOlivine>, <ore:circuitBasic>, <metaitem:plateOlivine>],
+    [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
+]);
+
+recipes.addShaped(<buildinggadgets:destructiontool>, [
+    [<metaitem:plateIron>, tieredCables[1], <metaitem:plateIron>],
+    [<metaitem:plateDiamond>, <ore:circuitBasic>, <metaitem:plateDiamond>],
+    [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
+]);
