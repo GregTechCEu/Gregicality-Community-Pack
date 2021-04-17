@@ -218,9 +218,9 @@ fluid_solidifier.recipeBuilder()
 	.buildAndRegister();
 	
 mixer.recipeBuilder()
-	.inputs(<ore:dustSugar> * 2)
-	.inputs(<ore:dustWheat> * 5)
-	.inputs(<ore:dustSodiumBicarbonate>)
+	.inputs(<ore:dustSugar> * 1)
+	.inputs(<ore:dustWheat> * 3)
+	.inputs(<ore:dustSodiumBicarbonate> * 6)
 	.fluidInputs(<liquid:butter> * 2000)
 	.fluidInputs(<liquid:milk> * 500)
 	.outputs(<ore:crushedCentrifugedMatterGraham>.firstItem * 8)
