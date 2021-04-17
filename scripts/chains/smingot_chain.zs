@@ -10,7 +10,7 @@ for craft_name in craft_removals {
 	recipes.removeByRecipeName(craft_name);
 }
 
-assembler.recipeBuilder()
+forming_press.recipeBuilder()
 	.inputs(<ore:ingotMarshmallow>)
 	.inputs(<nuclearcraft:graham_cracker> * 2)
 	.inputs(<ore:ingotHotMilkChocolate>)
@@ -19,7 +19,7 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 	
-assembler.recipeBuilder()
+forming_press.recipeBuilder()
 	.inputs(<ore:ingotMarshmallow>)
 	.inputs(<nuclearcraft:smore> * 2)
 	.inputs(<ore:ingotHotMilkChocolate>)
@@ -28,7 +28,7 @@ assembler.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 	
-assembler.recipeBuilder()
+forming_press.recipeBuilder()
 	.inputs(<ore:ingotMarshmallow>)
 	.inputs(<nuclearcraft:moresmore> * 2)
 	.inputs(<ore:ingotHotMilkChocolate>)
@@ -218,8 +218,8 @@ fluid_solidifier.recipeBuilder()
 	.buildAndRegister();
 	
 mixer.recipeBuilder()
-	.inputs(<ore:dustSugar>)
-	.inputs(<ore:dustWheat> * 3)
+	.inputs(<ore:dustSugar> * 2)
+	.inputs(<ore:dustWheat> * 5)
 	.inputs(<ore:dustSodiumBicarbonate>)
 	.fluidInputs(<liquid:butter> * 2000)
 	.fluidInputs(<liquid:milk> * 500)
@@ -258,18 +258,26 @@ fermenter.recipeBuilder()
 	.duration(1200)
 	.buildAndRegister();
 
-mixer.recipeBuilder()
-	.inputs(<ore:dustPotassiumCarbonate>)
+chemical_bath.recipeBuilder()
+	.fluidInputs(<liquid:potassium_carbonate_solution> * 0)
 	.inputs(<ore:crushedCentrifugedChocolateLiquorRefined>)
 	.outputs(<ore:crushedCentrifugedChocolateLiquorDutched>.firstItem)
 	.EUt(540)
 	.duration(160)
 	.buildAndRegister();
 
+mixer.recipeBuilder()
+	.fluidInputs(<liquid:water> * 1000)
+	.inputs(<ore:dustPotassiumCarbonate> * 6)
+	.fluidOutputs(<liquid:potassium_carbonate_solution> * 1000)
+	.EUt(30)
+	.duration(40)
+	.buildAndRegister();
+
 fluid_heater.recipeBuilder()
 	.fluidInputs(<liquid:unheated_cane_syrup> * 1000)
 	.property("circuit", 0)
-	.fluidOutputs(<liquid:cane_syrup> * 2000)
+	.fluidOutputs(<liquid:cane_syrup> * 1000)
 	.EUt(120)
 	.duration(80)
 	.buildAndRegister();
@@ -277,7 +285,7 @@ fluid_heater.recipeBuilder()
 mixer.recipeBuilder()
 	.inputs(<ore:dustGlucose> * 9)
 	.fluidInputs(<liquid:water> * 2000)
-	.fluidOutputs(<liquid:unheated_cane_syrup> * 2400)
+	.fluidOutputs(<liquid:unheated_cane_syrup> * 2000)
 	.EUt(80)
 	.duration(260)
 	.buildAndRegister();
@@ -310,7 +318,7 @@ macerator.recipeBuilder()
 	.duration(15)
 	.buildAndRegister();
 	
-large_centrifuge.recipeBuilder()
+centrifuge.recipeBuilder()
 	.inputs(<nuclearcraft:roasted_cocoa_beans> * 6)
 	.fluidInputs(<liquid:steam> * 10000)
 	.outputs(<ore:gemChippedCocoaNib>.firstItem * 6)

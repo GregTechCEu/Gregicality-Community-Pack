@@ -65,6 +65,7 @@ fluid.yolk=Yolk
 fluid.marshmallow_syrup_mixture=Marshmallow Syrup Mixture
 fluid.marshmallow_foam=Marshmallow Foam
 fluid.butter=Butter
+fluid.potassium_carbonate_solution=Potassium Carbonate Solution
 
 # EnderIO
 item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
