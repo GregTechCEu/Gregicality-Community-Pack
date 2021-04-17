@@ -27,7 +27,7 @@ val smores as IItemStack[] = [
 	<contenttweaker:heartofasmogus>];
 var eupertick = 1920;
 var ticks = 25;
-for i in 1 to 11 {
+for i in 1 to 12 {
 	if (i < 7) { 
 		forming_press.recipeBuilder()
 			.inputs(<ore:ingotMarshmallow>)
