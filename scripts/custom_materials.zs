@@ -40,6 +40,25 @@ Utils.registerItem("charged_certus", 1031, 0xD2D2E6, "QUARTZ", "dust");
 Utils.registerItem("HSLASteel", 1032, 0x687bbe, "METALLIC", "plate");
 Utils.registerItem("Tough", 1033, 0x0c090a, "METALLIC", "plate");
 Utils.registerItem("Extreme", 1034, 0x0c090a, "METALLIC", "plate");
+Utils.registerItem("cocoa_hull", 1035, 0x362c25, "GEM_VERTICAL", "gemChipped");
+Utils.registerItem("cocoa_nib", 1036, 0x635943, "GEM_VERTICAL", "gemChipped");
+Utils.registerItem("chocolate_liquor", 1037, 0x635943, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_refined", 1038, 0x605528, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_dutched", 1039, 0x695143, "DULL", "crushedCentrifuged");
+Utils.registerItem("press_cake_dutched", 1040, 0x997e6e, "DULL", "plateDense");
+Utils.registerItem("press_cake", 1041, 0x948881, "DULL", "plateDense");
+Utils.registerItem("press_cake_graded", 1042, 0xa67f68, "DULL", "plateDense");
+Utils.registerItem("milk_chocolate", 1043, 0x636c61, "DULL", "ingotHot");
+Utils.registerItem("matter_marshmallow", 1044, 0xe6e0dc, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham", 1045, 0xf0c25d, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham_hot", 1046, 0xffe1a1, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham_hot", 1047, 0xffe1a1, "DULL", "plateDense");
+Utils.registerItem("matter_graham_hot", 1048, 0xffe1a1, "DULL", "plate");
+Utils.registerItem("cracker_graham_ungraded", 1049, 0xf0c25d, "DULL", "plate");
+Utils.registerItem("chocolate_liquor_pressed", 1050, 0xa6795a, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_dutched_pressed", 1051, 0xab7550, "DULL", "crushedCentrifuged");
+
+
 
 //Adding flags
 
@@ -59,5 +78,21 @@ Utils.registerItem("Extreme", 1034, 0x0c090a, "METALLIC", "plate");
 
 var coffee = VanillaFactory.createFluid("coffee", 0x36312e);
 var energized_coffee = VanillaFactory.createFluid("energized_coffee", 0x695934);
+var unheated_cane_syrup = VanillaFactory.createFluid("unheated_cane_syrup", 0xf0efe4);
+var cane_syrup = VanillaFactory.createFluid("cane_syrup", 0xf2f1dc);
+var sweetened_diluted_cane_syrup_mixture = VanillaFactory.createFluid("sweetened_diluted_cane_syrup_mixture", 0xdedcc8);
+var albumen = VanillaFactory.createFluid("albumen", 0xfffef7);
+var yolk = VanillaFactory.createFluid("yolk", 0xffdf00);
+var marshmallow_syrup_mixture = VanillaFactory.createFluid("marshmallow_syrup_mixture", 0xe6e0dc);
+var marshmallow_foam = VanillaFactory.createFluid("marshmallow_foam", 0xe6e0dc);
+var butter = VanillaFactory.createFluid("butter", 0xffef82);
 coffee.register();
 energized_coffee.register();
+unheated_cane_syrup.register();
+cane_syrup.register();
+sweetened_diluted_cane_syrup_mixture.register();
+albumen.register();
+yolk.register();
+marshmallow_syrup_mixture.register();
+marshmallow_foam.register();
+butter.register();
