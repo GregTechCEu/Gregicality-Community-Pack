@@ -1,7 +1,6 @@
 # GregTech
 metaitem.stellar_alloy_screw.name=Stellar Alloy Screw
 metaitem.stellar_alloy_plate.name=Stellar Alloy Plate
-metaitem.stellar_alloy_bolt.name=Stellar Alloy Bolt
 metaitem.dark_steel_bolt.name=Dark Steel Bolt
 metaitem.dark_steel_dust.name=Dark Steel Dust
 metaitem.dark_steel_screw.name=Dark Steel Screw
@@ -17,12 +16,9 @@ metaitem.resonating_crystal_dust.name=Resonating Crystal Dust
 metaitem.fluix_plate.name=Fluix Crystal Plate
 metaitem.skystone_lens.name=Skystone Lens
 metaitem.charged_certus_dust.name=Charged Certus Quartz Dust
-metaitem.Extreme_plate.name=Extreme Alloy Plate
-metaitem.Tough_plate.name=Tough Alloy Plate
-metaitem.HSLASteel_plate.name=HSLA Steel Plate
 
 
-
+# Coffee Chain
 metaitem.basic_coffee_unsorted_gem_chipped.name=Unsorted Raw Coffee Beans
 metaitem.basic_coffee_large_gem_chipped.name=Large Raw Coffee Beans
 metaitem.basic_coffee_small_gem_chipped.name=Small Raw Coffee Beans
@@ -40,6 +36,8 @@ metaitem.coffee_grounds_dust.name=Coffee Grounds
 fluid.coffee=Coffee
 fluid.energized_coffee=Energizing Coffee
 
+
+# Smore Chain
 metaitem.chocolate_liquor_dutched_pressed_crushed_centrifuged.name=Dutched Pressed Chocolate Liquor
 metaitem.chocolate_liquor_pressed_crushed_centrifuged.name=Pressed Chocolate Liquor
 metaitem.cracker_graham_ungraded_plate.name=Ungraded Graham Cracker
@@ -67,6 +65,7 @@ fluid.marshmallow_foam=Marshmallow Foam
 fluid.butter=Butter
 fluid.potassium_carbonate_solution=Potassium Carbonate Solution
 
+
 # EnderIO
 item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
 item.item_capacitor_energetic_silver.name=Endergetic Capacitor V2.0
@@ -92,6 +91,6 @@ enderio.item_endergy_conduit_pink_slime.name=UMV Energy Conduit
 enderio.item_endergy_conduit_melodic.name=UXV Energy Conduit
 enderio.item_endergy_conduit_stellar.name=MAX Energy Conduit
 
-# Actually Additions
-item.actuallyadditions.item_misc_knife_handle.name=Handle
-item.actuallyadditions.item_coffee_beans.name=Coffee Cherry
+
+# Nuclearcraft
+item.nuclearcraft.compound.energetic_blend.name=Extreme Blend
