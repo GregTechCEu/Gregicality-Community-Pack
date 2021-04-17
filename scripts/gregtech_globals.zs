@@ -60,6 +60,7 @@ global polarizer as RecipeMap =                     RecipeMap.getByName("polariz
 global pyro as RecipeMap =                          RecipeMap.getByName("pyro");
 global sifter as RecipeMap =                        RecipeMap.getByName("sifter");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
+global vacuum_freezer as RecipeMap = 				RecipeMap.getByName("vacuum_freezer");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
 
 // Tiered Components
