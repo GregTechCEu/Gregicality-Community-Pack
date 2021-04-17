@@ -20,6 +20,7 @@ val smores as IItemStack[] = [
 	<contenttweaker:eightsmore>, 
 	<contenttweaker:sixteensmore>, 
 	<contenttweaker:thirtytwosmore>, 
+	<contenttweaker:sixtyfoursmore>,
 	<contenttweaker:smogus>, 
 	<contenttweaker:doublesmogus>, 
 	<contenttweaker:quadsmogus>, 
@@ -50,9 +51,6 @@ for i in 1 to 11 {
 	}
 	eupertick *= 4;
 	ticks *= 2;
-	if (i == 3) {
-		eupertick *= 4;
-	}
 }
 
 forming_press.recipeBuilder()
