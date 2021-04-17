@@ -13,10 +13,9 @@ for craft_name in craft_removals {
 }
 
 val smores as IItemStack[] = [<nuclearcraft:graham_cracker>, <nuclearcraft:smore>, <nuclearcraft:moresmore>, <nuclearcraft:foursmore>, <contenttweaker:eightsmore>, <contenttweaker:sixteensmore>, <contenttweaker:thirtytwosmore>, <contenttweaker:smogus>, <contenttweaker:doublesmogus>, <contenttweaker:quadsmogus>, <contenttweaker:heartofasmogus>];
-val ivalues as int[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //To prevent out of bounds exceptions.
 var eupertick = 1920;
 var ticks = 25;
-for i in ivalues {
+for i in 1 to 11 {
 	if (i < 7) { 
 		forming_press.recipeBuilder()
 			.inputs(<ore:ingotMarshmallow>)
