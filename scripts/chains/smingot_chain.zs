@@ -223,7 +223,7 @@ mixer.recipeBuilder()
 	.inputs(<ore:dustSodiumBicarbonate> * 6)
 	.fluidInputs(<liquid:butter> * 2000)
 	.fluidInputs(<liquid:milk> * 500)
-	.outputs(<ore:crushedCentrifugedMatterGraham>.firstItem * 8)
+	.outputs(<ore:crushedCentrifugedMatterGraham>.firstItem * 10)
 	.EUt(80)
 	.duration(200)
 	.buildAndRegister();
@@ -283,7 +283,7 @@ fluid_heater.recipeBuilder()
 	.buildAndRegister();
 
 mixer.recipeBuilder()
-	.inputs(<ore:dustGlucose> * 9)
+	.inputs(<ore:dustGlucose> * 24)
 	.fluidInputs(<liquid:water> * 2000)
 	.fluidOutputs(<liquid:unheated_cane_syrup> * 2000)
 	.EUt(80)
