@@ -20,13 +20,14 @@ val smores as IItemStack[] = [
 	<contenttweaker:eightsmore>, 
 	<contenttweaker:sixteensmore>, 
 	<contenttweaker:thirtytwosmore>, 
+	<contenttweaker:sixtyfoursmore>,
 	<contenttweaker:smogus>, 
 	<contenttweaker:doublesmogus>, 
 	<contenttweaker:quadsmogus>, 
 	<contenttweaker:heartofasmogus>];
 var eupertick = 1920;
 var ticks = 25;
-for i in 1 to 11 {
+for i in 1 to 12 {
 	if (i < 7) { 
 		forming_press.recipeBuilder()
 			.inputs(<ore:ingotMarshmallow>)
@@ -50,9 +51,6 @@ for i in 1 to 11 {
 	}
 	eupertick *= 4;
 	ticks *= 2;
-	if (i == 3) {
-		eupertick *= 4;
-	}
 }
 
 forming_press.recipeBuilder()
