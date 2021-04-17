@@ -1,4 +1,6 @@
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+
 
 val craft_removals as string[] = 
 [
@@ -8,6 +10,39 @@ val craft_removals as string[] =
 ];
 for craft_name in craft_removals {
 	recipes.removeByRecipeName(craft_name);
+}
+
+val smores as IItemStack[] = [<nuclearcraft:graham_cracker>, <nuclearcraft:smore>, <nuclearcraft:moresmore>, <nuclearcraft:foursmore>, <contenttweaker:eightsmore>, <contenttweaker:sixteensmore>, <contenttweaker:thirtytwosmore>, <contenttweaker:smogus>, <contenttweaker:doublesmogus>, <contenttweaker:quadsmogus>, <contenttweaker:heartofasmogus>];
+val ivalues as int[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //To prevent out of bounds exceptions.
+var eupertick = 1920;
+var ticks = 25;
+for i in ivalues {
+	if (i < 7) { 
+		forming_press.recipeBuilder()
+			.inputs(<ore:ingotMarshmallow>)
+			.inputs(<ore:ingotHotMilkChocolate>)
+			.inputs(smores[i - 1] * 2)
+			.outputs(smores[i])
+			.EUt(eupertick)
+			.duration(ticks)
+			.buildAndRegister();
+			
+	}
+	else {
+		stellar_forge.recipeBuilder()
+			.inputs(<ore:ingotMarshmallow>)
+			.inputs(<ore:ingotHotMilkChocolate>)
+			.inputs(smores[i - 1] * 2)
+			.outputs(smores[i])
+			.EUt(eupertick)
+			.duration(ticks)
+			.buildAndRegister();
+	}
+	eupertick *= 4;
+	ticks *= 2;
+	if (i == 3) {
+		eupertick *= 4;
+	}
 }
 
 forming_press.recipeBuilder()
@@ -37,6 +72,8 @@ forming_press.recipeBuilder()
 	.duration(400)
 	.buildAndRegister();
 	
+	
+
 blast_furnace.recipeBuilder()
 	.inputs(<ore:ingotChocolate>)
 	.outputs(<ore:ingotHotMilkChocolate>.firstItem)
