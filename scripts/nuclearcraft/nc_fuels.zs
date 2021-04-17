@@ -252,46 +252,80 @@ val nc_solid_fuels_components = [
     [<ore:dustCalifornium251>, <ore:dustCalifornium252>]
 ] as IIngredient[][];
 
+// TODO Why are all fuel and oxide etc. recipes being registered twice?
+
 // Regular Fuels
 for i in 0 to nc_solid_fuels_components.length {
 
-    if (nc_solid_fuels[i] has <ore:ingotTBU>) {
-        continue;
+    if (i % 2 == 0) {
+        forming_press.recipeBuilder().duration(100).EUt(24)
+            .inputs(nc_solid_fuels_components[i][0])
+            .inputs(nc_solid_fuels_components[i][1] * 8)
+            .notConsumable(<metaitem:shape.mold.cylinder>)
+            .circuit(0)
+            .outputs(nc_solid_fuels[i * 2].itemArray[0] * 9)
+            .buildAndRegister();
+
+        thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
+            .inputs(nc_solid_fuels[i * 2] * 9)
+            .outputs(nc_solid_fuels_components[i][0].itemArray[0])
+            .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 8)
+            .buildAndRegister();
+        
+        recipes.remove(nc_solid_fuels[i * 2].itemArray[0]);
+        furnace.remove(nc_solid_fuels[i * 2].itemArray[0]);
+
+        forming_press.recipeBuilder().duration(100).EUt(24)
+            .inputs(nc_solid_fuels_components[i][0] * 3)
+            .inputs(nc_solid_fuels_components[i][1] * 5)
+            .notConsumable(<metaitem:shape.mold.cylinder>)
+            .circuit(1)
+            .outputs(nc_solid_fuels[(i * 2) + 1].itemArray[0] * 9)
+            .buildAndRegister();
+
+        thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
+            .inputs(nc_solid_fuels[(i * 2) + 1] * 9)
+            .outputs(nc_solid_fuels_components[i][0].itemArray[0] * 3)
+            .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 5)
+            .buildAndRegister();
+
+        recipes.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
+        furnace.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
+    } else if (i == nc_solid_fuels_components.length - 1) {
+        forming_press.recipeBuilder().duration(100).EUt(24)
+            .inputs(nc_solid_fuels_components[i][0])
+            .inputs(nc_solid_fuels_components[i][1] * 8)
+            .notConsumable(<metaitem:shape.mold.cylinder>)
+            .circuit(0)
+            .outputs(nc_solid_fuels[i * 2].itemArray[0] * 9)
+            .buildAndRegister();
+
+        thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
+            .inputs(nc_solid_fuels[i * 2] * 9)
+            .outputs(nc_solid_fuels_components[i][0].itemArray[0])
+            .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 8)
+            .buildAndRegister();
+        
+        recipes.remove(nc_solid_fuels[i * 2].itemArray[0]);
+        furnace.remove(nc_solid_fuels[i * 2].itemArray[0]);
+
+        forming_press.recipeBuilder().duration(100).EUt(24)
+            .inputs(nc_solid_fuels_components[i][0] * 3)
+            .inputs(nc_solid_fuels_components[i][1] * 5)
+            .notConsumable(<metaitem:shape.mold.cylinder>)
+            .circuit(1)
+            .outputs(nc_solid_fuels[(i * 2) + 1].itemArray[0] * 9)
+            .buildAndRegister();
+
+        thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
+            .inputs(nc_solid_fuels[(i * 2) + 1] * 9)
+            .outputs(nc_solid_fuels_components[i][0].itemArray[0] * 3)
+            .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 5)
+            .buildAndRegister();
+
+        recipes.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
+        furnace.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
     }
-
-    forming_press.recipeBuilder().duration(100).EUt(24)
-        .inputs(nc_solid_fuels_components[i][0])
-        .inputs(nc_solid_fuels_components[i][1] * 8)
-        .notConsumable(<metaitem:shape.mold.cylinder>)
-        .circuit(0)
-        .outputs(nc_solid_fuels[i * 2].itemArray[0] * 9)
-        .buildAndRegister();
-
-    thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
-        .inputs(nc_solid_fuels[i * 2] * 9)
-        .outputs(nc_solid_fuels_components[i][0].itemArray[0])
-        .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 8)
-        .buildAndRegister();
-    
-    recipes.remove(nc_solid_fuels[i * 2].itemArray[0]);
-    furnace.remove(nc_solid_fuels[i * 2].itemArray[0]);
-
-    forming_press.recipeBuilder().duration(100).EUt(24)
-        .inputs(nc_solid_fuels_components[i][0] * 3)
-        .inputs(nc_solid_fuels_components[i][1] * 5)
-        .notConsumable(<metaitem:shape.mold.cylinder>)
-        .circuit(1)
-        .outputs(nc_solid_fuels[(i * 2) + 1].itemArray[0] * 9)
-        .buildAndRegister();
-
-    thermal_centrifuge.recipeBuilder().duration(100).EUt(120)
-        .inputs(nc_solid_fuels[(i * 2) + 1] * 9)
-        .outputs(nc_solid_fuels_components[i][0].itemArray[0] * 3)
-        .outputs(nc_solid_fuels_components[i][1].itemArray[0] * 5)
-        .buildAndRegister();
-
-    recipes.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
-    furnace.remove(nc_solid_fuels[(i * 2) + 1].itemArray[0]);
 }
 
 // TBU
