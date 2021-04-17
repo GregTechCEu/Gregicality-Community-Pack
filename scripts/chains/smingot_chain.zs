@@ -12,7 +12,18 @@ for craft_name in craft_removals {
 	recipes.removeByRecipeName(craft_name);
 }
 
-val smores as IItemStack[] = [<nuclearcraft:graham_cracker>, <nuclearcraft:smore>, <nuclearcraft:moresmore>, <nuclearcraft:foursmore>, <contenttweaker:eightsmore>, <contenttweaker:sixteensmore>, <contenttweaker:thirtytwosmore>, <contenttweaker:smogus>, <contenttweaker:doublesmogus>, <contenttweaker:quadsmogus>, <contenttweaker:heartofasmogus>];
+val smores as IItemStack[] = [
+	<nuclearcraft:graham_cracker>, 
+	<nuclearcraft:smore>, 
+	<nuclearcraft:moresmore>, 
+	<nuclearcraft:foursmore>, 
+	<contenttweaker:eightsmore>, 
+	<contenttweaker:sixteensmore>, 
+	<contenttweaker:thirtytwosmore>, 
+	<contenttweaker:smogus>, 
+	<contenttweaker:doublesmogus>, 
+	<contenttweaker:quadsmogus>, 
+	<contenttweaker:heartofasmogus>];
 var eupertick = 1920;
 var ticks = 25;
 for i in 1 to 11 {
