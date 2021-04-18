@@ -3,7 +3,7 @@
         "version": "1.12.2",
         "modLoaders": [
             {
-            "id": "forge-14.23.5.2855",
+            "id": "forge-14.23.5.2847",
             "primary": true
             }
         ]
@@ -13,7 +13,7 @@
     "manifestVersion": 1,
     "version": "1.0",
     "author": "hjae",
-    "externalDeps":["https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v34b/appliedenergistics2-rv6-stable-7.omni-fixes-v34b.jar"],
+    "externalDeps":["https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v35/appliedenergistics2-rv6-stable-7.omni-fixes-v35.jar"],
     "name": "GCM2",
     "files":[
         {
@@ -28,7 +28,7 @@
         },
         {
             "projectID":238222,
-            "fileID":3040523,
+            "fileID":3043174,
             "required":true
         },
         {
@@ -68,7 +68,7 @@
         },
         {
             "projectID":239197,
-            "fileID":3202907,
+            "fileID":3268209,
             "required":true
         },
         {
@@ -183,7 +183,7 @@
         },
         {
             "projectID":293327,
-            "fileID":3249033,
+            "fileID":3266351,
             "required":true
         },
         {
@@ -198,7 +198,7 @@
         },
         {
             "projectID":386188,
-            "fileID":3112569,
+            "fileID":3273732,
             "required":true
         },
         {
@@ -423,12 +423,12 @@
         },
         {
             "projectID":336895,
-            "fileID":3072330,
+            "fileID":3273610,
             "required":true
         },
         {
             "projectID":362056,
-            "fileID":3239671,
+            "fileID":3273158,
             "required":true
         },
         {
@@ -453,7 +453,7 @@
         },
         {
             "projectID":465261,
-            "fileID":3260511,
+            "fileID":3269250,
             "required":true
         },
         {
@@ -493,6 +493,66 @@
         {
             "projectID":308380,
             "fileID":3214216,
+            "required":true
+        },
+        {
+            "projectID":230976,
+            "fileID":2463272,
+            "required":true
+        },
+        {
+            "projectID":391401,
+            "fileID":3049346,
+            "required":true
+        },
+        {
+            "projectID":286098,
+            "fileID":2524176,
+            "required":true
+        },
+        {
+            "projectID":257818,
+            "fileID":3265077,
+            "required":true
+        },
+        {
+            "projectID":257814,
+            "fileID":3227279,
+            "required":true
+        },
+        {
+            "projectID":361579,
+            "fileID":3245793,
+            "required":true
+        },
+        {
+            "projectID":224375,
+            "fileID":2712805,
+            "required":true
+        },
+        {
+            "projectID":224428,
+            "fileID":2713584,
+            "required":true
+        },
+        {
+            "projectID":376351,
+            "fileID":3015136,
+            "required":true
+        },
+        {
+            "projectID":257573,
+            "fileID":3248033,
+            "required":true
+        },
+        {
+            "projectID":244023,
+            "fileID":2463886,
+            "required":true
+        },
+        {
+            "projectID":383632,
+            "fileID":3056455,
             "required":true
         }
     ]

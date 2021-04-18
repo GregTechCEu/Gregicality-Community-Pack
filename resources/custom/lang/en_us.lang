@@ -1,5 +1,69 @@
 # GregTech
+metaitem.stellar_alloy_screw.name=Stellar Alloy Screw
+metaitem.stellar_alloy_plate.name=Stellar Alloy Plate
+metaitem.dark_steel_bolt.name=Dark Steel Bolt
+metaitem.dark_steel_dust.name=Dark Steel Dust
+metaitem.dark_steel_screw.name=Dark Steel Screw
+metaitem.dark_steel_plate.name=Dark Steel Plate
+metaitem.dark_steel_stick.name=Dark Steel Stick
+metaitem.end_steel_screw.name=End Steel Screw
+metaitem.end_steel_plate.name=End Steel Plate
+metaitem.end_steel_stick.name=End Steel Stick
+metaitem.end_steel_bolt.name=End Steel Bolt
+metaitem.fluix_steel_plate.name=Fluix Steel Plate
+metaitem.resonating_crystal_plate.name=Resonating Crystal Plate
+metaitem.resonating_crystal_dust.name=Resonating Crystal Dust
+metaitem.fluix_plate.name=Fluix Crystal Plate
+metaitem.skystone_lens.name=Skystone Lens
+metaitem.charged_certus_dust.name=Charged Certus Quartz Dust
 
+
+# Coffee Chain
+metaitem.basic_coffee_unsorted_gem_chipped.name=Unsorted Raw Coffee Beans
+metaitem.basic_coffee_large_gem_chipped.name=Large Raw Coffee Beans
+metaitem.basic_coffee_small_gem_chipped.name=Small Raw Coffee Beans
+metaitem.wet_coffee_large_gem_chipped.name=Large Fermented Coffee Beans
+metaitem.wet_coffee_small_gem_chipped.name=Small Fermented Coffee Beans
+metaitem.dried_coffee_large_gem_chipped.name=Large Dried Coffee Beans
+metaitem.dried_coffee_small_gem_chipped.name=Small Dried Coffee Beans
+metaitem.hulled_coffee_large_gem_chipped.name=Large Hulled Coffee Beans
+metaitem.hulled_coffee_small_gem_chipped.name=Small Hulled Coffee Beans
+metaitem.graded_coffee_large_gem_chipped.name=Large Graded Coffee Beans
+metaitem.graded_coffee_small_gem_chipped.name=Small Graded Coffee Beans
+metaitem.roasted_coffee_large_gem_chipped.name=Large Roasted Coffee Beans
+metaitem.roasted_coffee_small_gem_chipped.name=Small Roasted Coffee Beans
+metaitem.coffee_grounds_dust.name=Coffee Grounds
+fluid.coffee=Coffee
+fluid.energized_coffee=Energizing Coffee
+
+
+# Smore Chain
+metaitem.chocolate_liquor_dutched_pressed_crushed_centrifuged.name=Dutched Pressed Chocolate Liquor
+metaitem.chocolate_liquor_pressed_crushed_centrifuged.name=Pressed Chocolate Liquor
+metaitem.cracker_graham_ungraded_plate.name=Ungraded Graham Cracker
+metaitem.matter_graham_hot_plate.name=Hot Graham Cracker
+metaitem.matter_graham_hot_plate_dense.name=Hot Graham Cracker Dough Chunk
+metaitem.matter_graham_hot_crushed_centrifuged.name=Hot Graham Cracker Dough
+metaitem.matter_graham_crushed_centrifuged.name=Graham Cracker Dough
+metaitem.matter_marshmallow_crushed_centrifuged.name=Marshmallow Matter
+metaitem.milk_chocolate_ingot_hot.name=Melting Milk Chocolate
+metaitem.press_cake_graded_plate_dense.name=Graded Chocolate Press Cake
+metaitem.press_cake_plate_dense.name=Chocolate Press Cake
+metaitem.press_cake_dutched_plate_dense.name=Dutched Chocolate Press Cake
+metaitem.chocolate_liquor_crushed_centrifuged.name=Chocolate Liquor
+metaitem.chocolate_liquor_refined_crushed_centrifuged.name=Refined Chocolate Liquor
+metaitem.chocolate_liquor_dutched_crushed_centrifuged.name=Dutched Chocolate Liquor
+metaitem.cocoa_nib_gem_chipped.name=Cocoa Nib
+metaitem.cocoa_hull_gem_chipped.name=Cocoa Hull
+fluid.unheated_cane_syrup=Unheated Cane Syrup
+fluid.cane_syrup=Cane Syrup
+fluid.sweetened_diluted_cane_syrup_mixture=Sweetened Diluted Cane Syrup Mixture
+fluid.albumen=Albumen
+fluid.yolk=Yolk
+fluid.marshmallow_syrup_mixture=Marshmallow Syrup Mixture
+fluid.marshmallow_foam=Marshmallow Foam
+fluid.butter=Butter
+fluid.potassium_carbonate_solution=Potassium Carbonate Solution
 
 
 # EnderIO
@@ -26,3 +90,7 @@ enderio.item_power_conduit_ender.name=UIV Energy Conduit
 enderio.item_endergy_conduit_pink_slime.name=UMV Energy Conduit
 enderio.item_endergy_conduit_melodic.name=UXV Energy Conduit
 enderio.item_endergy_conduit_stellar.name=MAX Energy Conduit
+
+
+# Nuclearcraft
+item.nuclearcraft.compound.energetic_blend.name=Extreme Blend

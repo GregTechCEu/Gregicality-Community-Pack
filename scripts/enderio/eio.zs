@@ -2,107 +2,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemDefinition;
 
-val name_removals = [
-    "enderio:simple_chassis_parts",
-    "enderio:simple_chassis",
-    "enderio:tank",
-    "enderio:chassis_parts",
-    "enderio:end_steel_chassis",
-    "enderio:unsouled_chassis",
-    "enderio:simple_crafter",
-    "enderio:crafter",
-    "enderio:crafter_upgrade",
-    "enderio:tank_2",
-    "enderio:painted_pressure_plate_dark_steel",
-    "enderio:detector_block",
-    "enderio:detector_block_silent",
-    "enderio:niard",
-    "enderio:impulse_hopper",
-    "enderio:dark_iron_bars",
-    "enderio:end_iron_bars",
-    "enderio:energy_monitor",
-    "enderio:energy_monitor_2",
-    "enderio:item_buffer",
-    "enderio:enchanter",
-    "enderio:farming_station",
-    "enderio:simple_wired_charger",
-    "enderio:wired_charger",
-    "enderio:wired_charger_upgrade",
-    "enderio:enhanced_wired_charger",
-    "enderio:enhanced_wired_charger_upgrade",
-    "enderio:wireless_charger",
-    "enderio:wireless_energy_transmitter_dish_assembly",
-    "enderio:wireless_charger_antenna",
-    "enderio:wireless_charger_antenna_upgrade",
-    "enderio:wireless_charger_antenna_enhanced",
-    "enderio:wireless_charger_antenna_enhanced_upgrade_1",
-    "enderio:wireless_charger_antenna_enhanced_upgrade_2",
-    "enderio:wireless_charger_antenna_extension",
-    "enderio:vacuum_chest",
-    "enderio:x_p_vacuum",
-    "enderio:transceiver",
-    "enderio:travel_anchor",
-    "enderio:enhanced_chassis_parts",
-    "enderio:dialing_device",
-    "enderio:pulsating_crystal",
-    "enderio:vibrant_crystal",
-    "enderio:rod_of_return",
-    "enderio:binder_composite",
-    "enderio:dark_steel_anvil",
-    "enderio:tele_pad",
-    "enderio:block_dark_steel_trapdoor",
-    "enderio:dark_steel_door",
-    "enderio:conduit_probe",
-    "enderio:yeta_wrench",
-    "enderio:x_p_rod",
-    "enderio:coordinate_selector",
-    "enderio:staff_of_travelling",
-    "enderio:electromagnet",
-    "enderio:inventory_charger_simple",
-    "enderio:inventory_charger_basic",
-    "enderio:inventory_charger",
-    "enderio:inventory_charger_vibrant",
-    "enderio:reinforced_obsidian",
-    "enderio:attractor_obelisk",
-    "enderio:aversion_obelisk",
-    "enderio:inhibitor_obelisk",
-    "enderio:relocator_obelisk",
-    "enderio:weather_obelisk",
-    "enderio:experience_obelisk",
-    "enderio:reservoir",
-    "enderio:painter",
-    "enderio:infity_rod",
-    "enderio:capacitor_1",
-    "enderio:capacitor_energetic_silver",
-    "enderio:capacitor_vivid",
-    "enderio:capacitor_melodic",
-    "enderio:capacitor_stellar",
-    "enderio:infinity_rod",
-    "enderio:auto_dark_steel_9_ingots_to_1_block",
-    "enderio:auto_end_steel_9_ingots_to_1_block",
-    "enderio:auto_stellar_alloy_9_ingots_to_1_block",
-    "enderio:exit_rail",
-    "enderio:weather_crystal",
-    "enderio:soul_vial"
-] as string[];
-
-for item in name_removals {
-    recipes.removeByRecipeName(item);
-}
-
-val removals = [
-    <enderio:block_electric_light>,
-    <enderio:block_electric_light:1>,
-    <enderio:block_electric_light:2>,
-    <enderio:block_electric_light:3>,
-    <enderio:block_electric_light:4>,
-    <enderio:block_electric_light:5>
-] as IItemStack[];
-
-for item in removals {
-    recipes.remove(item);
-}
-
 val disables = [
     <ore:ballPulsatingIron>.firstItem,
     <ore:ballConductiveIron>.firstItem,
@@ -221,16 +120,20 @@ val disables = [
 ] as IItemStack[];
 
 for item in disables {
-    mods.jei.JEI.removeAndHide(item);
+    mods.jei.JEI.hide(item);
 }
 
 val deco = <enderio:block_decoration1>.definition as IItemDefinition;
 val deco2 = <enderio:block_decoration2>.definition as IItemDefinition;
+val deco3 = <enderio:block_decoration3>.definition as IItemDefinition;
 
 for i in 0 to 16 {
-    mods.jei.JEI.removeAndHide(deco.makeStack(i));
-    mods.jei.JEI.removeAndHide(deco2.makeStack(i));
+    mods.jei.JEI.hide(deco.makeStack(i));
+    mods.jei.JEI.hide(deco2.makeStack(i));
+}
 
+for i in 0 to 5 {
+    mods.jei.JEI.hide(deco3.makeStack(i));
 }
 
 // Construction Alloy
@@ -262,6 +165,12 @@ compressor.recipeBuilder().EUt(2).duration(400)
 
 forge_hammer.recipeBuilder().EUt(2).duration(400)
     .inputs(<ore:blockConstructionAlloy>)
+    .outputs(<ore:ingotConstructionAlloy>.firstItem * 9)
+    .buildAndRegister();
+
+large_forge_hammer.recipeBuilder().EUt(2).duration(400)
+    .inputs(<ore:blockConstructionAlloy>)
+    .fluidInputs([<fluid:lubricant> * 2])
     .outputs(<ore:ingotConstructionAlloy>.firstItem * 9)
     .buildAndRegister();
 
@@ -563,6 +472,11 @@ mixer.recipeBuilder().EUt(30).duration(100)
     .outputs(<ore:itemBinderComposite>.firstItem * 8)
     .buildAndRegister();
 
+recipes.addShapeless("eio_conduit_binder_manual", <ore:itemBinderComposite>.firstItem * 8, [<ore:sand>, <ore:sand>, <ore:sand>, <ore:sand>, <ore:gravel>, <ore:gravel>, <ore:gravel>, <ore:gravel>, <forge:bucketfilled>.withTag({FluidName: "concrete", Amount: 1000}).giveBack(<minecraft:bucket>)]);
+
+// Conduit Binder
+furnace.addRecipe(<ore:itemConduitBinder>.firstItem, <ore:itemBinderComposite>);
+
 // Crytals
 val crystal_inputs = [<ore:dustDiamond>, <ore:dustEmerald>, <ore:dustRegularEnderEye>, <ore:dustAmethyst>, <ore:dustVinteum>] as IIngredient[];
 val crystal_outputs = [<ore:itemPulsatingCrystal>.firstItem, <ore:itemVibrantCrystal>.firstItem, <ore:itemEnderCrystal>.firstItem, <ore:itemAttractorCrystal>.firstItem, <ore:itemPrecientCrystal>.firstItem] as IItemStack[];
@@ -728,9 +642,6 @@ assembler.recipeBuilder().EUt(30).duration(200)
     .outputs(<enderio:item_soul_vial> * 3)
     .buildAndRegister();
 
-// Skeletal Contractor
-recipes.addShaped("eio_skeletal_contractor", <ore:skullSkeletalContractor>.firstItem, [[<ore:plateMaragingSteelA>, <ore:stickBone>]]);
-
 // Grains
 val crystals = [<ore:itemPrecientCrystal>, <ore:itemVibrantCrystal>, <ore:itemPulsatingCrystal>, <ore:itemEnderCrystal>] as IIngredient[];
 val grains = [<ore:itemPrecientPowder>, <ore:itemVibrantPowder>, <ore:itemPulsatingPowder>, <ore:itemEnderCrystalPowder>] as IIngredient[];
@@ -844,8 +755,8 @@ distillery.recipeBuilder().EUt(120).duration(20)
 // Dark Steel
 mixer.recipeBuilder().EUt(30).duration(496)
     .inputs(<ore:dustRegularBlackSteel> * 5)
-    .inputs(<ore:dustRegularCarbon> * 5)
-    .inputs(<ore:dustRegularVanadium>)
+    .inputs(<ore:dustRegularVanadium> * 4)
+    .inputs(<ore:dustRegularCarbon>)
     .outputs(<ore:dustDarkSteel>.firstItem * 9)
     .buildAndRegister();
 
@@ -864,6 +775,17 @@ macerator.recipeBuilder().EUt(128).duration(30)
 compressor.recipeBuilder().EUt(2).duration(400)
     .inputs(<ore:ingotDarkSteel> * 9)
     .outputs(<ore:blockDarkSteel>.firstItem)
+    .buildAndRegister();
+
+forge_hammer.recipeBuilder().EUt(2).duration(400)
+    .inputs(<ore:blockDarkSteel>)
+    .outputs(<ore:ingotDarkSteel>.firstItem * 9)
+    .buildAndRegister();
+
+large_forge_hammer.recipeBuilder().EUt(2).duration(400)
+    .inputs(<ore:blockDarkSteel>)
+    .fluidInputs([<fluid:lubricant> * 2])
+    .outputs(<ore:ingotDarkSteel>.firstItem * 9)
     .buildAndRegister();
 
 extruder.recipeBuilder().EUt(48).duration(150)
@@ -896,6 +818,35 @@ cutting_saw.recipeBuilder().EUt(30).duration(224)
     .outputs(<ore:plateDarkSteel>.firstItem * 9)
     .buildAndRegister();
 
+cutting_saw.recipeBuilder().EUt(30).duration(256)
+    .inputs(<ore:stickDarkSteel>)
+    .fluidInputs(cuttingFluids[0])
+    .outputs(<ore:boltDarkSteel>.firstItem * 4)
+    .buildAndRegister();
+
+cutting_saw.recipeBuilder().EUt(30).duration(166)
+    .inputs(<ore:stickDarkSteel>)
+    .fluidInputs(cuttingFluids[1])
+    .outputs(<ore:boltDarkSteel>.firstItem * 4)
+    .buildAndRegister();
+
+cutting_saw.recipeBuilder().EUt(30).duration(644)
+    .inputs(<ore:stickDarkSteel>)
+    .fluidInputs(cuttingFluids[2])
+    .outputs(<ore:boltDarkSteel>.firstItem * 4)
+    .buildAndRegister();
+
+extruder.recipeBuilder().EUt(120).duration(16)
+    .inputs(<ore:ingotDarkSteel>)
+    .notConsumable(<metaitem:shape.extruder.bolt>)
+    .outputs(<ore:boltDarkSteel>.firstItem)
+    .buildAndRegister();
+
+lathe.recipeBuilder().EUt(4).duration(8)
+    .inputs(<ore:boltDarkSteel>)
+    .outputs(<ore:screwDarkSteel>.firstItem)
+    .buildAndRegister();
+
 // End Steel
 chemical_bath.recipeBuilder().EUt(1920).duration(400)
     .inputs(<ore:ingotDarkSteel>)
@@ -906,6 +857,17 @@ chemical_bath.recipeBuilder().EUt(1920).duration(400)
 compressor.recipeBuilder().EUt(2).duration(400)
     .inputs(<ore:ingotEndSteel> * 9)
     .outputs(<ore:blockEndSteel>.firstItem)
+    .buildAndRegister();
+
+forge_hammer.recipeBuilder().EUt(2).duration(400)
+    .inputs(<ore:blockEndSteel>)
+    .outputs(<ore:ingotEndSteel>.firstItem * 9)
+    .buildAndRegister();
+
+large_forge_hammer.recipeBuilder().EUt(2).duration(400)
+    .inputs(<ore:blockEndSteel>)
+    .fluidInputs([<fluid:lubricant> * 2])
+    .outputs(<ore:ingotEndSteel>.firstItem * 9)
     .buildAndRegister();
 
 extruder.recipeBuilder().EUt(192).duration(150)
@@ -936,6 +898,17 @@ cutting_saw.recipeBuilder().EUt(30).duration(760)
     .inputs(<ore:blockEndSteel>)
     .fluidInputs(cuttingFluids[2])
     .outputs(<ore:plateEndSteel>.firstItem * 9)
+    .buildAndRegister();
+
+extruder.recipeBuilder().EUt(120).duration(16)
+    .inputs(<ore:ingotEndSteel>)
+    .notConsumable(<metaitem:shape.extruder.bolt>)
+    .outputs(<ore:boltEndSteel>.firstItem)
+    .buildAndRegister();
+
+lathe.recipeBuilder().EUt(24).duration(8)
+    .inputs(<ore:boltEndSteel>)
+    .outputs(<ore:screwEndSteel>.firstItem)
     .buildAndRegister();
 
 // Stellar Alloy
@@ -978,4 +951,15 @@ cutting_saw.recipeBuilder().EUt(30).duration(768)
     .inputs(<ore:blockStellarAlloy>)
     .fluidInputs(cuttingFluids[2])
     .outputs(<ore:plateStellarAlloy>.firstItem * 9)
+    .buildAndRegister();
+
+extruder.recipeBuilder().EUt(120).duration(16)
+    .inputs(<ore:ingotStellarAlloy>)
+    .notConsumable(<metaitem:shape.extruder.bolt>)
+    .outputs(<ore:boltStellarAlloy>.firstItem)
+    .buildAndRegister();
+
+lathe.recipeBuilder().EUt(30).duration(8)
+    .inputs(<ore:boltStellarAlloy>)
+    .outputs(<ore:screwStellarAlloy>.firstItem)
     .buildAndRegister();

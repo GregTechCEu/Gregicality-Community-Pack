@@ -414,7 +414,7 @@ assembler.recipeBuilder()
 
 //ME Chest
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/storage_chest");
-recipes.addShaped("me_chest", <appliedenergistics2:chest>, [[<ore:blockGlass>, <appliedenergistics2:part:380>, <ore:blockGlass>],[me_cable, null, me_cable], [<ore:plateAluminium>, <ore:plateFluix>, <ore:plateAluminium>]]);
+recipes.addShaped("me_chest", <appliedenergistics2:chest>, [[<ore:blockGlass>, <appliedenergistics2:part:380>, <ore:blockGlass>],[me_cable, <meta_tile_entity:titanium_chest>, me_cable], [<ore:plateAluminium>, <ore:plateFluix>, <ore:plateAluminium>]]);
 
 //Illuminated Panel
 assembler.recipeBuilder()

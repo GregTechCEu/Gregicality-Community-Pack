@@ -65,13 +65,38 @@ function unify (ore as IOreDictEntry, p as int) {
 
 // Ender Pearl Powder Compatability
 <ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
-// Silicon Compatability
-<ore:itemSilicon>.add(<metaitem:plateSilicon>);
-<ore:itemSilicon>.remove(<ore:itemSilicon>.firstItem);
 
-// Ender Pearl Powder Compatability
-<ore:nuggetEnderpearl>.add(<ore:dustTinyEnderPearl>.firstItem);
+// Remove LazyAE2 Coal Dust
+<ore:dustCoal>.remove(<threng:material:3>);
 
+// EnderIO Dusts
+<ore:dustCopper>.remove(<enderio:item_material:26>);
+JEI.hide(<enderio:item_material:26>);
+<ore:dustTin>.remove(<enderio:item_material:27>);
+JEI.hide(<enderio:item_material:27>);
+<ore:dustCobalt>.remove(<enderio:item_material:31>);
+JEI.hide(<enderio:item_material:31>);
+
+// Nuclearcraft Ores
+<ore:oreCopper>.remove(<nuclearcraft:ore>);
+JEI.hide(<nuclearcraft:ore>);
+<ore:oreTin>.remove(<nuclearcraft:ore:1>);
+JEI.hide(<nuclearcraft:ore:1>);
+<ore:oreLead>.remove(<nuclearcraft:ore:2>);
+JEI.hide(<nuclearcraft:ore:2>);
+<ore:oreThorium>.remove(<nuclearcraft:ore:3>);
+JEI.hide(<nuclearcraft:ore:3>);
+<ore:oreUranium>.remove(<nuclearcraft:ore:4>);
+JEI.hide(<nuclearcraft:ore:4>);
+<ore:oreBoron>.remove(<nuclearcraft:ore:5>);
+JEI.hide(<nuclearcraft:ore:5>);
+<ore:oreLithium>.remove(<nuclearcraft:ore:6>);
+JEI.hide(<nuclearcraft:ore:6>);
+<ore:oreMagnesium>.remove(<nuclearcraft:ore:7>);
+JEI.hide(<nuclearcraft:ore:7>);
+
+// Maganese Dioxide
+<ore:dustManganeseDioxide>.add(<ore:dustRegularPyrolusite>.firstItem);
 
 unify_oredicts(<ore:ingot*>);
 unify_oredicts(<ore:plate*>);
@@ -81,8 +106,8 @@ unify_oredicts(<ore:gear*>);
 unify_oredicts(<ore:stick*>);
 unify_oredicts(<ore:crystal*>);
 unify_oredicts(<ore:nugget*>);
+unify_oredicts(<ore:egg*>);
 
 
 unify(<ore:bioplastic>, 0);
 unify(<ore:itemSilicon>, 0);
-

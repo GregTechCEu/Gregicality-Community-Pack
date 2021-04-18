@@ -7,5 +7,6 @@
 - Hjae - AE2 - https://github.com/hjae78
 - Zalgo - is doing NC - https://github.com/Zalgo239
 - dan - repository management - https://github.com/DStrand1
+- Alex404 - opencomputers - https://github.com/Alessandro404
 
 ###### feel free to add/change yourself
