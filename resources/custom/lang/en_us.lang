@@ -18,6 +18,30 @@ metaitem.skystone_lens.name=Skystone Lens
 metaitem.charged_certus_dust.name=Charged Certus Quartz Dust
 
 
+# DevTech
+# Super Chests
+devtech.machine.super.chest.ulv.name=Super Chest I
+devtech.machine.super.chest.lv.name=Super Chest II
+devtech.machine.super.chest.mv.name=Super Chest III
+devtech.machine.super.chest.hv.name=Super Chest IV
+devtech.machine.super.chest.ev.name=Quantum Chest I
+devtech.machine.super.chest.iv.name=Quantum Chest II
+devtech.machine.super.chest.luv.name=Quantum Chest III
+devtech.machine.super.chest.zpm.name=Quantum Chest IV
+devtech.machine.super.chest.uv.name=Quantum Chest V
+
+# Super Tanks
+devtech.machine.super.tank.ulv.name=Super Tank I
+devtech.machine.super.tank.lv.name=Super Tank II
+devtech.machine.super.tank.mv.name=Super Tank III
+devtech.machine.super.tank.hv.name=Super Tank IV
+devtech.machine.super.tank.ev.name=Quantum Tank I
+devtech.machine.super.tank.iv.name=Quantum Tank II
+devtech.machine.super.tank.luv.name=Quantum Tank III
+devtech.machine.super.tank.zpm.name=Quantum Tank IV
+devtech.machine.super.tank.uv.name=Quantum Tank V
+
+
 # Coffee Chain
 metaitem.basic_coffee_unsorted_gem_chipped.name=Unsorted Raw Coffee Beans
 metaitem.basic_coffee_large_gem_chipped.name=Large Raw Coffee Beans
