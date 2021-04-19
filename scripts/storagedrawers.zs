@@ -166,7 +166,7 @@ recipes.addShaped("gregified_controller", <storagedrawers:controller>,
 recipes.removeByRecipeName("storagedrawers:controller_slave");
 recipes.addShaped("gregified_controller_slave", <storagedrawers:controllerslave>,
 	[
-	[<ore:plateSteel>,conveyors[1],<ore:plateSteel>],
+	[<ore:plateSteel>,null,<ore:plateSteel>],
 	[<ore:itemConduitBinder>,hulls[1],<ore:itemConduitBinder>],
 	[<ore:plateLead>,circuits[1],<ore:plateLead>]
 	]);
@@ -182,7 +182,7 @@ recipes.addShaped("gregified_framed_controller", <framedcompactdrawers:framed_dr
 recipes.removeByRecipeName("framedcompactdrawers:framed_slave");
 recipes.addShaped("gregified_framed_slave", <framedcompactdrawers:framed_slave>,
 	[
-	[<ore:plateSteel>,conveyors[1],<ore:plateSteel>],
+	[<ore:plateSteel>,null,<ore:plateSteel>],
 	[<ore:itemConduitBinder>,<ore:frameGtTumbaga>,<ore:itemConduitBinder>],
 	[<ore:plateLead>,circuits[1],<ore:plateLead>]
 	]);
@@ -224,7 +224,7 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 	
 recipes.removeByRecipeName("storagedrawers:upgrade_template");
-assembler.recipeBuilder()
+chemical_bath.recipeBuilder()
 	.inputs(<ore:woodPlate>)
 	.fluidInputs(<liquid:sulfuric_acid> * 0)
 	.outputs(<storagedrawers:upgrade_template>)
@@ -261,7 +261,7 @@ assembler.recipeBuilder()
 	
 recipes.removeByRecipeName("storagedrawers:upgrade_storage_gold");
 assembler.recipeBuilder()
-	.inputs(<ore:plateChrome> * 8)
+	.inputs(<ore:plateStainlessSteel> * 8)
 	.inputs(<storagedrawers:upgrade_template>)
 	.outputs(<storagedrawers:upgrade_storage:2>)
 	.EUt(128)
@@ -270,7 +270,7 @@ assembler.recipeBuilder()
 	
 recipes.removeByRecipeName("storagedrawers:upgrade_storage_diamond");
 assembler.recipeBuilder()
-	.inputs(<ore:plateStainlessSteel> * 8)
+	.inputs(<ore:plateChrome> * 8)
 	.inputs(<storagedrawers:upgrade_template>)
 	.outputs(<storagedrawers:upgrade_storage:3>)
 	.EUt(512)
