@@ -15,6 +15,7 @@ with open(basePath + "/manifest.json") as file:
 try:
     os.makedirs(basePath + "/buildOut/overrides")
     os.makedirs(basePath + "/mods")
+    print("make directories")
 except Exception as e:
     print("Directory exists, skipping")
 
@@ -29,8 +30,10 @@ for mod in manifest["externalDeps"]:
             if str(hash) == mod["hash"]:
                 jar.write(r.content)
                 modlist.append(mod["name"])
+                print("hash succsessful")
                 break
             else:
+                print("hash unsuccsessful")
                 pass
 
 for dir in copyDirs:
@@ -38,9 +41,11 @@ for dir in copyDirs:
         shutil.copytree(basePath + dir, basePath + "/buildOut/overrides" + dir)
     except Exception as e:
         print("Directory exists, skipping")
+print("directories copied to buildOut")
 
 shutil.copy(basePath + "/manifest.json", basePath + "/buildOut/manifest.json")
 shutil.make_archive("build/client", "zip", basePath + "/buildOut")
+print("zip made")
 
 for mod in manifest["files"]:
     url = "https://cursemeta.dries007.net/" + \
@@ -48,6 +53,7 @@ for mod in manifest["files"]:
     r = requests.get(url)
     metadata = json.loads(r.text)
     modlist.append(metadata["FileName"])
+print("modlist compiled")
 
 with open(basePath + "/build/modlist.html", "w") as file:
     data = "<html><body><h1>Gregicality Community Pack modlist</h1><ul>"
@@ -55,4 +61,5 @@ with open(basePath + "/build/modlist.html", "w") as file:
         data += "<li>" + mod + "</li>"
     data += "</ul></body></html>"
     file.write(data)
-
+print("modlist.html done")
+print("done")
