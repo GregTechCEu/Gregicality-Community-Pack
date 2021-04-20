@@ -39,18 +39,36 @@ Utils.registerItem("basic_coffee_small", 1028, 0x3b220d, "GEM_VERTICAL", "gemChi
 Utils.registerItem("basic_coffee_large", 1029, 0x3b220d, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("basic_coffee_unsorted", 1030, 0x422003, "GEM_VERTICAL", "gemChipped");
 Utils.registerItem("charged_certus", 1031, 0xD2D2E6, "QUARTZ", "dust");
-Utils.registerItem("ferroboron", 1032, 0x646464, "DULL", "dust");
-Utils.registerItem("ferroboron", 1033, 0x646464, "DULL", "ingotHot");
-Utils.registerItem("hsla_steel", 1034, 0x687bbe, "METALLIC", "plate");
-Utils.registerItem("hsla_steel", 1035, 0x687bbe, "METALLIC", "dust");
-Utils.registerItem("hsla_steel", 1036, 0x687bbe, "METALLIC", "ingotHot");
-Utils.registerItem("tough", 1037, 0x0c090a, "METALLIC", "plate");
-Utils.registerItem("tough", 1038, 0x0c090a, "METALLIC", "dust");
-Utils.registerItem("tough", 1039, 0x0c090a, "METALLIC", "ingotHot");
-Utils.registerItem("extreme", 1040, 0x742a3c, "METALLIC", "plate");
-Utils.registerItem("extreme", 1041, 0x742a3c, "METALLIC", "dust");
-Utils.registerItem("extreme", 1042, 0x742a3c, "METALLIC", "ingotHot");
-Utils.registerItem("zircaloy", 1043, 0xa3a490, "METALLIC", "plate");
+Utils.registerItem("cocoa_hull", 1035, 0x362c25, "GEM_VERTICAL", "gemChipped");
+Utils.registerItem("cocoa_nib", 1036, 0x635943, "GEM_VERTICAL", "gemChipped");
+Utils.registerItem("chocolate_liquor", 1037, 0x635943, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_refined", 1038, 0x605528, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_dutched", 1039, 0x695143, "DULL", "crushedCentrifuged");
+Utils.registerItem("press_cake_dutched", 1040, 0x997e6e, "DULL", "plateDense");
+Utils.registerItem("press_cake", 1041, 0x948881, "DULL", "plateDense");
+Utils.registerItem("press_cake_graded", 1042, 0xa67f68, "DULL", "plateDense");
+Utils.registerItem("milk_chocolate", 1043, 0x636c61, "DULL", "ingotHot");
+Utils.registerItem("matter_marshmallow", 1044, 0xe6e0dc, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham", 1045, 0xf0c25d, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham_hot", 1046, 0xffe1a1, "DULL", "crushedCentrifuged");
+Utils.registerItem("matter_graham_hot", 1047, 0xffe1a1, "DULL", "plateDense");
+Utils.registerItem("matter_graham_hot", 1048, 0xffe1a1, "DULL", "plate");
+Utils.registerItem("cracker_graham_ungraded", 1049, 0xf0c25d, "DULL", "plate");
+Utils.registerItem("chocolate_liquor_pressed", 1050, 0xa6795a, "DULL", "crushedCentrifuged");
+Utils.registerItem("chocolate_liquor_dutched_pressed", 1051, 0xab7550, "DULL", "crushedCentrifuged");
+Utils.registerItem("ferroboron", 1052, 0x646464, "DULL", "dust");
+Utils.registerItem("ferroboron", 1053, 0x646464, "DULL", "ingotHot");
+Utils.registerItem("hsla_steel", 1054, 0x687bbe, "METALLIC", "plate");
+Utils.registerItem("hsla_steel", 1055, 0x687bbe, "METALLIC", "dust");
+Utils.registerItem("hsla_steel", 1056, 0x687bbe, "METALLIC", "ingotHot");
+Utils.registerItem("tough", 1057, 0x0c090a, "METALLIC", "plate");
+Utils.registerItem("tough", 1058, 0x0c090a, "METALLIC", "dust");
+Utils.registerItem("tough", 1059, 0x0c090a, "METALLIC", "ingotHot");
+Utils.registerItem("extreme", 1060, 0x742a3c, "METALLIC", "plate");
+Utils.registerItem("extreme", 1061, 0x742a3c, "METALLIC", "dust");
+Utils.registerItem("extreme", 1062, 0x742a3c, "METALLIC", "ingotHot");
+Utils.registerItem("zircaloy", 1063, 0xa3a490, "METALLIC", "plate");
+
 
 //Adding flags
 
@@ -64,6 +82,7 @@ Utils.registerItem("zircaloy", 1043, 0xa3a490, "METALLIC", "plate");
 <material:iron>.addFlags(["GENERATE_SMALL_GEAR"]);
 <material:magnesium>.addFlags(["GENERATE_FINE_WIRE"]);
 <material:beryllium>.addFlags(["GENERATE_FINE_WIRE"]);
+<material:gold>.addFlags(["GENERATE_RING"]);
 
 
 //ContentTweaking
