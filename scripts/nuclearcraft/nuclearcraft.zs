@@ -679,7 +679,7 @@ assembler.recipeBuilder()
 // Ra-Be
 assembler.recipeBuilder()
 	.inputs(hulls[3], <ore:dustRadium>*2, <ore:dustBeryllium>*2, <ore:plateBasic>*4)
-	.outputs(<nuclearcraft:fission_source:0>)
+	.outputs(<nuclearcraft:fission_source>)
 	.fluidInputs(solder)
 	.EUt(480)
 	.duration(100)
