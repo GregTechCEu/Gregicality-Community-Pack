@@ -1,4 +1,5 @@
 #modloaded advancedrocketry
+#modloaded gregtech
 import crafttweaker.item.IItemStack as IItemStack;
 import mods.jei.JEI.removeAndHide as rh;
 import mods.jei.JEI.addDescription as ad;
@@ -26,7 +27,7 @@ val removals = [
 	<advancedrocketry:blastbrick>,
 	<advancedrocketry:arcfurnace>,
 	<advancedrocketry:blackholegenerator>,
-	<advancedrocketry:centrifuge>,
+	<advancedrocketry:centrifuge>
 		] as IItemStack[];
 
 
@@ -68,10 +69,10 @@ val removals = [
 	recipes.remove(<advancedrocketry:seat>);
 	recipes.addShaped("ar_seat", <advancedrocketry:seat>, [[<ore:blockWool>, <ore:string>, <ore:blockWool>], [<ore:blockWool>, null, <ore:blockWool>], [<ore:blockWool>, <ore:blockWool>, <ore:blockWool>]]);
 
-
 # Liquid Fuel Tank
 	recipes.remove(<advancedrocketry:fueltank>);
 	
+
 	assembler.recipeBuilder()
 	.inputs([<ore:frameGtStainlessSteel>, <meta_tile_entity:gregtech:stainless_steel_tank>, <ore:gearStainlessSteel>])
     .property("circuit", 1)
@@ -202,13 +203,17 @@ val removals = [
 	recipes.remove(<advancedrocketry:oxygencharger>);
 	recipes.addShaped("ar_oxygencharger", <advancedrocketry:oxygencharger>, [[<ore:plateStainlessSteel>, <ore:gearStainlessSteel>, <ore:plateStainlessSteel>], [<ore:plateStainlessSteel>, <meta_tile_entity:gregtech:hull.hv>, <ore:plateStainlessSteel>], [<ore:pipeSmallStainlessSteel>, <meta_tile_entity:gregtech:stainless_steel_tank>, <ore:pipeSmallStainlessSteel>]]);
 
+# Pollutant Pump
+	recipes.remove(<advancedrocketry:oxygencharger>);
+	recipes.addShaped("ar_oxygencharger", <advancedrocketry:blockpump>, [[<ore:plateStainlessSteel>, <ore:gearStainlessSteel>, <ore:plateStainlessSteel>], [<ore:plateStainlessSteel>, <meta_tile_entity:gregtech:hull.hv>, <ore:plateStainlessSteel>], [<ore:pipeSmallStainlessSteel>, <metaitem:electric.pump.hv>, <ore:pipeSmallStainlessSteel>]]);
+
 # Atmosphere Detector
 	recipes.remove(<advancedrocketry:oxygendetection>);
 	recipes.addShaped("ar_oxygendetection", <advancedrocketry:oxygendetection>, [[<ore:plateTitanium>, <metaitem:sensor.ev>, <ore:plateTitanium>], [<ore:circuitExtreme>, <meta_tile_entity:gregtech:hull.ev>, <ore:circuitExtreme>], [<ore:wireGtSingleAluminium>, <metaitem:emitter.ev>, <ore:wireGtSingleAluminium>]]);
 
 # Atmosphere Terraformer
 	recipes.remove(<advancedrocketry:terraformer>);
-	recipes.addShaped("ar_terraformer", <advancedrocketry:terraformer>, [[<ore:plateTungstensteel>, <metaitem:field.generator.iv>, <ore:plateTungstensteel>], [<ore:circuitElite>, <meta_tile_entity:gregtech:hull.iv>, <ore:circuitElite>], [<ore:wireGtSingleTungsten>, <metaitem:emitter.iv>, <ore:wireGtSingleTungsten>]]);
+	recipes.addShaped("ar_terraformer", <advancedrocketry:terraformer>, [[<ore:plateTungstenSteel>, <metaitem:field.generator.iv>, <ore:plateTungstenSteel>], [<ore:circuitElite>, <meta_tile_entity:gregtech:hull.iv>, <ore:circuitElite>], [<ore:wireGtSingleTungsten>, <metaitem:emitter.iv>, <ore:wireGtSingleTungsten>]]);
 
 # Beacon
 	recipes.remove(<advancedrocketry:beacon>);
@@ -313,7 +318,7 @@ assembler.recipeBuilder()
 # Laser Drill
 recipes.remove(<advancedrocketry:spacelaser>);
 assembler.recipeBuilder()
-	.inputs(<meta_tile_entity:gregtech:hull.iv>, <ore:plateTungstensteel> * 15, <gregtech:machine:2225>, <ore:circuitExtreme>, <metaitem:sensor.ev>, <metaitem:emitter.ev>)
+	.inputs(<meta_tile_entity:gregtech:hull.iv>, <ore:plateTungstenSteel> * 15, <gregtech:machine:2225>, <ore:circuitExtreme>, <metaitem:sensor.ev>, <metaitem:emitter.ev>)
     .fluidInputs([<liquid:soldering_alloy> * 1080])
 	.outputs(<advancedrocketry:spacelaser>)
 	.EUt(7680)
@@ -335,7 +340,7 @@ assembler.recipeBuilder()
 	.inputs(<metaitem:electric.motor.luv> * 32)
 	.inputs(<metaitem:electric.piston.luv> * 16)
 	.inputs(<metaitem:robot.arm.luv> * 16)
-	.inputs(<meta_tile_entity:hull.luv>)
+	.inputs(<meta_tile_entity:gregtech:hull.luv>)
 	.inputs(circuits[7] * 4)
 	.inputs(<metaitem:field.generator.luv>)
     .fluidInputs([<liquid:soldering_alloy> * 1440])
@@ -347,6 +352,8 @@ assembler.recipeBuilder()
 
 # Space Elevator
 
+recipes.remove(<advancedrocketry:spaceelevatorcontroller>);
+
 	assembler.recipeBuilder()
 	.inputs(<ore:plateGraphene> * 64)
 	.inputs(<ore:plateGraphene> * 64)
@@ -356,7 +363,7 @@ assembler.recipeBuilder()
 	.inputs(<metaitem:electric.piston.iv> * 4)
 	.inputs(<metaitem:robot.arm.iv> * 4)
 	.inputs(<meta_tile_entity:hull.iv>)
-	.inputs(<advancedrocketry:ic:3>)
+	.inputs(<advancedrocketry:ic:1>)
 	.fluidInputs([<liquid:soldering_alloy> * 720])
 	.outputs(<advancedrocketry:spaceelevatorcontroller>)
 	.EUt(7680)
@@ -374,19 +381,6 @@ assembler.recipeBuilder()
 	.duration(100)
 	.buildAndRegister();
 
-# Data storage unit
-assembler.recipeBuilder()
-	.inputs(<metaitem:wafer.nand_memory_chip> * 12)
-    .inputs(<ore:platePlastic> * 4)
-    .inputs(<metaitem:wafer.ram_memory_chip> * 4)
-    .inputs(<ore:wireFineElectrum> * 8)
-    .inputs(<metaitem:board.plastic>)
-    .inputs(<ore:circuitAdvanced>)
-	.outputs(<advancedrocketry:dataunit>)
-	.EUt(480)
-	.duration(175)
-	.buildAndRegister();   
-
 # Unmanned Vehicle Assembler
 	recipes.remove(<advancedrocketry:deployablerocketbuilder>);
 	recipes.addShaped("ar_deployablerocketbuilder", <advancedrocketry:deployablerocketbuilder>, [[<ore:plateTitanium>, <metaitem:robot.arm.ev>, <ore:plateTitanium>], [<ore:circuitAdvanced>, <meta_tile_entity:gregtech:hull.ev>, <ore:circuitAdvanced>], [<metaitem:electric.piston.ev>, <metaitem:electric.motor.ev>, <ore:wireGtSingleAluminium>]]);
@@ -397,7 +391,8 @@ assembler.recipeBuilder()
 
 
 # Engines
-
+recipes.remove(<advancedrocketry:rocketmotor>);
+recipes.remove(<advancedrocketry:advrocketmotor>);
 # T1 engine
 recipes.addShaped("ar_monopropellant_engine", <advancedrocketry:rocketmotor>, 
     [[<ore:plateStainlessSteel>, <ore:frameGtAluminium>, <ore:plateStainlessSteel>],
@@ -449,6 +444,19 @@ autoclave.recipeBuilder()
 	.duration(200)
 	.buildAndRegister();
 
+
+# Data Unit
+	recipes.remove(<advancedrocketry:dataunit>);
+	
+	assembler.recipeBuilder()
+	.inputs([<ore:wireGtSingleElectrum> * 3, <ore:plateAluminium>, <ore:screwGold>, <metaitem:plate.random_access_memory>, <metaitem:plate.central_processing_unit>, <metaitem:plate.nand_memory_chip>])
+	.fluidInputs([<liquid:soldering_alloy> * 144])
+    .property("circuit", 1)
+	.outputs(<advancedrocketry:dataunit>)
+	.EUt(480)
+	.duration(200)
+	.buildAndRegister();
+
 # Ore Scanner
 	recipes.remove(<advancedrocketry:orescanner>);
 	
@@ -478,11 +486,23 @@ autoclave.recipeBuilder()
 	recipes.remove(<advancedrocketry:ic:1>);
 	
 	assembler.recipeBuilder()
-	.inputs([<metaitem:wafer.central_processing_unit>, <metaitem:wafer.random_access_memory>, <metaitem:wafer.nand_memory_chip> * 8, <ore:circuitAdvanced>, <metaitem:sensor.hv>, <metaitem:emitter.hv>])
+	.inputs([<metaitem:wafer.central_processing_unit>, <metaitem:wafer.nand_memory_chip> * 8, <ore:circuitAdvanced>, <metaitem:sensor.hv>, <metaitem:emitter.hv>])
 	.fluidInputs([<liquid:soldering_alloy> * 144])
     .property("circuit", 1)
-	.outputs(<advancedrocketry:satellite>)
+	.outputs(<advancedrocketry:ic:1>)
 	.EUt(480)
+	.duration(420)
+	.buildAndRegister();
+
+# Biome Changer
+	recipes.remove(<advancedrocketry:biomechanger>);
+	
+	assembler.recipeBuilder()
+	.inputs([<ore:plateTungstenSteel> * 16, <ore:plateStainlessSteel> * 32, <ore:circuitElite> * 2, <metaitem:sensor.iv>, <metaitem:emitter.iv>, <metaitem:platePalladium> * 12])
+	.fluidInputs([<liquid:soldering_alloy> * 144])
+    .property("circuit", 1)
+	.outputs(<advancedrocketry:biomechanger>)
+	.EUt(7680)
 	.duration(420)
 	.buildAndRegister();
 
@@ -559,13 +579,13 @@ autoclave.recipeBuilder()
 	.buildAndRegister();
 
 # Planet ID Chip
-	recipes.remove(<advancedrocketry:satelliteidchip>);
+	recipes.remove(<advancedrocketry:planetidchip>);
 	
 	assembler.recipeBuilder()
 	.inputs([<metaitem:wafer.central_processing_unit>, <metaitem:wafer.system_on_chip>, <metaitem:wafer.random_access_memory>, <metaitem:wafer.nand_memory_chip>, <ore:circuitAdvanced>])
  	.fluidInputs([<liquid:soldering_alloy> * 144])
    .property("circuit", 8)
-	.outputs(<advancedrocketry:satelliteidchip>)
+	.outputs(<advancedrocketry:planetidchip>)
 	.EUt(480)
 	.duration(800)
 	.buildAndRegister();
@@ -586,10 +606,34 @@ autoclave.recipeBuilder()
 	recipes.remove(<advancedrocketry:spacestationchip>);
 	
 	assembler.recipeBuilder()
-	.inputs([<ore:circuitAdvanced>, <metaitem:wafer.central_processing_unit>, <metaitem:wafer.ram_memory_chip>, <metaitem:wafer.nand_memory_chip>])
-	.fluidInputs([<liquid:soldering_alloy> * 144])
-	.property("circuit", 9)
+	.inputs([<metaitem:wafer.central_processing_unit> * 3, <ore:plateGold> * 2, <ore:circuitAdvanced>])
+    .fluidInputs(<liquid:soldering_alloy> * 144)
+	.property("circuit", 1)
 	.outputs(<advancedrocketry:spacestationchip>)
+	.EUt(480)
+	.duration(220)
+	.buildAndRegister();
+
+# Seal Detector
+	recipes.remove(<advancedrocketry:sealdetector>);
+	
+	assembler.recipeBuilder()
+	.inputs([<ore:plateStainlessSteel> * 3, <ore:plateGold> * 2, <ore:circuitAdvanced>, <metaitem:sensor.mv>])
+    .fluidInputs(<liquid:soldering_alloy> * 144)
+	.property("circuit", 1)
+	.outputs(<advancedrocketry:sealdetector>)
+	.EUt(480)
+	.duration(220)
+	.buildAndRegister();
+
+# Space Elevator ID chip
+	recipes.remove(<advancedrocketry:elevatorchip>);
+	
+	assembler.recipeBuilder()
+	.inputs([<metaitem:wafer.central_processing_unit> * 3, <ore:plateGold> * 2, <ore:circuitAdvanced>])
+    .fluidInputs(<liquid:soldering_alloy> * 144)
+	.property("circuit", 4)
+	.outputs(<advancedrocketry:elevatorchip>)
 	.EUt(480)
 	.duration(220)
 	.buildAndRegister();
@@ -671,7 +715,7 @@ autoclave.recipeBuilder()
 	recipes.remove(<advancedrocketry:pressuretank:2>);
 	
 	assembler.recipeBuilder()
-	.inputs([<ore:plateTungstensteel> * 32, <ore:plateGlass> * 8])
+	.inputs([<ore:plateTungstenSteel> * 32, <ore:plateGlass> * 8])
 	.fluidInputs([<liquid:soldering_alloy> * 576])
 	.property("circuit", 1)
 	.outputs(<advancedrocketry:pressuretank:2>)
@@ -769,7 +813,7 @@ autoclave.recipeBuilder()
 	recipes.remove(<advancedrocketry:itemupgrade:3>);
 	
 	assembler.recipeBuilder()
-	.inputs([<ore:plateStainlessSteel> * 5, <ore:circuitAdvanced>, <ore:plateSiliconeRubber> * 7])
+	.inputs([<ore:plateStainlessSteel> * 5, <ore:circuitAdvanced>, <ore:plateSiliconRubber> * 7])
 	.fluidInputs([<liquid:soldering_alloy> * 144])
 	.property("circuit", 4)
 	.outputs(<advancedrocketry:itemupgrade:3>)
