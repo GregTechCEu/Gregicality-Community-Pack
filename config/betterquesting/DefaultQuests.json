@@ -7386,7 +7386,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This machine can produce various coal products. Namely charcoal and coke. Both are good for fuel. Additionally, Coal Tar, and Wood Vinegar are useful as well. For Ethanol, the chemical being worked towards with these quests, I reccomend producing Wood Vinegar (which also produces charcoal).\n\nMaking Wood Tar, and distilling it into Benzene for use in Gas Turbines is also very advisable.",
+          "desc:8": "This machine can produce various coal products. Namely charcoal and coke. Both are good for fuel. Additionally, Coal Tar, and Wood Vinegar are useful as well. For Ethanol, the chemical being worked towards with these quests, I reccomend producing Wood Vinegar (which also produces charcoal).\n\nMaking Wood Tar, and distilling it into Benzene for use in Gas Turbines is also very good for power.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7463,12 +7463,12 @@
     },
     "119:10": {
       "preRequisites:11": [
-        226
+        225
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ethanol can be produced in 4 different ways.\n\n1. Distillation of Wood Vinegar from a Pyrolyse Oven\n2. Distillation of Fermented Biomass from a Pyrolyse Oven\n3. Distillation of Fermented Biomass, produced using biomass from a Brewery, fermented in a Fermenter.\n\nThe fourth is with Fermentation Base.\n\nThis isn\u0027t required at the moment, but it will be useful later on. Bio diesel is also a good source of power, it is used to make it.",
+          "desc:8": "Ethanol can be produced in 4 different ways.\n\n1. Distillation of Wood Vinegar from a Pyrolyse Oven\n2. Distillation of Fermented Biomass from a Pyrolyse Oven\n3. Distillation of Fermented Biomass, produced using biomass from a Brewery, fermented in a Fermenter.\n4. Distillation of Fermentation Base, produced in a Chemcial Plant.\n\nThis is one of the routes to early-game ethylene. Bio diesel is also a good source of power, it is used to make it in some routes.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7535,7 +7535,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Converts any voltage to any other voltage. Hatches only work parrel to each other, on the horizontal axes. ",
+          "desc:8": "Converts any voltage to any other voltage. Hatches only work parallel to each other, on the horizontal axes. ",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7679,7 +7679,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You will need this for the entire modpack. Make it with Sulfur and Water.",
+          "desc:8": "You will need this for the entire modpack. The best way to make it is from Sulfur Dioxide -\u003e Sulfur Trioxide -\u003e Sulfuric Acid. It is by far the fastest.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -7744,7 +7744,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Ethylene is the first major chemical. There are 2 main ways to produce this. \n1. React Sulfuric Acid and Ethanol in a chemical reactor.\n\n2. Distill oil into naphtha or light or heavy fuel (naptha recomended), react the the sulfuric fuel with hydrogen, and steam crack the fuel in a reactor. Distill it into ethylene. The cracker unit is better for cracking fuels, you can make it at HV.\n\nMethod #2 is recomended.",
+          "desc:8": "Ethylene is the first major chemical. There are 2 main ways to produce it.\n\n1. React Sulfuric Acid and Ethanol in a chemical reactor.\n\n2. Distill oil into naphtha or light or heavy fuel (naptha recomended), react the the sulfuric fuel with hydrogen, and steam crack the fuel in a reactor. Distill it into ethylene. The cracker unit is better for cracking fuels, you can make it at HV.\n\nMethod #2 is recomended.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8015,7 +8015,9 @@
       }
     },
     "127:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        129
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -8909,7 +8911,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the T3 LV Circuit. It is also the final one. ",
+          "desc:8": "This is the final LV Circuit.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8967,7 +8969,9 @@
       }
     },
     "142:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        234
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
@@ -9092,7 +9096,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the T3 MV Circuit.",
+          "desc:8": "This is the third MV Circuit.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9294,7 +9298,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the T2 HV Circuit",
+          "desc:8": "This is the second HV Circuit",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9488,7 +9492,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This is the T1 EV Circuit.",
+          "desc:8": "This is the first EV Circuit.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -9698,7 +9702,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The Large Steel boiler consumes the same amount of fuel as the Bronze Boiler, but produces more steam. It produces 1600mB of steam.",
+          "desc:8": "The Large Steel boiler consumes the same amount of fuel as the Bronze Boiler, but produces 1600mB of steam.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13558,12 +13562,12 @@
     },
     "216:10": {
       "preRequisites:11": [
-        387
+        232
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The first step in making Epoxy. \n\nAcetic acid is very easy to make, just electrolyzed water and some carbon or oxygen and ethylene. Combine it with Calcium and oxygen for calcium acetate soultion. An infinite calcium supply is possible using bones. Centrifuging bone meal or electrolyzing Ink Sacs are both viable ways of obtaining calcium.\n\nDistill or heat the calcium acetate solution for a 1:1 convertion into Acetone.",
+          "desc:8": "The first step in making Epoxy. \n\nAcetic acid is very easy to make, just electrolyzed water and some carbon or oxygen and ethylene (this way is faster/better!). Combine it with Calcium and oxygen, Quiclime, or Calcite for calcium acetate soultion. \n\nA good calcium source is from bones. Centrifuging bone meal or electrolyzing Ink Sacs are both viable ways of obtaining calcium.\n\nDistill or heat the calcium acetate solution for a 1:1 convertion into Acetone. The Distillation Tower also recycles the calcium in the form of quicklime, so you can loop it without cost.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13623,7 +13627,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Phenol can be made from Cumene and Oxygen, or in a Large Chemical Reactor. The LCR recipe skips over Cumene and creates Phenol in fewer steps. Use the LCR shortcuts if they are available!",
+          "desc:8": "Phenol can be made from Cumene and Oxygen, or from Dichlorobenzene and Sodium Hydroxide. At EV, you can react Oxygen and Benzene to make it directly.\n\nWhile some recipes for phenol produce Acetone, it isn\u0027t enough to keep up with Phenol on it\u0027s own when making Bisphenol A.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13671,11 +13675,13 @@
       }
     },
     "218:10": {
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        247
+      ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Epichlorohydrin can be made through Glycerol or Allyl Chloride. It also has an LCR shortcut. Use it.",
+          "desc:8": "Epichlorohydrin can be made through Glycerol or Allyl Chloride.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13731,7 +13737,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Can be made using Bisphenol A, or through an LCR shortcut.",
+          "desc:8": "Can be made using Bisphenol A. The yeild on the naphtha recipe is extremely poor, don\u0027t do it.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -13862,7 +13868,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "Note that the capacitors can be made with PVC or Silicone Rubber foil.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14029,7 +14035,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The next HV circuit.",
+          "desc:8": "The third HV circuit.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16287,7 +16293,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This massive multiblock can drill fluids from chunks. Use JEI to see the different fluid veins available. You can find what fluid is in a chunk using a solar scanner. It requires an LV solar panel on top of it, and a data stick as input. Data sticks are reusable.",
+          "desc:8": "This massive multiblock can drill fluids from chunks. Use JEI to see the different fluid veins available. You can find what fluid is in a chunk using a solar scanner. It requires an LV solar panel on top of it, and a data stick as input. Data sticks are reusable.\n\nLuV+ Prospectors can also scan for fluids.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24120,7 +24126,7 @@
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Mendelevium Dust",
+          "name:8": "Mendelevium",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -28942,7 +28948,7 @@
           "id:3": 227,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -54,
+          "x:3": -48,
           "y:3": -126
         },
         "8:10": {
@@ -28963,36 +28969,36 @@
           "id:3": 231,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 102,
+          "x:3": 108,
           "y:3": -126
         },
         "11:10": {
           "id:3": 232,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 78,
+          "x:3": 84,
           "y:3": -198
         },
         "12:10": {
           "id:3": 234,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": 72,
-          "y:3": -258
+          "x:3": 78,
+          "y:3": -252
         },
         "13:10": {
           "id:3": 235,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 24,
-          "y:3": -252
+          "x:3": 30,
+          "y:3": -246
         },
         "14:10": {
           "id:3": 236,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -24,
-          "y:3": -252
+          "x:3": -18,
+          "y:3": -246
         },
         "15:10": {
           "id:3": 237,
@@ -29012,28 +29018,28 @@
           "id:3": 240,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -6,
+          "x:3": 0,
           "y:3": -204
         },
         "18:10": {
           "id:3": 241,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -66,
+          "x:3": -72,
           "y:3": -204
         },
         "19:10": {
           "id:3": 243,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -60,
-          "y:3": -252
+          "x:3": -66,
+          "y:3": -246
         },
         "20:10": {
           "id:3": 244,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -186,
+          "x:3": -180,
           "y:3": -198
         },
         "21:10": {
@@ -29048,7 +29054,7 @@
           "sizeX:3": 36,
           "sizeY:3": 36,
           "x:3": -138,
-          "y:3": -276
+          "y:3": -270
         },
         "23:10": {
           "id:3": 247,
@@ -29068,8 +29074,8 @@
           "id:3": 267,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -186,
-          "y:3": -252
+          "x:3": -180,
+          "y:3": -246
         },
         "26:10": {
           "id:3": 446,
