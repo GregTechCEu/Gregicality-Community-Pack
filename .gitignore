@@ -27,3 +27,4 @@ config/jei/bookmark.ini
 config/jei/worldSettings.cfg
 config/AppliedEnergistics2/items.csv
 build/modlist.*
+config/BiomeTweaker/output/*
