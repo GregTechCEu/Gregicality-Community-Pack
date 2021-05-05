@@ -21,6 +21,11 @@ jobs:
     - name: Install requests
       run: |
        pip install requests
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt' # See 'Supported distributions' for available options
+        java-version: '11'
+    - run: java -version
     - name: Run Build
       run: |
         python build/main.py
@@ -33,5 +38,6 @@ jobs:
           title: ${{ steps.vars.outputs.sha_short }}
 
           files: |
-            build/client.zip
-            build/modlist.html
+            buildOut/client.zip
+            buildOut/server.zip
+            buildOut/modlist.html
