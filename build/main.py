@@ -106,8 +106,15 @@ print("Vanilla Downloaded")
 subprocess.run(["java", "-jar", "forge-installer.jar", "--installServer"], cwd=basePath + "/buildOut/server/")
 print("Forge Installed")
 
-subprocess.run(["rm", basePath + "/buildout/server/forge-installer.jar"])
-subprocess.run(["rm", basePath + "/buildout/server/forge-installer.jar.log"])
+try:
+    os.remove(basePath + "/buildout/server/forge-installer.jar")
+except Exception as e:
+    print("Couldn't delete forge-installer.jar")
+try:
+    os.remove(basePath + "/buildout/server/forge-installer.jar.log")
+except Exception as e:
+    print("Couldn't delete forge-installer.jar.log")
+
 shutil.make_archive("buildOut/server", "zip", basePath + "/buildOut/server")
 print("server zip made")
 print("done")
