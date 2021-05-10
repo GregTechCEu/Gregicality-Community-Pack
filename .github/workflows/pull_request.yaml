@@ -7,6 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+    steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -20,6 +21,11 @@ jobs:
     - name: Install requests
       run: |
        pip install requests
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt' # See 'Supported distributions' for available options
+        java-version: '11'
+    - run: java -version
     - name: Run Build
       run: |
         python build/main.py
@@ -27,9 +33,14 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: client
-        path: buildOut/*
+        path: buildOut/client/*
+    - name: 'Upload Client'
+      uses: actions/upload-artifact@v2
+      with:
+        name: server
+        path: buildOut/server/*
     - name: 'Upload Modlist'
       uses: actions/upload-artifact@v2
       with:
         name: modlist
-        path: build/modlist.html
+        path: buildOut/modlist.html

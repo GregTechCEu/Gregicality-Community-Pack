@@ -3,7 +3,7 @@
         "version": "1.12.2",
         "modLoaders": [
             {
-            "id": "forge-14.23.5.2847",
+            "id": "forge-14.23.5.2855",
             "primary": true
             }
         ]
@@ -15,7 +15,7 @@
     "author": "hjae",
     "externalDeps":[
         {
-            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v36/appliedenergistics2-rv6-stable-7.omni-fixes-v36b.jar",
+            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v38/appliedenergistics2-rv6-stable-7.omni-fixes-v38f.jar",
             "hash" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "name": "Applied Energistics 2 Trousers Edition"
         }
@@ -563,7 +563,7 @@
         },
 	{
 	    "projectID":477021,
-            "fileID":3303969,
+      "fileID":3303969,
 	    "required":true
 	},
         {
@@ -575,6 +575,11 @@
             "projectID":228895,
             "fileID":3112142,
             "required":true
-        }
+        },
+	{
+	    "projectID":262823,
+            "fileID":2619249,
+	    "required":true
+	}
     ]
 }
