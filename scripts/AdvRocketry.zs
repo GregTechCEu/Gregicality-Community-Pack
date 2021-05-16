@@ -578,8 +578,7 @@ assembler.recipeBuilder()
 
 assembler.recipeBuilder()
 	.inputs(<ore:wireGtDoubleYttriumBariumCuprate> * 8)
-	.inputs(<ore:wireFineIridium> * 64)
-	.inputs(<ore:wireFineIridium> * 64)
+	.inputs(<ore:wireFineIridium> * 128)
 	.fluidInputs([<fluid:soldering_alloy> * 72])
 	.outputs(<ore:coilIridium>.firstItem)
 	.duration(200)
@@ -602,7 +601,7 @@ recipes.addShaped("ar_planetselector", <advancedrocketry:planetselector>, [
 
 // Space Elevator
 assembly_line.recipeBuilder()
-	.inputs(<ore:frameGtBlueSteel> * 63)
+	.inputs(<ore:frameGtBlueSteel> * 6)
 	.inputs(<ore:plateBismuthBronze> * 64)
 	.inputs(<ore:plateGraphene> * 64)
 	.inputs(circuits[6] * 4)
