@@ -41,6 +41,17 @@ devtech.machine.super.tank.luv.name=Quantum Tank III
 devtech.machine.super.tank.zpm.name=Quantum Tank IV
 devtech.machine.super.tank.uv.name=Quantum Tank V
 
+# Stock Manipulators
+devtech.machine.stock_manipulator.lv.name=Basic Stock Manipulator
+devtech.machine.stock_manipulator.mv.name=Advanced Stock Manipulator
+devtech.machine.stock_manipulator.hv.name=Advanced Stock Manipulator II
+devtech.machine.stock_manipulator.ev.name=Advanced Stock Manipulator III
+devtech.machine.stock_manipulator.iv.name=Elite Stock Manipulator
+devtech.machine.stock_manipulator.luv.name=Elite Stock Manipulator II
+devtech.machine.stock_manipulator.zpm.name=Elite Stock Manipulator III
+devtech.machine.stock_manipulator.uv.name=Elite Stock Manipulator IV
+recipemap.stock_manipulator.name=Stock Market Manipulation
+
 # EnderIO
 item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
 item.item_capacitor_energetic_silver.name=Endergetic Capacitor V2.0
