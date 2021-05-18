@@ -78,3 +78,15 @@ for i in (id + 1) to id + 9 {
 }
 
 id += 9;
+
+// Stock manipulators
+tier = 1;
+for i in (id + 1) to id + 9 {
+    recipes.addShaped("gt_stock_manipulator" + (i - id), machine.makeStack(i), [
+        [tieredGlass[tier], sensors[tier], <minecraft:clay_ball>],
+        [circuits[tier], hulls[tier], circuits[tier]],
+        [tieredCables[tier], emitters[tier], tieredCables[tier]]
+    ]);
+    tier += 1;
+}
+
