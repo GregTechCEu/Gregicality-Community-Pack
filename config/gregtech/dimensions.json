@@ -11,6 +11,54 @@
     {
       "dimID": -1,
       "dimName": "Nether"
+    },
+    {
+      "dimID": 10,
+      "dimName": "The Beneath"
+    },
+    {
+      "dimID": 100,
+      "dimName": "The Moon"
+    },
+    {
+      "dimID": 101,
+      "dimName": "Mercury"
+    },
+    {
+      "dimID": 102,
+      "dimName": "Venus"
+    },
+    {
+      "dimID": 103,
+      "dimName": "Mars"
+    },
+    {
+      "dimID": 104,
+      "dimName": "Jupiter"
+    },
+    {
+      "dimID": 105,
+      "dimName": "Io"
+    },
+    {
+      "dimID": 106,
+      "dimName": "Europa"
+    },
+    {
+      "dimID": 107,
+      "dimName": "Saturn"
+    },
+    {
+      "dimID": 108,
+      "dimName": "Titan"
+    },
+    {
+      "dimID": 109,
+      "dimName": "Uranus"
+    },
+    {
+      "dimID": 110,
+      "dimName": "Neptune"
     }
   ]
 }
