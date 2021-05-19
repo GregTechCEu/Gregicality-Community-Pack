@@ -1,1 +1,6 @@
-[]
+[
+	{
+	        "passive": false,
+		"result": deny
+	}
+]
