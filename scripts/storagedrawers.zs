@@ -11,12 +11,12 @@ mods.jei.JEI.removeAndHide(<framedcompactdrawers:framed_compact_drawer>);
 
 var drawerWoodTypeMap as IItemStack[][] =
 [
-[<minecraft:planks:0>, <storagedrawers:trim:0>, <quark:custom_chest:0>],
-[<minecraft:planks:1>, <storagedrawers:trim:1>, <quark:custom_chest:1>],
-[<minecraft:planks:2>, <storagedrawers:trim:2>, <quark:custom_chest:2>],
-[<minecraft:planks:3>, <storagedrawers:trim:3>, <quark:custom_chest:3>],
-[<minecraft:planks:4>, <storagedrawers:trim:4>, <quark:custom_chest:4>],
-[<minecraft:planks:5>, <storagedrawers:trim:5>, <quark:custom_chest:5>]
+[<minecraft:planks:0>, <storagedrawers:trim:0>],
+[<minecraft:planks:1>, <storagedrawers:trim:1>],
+[<minecraft:planks:2>, <storagedrawers:trim:2>],
+[<minecraft:planks:3>, <storagedrawers:trim:3>],
+[<minecraft:planks:4>, <storagedrawers:trim:4>],
+[<minecraft:planks:5>, <storagedrawers:trim:5>]
 ];
 
 var woodStrings as IData[] = 
@@ -43,6 +43,7 @@ val doubleStick = <ore:stickLongWood> as IIngredient;
 val quarterStick = <ore:boltWood> as IIngredient;
 val woodPlate = <ore:plateWood> as IIngredient;
 val ironScrew = <ore:screwIron> as IIngredient;
+val chest = <ore:chestWood> as IIngredient;
 
 // Trims
 for i in 0 to 6 {
@@ -67,12 +68,12 @@ for i in 0 to 6 {
 	recipes.addShaped("gregified_fulldrawer1_" + woods[i], <storagedrawers:basicdrawers:0>.withTag(woodStrings[i]),
 	[
 	[stick,stick,null],
-	[drawerWoodTypeMap[i][1],drawerWoodTypeMap[i][2],<ore:gregSaws>],
+	[drawerWoodTypeMap[i][1],chest,<ore:gregSaws>],
 	[stick,stick,null]
 	]);
 	assembler.recipeBuilder()
 		.inputs(drawerWoodTypeMap[i][1])
-		.inputs(drawerWoodTypeMap[i][2])
+		.inputs(chest)
 		.outputs(<storagedrawers:basicdrawers:0>.withTag(woodStrings[i]))
 		.EUt(30)
 		.duration(20)
