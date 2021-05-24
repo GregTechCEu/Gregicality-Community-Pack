@@ -169,7 +169,7 @@ extractor.findRecipe(5, [<metaitem:rubber_drop>], null).remove();
 
 extractor.recipeBuilder().duration(200).EUt(5)
 	.inputs(<minecraft:slime_ball>)
-	.outputs(<ore:dustRawRubber>.firstItem * 4)
+	.outputs(<ore:dustRawRubber>.firstItem * 2)
 	.buildAndRegister();
 
 furnace.remove(<metaitem:rubber_drop>);
