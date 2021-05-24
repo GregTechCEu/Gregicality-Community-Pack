@@ -1,4 +1,5 @@
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 
