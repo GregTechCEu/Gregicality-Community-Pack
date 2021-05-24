@@ -118,7 +118,7 @@ for i in 0 to 6 {
 for i in 0 to 6 {
 	recipes.removeByRecipeName("storagedrawers:basicdrawers_halfdrawers2_" + woods[i]);
 	recipes.removeByRecipeName("storagedrawers:basicdrawers_halfdrawers4_" + woods[i]);
-	recipes.addShaped("gregified_halfdrawer2_" + woods[i], <storagedrawers:basicdrawers:3>.withTag(woodStrings[i]),
+	recipes.addShaped("gregified_halfdrawer2_" + woods[i], <storagedrawers:basicdrawers:3>.withTag(woodStrings[i]) * 2,
 	[
 	[doubleStick,woodPlate,doubleStick],
 	[doubleStick,<storagedrawers:basicdrawers:1>.withTag(woodStrings[i]),<ore:gregSaws>],
@@ -128,12 +128,12 @@ for i in 0 to 6 {
 		.inputs(<storagedrawers:basicdrawers:1>.withTag(woodStrings[i]))
 		.inputs(woodPlate * 2)
 		.inputs(stick * 8)
-		.outputs(<storagedrawers:basicdrawers:3>.withTag(woodStrings[i]))
+		.outputs(<storagedrawers:basicdrawers:3>.withTag(woodStrings[i]) * 2)
 		.EUt(30)
 		.duration(80)
 		.buildAndRegister();
 		
-	recipes.addShaped("gregified_halfdrawer4_" + woods[i], <storagedrawers:basicdrawers:4>.withTag(woodStrings[i]),
+	recipes.addShaped("gregified_halfdrawer4_" + woods[i], <storagedrawers:basicdrawers:4>.withTag(woodStrings[i]) * 2,
 	[
 	[doubleStick,woodPlate,doubleStick],
 	[doubleStick,<storagedrawers:basicdrawers:2>.withTag(woodStrings[i]),<ore:gregSaws>],
@@ -143,7 +143,7 @@ for i in 0 to 6 {
 		.inputs(<storagedrawers:basicdrawers:2>.withTag(woodStrings[i]))
 		.inputs(woodPlate * 2)
 		.inputs(stick * 8)
-		.outputs(<storagedrawers:basicdrawers:4>.withTag(woodStrings[i]))
+		.outputs(<storagedrawers:basicdrawers:4>.withTag(woodStrings[i]) * 2)
 		.EUt(30)
 		.duration(80)
 		.buildAndRegister();
@@ -210,7 +210,7 @@ assembler.recipeBuilder()
 	.buildAndRegister();
 
 recipes.removeByRecipeName("storagedrawers:framed_drawer_half2");
-recipes.addShaped("gregified_framed_halfdrawer2", <storagedrawers:customdrawers:3>,
+recipes.addShaped("gregified_framed_halfdrawer2", <storagedrawers:customdrawers:3> * 2,
 	[
 	[stick,doubleStick,stick],
 	[stick,<ore:gregFiles>,stick],
@@ -220,13 +220,13 @@ recipes.addShaped("gregified_framed_halfdrawer2", <storagedrawers:customdrawers:
 assembler.recipeBuilder()
 	.inputs(stick * 10)
 	.property("circuit", 6)
-	.outputs(<storagedrawers:customdrawers:3>)
+	.outputs(<storagedrawers:customdrawers:3> * 2)
 	.EUt(30)
 	.duration(40)
 	.buildAndRegister();
 
 recipes.removeByRecipeName("storagedrawers:framed_drawer_half4");
-recipes.addShaped("gregified_framed_halfdrawer4", <storagedrawers:customdrawers:4>,
+recipes.addShaped("gregified_framed_halfdrawer4", <storagedrawers:customdrawers:4> * 2,
 	[
 	[stick,doubleStick,stick],
 	[stick,<ore:gregFiles>,doubleStick],
@@ -236,7 +236,7 @@ recipes.addShaped("gregified_framed_halfdrawer4", <storagedrawers:customdrawers:
 assembler.recipeBuilder()
 	.inputs(stick * 11)
 	.property("circuit", 7)
-	.outputs(<storagedrawers:customdrawers:4>)
+	.outputs(<storagedrawers:customdrawers:4> * 2)
 	.EUt(30)
 	.duration(40)
 	.buildAndRegister();
@@ -382,10 +382,10 @@ assembler.recipeBuilder()
 
 recipes.removeByRecipeName("storagedrawers:upgrade_void");
 assembler.recipeBuilder()
-	.inputs(<minecraft:dispenser>)
+	.inputs(<minecraft:dropper>)
 	.inputs(<storagedrawers:upgrade_template>)
 	.outputs(<storagedrawers:upgrade_void>)
-	.EUt(2048)
+	.EUt(16)
 	.duration(100)
 	.buildAndRegister();
 	
