@@ -157,3 +157,20 @@ recipes.addShaped("minecraft_door", <minecraft:wooden_door>, [[<ore:plankWood>, 
 // Hammers
 recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron:72>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
 recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond:36>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
+
+
+// Slime Balls
+extractor.recipeBuilder().duration(50).EUt(4)
+	.inputs(<metaitem:rubber_drop>)
+	.outputs(<minecraft:slime_ball> * 2)
+	.buildAndRegister();
+
+extractor.findRecipe(5, [<metaitem:rubber_drop>], null).remove();
+
+extractor.recipeBuilder().duration(200).EUt(5)
+	.inputs(<minecraft:slime_ball>)
+	.outputs(<ore:dustRawRubber>.firstItem * 2)
+	.buildAndRegister();
+
+furnace.remove(<metaitem:rubber_drop>);
+
