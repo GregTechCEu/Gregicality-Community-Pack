@@ -177,5 +177,7 @@ extractor.recipeBuilder().duration(200).EUt(5)
 
 furnace.remove(<metaitem:rubber_drop>);
 
+
 // Shears
 recipes.addShaped("minecraft_shears", <minecraft:shears>, [[<ore:gregHardHammers>, <ore:plateIron>], [<ore:plateIron>, <ore:gregFiles>]]);
+
