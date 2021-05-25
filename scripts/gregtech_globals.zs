@@ -61,6 +61,7 @@ global packer as RecipeMap =                        RecipeMap.getByName("packer"
 global polarizer as RecipeMap =                     RecipeMap.getByName("polarizer");
 global pyro as RecipeMap =                          RecipeMap.getByName("pyro");
 global sifter as RecipeMap =                        RecipeMap.getByName("sifter");
+global stellar_forge as RecipeMap =                 RecipeMap.getByName("stellar_forge");
 global thermal_centrifuge as RecipeMap =            RecipeMap.getByName("thermal_centrifuge");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global vacuum_freezer as RecipeMap =                RecipeMap.getByName("vacuum_freezer");

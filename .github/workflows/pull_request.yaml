@@ -1,12 +1,13 @@
 name: Build
 
-on: [push]
+on: [pull_request]
+
+
+
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -24,20 +25,23 @@ jobs:
     - uses: actions/setup-java@v2
       with:
         distribution: 'adopt' # See 'Supported distributions' for available options
-        java-version: '8'
+        java-version: '11'
     - run: java -version
     - name: Run Build
       run: |
         python build/main.py
-    - name: Automatic Releases
-      uses: marvinpinto/action-automatic-releases@v1.1.1
+    - name: 'Upload Client'
+      uses: actions/upload-artifact@v2
       with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: ${{ steps.vars.outputs.sha_short }}
-
-          files: |
-            buildOut/client.zip
-            buildOut/server.zip
-            buildOut/modlist.html
+        name: client
+        path: buildOut/client/*
+    - name: 'Upload Client'
+      uses: actions/upload-artifact@v2
+      with:
+        name: server
+        path: buildOut/server/*
+    - name: 'Upload Modlist'
+      uses: actions/upload-artifact@v2
+      with:
+        name: modlist
+        path: buildOut/modlist.html
