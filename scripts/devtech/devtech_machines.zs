@@ -32,11 +32,11 @@ var stock_manipulator = IRecipeMap.recipeMapBuilder("stock_manipulator")
 val tiers as string[] = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv"];
 
 RegisterMachine.CreateQuantumChest(5000, "super.chest." + tiers[0], 0, 2048);
-RegisterMachine.CreateQuantumTank(5009, "super.tank." + tiers[0], 0, 1000000);  
+RegisterMachine.CreateQuantumTank(5009, "super.tank." + tiers[0], 0, 1000000);
 
 for i in 1 to 9 {
     RegisterMachine.CreateQuantumChest((5000 + i), "super.chest." + tiers[i], i, (2048 * pow(2, i)));
-    RegisterMachine.CreateQuantumTank((5009 + i), "super.tank." + tiers[i], i, (2000000 * pow(2, i)));  
+    RegisterMachine.CreateQuantumTank((5009 + i), "super.tank." + tiers[i], i, (2000000 * pow(2, i)));
     RegisterMachine.CreateSimpleMachine((5018 + i), "stock_manipulator." + tiers[i], stock_manipulator, Overlays.get("electromagnetic_separator"), i);
 }
 
@@ -569,3 +569,54 @@ stock_manipulator.recipeBuilder()
 .outputs(<gregtech:ore_tellurium_0> * 32)
 .buildAndRegister();
 
+stock_manipulator.recipeBuilder()
+.notConsumable(intCircuit(51))
+.inputs(<contenttweaker:coin_steel> * 4)
+.EUt(120)
+.duration(100)
+.outputs(<contenttweaker:coin_aluminium>)
+.buildAndRegister();
+
+stock_manipulator.recipeBuilder()
+.notConsumable(intCircuit(52))
+.inputs(<contenttweaker:coin_aluminium> * 4)
+.EUt(270)
+.duration(100)
+.outputs(<contenttweaker:coin_stainless_steel>)
+.buildAndRegister();
+
+recipes.addShaped("gt_coin_iron", <metaitem:dustIron> * 32, [
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>],
+    [null, null, null],
+    [null, null, null]
+]);
+recipes.addShaped("gt_coin_copper", <metaitem:dustCopper> * 32, [
+    [null, null, null],
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>],
+    [null, null, null]
+]);
+recipes.addShaped("gt_coin_tin", <metaitem:dustTin> * 32, [
+    [null, null, null],
+    [null, null, null],
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>]
+]);
+recipes.addShaped("gt_coin_redstone", <minecraft:redstone> * 32, [
+    [null, null, null],
+    [null, <contenttweaker:coin_bronze>, null],
+    [null, null, null]
+]);
+recipes.addShaped("gt_coin_sliver", <metaitem:dustSilver> * 32, [
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>],
+    [null, <contenttweaker:coin_bronze>, null],
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>]
+]);
+recipes.addShaped("gt_coin_diamond", <minecraft:diamond>, [
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>],
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>],
+    [<contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>, <contenttweaker:coin_bronze>]
+]);
+recipes.addShaped("gt_coin_upgrade", <contenttweaker:coin_steel> * 4, [
+    [<contenttweaker:coin_bronze>, null, <contenttweaker:coin_bronze>],
+    [null, null, null],
+    [<contenttweaker:coin_bronze>, null, <contenttweaker:coin_bronze>]
+]);
