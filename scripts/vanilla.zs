@@ -162,6 +162,7 @@ recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron>, [
 recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
 
 
+
 // Slime Balls
 extractor.recipeBuilder().duration(50).EUt(4)
 	.inputs(<metaitem:rubber_drop>)

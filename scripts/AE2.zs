@@ -61,6 +61,7 @@ val name_removals = [
 	"appliedenergistics2:network/parts/terminals_crafting",
 	"appliedenergistics2:network/parts/terminals_pattern",
 	"appliedenergistics2:network/parts/terminals_interface",
+	"appliedenergistics2:network/parts/terminals_fluid",
 	"appliedenergistics2:materials/annihilationcore",
 	"appliedenergistics2:materials/formationcore",
 	"appliedenergistics2:network/blocks/cell_workbench",
