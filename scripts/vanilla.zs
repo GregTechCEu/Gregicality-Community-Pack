@@ -158,8 +158,9 @@ recipes.addShaped("minecraft_door", bestDoor, [[<ore:plankWood>, <minecraft:trap
 
 
 // Hammers
-recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron:72>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
-recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond:36>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
+recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
+recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
+
 
 
 // Slime Balls
