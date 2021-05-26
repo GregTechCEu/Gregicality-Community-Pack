@@ -18,6 +18,7 @@ val name_removals = [
     "minecraft:ender_eye",
     "minecraft:speckled_melon",
     "minecraft:golden_carrot",
+    "minecraft:shears",
     "gregtech:oak_planks_saw",
     "gregtech:spruce_planks_saw",
     "gregtech:birch_planks_saw",
@@ -151,7 +152,9 @@ for i in 0 to small_gears.length {
 }
 
 // Door
-recipes.addShaped("minecraft_door", <minecraft:wooden_door>, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
+val bestDoor = <minecraft:wooden_door>.withTag({display: {Name: "Better Door"}}) as IItemStack;
+bestDoor.addTooltip(format.darkPurple("Congratulations, you played yourself."));
+recipes.addShaped("minecraft_door", bestDoor, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
 
 
 // Hammers
@@ -173,4 +176,8 @@ extractor.recipeBuilder().duration(200).EUt(5)
 	.buildAndRegister();
 
 furnace.remove(<metaitem:rubber_drop>);
+
+
+// Shears
+recipes.addShaped("minecraft_shears", <minecraft:shears>, [[<ore:gregHardHammers>, <ore:plateIron>], [<ore:plateIron>, <ore:gregFiles>]]);
 
