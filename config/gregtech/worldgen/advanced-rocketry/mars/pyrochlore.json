@@ -1,0 +1,41 @@
+{
+    "weight": 15,
+    "density": 0.6,
+    "max_height": 50,
+    "min_height": 20,
+    "surface_stone_material": "pyrochlore",
+            "vein_populator": {
+                "type": "surface_rock",
+                "material": "pyrochlore"
+            },
+            "dimension_filter": [
+                "dimension_id:104"
+            ],
+    "generator": {
+        "type": "ellipsoid",
+        "radius": [
+            13,
+            13
+        ]
+    },
+    "filler": {
+        "type": "simple",
+        "value": {
+            "type": "weight_random",
+            "values": [
+                {
+                    "weight": 90,
+                    "value": "ore:pyrochlore"
+                },
+                {
+                    "weight": 5,
+                    "value": "ore:thorium"
+                },
+                {
+                    "weight": 5,
+                    "value": "ore:pitchblende"
+                }
+            ]
+        }
+    }
+}
