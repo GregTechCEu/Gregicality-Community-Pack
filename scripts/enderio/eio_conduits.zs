@@ -135,9 +135,9 @@ for i in 12 to 15 {
 }
 
 // Item Conduits
-val conduit_foils = [<ore:foilPolycaprolactam> * 16, <ore:foilPolytetrafluoroethylene> * 16, <ore:foilSiliconRubber> * 16] as IIngredient[];
+val conduit_foils = [<ore:foilRubber> * 16, <ore:foilPlastic> * 16, <ore:plateStyreneButadieneRubber> * 4] as IIngredient[];
 for i in 1 to 4 {
-    assembler.recipeBuilder().EUt(8 * pow(4, i)).duration(400)
+    assembler.recipeBuilder().EUt(30 * pow(4, (i - 1))).duration(400)
         .inputs(<ore:itemConduitBinder> * (16 * (i + 1)))
         .inputs(conveyors[i])   
         .inputs(conduit_foils[i - 1])     
