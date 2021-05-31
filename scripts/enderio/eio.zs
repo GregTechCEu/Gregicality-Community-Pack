@@ -292,7 +292,7 @@ assembler.recipeBuilder().EUt(7680).duration(100)
     .buildAndRegister();
 
 // Portable Tank
-recipes.addShaped("eio_tank", <enderio:block_tank>, [[tieredPlates[0], tieredPlates[0], tieredPlates[0]],[tieredGlass[3], <ore:itemSimpleMachineChassi>, tieredGlass[3]],[tieredPlates[0], tieredPlates[0], tieredPlates[0]]]);
+recipes.addShaped("eio_tank", <enderio:block_tank>, [[tieredPlates[0], tieredPlates[0], tieredPlates[0]],[tieredGlass[2], <ore:itemSimpleMachineChassi>, tieredGlass[2]],[tieredPlates[0], tieredPlates[0], tieredPlates[0]]]);
 
 // Simple Crafter
 recipes.addShaped("eio_simple_crafter", <enderio:block_simple_crafter>, [[tieredPlates[0], <meta_tile_entity:gregtech:workbench>, tieredPlates[0]],[<ore:gregWrenches>, <ore:itemSimpleMachineChassi>, <ore:gregScrewDrivers>],[<ore:gearStone>, circuits[1], <ore:gearStone>]]);

@@ -102,3 +102,9 @@ var furnace_removals = [
 for item in furnace_removals {
     furnace.remove(item);
 }
+
+<ore:circuitBasic>.remove(<metaitem:circuit.advanced_parts>);
+<ore:circuitGood>.remove(<metaitem:circuit.advanced>);
+<ore:circuitGood>.remove(<metaitem:circuit.good>);
+<ore:circuitElite>.remove(<metaitem:circuit.data_control>);
+<ore:circuitElite>.remove(<metaitem:circuit.crystal_processor>);

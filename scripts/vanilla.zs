@@ -18,6 +18,7 @@ val name_removals = [
     "minecraft:ender_eye",
     "minecraft:speckled_melon",
     "minecraft:golden_carrot",
+    "minecraft:shears",
     "gregtech:oak_planks_saw",
     "gregtech:spruce_planks_saw",
     "gregtech:birch_planks_saw",
@@ -151,9 +152,33 @@ for i in 0 to small_gears.length {
 }
 
 // Door
-recipes.addShaped("minecraft_door", <minecraft:wooden_door>, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
+val bestDoor = <minecraft:wooden_door>.withTag({display: {Name: "Better Door"}}) as IItemStack;
+bestDoor.addTooltip(format.darkPurple("Congratulations, you played yourself."));
+recipes.addShaped("minecraft_door", bestDoor, [[<ore:plankWood>, <minecraft:trapdoor>, <ore:gregScrewDrivers>], [<ore:plankWood>, <ore:ringIron>, <ore:screwIron>], [<ore:plankWood>, <ore:plankWood>, <ore:gregSaws>]]);
 
 
 // Hammers
-recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron:72>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
-recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond:36>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
+recipes.addShaped("vanillatools_hammer_iron", <vanillatools:tool.hammer_iron>, [[<ore:plateIron>, <ore:ingotIron>, <ore:plateIron>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>], [null, <ore:stickWood>, null]]);
+recipes.addShaped("vanillatools_hammer_diamond", <vanillatools:tool.hammer_diamond>, [[<ore:gemDiamond>, <ore:gemDiamond>, <ore:gemDiamond>], [<ore:gemFlawedDiamond>, <ore:stickWood>, <ore:gemFlawedDiamond>], [<ore:gregHardHammers>, <ore:stickWood>, <ore:gregFiles>]]);
+
+
+
+// Slime Balls
+extractor.recipeBuilder().duration(50).EUt(4)
+	.inputs(<metaitem:rubber_drop>)
+	.outputs(<minecraft:slime_ball> * 2)
+	.buildAndRegister();
+
+extractor.findRecipe(5, [<metaitem:rubber_drop>], null).remove();
+
+extractor.recipeBuilder().duration(200).EUt(5)
+	.inputs(<minecraft:slime_ball>)
+	.outputs(<ore:dustRawRubber>.firstItem * 2)
+	.buildAndRegister();
+
+furnace.remove(<metaitem:rubber_drop>);
+
+
+// Shears
+recipes.addShaped("minecraft_shears", <minecraft:shears>, [[<ore:gregHardHammers>, <ore:plateIron>], [<ore:plateIron>, <ore:gregFiles>]]);
+

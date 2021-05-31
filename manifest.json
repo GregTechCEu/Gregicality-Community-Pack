@@ -15,7 +15,7 @@
     "author": "hjae",
     "externalDeps":[
         {
-            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v38/appliedenergistics2-rv6-stable-7.omni-fixes-v38f.jar",
+            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v41/appliedenergistics2-rv6-stable-7.omni-fixes-v41.jar",
             "hash" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "name": "Applied Energistics 2 Trousers Edition"
         }
@@ -318,11 +318,6 @@
             "required":true
         },
         {
-            "projectID":257356,
-            "fileID":3101719,
-            "required":true
-        },
-        {
             "projectID":285789,
             "fileID":2641661,
             "required":true
@@ -576,15 +571,30 @@
             "fileID":3112142,
             "required":true
         },
-	    {
-	        "projectID":262823,
-                "fileID":2619249,
-	        "required":true
-	    },
         {
             "projectID": 254629,
             "fileID": 2850842,
             "required": true
-        }
+        },
+	{
+	    "projectID":262823,
+            "fileID":2619249,
+	    "required":true
+	},
+	{
+	    "projectID":224472,
+            "fileID":2969118,
+	    "required":true
+	},
+	{
+	    "projectID":224473,
+            "fileID":2442631,
+	    "required":true
+	},
+	{
+	    "projectID":227657,
+            "fileID":2654852,
+	    "required":true
+	}
     ]
 }

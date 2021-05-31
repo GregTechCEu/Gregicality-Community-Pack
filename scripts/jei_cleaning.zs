@@ -10,7 +10,6 @@ val name_removals = [
     "enderio:tweak_stick_from_wood",
     "enderio:ender_defragmentation",
     "minecraft:bookshelf",
-    "minecraft:chest",
     "buildinggadgets:templatemanager"
 ] as string[];
 
