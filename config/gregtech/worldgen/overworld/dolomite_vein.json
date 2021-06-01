@@ -34,6 +34,6 @@
         }
     },
     "dimension_filter": [
-        "dimension_id:1"
+        "dimension_id:0"
     ]
 }
