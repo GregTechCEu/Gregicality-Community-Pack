@@ -41,11 +41,11 @@
         },
         {
           "weight": 10,
-          "value": "ore:poor:gold"
+          "value": "ore:gold"
         },
         {
           "weight": 5,
-          "value": "ore:gold"
+          "value": "ore:rich:gold"
         }
       ]
     }
