@@ -16,11 +16,11 @@
             "type": "weight_random",
             "values": [
                 {
-                    "weight": 25,
+                    "weight": 10,
                     "value": "ore:lignite"
                 },
                 {
-                    "weight": 75,
+                    "weight": 90,
                     "value": "ore:coal"
                 }
             ]

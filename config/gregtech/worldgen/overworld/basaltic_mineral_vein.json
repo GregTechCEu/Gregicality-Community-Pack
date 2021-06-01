@@ -25,10 +25,6 @@
                 },
                 {
                     "weight": 20,
-                    "value": "ore:fullers_earth"
-                },
-                {
-                    "weight": 20,
                     "value": "ore:gypsum"
                 }
             ]
