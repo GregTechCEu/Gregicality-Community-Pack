@@ -612,3 +612,7 @@ recipes.addShaped("gt_coin_diamond", <minecraft:diamond> * 4, [
     [null, <contenttweaker:coin_bronze>, null],
     [<contenttweaker:coin_bronze>, null, <contenttweaker:coin_bronze>]
 ]);
+
+canner.recipeBuilder().inputs(<minecraft:stone>*8).duration(100).EUt(8).inputs(<ore:dyeWhite>).outputs(<gregtech:mineral:0>*8).buildAndRegister();
+canner.recipeBuilder().inputs(<minecraft:stone>*8).duration(100).EUt(8).inputs(<ore:dyeRed>).outputs(<gregtech:granite:1>*8).buildAndRegister();
+canner.recipeBuilder().inputs(<minecraft:stone>*8).duration(100).EUt(8).inputs(<ore:dyeBlack>).outputs(<gregtech:granite:0>*8).buildAndRegister();
