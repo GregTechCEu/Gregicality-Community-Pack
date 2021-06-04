@@ -154,10 +154,11 @@ recipes.addShaped("eio_step_explosive_upgrade_5", <enderio:item_dark_steel_upgra
 
 // Dark Steel Helmet
 assembler.recipeBuilder()
-	.inputs(<ore:plateDarkSteel> * 5)
 	.inputs(circuits[2] * 2)
+	.inputs(<ore:wireFineAluminium> * 10)
+	.inputs(<ore:plateDarkSteel> * 5)
     .inputs(<ore:screwDarkSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(5))
+	.circuit(3)
 	.outputs(<enderio:item_dark_steel_helmet>)
 	.EUt(96)
 	.duration(100)
@@ -166,9 +167,10 @@ assembler.recipeBuilder()
 // Dark Steel Chestplate
 assembler.recipeBuilder()
 	.inputs(circuits[2] * 2)
+	.inputs(<ore:wireFineAluminium> * 10)
 	.inputs(<ore:plateDarkSteel> * 8)
     .inputs(<ore:screwDarkSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(8))
+	.circuit(0)
 	.outputs(<enderio:item_dark_steel_chestplate>)
 	.EUt(96)
 	.duration(100)
@@ -177,9 +179,10 @@ assembler.recipeBuilder()
 // Dark Steel Leggings
 assembler.recipeBuilder()
 	.inputs(circuits[2] * 2)
+	.inputs(<ore:wireFineAluminium> * 10)
 	.inputs(<ore:plateDarkSteel> * 7)
     .inputs(<ore:screwDarkSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(7))
+	.circuit(1)
 	.outputs(<enderio:item_dark_steel_leggings>)
 	.EUt(96)
 	.duration(100)
@@ -188,9 +191,10 @@ assembler.recipeBuilder()
 // Dark Steel Boots
 assembler.recipeBuilder()
 	.inputs(circuits[2] * 2)
+	.inputs(<ore:wireFineAluminium> * 10)
 	.inputs(<ore:plateDarkSteel> * 4)
     .inputs(<ore:screwDarkSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(4))
+	.circuit(2)
 	.outputs(<enderio:item_dark_steel_boots>)
 	.EUt(96)
 	.duration(100)
@@ -210,9 +214,9 @@ recipes.addShaped("eio_shield_dark", <enderio:item_dark_steel_shield>,
 
 // Dark Bow
 recipes.addShaped("eio_bow_dark", <enderio:item_dark_steel_bow>,
-	[[null, <ore:string>, <ore:plateDarkSteel>],
-	[<ore:string>, circuits[2], <ore:itemInfinityRod>],
-	[null, <ore:string>, <ore:plateDarkSteel>]]);
+	[[<ore:screwDarkSteel>, <ore:plateDarkSteel>, <ore:string>],
+	[<ore:itemInfinityRod>, circuits[2], <ore:string>],
+	[<ore:gregScrewDrivers>, <ore:plateDarkSteel>, <ore:string>]]);
 
 // Dark Pick
 recipes.addShaped("eio_pickaxe_dark", <enderio:item_dark_steel_pickaxe>,
@@ -248,45 +252,49 @@ recipes.addShaped("eio_shears_dark", <enderio:item_dark_steel_shears>,
 
 // End Steel Helmet
 assembler.recipeBuilder()
-	.inputs(circuits[3] * 2)
+	.inputs(circuits[4] * 2)
+	.inputs(<ore:wireFineUltimet> * 10)
 	.inputs(<ore:plateEndSteel> * 5)
     .inputs(<ore:screwEndSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(5))
+	.circuit(4)
 	.outputs(<enderio:item_end_steel_helmet>)
-	.EUt(480)
+	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
 
 // End Steel Chestplate
 assembler.recipeBuilder()
-	.inputs(circuits[3] * 2)
+	.inputs(circuits[4] * 2)
+	.inputs(<ore:wireFineUltimet> * 10)
 	.inputs(<ore:plateEndSteel> * 8)
     .inputs(<ore:screwEndSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(8))
+	.circuit(0)
 	.outputs(<enderio:item_end_steel_chestplate>)
-	.EUt(480)
+	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
 
 // End Steel Leggings
 assembler.recipeBuilder()
-	.inputs(circuits[3] * 2)
+	.inputs(circuits[4] * 2)
+	.inputs(<ore:wireFineUltimet> * 10)
 	.inputs(<ore:plateEndSteel> * 7)
     .inputs(<ore:screwEndSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(7))
+	.circuit(1)
 	.outputs(<enderio:item_end_steel_leggings>)
-	.EUt(480)
+	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
 
 // End Steel Boots
 assembler.recipeBuilder()
-	.inputs(circuits[3] * 2)
+	.inputs(circuits[4] * 2)
+	.inputs(<ore:wireFineUltimet> * 10)
 	.inputs(<ore:plateEndSteel> * 4)
     .inputs(<ore:screwEndSteel> * 4)
-	.notConsumable(scripts.gregtech_globals.intCircuit(4))
+	.circuit(2)
 	.outputs(<enderio:item_end_steel_boots>)
-	.EUt(480)
+	.EUt(1920)
 	.duration(100)
 	.buildAndRegister();
 
@@ -304,9 +312,9 @@ recipes.addShaped("eio_shield_end", <enderio:item_end_steel_shield>,
 
 // Ender Bow
 recipes.addShaped("eio_bow_end", <enderio:item_end_steel_bow>,
-	[[null, <ore:string>, <ore:plateEndSteel>],
-	[<ore:string>, circuits[3], <ore:itemInfinityRod>],
-	[null, <ore:string>, <ore:plateEndSteel>]]);
+	[[<ore:screwEndSteel>, <ore:plateEndSteel>, <ore:string>],
+	[<ore:itemInfinityRod>, circuits[3], <ore:string>],
+	[<ore:gregScrewDrivers>, <ore:plateEndSteel>, <ore:string>]]);
 
 // Ender Pickaxe
 recipes.addShaped("eio_pickaxe_end", <enderio:item_end_steel_pickaxe>,
@@ -323,68 +331,75 @@ recipes.addShaped("eio_axe_end", <enderio:item_end_steel_axe>,
 # Stellar Alloy(Steel?) Armor and Arms
 
 // Stellar Helmet
-assembler.recipeBuilder()
-	.inputs(circuits[5] * 2)
+assembly_line.recipeBuilder()
+	.inputs(circuits[6] * 2)
+	.inputs(<ore:wireFineInconelA> * 10)
 	.inputs(<ore:plateStellarAlloy> * 5)
     .inputs(<ore:screwStellarAlloy> * 4)
-    .inputs(field_generators[4])
-	.notConsumable(scripts.gregtech_globals.intCircuit(5))
+	.inputs(<ore:lensNetherStar> * 2)
+    .inputs(field_generators[5])
+	.fluidInputs(soldering_alloys[1] * 576)
 	.outputs(<enderio:item_stellar_alloy_helmet>)
-	.EUt(1920)
-	.duration(100)
+	.EUt(7680)
+	.duration(400)
 	.buildAndRegister();
 
 // Stellar Chestplate
-assembler.recipeBuilder()
-	.inputs(circuits[5] * 2)
+assembly_line.recipeBuilder()
+	.inputs(circuits[6] * 2)
+	.inputs(<ore:wireFineInconelA> * 10)
 	.inputs(<ore:plateStellarAlloy> * 8)
     .inputs(<ore:screwStellarAlloy> * 4)
-    .inputs(field_generators[4])
-	.notConsumable(scripts.gregtech_globals.intCircuit(8))
+	.inputs(<metaitem:plate.iridium_alloy> * 2)
+    .inputs(field_generators[5])
+	.fluidInputs(soldering_alloys[1] * 576)
 	.outputs(<enderio:item_stellar_alloy_chestplate>)
-	.EUt(1920)
-	.duration(100)
+	.EUt(7680)
+	.duration(400)
 	.buildAndRegister();
 
 // Stellar Leggings
-assembler.recipeBuilder()
-	.inputs(circuits[5] * 2)
+assembly_line.recipeBuilder()
+	.inputs(circuits[6] * 2)
+	.inputs(<ore:wireFineInconelA> * 10)
 	.inputs(<ore:plateStellarAlloy> * 7)
     .inputs(<ore:screwStellarAlloy> * 4)
-    .inputs(field_generators[4])
-	.notConsumable(scripts.gregtech_globals.intCircuit(7))
+	.inputs(<ore:itemAttractorCrystal> * 2)
+    .inputs(field_generators[5])
+	.fluidInputs(soldering_alloys[1] * 576)
 	.outputs(<enderio:item_stellar_alloy_leggings>)
-	.EUt(1920)
-	.duration(100)
+	.EUt(7680)
+	.duration(400)
 	.buildAndRegister();
 
 // Stellar Boots
-assembler.recipeBuilder()
-	.inputs(circuits[5] * 2)
+assembly_line.recipeBuilder()
+	.inputs(circuits[6] * 2)
+	.inputs(<ore:wireFineInconelA> * 10)
 	.inputs(<ore:plateStellarAlloy> * 4)
     .inputs(<ore:screwStellarAlloy> * 4)
-    .inputs(<gtadditions:ga_meta_item:32454> * 2)
-    .inputs(field_generators[4])
-	.notConsumable(scripts.gregtech_globals.intCircuit(4))
+    .inputs(<metaitem:memory_foam_block> * 2)
+    .inputs(field_generators[5])
+	.fluidInputs(soldering_alloys[1] * 576)
 	.outputs(<enderio:item_stellar_alloy_boots>)
-	.EUt(1920)
-	.duration(100)
+	.EUt(7680)
+	.duration(400)
 	.buildAndRegister();
 
 // The Ender Mark IV
 recipes.addShaped("eio_sword_stellar", <enderio:item_stellar_alloy_sword>,
 	[[null, <ore:plateStellarAlloy>, null],
-	[field_generators[4], <ore:plateStellarAlloy>, <ore:gregScrewDrivers>],
+	[field_generators[5], <ore:plateStellarAlloy>, <ore:gregScrewDrivers>],
 	[<ore:screwStellarAlloy>, <ore:itemInfinityRod>, <ore:screwStellarAlloy>]]);
 
 // Stellar Pickaxe
 recipes.addShaped("eio_pickaxe_stellar", <enderio:item_stellar_alloy_pickaxe>,
 	[[<ore:plateStellarAlloy>, <ore:ingotStellarAlloy>, <ore:ingotStellarAlloy>],
-	[field_generators[4], <ore:itemInfinityRod>, <ore:gregScrewDrivers>],
+	[field_generators[5], <ore:itemInfinityRod>, <ore:gregScrewDrivers>],
 	[<ore:screwStellarAlloy>, <ore:itemInfinityRod>, <ore:screwStellarAlloy>]]);
 
 // Stellar Axe
 recipes.addShaped("eio_axe_stellar", <enderio:item_stellar_alloy_axe>,
-	[[<ore:plateStellarAlloy>, <ore:ingotStellarAlloy>, field_generators[4]],
+	[[<ore:plateStellarAlloy>, <ore:ingotStellarAlloy>, field_generators[5]],
 	[<ore:plateStellarAlloy>, <ore:itemInfinityRod>, <ore:gregScrewDrivers>],
 	[<ore:screwStellarAlloy>, <ore:itemInfinityRod>, <ore:screwStellarAlloy>]]);
