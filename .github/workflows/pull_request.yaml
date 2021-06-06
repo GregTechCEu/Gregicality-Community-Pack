@@ -33,7 +33,7 @@ jobs:
       with:
         name: client
         path: buildOut/client/*
-    - name: 'Upload Client'
+    - name: 'Upload Server'
       uses: actions/upload-artifact@v2
       with:
         name: server

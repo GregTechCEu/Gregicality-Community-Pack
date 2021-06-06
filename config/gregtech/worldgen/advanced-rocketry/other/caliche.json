@@ -24,11 +24,11 @@
             "type": "weight_random",
             "values": [
                 {
-                    "weight": 5,
+                    "weight": 10,
                     "value": "ore:fluorite"
                 },
                 {
-                    "weight": 90,
+                    "weight": 75,
                     "value": "ore:caliche"
                 },
                 {

@@ -16,7 +16,7 @@
       "type": "weight_random",
       "values": [
         {
-          "weight": 20,
+          "weight": 25,
           "value": "ore:scheelite"
         },
         {
@@ -26,10 +26,6 @@
         {
           "weight": 20,
           "value": "ore:lithium"
-        },
-        {
-          "weight": 5,
-          "value": "ore:tellurium"
         }
       ]
     }
