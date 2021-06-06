@@ -755,8 +755,8 @@ distillery.recipeBuilder().EUt(120).duration(20)
 // Dark Steel
 mixer.recipeBuilder().EUt(30).duration(496)
     .inputs(<ore:dustRegularBlackSteel> * 5)
-    .inputs(<ore:dustRegularVanadium> * 4)
-    .inputs(<ore:dustRegularCarbon>)
+    .inputs(<ore:dustRegularVanadium> * 1)
+    .inputs(<ore:dustRegularCarbon> * 3)
     .outputs(<ore:dustDarkSteel>.firstItem * 9)
     .buildAndRegister();
 
