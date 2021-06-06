@@ -1,6 +1,7 @@
-//recipe if you want to play with channels
+#norun
+// If you want to play with AE2 Channels, remove or comment out the "#norun" from the first line of the file
 
-//controller
+// Controller
 recipes.removeByRecipeName("appliedenergistics2:network/blocks/controller");
 assembler.recipeBuilder()
 	.inputs(<ore:frameGtAluminium>)

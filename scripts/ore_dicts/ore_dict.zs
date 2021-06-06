@@ -30,7 +30,7 @@ function unify (ore as IOreDictEntry, p as int) {
     for item in ore.itemArray { 
 
         // check any item is from current mod
-        if (item.definition.owner == mods[pos]) {
+        if (item.definition.owner == mods[pos] && item.definition.owner != "xtones") {
             foundMod = true;
         }
     }

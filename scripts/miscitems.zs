@@ -35,22 +35,25 @@ assembler.recipeBuilder()
 
 
 // More Furnaces ==============================================================
-mods.jei.JEI.hide(<morefurnaces:upgrade:0>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:1>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:2>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:3>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:4>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:5>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:6>);
-mods.jei.JEI.hide(<morefurnaces:upgrade:7>);
-mods.jei.JEI.hide(<morefurnaces:furnaceblock:0>);
-mods.jei.JEI.hide(<morefurnaces:furnaceblock:1>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:0>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:1>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:2>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:3>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:4>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:5>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:6>);
+mods.jei.JEI.removeAndHide(<morefurnaces:upgrade:7>);
+mods.jei.JEI.removeAndHide(<morefurnaces:furnaceblock:0>);
+mods.jei.JEI.removeAndHide(<morefurnaces:furnaceblock:1>);
 
 recipes.removeByRecipeName("morefurnaces:copper_furnace");
+
 recipes.addShaped(<morefurnaces:furnaceblock:5>, [
     [<ore:plateCopper>, <ore:plateCopper>, <ore:plateCopper>],
     [<ore:plateCopper>, <ore:gregWrenches>, <ore:plateCopper>],
-    [<ore:plateCopper>, <minecraft:furnace>, <ore:plateCopper>]]);
+    [<ore:plateCopper>, <minecraft:furnace>, <ore:plateCopper>]
+]);
+
 assembler.recipeBuilder()
     .inputs(<minecraft:furnace>)
     .inputs(<ore:plateCopper> * 5)
@@ -60,10 +63,13 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 recipes.removeByRecipeName("morefurnaces:silver_furnace");
+
 recipes.addShaped(<morefurnaces:furnaceblock:6>, [
     [<ore:plateSilver>, <ore:plateSilver>, <ore:plateSilver>],
     [<ore:plateSilver>, <ore:gregWrenches>, <ore:plateSilver>],
-    [<ore:plateSilver>, <morefurnaces:furnaceblock:5>, <ore:plateSilver>]]);
+    [<ore:plateSilver>, <morefurnaces:furnaceblock:5>, <ore:plateSilver>]
+]);
+
 assembler.recipeBuilder()
     .inputs(<morefurnaces:furnaceblock:5>)
     .inputs(<ore:plateSilver> * 5)
@@ -73,10 +79,13 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 recipes.removeByRecipeName("morefurnaces:diamond_furnace");
+
 recipes.addShaped(<morefurnaces:furnaceblock:2>, [
     [<ore:plateDiamond>, <ore:plateDiamond>, <ore:plateDiamond>],
     [<ore:plateDiamond>, <ore:gregWrenches>, <ore:plateDiamond>],
-    [<ore:plateDiamond>, <morefurnaces:furnaceblock:6>, <ore:plateDiamond>]]);
+    [<ore:plateDiamond>, <morefurnaces:furnaceblock:6>, <ore:plateDiamond>]
+]);
+
 assembler.recipeBuilder()
     .inputs(<morefurnaces:furnaceblock:6>)
     .inputs(<ore:plateDiamond> * 5)
@@ -86,10 +95,13 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 recipes.removeByRecipeName("morefurnaces:obsidian_furnace");
+
 recipes.addShaped(<morefurnaces:furnaceblock:3>, [
     [<ore:obsidian>, <ore:obsidian>, <ore:obsidian>],
     [<ore:obsidian>, <ore:gregHardHammers>, <ore:obsidian>],
-    [<ore:obsidian>, <morefurnaces:furnaceblock:2>, <ore:obsidian>]]);
+    [<ore:obsidian>, <morefurnaces:furnaceblock:2>, <ore:obsidian>]
+]);
+
 assembler.recipeBuilder()
     .inputs(<morefurnaces:furnaceblock:2>)
     .inputs(<ore:obsidian> * 5)
@@ -99,6 +111,7 @@ assembler.recipeBuilder()
     .buildAndRegister();
 
 recipes.removeByRecipeName("morefurnaces:netherrack_furnace");
+
 recipes.addShaped(<morefurnaces:furnaceblock:4>, [
     [<minecraft:nether_brick>, <minecraft:nether_brick>, <minecraft:nether_brick>],
     [<minecraft:flint>, <minecraft:flint>, <minecraft:flint>],
@@ -118,7 +131,9 @@ assembler.recipeBuilder()
 recipes.addShaped(<thuttech:lift>, [
     [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>],
     [<ore:gregScrewDrivers>, <ore:frameGtIron>, <ore:gregWrenches>],
-    [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>]]);
+    [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>]
+]);
+
 assembler.recipeBuilder()
     .inputs(<ore:frameGtIron>)
     .inputs(<ore:plateIron> * 2)
@@ -167,7 +182,8 @@ for name in removals {
 recipes.addShaped(<elevatorid:elevator_white>, [
     [<ore:plateSteel>, <ore:plateEnderPearl>, <ore:plateSteel>],
     [<ore:springSmallAluminium>, <ore:frameGtSteel>, <ore:springSmallAluminium>],
-    [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+    [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
+]);
 
 // Building gadgets ===========================================================
 
@@ -175,6 +191,7 @@ recipes.addShaped(<elevatorid:elevator_white>, [
 recipes.removeByRecipeName("buildinggadgets:constructionpastecontainer");
 recipes.removeByRecipeName("buildinggadgets:constructionpastecontainert2");
 recipes.removeByRecipeName("buildinggadgets:constructionpastecontainert3");
+
 canner.recipeBuilder()
     .inputs(<metaitem:fluid_cell>)
     .inputs(<buildinggadgets:constructionpaste>)
@@ -182,6 +199,7 @@ canner.recipeBuilder()
     .EUt(20)
     .duration(50)
     .buildAndRegister();
+
 canner.recipeBuilder()
     .inputs(<metaitem:large_fluid_cell.steel>)
     .inputs(<buildinggadgets:constructionpaste>)
@@ -189,6 +207,7 @@ canner.recipeBuilder()
     .EUt(20)
     .duration(50)
     .buildAndRegister();
+
 canner.recipeBuilder()
     .inputs(<metaitem:large_fluid_cell.tungstensteel>)
     .inputs(<buildinggadgets:constructionpaste>)
@@ -221,6 +240,7 @@ compressor.recipeBuilder()
 
 // Construction powder
 recipes.removeByRecipeName("buildinggadgets:constructionpastepowder");
+
 recipes.addShaped(<buildinggadgets:constructionblockpowder>, [
     [null, <ore:sand> , null],
     [<ore:sand>, <ore:itemClay>, <ore:sand>],
