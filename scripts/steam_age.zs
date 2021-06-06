@@ -147,5 +147,6 @@ metal_bender.recipeBuilder().EUt(8).duration(100)
     .outputs(<ore:springSmallCopper>.firstItem * 2)
     .buildAndRegister();
 
+
 // Manual Copper Foil
 recipes.addShaped("gt_copper_foil", <ore:foilCopper>.firstItem * 2, [[<ore:gregHardHammers>, <ore:plateCopper>]]);
