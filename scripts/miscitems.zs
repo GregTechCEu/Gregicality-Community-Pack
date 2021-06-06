@@ -281,3 +281,14 @@ recipes.addShaped(<buildinggadgets:destructiontool>, [
     [<metaitem:plateDiamond>, <ore:circuitBasic>, <metaitem:plateDiamond>],
     [<metaitem:boltIron>, <metaitem:battery.re.lv.sodium> | <metaitem:battery.re.lv.lithium> | <metaitem:battery.re.lv.cadmium>, <metaitem:screwIron>]
 ]);
+
+// Effotless Building
+recipes.removeByRecipeName("effortlessbuilding:randomizer_bag");
+recipes.removeByRecipeName("effortlessbuilding:reach_upgrade1");
+recipes.removeByRecipeName("effortlessbuilding:reach_upgrade2");
+recipes.removeByRecipeName("effortlessbuilding:reach_upgrade3");
+
+recipes.addShapeless("EB_randomizer_bag", <effortlessbuilding:randomizer_bag>, [robotArms[1], <vanillasatchels:satchel:1>]);
+recipes.addShapeless("EB_upgrade1", <effortlessbuilding:reach_upgrade1>, [robotArms[1], <ore:stickLongSteel>]);
+recipes.addShapeless("EB_upgrade2", <effortlessbuilding:reach_upgrade2>, [robotArms[2], <ore:stickLongAluminium>]);
+recipes.addShapeless("EB_upgrade3", <effortlessbuilding:reach_upgrade3>, [robotArms[3], <ore:stickLongStainlessSteel>]);
