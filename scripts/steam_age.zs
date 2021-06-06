@@ -4,20 +4,20 @@ import mods.gregtech.recipe.PBFRecipeBuilder;
 import crafttweaker.item.IItemStack;
 
 val name_removals = [
-    "gtadditions:ga_steam_boiler_solar_bronze",
-    "gtadditions:ga_steam_boiler_lava_bronze",
+    "gregtech:steam_boiler_solar_bronze",
+    "gregtech:steam_boiler_lava_bronze",
     "gregtech:steam_boiler_coal_bronze",
     "gregtech:steam_boiler_lava_bronze",
     "gregtech:steam_boiler_coal_steel",
     "gregtech:steam_boiler_lava_steel",
     "gregtech:bronze_hull",
     "gregtech:bronze_bricks_hull",
-    "gtadditions:steam_extractor_bronze",
-    "gtadditions:steam_macerator_bronze",
-    "gtadditions:steam_compressor_bronze",
-    "gtadditions:steam_hammer_bronze",
-    "gtadditions:steam_furnace_bronze",
-    "gtadditions:steam_alloy_smelter_bronze",
+    "gregtech:steam_extractor_bronze",
+    "gtadditions:ga_steam_macerator_bronze",
+    "gregtech:steam_compressor_bronze",
+    "gregtech:steam_hammer_bronze",
+    "gregtech:steam_furnace_bronze",
+    "gregtech:steam_alloy_smelter_bronze",
     "gtadditions:ga_steam_mixer",
     "gtadditions:ga_steam_pump",
     "gtadditions:coke_brick",
@@ -48,13 +48,13 @@ for item in name_yeets {
     mods.jei.JEI.removeAndHide(item);
 }
 
-recipes.addShaped("gt_coke_clay", <metaitem:compressed.coke.clay> * 8, [[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],[<ore:sand>, <ore:formWood>, <minecraft:sand>], [<ore:sand>, <ore:sand>, <ore:sand>]]);
+recipes.addShaped("gt_coke_clay", <metaitem:compressed.coke.clay> * 8, [[<ore:ingotClay>, <ore:ingotClay>, <ore:ingotClay>],[<ore:sand>, <ore:formWood>, <ore:sand>], [<ore:sand>, <ore:sand>, <ore:sand>]]);
 recipes.addShaped("gt_coke_hatch", <meta_tile_entity:coke_oven_hatch>, [[null, <ore:plateIron>, null],[<ore:gregHardHammers>, <gregtech:metal_casing:8>, <ore:gregWrenches>],[null, <ore:blockGlassColorless>, null]]);
 recipes.addShaped("gt_bronze_hull", <gregtech:machine_casing:10>, [[null, <ore:plateBronze>, null],[<ore:plateBronze>, <ore:gregHardHammers>, <ore:plateBronze>], [null, <ore:plateBronze>, null]]);
 recipes.addShaped("gt_solar_boiler", <meta_tile_entity:steam_boiler_solar_bronze>, [[null, <ore:blockGlassColorless>, null],[<ore:pipeSmallBronze>, <ore:plateSilver>, <ore:pipeSmallBronze>], [null, <gregtech:machine_casing:11>, null]]);
 recipes.addShaped("gt_coal_boiler", <meta_tile_entity:steam_boiler_coal_bronze>, [[null, <ore:plateBronze>, null],[<ore:plateBronze>, <ore:craftingFurnace>, <ore:plateBronze>], [null, <ore:blockBrick>, null]]);
 recipes.addShaped("gt_lava_boiler", <meta_tile_entity:steam_boiler_lava_bronze>, [[null, <ore:plateBronze>, null],[<ore:plateBronze>, <ore:blockGlassColorless>, <ore:plateBronze>], [null, <gregtech:machine_casing:11>, null]]);
-recipes.addShaped("gt_coal_steel", <meta_tile_entity:steam_boiler_coal_steel>, [[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],[<ore:plateWroughtIron>, null, <ore:plateWroughtIron>],[<ore:blockBrick>, <gregtech:machine_casing:11>, <ore:blockBrick>]]);
+recipes.addShaped("gt_coal_steel", <meta_tile_entity:steam_boiler_coal_steel>, [[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],[<ore:plateWroughtIron>, <minecraft:furnace>, <ore:plateWroughtIron>],[<ore:blockBrick>, <gregtech:machine_casing:11>, <ore:blockBrick>]]);
 recipes.addShaped("gt_lava_steel", <meta_tile_entity:steam_boiler_lava_steel>, [[<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],[<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>],[<ore:plateWroughtIron>, <gregtech:machine_casing:11>, <ore:plateWroughtIron>]]);
 recipes.addShaped("gt_brick_hull", <gregtech:machine_casing:11>, [[null, <ore:plateBronze>, null],[null, <ore:blockBrick>, null], [null, <ore:plateBronze>, null]]); // Brick Bronze Hull
 recipes.addShaped("gt_steam_extractor", <meta_tile_entity:steam_extractor_bronze>, [[null, <ore:pipeSmallBronze>, null],[<ore:craftingPiston>, <gregtech:machine_casing:10>, <ore:blockGlassColorless>],[null, <ore:pipeSmallBronze>, null]]);
