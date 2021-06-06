@@ -1,4 +1,5 @@
 # GregTech
+metaitem.stellar_alloy_bolt.name=Stellar Alloy Bolt
 metaitem.stellar_alloy_screw.name=Stellar Alloy Screw
 metaitem.stellar_alloy_plate.name=Stellar Alloy Plate
 metaitem.dark_steel_bolt.name=Dark Steel Bolt
@@ -16,6 +17,18 @@ metaitem.resonating_crystal_dust.name=Resonating Crystal Dust
 metaitem.fluix_plate.name=Fluix Crystal Plate
 metaitem.skystone_lens.name=Skystone Lens
 metaitem.charged_certus_dust.name=Charged Certus Quartz Dust
+metaitem.ferroboron_dust.name=Ferroboron Dust
+metaitem.ferroboron_ingot_hot.name=Hot Ferroboron Ingot
+metaitem.hsla_steel_dust.name=HSLA Steel Dust
+metaitem.hsla_steel_plate.name=HSLA Steel Plate
+metaitem.hsla_steel_ingot_hot.name=Hot HSLA Steel Ingot
+metaitem.tough_plate.name=Tough Alloy Plate
+metaitem.tough_dust.name=Tough Alloy Dust
+metaitem.tough_ingot_hot.name=Hot Tough Alloy Ingot
+metaitem.extreme_plate.name=Extreme Alloy Plate
+metaitem.extreme_dust.name=Extreme Alloy Dust
+metaitem.extreme_ingot_hot.name=Hot Extreme Alloy Ingot
+metaitem.zircaloy_plate.name=Zircaloy Plate
 
 
 # DevTech
