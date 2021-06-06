@@ -4,7 +4,7 @@
   "max_height": 35,
   "min_height": 5,
   "surface_stone_material": "emerald",
-  "dimension_filter": ["name:the_end"],
+  "dimension_filter": ["name:the_end","dimension_id:10"],
 
   "generator": {
     "type": "ellipsoid",
