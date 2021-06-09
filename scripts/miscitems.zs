@@ -117,44 +117,6 @@ recipes.addShaped(<morefurnaces:furnaceblock:4>, [
     [<minecraft:flint>, <minecraft:flint>, <minecraft:flint>],
     [<minecraft:nether_brick>, <minecraft:nether_brick>, <minecraft:nether_brick>]]);
 
-
-// Thut's Elevators ===========================================================
-assembler.recipeBuilder()
-    .inputs(<ore:circuitBasic>)
-    .inputs(<ore:cableGtSingleSilver> * 2)
-    .fluidInputs(<fluid:redstone> * 144)
-    .outputs(<thuttech:devicelinker>)
-    .EUt(4)
-    .duration(600)
-    .buildAndRegister();
-
-recipes.addShaped(<thuttech:lift>, [
-    [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>],
-    [<ore:gregScrewDrivers>, <ore:frameGtIron>, <ore:gregWrenches>],
-    [<ore:screwIron>, <ore:plateIron>, <ore:screwIron>]
-]);
-
-assembler.recipeBuilder()
-    .inputs(<ore:frameGtIron>)
-    .inputs(<ore:plateIron> * 2)
-    .inputs(<ore:screwIron> * 2)
-    .outputs(<thuttech:lift:0>)
-    .EUt(16)
-    .duration(80)
-    .buildAndRegister();
-
-assembler.recipeBuilder()
-    .inputs(<ore:circuitBasic>)
-    .inputs(<ore:plateIron> * 4)
-    .notConsumable(<thuttech:devicelinker>)
-    .outputs(<thuttech:lift:1>)
-    .EUt(16)
-    .duration(200)
-    .buildAndRegister();
-
-// Metadata removing recipe for the tool
-recipes.addShapeless(<thuttech:devicelinker>, [<thuttech:devicelinker>]);
-
 // OpenBlocks Elevators =======================================================
 val removals = [
     "elevatorid:elevator_white",
@@ -180,9 +142,9 @@ for name in removals {
 }
 
 recipes.addShaped(<elevatorid:elevator_white>, [
-    [<ore:plateSteel>, <ore:plateEnderPearl>, <ore:plateSteel>],
-    [<ore:springSmallAluminium>, <ore:frameGtSteel>, <ore:springSmallAluminium>],
-    [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
+    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>],
+    [<ore:springSmallCopper>, <ore:frameGtIron>, <ore:springSmallCopper>],
+    [<ore:plateWroughtIron>, <ore:plateWroughtIron>, <ore:plateWroughtIron>]
 ]);
 
 // Building gadgets ===========================================================
