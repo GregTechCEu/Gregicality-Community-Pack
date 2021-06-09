@@ -137,11 +137,11 @@ for i in 12 to 15 {
 // Item Conduits
 val conduit_foils = [<ore:foilRubber> * 16, <ore:foilPlastic> * 16, <ore:plateStyreneButadieneRubber> * 4] as IIngredient[];
 for i in 1 to 4 {
-    assembler.recipeBuilder().EUt(30 * pow(4, (i - 1))).duration(400)
-        .inputs(<ore:itemConduitBinder> * (16 * (i + 1)))
+    assembler.recipeBuilder().EUt(8 * pow(4, i)).duration(400)
+        .inputs(<ore:itemConduitBinder> * (pow(2, i + 3)))
         .inputs(conveyors[i])   
         .inputs(conduit_foils[i - 1])     
-        .outputs(<enderio:item_item_conduit> * (16 * (i + 1)))
+        .outputs(<enderio:item_item_conduit> * (pow(2, i + 3)))
         .buildAndRegister();
 }
 
