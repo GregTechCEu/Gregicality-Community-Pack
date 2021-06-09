@@ -148,10 +148,10 @@ for i in 1 to 4 {
 // Ender Fluid Conduits
 for i in 1 to 4 {
     assembler.recipeBuilder().EUt(8 * pow(4, i)).duration(400)
-        .inputs(<ore:itemConduitBinder> * (16 * (i + 1)))
+        .inputs(<ore:itemConduitBinder> * (pow(2, i + 3)))
         .inputs(pumps[i])   
         .inputs(conduit_foils[i - 1])     
-        .outputs(<enderio:item_liquid_conduit:2> * (16 * (i + 1)))
+        .outputs(<enderio:item_liquid_conduit:2> * (pow(2, i + 3)))
         .buildAndRegister();
 }
 

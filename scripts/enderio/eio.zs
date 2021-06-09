@@ -549,7 +549,7 @@ alloy_smelter.recipeBuilder().EUt(24).duration(100)
 // Glowstone Nano-Particles
 macerator.recipeBuilder().EUt(24).duration(100)
     .inputs(<ore:itemClayedGlowstone>)
-    .outputs(<enderio:block_holy_fog> * 4, <ore:dustSmallClay>.firstItem * 2)
+    .outputs(<enderio:block_holier_fog> * 4, <ore:dustSmallClay>.firstItem * 2)
     .buildAndRegister();
 
 // Reinforced Obsidian
