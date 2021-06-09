@@ -564,14 +564,7 @@ assembler.recipeBuilder().EUt(2048).duration(400)
 // Weather Crystal
 implosion_compressor.recipeBuilder().EUt(7680).duration(1200)
     .inputs(<ore:itemEnderCrystalPowder> * 32, <ore:itemPulsatingPowder> * 32)
-    .property("explosives", 64)
-    .outputs(<ore:itemWeatherCrystal>.firstItem)
-    .buildAndRegister();
-
-// Weather Crystal
-implosion_compressor.recipeBuilder().EUt(7680).duration(1200)
-    .inputs(<ore:itemEnderCrystalPowder> * 32, <ore:itemPulsatingPowder> * 32)
-    .property("explosives", <metaitem:dynamite> * 32)
+    .property("explosives", <gtadditions:ga_explosive:4> * 64)
     .outputs(<ore:itemWeatherCrystal>.firstItem)
     .buildAndRegister();
 
@@ -921,6 +914,12 @@ implosion_compressor.recipeBuilder().EUt(7680).duration(400)
 implosion_compressor.recipeBuilder().EUt(7680).duration(400)
     .inputs(<ore:ingotEndSteel>, <ore:gemNetherStar>)
     .property("explosives", <metaitem:dynamite> * 12)
+    .outputs(<ore:ingotStellarAlloy>.firstItem)
+    .buildAndRegister();
+
+implosion_compressor.recipeBuilder().EUt(7680).duration(400)
+    .inputs(<ore:ingotEndSteel>, <ore:gemNetherStar>)
+    .property("explosives", <gtadditions:ga_explosive:4> * 6)
     .outputs(<ore:ingotStellarAlloy>.firstItem)
     .buildAndRegister();
 
