@@ -832,7 +832,7 @@ cutting_saw.recipeBuilder().EUt(30).duration(644)
 extruder.recipeBuilder().EUt(120).duration(16)
     .inputs(<ore:ingotDarkSteel>)
     .notConsumable(<metaitem:shape.extruder.bolt>)
-    .outputs(<ore:boltDarkSteel>.firstItem)
+    .outputs(<ore:boltDarkSteel>.firstItem * 8)
     .buildAndRegister();
 
 lathe.recipeBuilder().EUt(4).duration(8)
@@ -896,7 +896,7 @@ cutting_saw.recipeBuilder().EUt(30).duration(760)
 extruder.recipeBuilder().EUt(120).duration(16)
     .inputs(<ore:ingotEndSteel>)
     .notConsumable(<metaitem:shape.extruder.bolt>)
-    .outputs(<ore:boltEndSteel>.firstItem)
+    .outputs(<ore:boltEndSteel>.firstItem * 8)
     .buildAndRegister();
 
 lathe.recipeBuilder().EUt(24).duration(8)
