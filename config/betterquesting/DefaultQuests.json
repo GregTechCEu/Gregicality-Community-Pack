@@ -665,7 +665,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Redstone Alloy, is it even Stone?",
-          "desc:8": "One of the main components of the primitive processor is Red Alloy. It is an alloy of Redstone and Copper, and can be made in your Steam Alloy Smelter.\n\nThe rest of the items in the quest will guide you through making wires and then cables. Wires are rather expensive right now, but will get cheaper in LV age."
+          "desc:8": "One of the main components of the primitive processor is Red Alloy. It is an alloy of Redstone and Copper, and can be made in your Steam Alloy Smelter.\n\nThe rest of the items in the quest will guide you through making wires and then cables. Wires are rather expensive right now, but will get cheaper in the LV age."
         }
       },
       "tasks:9": {
@@ -1450,7 +1450,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Glycerol",
-          "desc:8": "If you hate oil, glycerol is your only option.\n\nThis option requires a lot of seed or fish oil to be useful. Although it gives Bio Diesel, which can be usec along with the rest of your power setup."
+          "desc:8": "If you hate oil, glycerol is your only option.\n\nThis option requires a lot of seed or fish oil to be useful. Although it gives Bio Diesel, which can be used along with the rest of your power setup."
         }
       },
       "tasks:9": {
@@ -1831,7 +1831,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Propene",
-          "desc:8": "Propene is a hydrocarbon, obtained only from oil processing. It can also be used to make Isoprene to synthesize Rubber.\n\nWhile it is not strictly required, having oil setup up will help you smoothly transition to higher tiers. §lEspecially§r with the Distillation Tower."
+          "desc:8": "Propene is a hydrocarbon, obtained only from oil processing. It can also be used to make Isoprene to synthesize Rubber.\n\nWhile it is not strictly required, having oil set up will help you smoothly transition to higher tiers. §lEspecially§r with the Distillation Tower."
         }
       },
       "tasks:9": {
@@ -2124,7 +2124,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Endervoir",
-          "desc:8": "Now wouldn't it be nice if you could have infinite automated water for your boilers? We have got you covered!"
+          "desc:8": "Now wouldn't it be nice if you could have infinite automated water for your boilers? We got you covered!"
         }
       },
       "tasks:9": {
@@ -5556,7 +5556,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Steam Macerator",
-          "desc:8": "The Macerator, so well known as the essential machine for ore doubling, is no different in here! However... Ore processing can get in the way, we will take a little bit of time explaining how it goes in the simple details in the following quest.\n\nWhen consulting JEI, you may notice that many Macerator recipes output 3 items. However this Macerator will only output the first item in the list! The same will apply to other macerators up to HV.\n\n\nThe Macerator also locks the Steam Grinder, which is significantly better."
+          "desc:8": "The Macerator, so well known as the essential machine for ore doubling, is no different in here! However... Ore processing can get in the way, we will take a little bit of time explaining how it goes in the simple details in the following quest.\n\nWhen consulting JEI, you may notice that many Macerator recipes output 3 items. However this Macerator will only output the first item in the list! The same will apply to other macerators up to HV.\n\n\nThe Macerator also unlocks the Steam Grinder, which is significantly better."
         }
       },
       "tasks:9": {
