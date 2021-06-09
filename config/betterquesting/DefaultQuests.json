@@ -665,7 +665,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Redstone Alloy, is it even Stone?",
-          "desc:8": "One of the main components of the primitive processor is Red Alloy. It is an alloy of Redstone and Copper, and can be made in your Steam Alloy Smelter.\n\nThe rest of the items will guide you through making wires and then cables. It is rather expensive right now, "
+          "desc:8": "One of the main components of the primitive processor is Red Alloy. It is an alloy of Redstone and Copper, and can be made in your Steam Alloy Smelter.\n\nThe rest of the items in the quest will guide you through making wires and then cables. Wires are rather expensive right now, but will get cheaper in LV age."
         }
       },
       "tasks:9": {
@@ -790,7 +790,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "USE JEI",
-          "desc:8": "Just Enough Items will be your best friend in this journey. Learning how to use it will be crucial to help you out understand the ins and outs of the modpack.\n\nBookmark items regularly (default key \u0027A\u0027) so you don\u0027t have to remember what you needed to craft, and won\u0027t have to type the names over and over.\n\nMost of the items have multiple recipes! Don\u0027t stop at the first apparent recipe and think it\u0027s unobtainable. Sometimes a material is only available from tiny dusts, sometimes it\u0027s available from a fluid solution. It takes some practice."
+          "desc:8": "Just Enough Items will be your best friend in this journey. Learning how to use it will be crucial to help you out understand the ins and outs of the modpack.\n\nBookmark items regularly (default key \u0027A\u0027) so you don\u0027t have to remember what you needed to craft, and won\u0027t have to type the names over and over.\n\nMost of the items have multiple recipes! Don\u0027t stop at the first apparent recipe and think it\u0027s unobtainable. Sometimes a material is only available from tiny dusts, sometimes it\u0027s available from fluids. It takes some practice."
         }
       },
       "tasks:9": {
@@ -1450,7 +1450,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Glycerol",
-          "desc:8": "If you hate oil, glycerol is your only option.\n\nThis option requires a lot of seed or fish oil to be useful. Although since it gives Bio Diesel, which can be placed along with the rest of your power setup."
+          "desc:8": "If you hate oil, glycerol is your only option.\n\nThis option requires a lot of seed or fish oil to be useful. Although it gives Bio Diesel, which can be usec along with the rest of your power setup."
         }
       },
       "tasks:9": {
@@ -1831,7 +1831,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Propene",
-          "desc:8": "Propene is a hydrocarbon, obtained only from oil processing. It can also be used to make Isoprene to synthesize Rubber.\n\nWhile it is not strictly required, having oil setupped will smoothly help you with the transition to higher tiers. §lEspecially§r with the Distillation Tower."
+          "desc:8": "Propene is a hydrocarbon, obtained only from oil processing. It can also be used to make Isoprene to synthesize Rubber.\n\nWhile it is not strictly required, having oil setup up will help you smoothly transition to higher tiers. §lEspecially§r with the Distillation Tower."
         }
       },
       "tasks:9": {
@@ -1879,7 +1879,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Crushed Ores?",
-          "desc:8": "Explaining the whole ore processing is out of the scope of this introduction, so we will keep it simple for now. More details in LV.\n\nMacerating is still an ore doubler like in other mods. But there is a twist, it does not give dusts directly! Crushed Ores are meant for more advanced ore processing. One Crushed Ore will convert to one dust.\n\n\nTo get the an Impure Dust, hammer the Crushed Ore. This is done either by using a Hammer tool in the crafting table, or using the Steam Forge Hammer.\n\nThe Impure Dust can be smelted in the Furnace to get the Ingot, however mixed ores (Limonite, Chalcopyrite) will only give nuggets over ingots.\n\nThe Impure Dust can also be thrown in a vanilla Cauldron filled with water to clean it and turn it into a regular dust. Throw them in full stacks to consume less water per single dust.\n\n\n§lNote: Macerating, hammering, and then smelting (sometimes into nuggets) is really time consuming in the steam age! Resource efficiency can be ignored for now. Nobody will blame you for smelting ores directly into ingots."
+          "desc:8": "Explaining the whole ore processing system is out of the scope of this introduction, so we will keep it simple for now. More details in LV.\n\nMacerating is still an ore doubler like in other mods. But there is a twist, it does not give dusts directly! Crushed Ores are meant for more advanced ore processing. One Crushed Ore will convert to one dust.\n\n\nTo get the an Impure Dust, hammer the Crushed Ore. This is done either by using a Hammer tool in the crafting table, or using the Steam Forge Hammer.\n\nThe Impure Dust can be smelted in the Furnace to get the Ingot, however mixed ores (Limonite, Chalcopyrite) will only give nuggets over ingots.\n\nThe Impure Dust can also be thrown in a vanilla Cauldron filled with water to clean it and turn it into a regular dust. Throw them in full stacks to consume less water per single dust.\n\n\n§lNote: Macerating, hammering, and then smelting (sometimes into nuggets) is really time consuming in the steam age! Resource efficiency can be ignored for now. Nobody will blame you for smelting ores directly into ingots."
         }
       },
       "tasks:9": {
@@ -1984,7 +1984,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Coins, coins, coins!",
-          "desc:8": "Did we tell you how much we wanted to help you in the early game. Perhaps we forgot... So more help!\n\nUse your Bronze Coins to get more resources. Really, spend them!!"
+          "desc:8": "Did we tell you how much we wanted to help you in the early game? Perhaps we forgot... So more help!\n\nUse your Bronze Coins to get more resources. Really, spend them!!"
         }
       },
       "tasks:9": {
@@ -2124,7 +2124,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Endervoir",
-          "desc:8": "Now that would be nice if you could infinite automated water for your boilers. We got you covered!"
+          "desc:8": "Now wouldn't it be nice if you could have infinite automated water for your boilers? We have got you covered!"
         }
       },
       "tasks:9": {
@@ -2189,7 +2189,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Biomass",
-          "desc:8": "Get Plant Ball from compressing excess saplings from your tree farm. If this is not enough, top it up with carrots or some other crop.\n\nDue to Integration Circuit configuration, you may need a dedicated Pyrolyse Oven for this step.\nEarly on, you can get away with making a lot of Fermented Biomass in bulk, then switching your Oven for charcoal."
+          "desc:8": "Get Plant Balls from compressing excess saplings from your tree farm. If this is not enough, top it up with carrots or some other crop.\n\nDue to Integrated Circuit configuration, you may need a dedicated Pyrolyse Oven for this step.\nEarly on, you can get away with making a lot of Fermented Biomass in bulk, then switching your Oven for charcoal."
         }
       },
       "tasks:9": {
@@ -2317,7 +2317,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Diesel",
-          "desc:8": "Diesel is probably the most classic Steam alternative there is in GregTech. It is obtained my mixing Light Fuel and Heavy Fuel.\n\nUsing regular Oil, a setup should go as follows:\n- 3 Distilleries for (Sulfuric) Light Fuel\n- 2 Distilleries for (Sulfuric) Heavy Fuel\n\nHeavy Oil is even better when obtained from Heavy Fuel. That ratio is much greater.\n\n\nSuch setup can easily power a base for MV and HV age. But be careful as running out of Oil can be fatal!"
+          "desc:8": "Diesel is probably the most classic Steam alternative there is in GregTech. It is obtained by mixing Light Fuel and Heavy Fuel.\n\nUsing regular Oil, a setup should go as follows:\n- 3 Distilleries for (Sulfuric) Light Fuel\n- 2 Distilleries for (Sulfuric) Heavy Fuel.\n\nHeavy Oil is an even better Heavy Fuel source, as the ratio is much greater.\n\n\nSuch a setup can easily power a base for the MV and HV age. But be careful as running out of Oil can be problematic!"
         }
       },
       "tasks:9": {
@@ -2369,7 +2369,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Central Monitor",
-          "desc:8": "Both the Central Monitor and the Freedom Wrench are an addition from KilaBash.\n\nThe Central Monitor is a modular multiblock to display information, images, and remotely access machines from its screens. Going into details on how it works is rather complicated, so we will just say it can do a lot of cool stuff. Check it out sooner than later!"
+          "desc:8": "Both the Central Monitor and the Freedom Wrench are an addition from KilaBash.\n\nThe Central Monitor is a modular multiblock to display information, images, and remotely access machines from its screens. Going into the details about how it works is rather complicated, so we will just say it can do a lot of cool stuff. Check it out sooner than later!"
         }
       },
       "tasks:9": {
@@ -2732,7 +2732,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Primitive Materials",
-          "desc:8": "The early game usually tends to be pretty slow in GregTech. Some modpacks embrace it, some of them skip steps to make it less tedious.\n\nAs the goal of the modpack is to provide a full GregTech + Gregicality experience, all the mechanics are kept. However, we will make it easier on you, with easier recipes and quest rewards. The help will be greater in the early game, and will gradually go away as you progress further. You can also decide to ignore rewards if you wish to be a purist.\n\nNotable modifications for this modpack:\n- Circuit recipes give twice as many circuits\n- Steam age related recipes are cheaper\n- Steel in the Primitive Blast Furnace is faster\n- Mob loots are not required (also they are disabled in the overworld)\n\n\nAs finding an iron vein may take a little bit of time and mining, we will give you a fair deal. Delay mining for later and collect some basic materials instead. Settle down somewhere and we will give you some iron to start off with tools. You may be able to progress up to LV age solely on Quest rewards."
+          "desc:8": "The early game usually tends to be pretty slow in GregTech. Some modpacks embrace it, some of them skip steps to make it less tedious.\n\nAs the goal of the modpack is to provide a full GregTech + Gregicality experience, all the mechanics are kept. However, we will make it easier on you, with easier recipes and quest rewards. The help will be greater in the early game, and will gradually go away as you progress further. You can also decide to ignore rewards if you wish to be a purist.\n\nNotable modifications for this modpack:\n- Circuit recipes give twice as many circuits\n- Steam age related recipes are cheaper\n- Steel in the Primitive Blast Furnace is faster\n- Mob loot is not required (hostile mobs are disabled anyways)\n\n\nAs finding an iron vein may take a little bit of time and mining, we will give you a fair deal. Delay mining for later and collect some basic materials instead. Settle down somewhere and we will give you some iron to start off with tools. You may be able to progress up to LV age solely on Quest rewards."
         }
       },
       "tasks:9": {
@@ -3081,7 +3081,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Better Furnaces",
-          "desc:8": "Better Furnaces might help you through smelting down many ores. They\u0027re not as important as in Omnifactory, due to Gregicality having a fancy Steam Oven multiblock available during the steam age."
+          "desc:8": "Better Furnaces might help you with smelting down many ores. They\u0027re not as important as in Omnifactory, due to Gregicality having a fancy Steam Oven multiblock available during the steam age."
         }
       },
       "tasks:9": {
@@ -4554,7 +4554,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Barium",
-          "desc:8": "Barite cannot be electrolyzed directly into Barium and Oxygen. It requires a unique chemical processing.\n\nWhile none of the steps are particularly complicated, they would need dedicated machines which makes automating the processing in HV age undesired. You may only need 9 barium dust to progress to IV, but making a full stack will grant you extra safety.\n\nWhen automating the processing line, make sure so most (or every) Barium compound is requestable, as they have their use in other chains."
+          "desc:8": "Barite cannot be electrolyzed directly into Barium and Oxygen. It requires a unique chemical process.\n\nWhile none of the steps are particularly complicated, they would need dedicated machines which makes automating the processing in HV age undesired. You may only need 9 barium dust to progress to IV, but making a full stack will grant you extra safety.\n\nWhen automating the processing line, make sure so most (or every) Barium compound is requestable, as they have their use in other chains."
         }
       },
       "tasks:9": {
@@ -4972,7 +4972,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "That\u0027s Wrought Buddy",
-          "desc:8": "Wrought Iron was the most common form of malleable iron before widespread and efficient steel production came around.\n\nWrought Iron can be used for tools, and has 1.5x base durability.\nSmelt Iron Ingots in a furnace to make hot Iron, and hammer it in a crafting table. No mittens needed, as Steve is fairly heat-proof.\n\nDon\u0027t turn all of your iron into wrought iron! You cannot convert it back, and they are both used."
+          "desc:8": "Wrought Iron was the most common form of malleable iron before widespread and efficient steel production came around.\n\nWrought Iron can be used for tools, and has 1.5x the base durability compared to iron.\nSmelt Iron Ingots in a furnace to make hot Iron, and hammer it in a crafting table. No mittens needed, as Steve is fairly heat-proof.\n\nDon\u0027t turn all of your iron into wrought iron! You cannot convert it back, and they are both used."
         }
       },
       "tasks:9": {
@@ -5116,7 +5116,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Primitive Processor",
-          "desc:8": "Congratulations! You\u0027ve completed the first step out of Steam Age. Soon you will be making electric machines.\n\nCircuits will become significantly easier to make as you progress throughout LV.\n\nNow, just make an LV Machine Hull and a few LV Electric Motors, and you can start the LV Age!"
+          "desc:8": "Congratulations! You\u0027ve completed your first step out of Steam Age. Soon you will be making electric machines.\n\nCircuits will become significantly easier to make as you progress throughout LV.\n\nNow, just make an LV Machine Hull and a few LV Electric Motors, and you can start the LV Age!"
         }
       },
       "tasks:9": {
@@ -5320,7 +5320,7 @@
           "repeat_relative:1": 1,
           "ismain:1": 0,
           "name:8": "Tungsten Process",
-          "desc:8": "Two ores contain Tunsgten. Tungstate and Scheelite.\n\nThe process for both ores is mostly the same, but entry points are slightly different. Automate the one you find more convenient now, and the other one later.\n\nYou can complete the quest with §eeither§r task completed."
+          "desc:8": "Two ores contain Tunsgten. Tungstate and Scheelite.\n\nThe process for both ores is nearly the same, but one requires an extra input. Automate the one you find more convenient now, and the other one later.\n\nYou can complete the quest with §eeither§r task completed."
         }
       },
       "tasks:9": {
@@ -5388,7 +5388,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "High Volume Steam Grinding",
-          "desc:8": "The Steam Grinder is the multiblock version of the steam macerator.\n\nIt utilizes more steam to macerate 8 items at once per recipe. This machine has utility up to HV age, or even beyond.\nSimilarly to the regular Macerator, only the first item will be produced from recipes shown in JEI.\n\nConsidering the cost of this multiblock, you may want to put it off until the LV age, once it gets a little easier to make."
+          "desc:8": "The Steam Grinder is the multiblock version of the steam macerator.\n\nIt utilizes more steam to macerate 8 items at once per recipe. This machine has utility up to HV age, or even beyond.\nSimilar to the regular Macerator, only the first item will be produced from recipes shown in JEI.\n\nConsidering the cost of this multiblock, you may want to put it off until the LV age, once it gets a little easier to make."
         }
       },
       "tasks:9": {
@@ -5556,7 +5556,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Steam Macerator",
-          "desc:8": "The Macerator, the so well known essential machine for ore doubling, no different in here! However... Ore processing can get in the way, we will take a little bit of time explaining how it goes in the simple details in the following quest.\n\nWhen consulting JEI, you may notice that many Macerator recipe output 3 items. However this Macerator will only output the first item of the list! The same will apply to other macerators up to HV.\n\n\nThe Macerator also locks the Steam Grinder, which is significantly better."
+          "desc:8": "The Macerator, so well known as the essential machine for ore doubling, is no different in here! However... Ore processing can get in the way, we will take a little bit of time explaining how it goes in the simple details in the following quest.\n\nWhen consulting JEI, you may notice that many Macerator recipes output 3 items. However this Macerator will only output the first item in the list! The same will apply to other macerators up to HV.\n\n\nThe Macerator also locks the Steam Grinder, which is significantly better."
         }
       },
       "tasks:9": {
@@ -6160,7 +6160,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Large Bronze Boiler",
-          "desc:8": "While the Large Bronze Boiler is not required, it is heavily recommended! It is capable of outputting large quantities of steam unlike small boilers.\n\nIt mechanically functions the same as the small boilers. That means if you\u0027re not careful it can §cexplode!§r Read the Small Boiler quest again if you\u0027re uncertain about the mechanics.\n\nAditionally, you can click the [-] and [+] icons in the controller GUI to throttle the Boiler as you wish.\n\nAt full power, it can run 14 LV steam turbines.\nAt full throttle, it can run 1.4 LV steam turbines.\n\nWe recommend throtlling it at first, else you won\u0027t be able to keep up due to the high fuel consumption.\n\nFurnace fuels will burn by putting them in the input bus.\nCreosote is a semifluid which can be burned in the boiler, which means you can now stop voiding it.\nDiesel/Combustion fuels also work in the boiler, however they lose 50% efficiency."
+          "desc:8": "While the Large Bronze Boiler is not required, it is heavily recommended! It is capable of outputting large quantities of steam unlike small boilers.\n\nIt mechanically functions the same as the small boilers. That means if you\u0027re not careful, it can §cexplode!§r Read the Small Boiler quest again if you\u0027re uncertain about the mechanics.\n\nAditionally, you can click the [-] and [+] icons in the controller GUI to throttle the Boiler as you wish.\n\nAt full power, it can run 14 LV steam turbines.\nAt full throttle, it can run 1.4 LV steam turbines.\n\nWe recommend throtlling it at first, else you won\u0027t be able to keep up due to the high fuel consumption.\n\nFurnace fuels will burn by putting them in the input bus.\nBoth Semi-fluid fuels and Combustion fuels (aka Diesel fuels in GTCE) are burnable. Semi-fluids are twice as efficient as indicated by JEI, whereas Combustion is half as efficient in the Boiler. You can now very efficiently burn your Creosote at the cost of one extra input hatch (we included it in the quest)."
         }
       },
       "tasks:9": {
@@ -6264,7 +6264,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Not For Fries!",
-          "desc:8": "You may have noticed Oil wells across the world. Now it is time to tackle them.\n\nWhile most Oil uses can be interchanged with biological products, you still need to start off with oil.\n\nOil comes in varietes:\nOil - plain regular oil, you will most likely want this one\nLight oil - richer in refinery gas\nRaw Oil - same as regular oil, but less dense\nHeavy oil - richer in heavy fuel, requires MV to process\n\nLight Fuel and Diesel are an alternative for power, but are not required.\n\nThe scrict minimum required oil to progress for now is one of the following amounts: Oil - 30B, Raw Oil - 60B, or Light Oil - 90B.\n\nYou can also use a GT pump to harvest oil, but you\u0027ll need a connected energy source to power it. The Steam Pump is a potential alternative."
+          "desc:8": "You may have noticed Oil wells across the world. Now it is time to tackle them.\n\nWhile most Oil uses can be interchanged with biological products, you still need to start off with oil.\n\nOil comes in varietes:\nOil - plain regular oil, you will most likely want this one\nLight oil - richer in refinery gas\nRaw Oil - same as regular oil, but less dense\nHeavy oil - richer in heavy fuel, requires MV to process\n\nLight Fuel and Diesel are an alternative for power, but are not required.\n\nThe strict minimum required oil to progress for now is one of the following amounts: Oil - 30B, Raw Oil - 60B, or Light Oil - 90B.\n\nYou can also use a GT pump to harvest oil, but you\u0027ll need a connected energy source to power it. The Steam Pump is a potential alternative."
         }
       },
       "tasks:9": {
@@ -6544,7 +6544,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "The Quest for Polyethylene",
-          "desc:8": "Polyethylene (PE), the most common plastic used in the world, will also be the most commonly used plastic in GregTech.\n\nGetting it will require a little bit of chemistry. Nothing too bad, I promise.\n\n\nPolyethylene can be obtained from 2 different methods. One comes from plants/wood/charcoal using the Pyrolyse Oven. And the other comes from oil and cracking it.\nBoth require quite a few steps, but they will also be multi-purpose. Check the other quests to see what the options and benefits are from each path.\n\n\nThis instance of a divergence is not limited to Polyethylene! I\n\n\nWhichever path you are choosing should also be the path that you use for power!\n\nWe\u0027ll guide you through both, but you won\u0027t always have this luxury!"
+          "desc:8": "Polyethylene (PE), the most common plastic used in the world, will also be the most commonly used plastic in GregTech.\n\nGetting it will require a little bit of chemistry. Nothing too bad, I promise.\n\n\nPolyethylene can be obtained from 2 different methods. One comes from plants/wood/charcoal using the Pyrolyse Oven. And the other comes from oil and cracking it.\nBoth require quite a few steps, but they will also be multi-purpose. Check the other quests to see what the options and benefits are from each path.\n\n\nThis instance of a divergence is not limited to Polyethylene!\n\n\nWhichever path you are choosing should also be the path that you use for power!\n\nWe\u0027ll guide you through both, but you won\u0027t always have this luxury!"
         }
       },
       "tasks:9": {
@@ -8643,7 +8643,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Through the LV era",
-          "desc:8": "Before moving on, we heavily recommend setting up all 4 machines above this quest as they greatly improve the material conversion rate to intermediates.\n\nIf you wish, you can make LV variants of your Steam Machines. But as long as they work, that\u0027s not important at all.\n\nYour next main step should be the Assembling Machine, but you won\u0027t be able to craft it directly.\n\nEnd goals of LV age are the Electric Blast Furnace for Aluminium, and the Primitive Assembly circuit."
+          "desc:8": "Before moving on, we heavily recommend setting up all 4 machines above this quest as they greatly improve the material conversion rate to intermediates.\n\nIf you wish, you can make LV variants of your Steam Machines. But as long as they work, that\u0027s not important at all.\n\nYour next main step should be the Assembling Machine, but you won\u0027t be able to craft it directly.\n\nThe end goals of LV age are the Electric Blast Furnace for Aluminium and the Primitive Assembly circuit."
         }
       },
       "tasks:9": {
@@ -9620,7 +9620,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "LV Chemical Reactor",
-          "desc:8": "This is your all-purpose fluid processing machine.\n\nGregTech, and mostly Gregicality add a lot of real life chemical reactions. The Chemical Reactor creates the condition for them to happen.\n\nThe Chemical Reactor will end up being the machine you build the most! You may even batch craft them at some point."
+          "desc:8": "This is your all-purpose fluid processing machine.\n\nGregTech, and mostly Gregicality add a lot of real life chemical reactions. The Chemical Reactor creates the conditions for them to happen.\n\nThe Chemical Reactor will end up being the machine you build the most! You may even batch craft them at some point."
         }
       },
       "tasks:9": {
@@ -10754,7 +10754,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Overclocking",
-          "desc:8": "Overclocking happens when the EU/t cost of a recipe is within a lower voltage than the machine handling it. The machine will consume four times as much power, and process the recipe faster. There is a catch though, you lose energy efficiency.\n\nRemember the case with the LV Wiremill? Wire recipe costs were 8eu/t, and are overclocked to 32eu/t.\nWith a MV Wiremill, the recipe would be overclocked once more, consuming 128eu/t to fit the current voltage tier.\n\nThe speed boost depends on the base cost of the recipe:\n- 16EU/t and less: 2x speed boost (2x net energy usage per overclock)\n- between 17EU/t and 32EU/t: 2.8x speed boost (1.42x net energy usage per overclock)\n\nDon\u0027t ask me why this is so weird, GTCE is GTCE. A work is in progress to improve overclocking."
+          "desc:8": "Overclocking happens when the EU/t cost of a recipe is within a lower voltage tier than the machine handling it. The machine will consume four times as much power, and process the recipe faster. There is a catch though, you lose energy efficiency.\n\nRemember the case with the LV Wiremill? Wire recipe costs were 8eu/t, and are overclocked to 32eu/t.\nWith a MV Wiremill, the recipe would be overclocked once more, consuming 128eu/t to fit the current voltage tier.\n\nThe speed boost depends on the base cost of the recipe:\n- 16EU/t and less: 2x speed boost (2x net energy usage per overclock)\n- between 17EU/t and 32EU/t: 2.8x speed boost (1.42x net energy usage per overclock)\n\nDon\u0027t ask me why this is so weird, GTCE is GTCE. A work is in progress to improve overclocking."
         }
       },
       "tasks:9": {
@@ -11962,7 +11962,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "MV Machine Hull",
-          "desc:8": "Just like the LV hull, but made of Aluminium.\n\nMV - Medium Voltage - implies danger.\nConnect a LV cable to a MV generator, and it will burn.\nConnect a LV machine to a MV powered cable, and you can bring confettis for the firework! The explosion is only visual though, it does not cause any harm, §msadly§r.\nWatch your cables!!\n\nAlso, uninsulated MV cables electrocute you even faster. Good incentive to actually insulate them."
+          "desc:8": "Just like the LV hull, but made of Aluminium.\n\nMV - Medium Voltage - implies danger.\nConnect a LV cable to a MV generator, and it will burn.\nConnect a LV machine to a MV powered cable, and you can bring confetti to the fireworks! The explosion is only visual though, it does not cause any harm, §msadly§r. You will still lose your machine.\nWatch your cables!!\n\nAlso, uninsulated MV cables electrocute you even faster. Good incentive to actually insulate them."
         }
       },
       "tasks:9": {
@@ -12077,7 +12077,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Wood",
-          "desc:8": "Any minecraft journey has to start somewhere, and that somewhere is wood!\n\nLuckily for you, wood to planks recipe is not nerfed.\n\nWood cannot be smelted to charcoal, so you can use planks as fuel for now."
+          "desc:8": "Any minecraft journey has to start somewhere, and that somewhere is wood!\n\nLuckily for you, the wood to planks recipe is not nerfed.\n\nWood cannot be smelted to charcoal, so you can use planks as fuel for now."
         }
       },
       "tasks:9": {
@@ -12719,7 +12719,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "The Pyrolyse Oven",
-          "desc:8": "This multiblock can produce various Coal products on top of doubling up as a Coke Oven. Unless you plan to entirely rely on oil, the Pyrolyse Oven is essential.\nDepending on the configuration, it can output varied fluids/gases.\n\nThe Pyrolyse Oven needs coils, just like your beloved EBF. Batch craft a lot of Mica Insulation Foils for future coils. The Pyrolyse Oven will also accept better coils to increase its processing speed. Some recipes will also accept Nitrogen for faster processing speed.\n\n\n\nIt\u0027s probably about time we talk about the difference between the Distillery, and Distillation Tower tabs in JEI.\nEssentially, the single block Distillery acts as a budget Distillation Tower, except you can only select one out of all the fluid outputs.\nDistillation Tower becomes available at EV tier, and is fairly big and expensive. But that\u0027s something to keep in mind for future automation purposes.\n\nAll the byproducts from the Pyrolyse Oven can be distilled. Here\u0027s a list of them:\n\n- Fermented Biomass: Useful for Ethanol\n- Creosote: Not really useful, other than for lubricant and burning directly in the large boiler\n- Coal Tar: Useful starting EV age for rocket fuel\n- Wood Gas: Contains mostly Carbon Dioxide and Carbon Monoxide\n- Wood Vinegar: Decent source of Methanol\n- Wood Tar: Good source of Benzene\n- Charcoal Byproducts: Distills into all three previous fluids, but requires the Distillation Tower to be worth it\n- Heavy Oil: A way to get a little bit of oil from wood, you lose on the charocal"
+          "desc:8": "This multiblock can produce various Coal products on top of doubling up as a Coke Oven. Unless you plan to entirely rely on oil, the Pyrolyse Oven is essential.\nDepending on the configuration, it can output varied fluids/gases.\n\nThe Pyrolyse Oven needs coils, just like your beloved EBF. Batch craft a lot of Mica Insulation Foils for future coils. The Pyrolyse Oven will also accept better coils to increase its processing speed. Some recipes will also accept Nitrogen for faster processing speed.\n\n\n\nIt\u0027s probably about time we talk about the difference between the Distillery, and Distillation Tower tabs in JEI.\nEssentially, the single block Distillery acts as a budget Distillation Tower, except you can only select one out of all the fluid outputs.\nDistillation Tower becomes available at EV tier, and is fairly big and expensive. But that\u0027s something to keep in mind for future automation purposes.\n\nAll the byproducts from the Pyrolyse Oven can be distilled. Here\u0027s a list of them:\n\n- Fermented Biomass: Useful for Ethanol\n- Creosote: Not really useful, other than for lubricant and burning directly in the large boiler\n- Coal Tar: Useful starting in the EV age for rocket fuel\n- Wood Gas: Contains mostly Carbon Dioxide and Carbon Monoxide\n- Wood Vinegar: Decent source of Methanol\n- Wood Tar: Good source of Benzene\n- Charcoal Byproducts: Distills into all three previous fluids, but requires the Distillation Tower to be worth it\n- Heavy Oil: A way to get a little bit of oil from wood, you lose on the charcoal"
         }
       },
       "tasks:9": {
@@ -14410,7 +14410,7 @@
           "ismain:1": 1,
           "repeat_relative:1": 1,
           "name:8": "Refined Processors",
-          "desc:8": "This is the final LV Circuit, and the beginning the of \"Refined\" circuit tier.\n\nFrom now on, all the circuits tiers will follow an identical pattern.\n\nLevel 1 - Processor\nLevel 2 - Assembly\nLevel 3 - Computer\nLevel 4 - Mainframe"
+          "desc:8": "This is the final LV Circuit, and the beginning of the \"Refined\" circuit tier.\n\nFrom now on, all the circuits\u0027 tiers will follow an identical pattern.\n\nLevel 1 - Processor\nLevel 2 - Assembly\nLevel 3 - Computer\nLevel 4 - Mainframe"
         }
       },
       "tasks:9": {
@@ -22315,7 +22315,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Acetone",
-          "desc:8": "Asides from Epoxy, Acetone can be used to refine Diesel or make Gasoline. The different ways to obtain it are:\n\nOption 1 - Distill Wood Vinegar (from pyrolyse).\n\nOption 2 - As a byproduct from making Phenol from Cumene (check that quest out).\n\nOption 3 - Make Acetic Acid first, then react with Calcite or Quicklime for Calcium Acetate Solution. Distill or heat that up for Acetone. The Calcium compound is lost, unless you use a Distillation Tower (available at EV tier) for the final step."
+          "desc:8": "Acetone is one out of many ketones, also the simplest. The different ways to obtain it are:\n\nOption 1 - Distill Wood Vinegar (from pyrolyse).\n\nOption 2 - As a byproduct from making Phenol from Cumene (check that quest out).\n\nOption 3 - Make Acetic Acid first, then react with Calcite or Quicklime for Calcium Acetate Solution. Distill or heat that up for Acetone. The Calcium compound is lost, unless you use a Distillation Tower (available at EV tier) for the final step."
         }
       },
       "tasks:9": {
@@ -22687,7 +22687,7 @@
           "ismain:1": 0,
           "repeat_relative:1": 1,
           "name:8": "Phenol",
-          "desc:8": "There are quite a few ways to make Phenol.\n\nFrom oil:\nOption 1 - Distill Heavy Fuel\nOption 2 - From Cumene, reacted with Propene and Benzene and Phosphoric Acid as a catalyst. This also gives some Acetone.\n\nAlternatives:\nOption 3 - Distill Wood Tar\nOption 4 - React Dichlorobenzene with Sodium Hydroxide\nOption 5 - React Benzene and Oxygen (this requires EV chemical reactor)\n\n\nOption 1 or 3 are the most recommended due to their simplicity, despite being lossy. Switch to Option 5 once settled in EV.\n\nOption 2 will allow you to not worry about Acetone, but you will be leftover with extra Phenol. You can burn it, or store it for future uses."
+          "desc:8": "There are quite a few ways to make Phenol.\n\nFrom oil:\nOption 1 - Distill Heavy Fuel\nOption 2 - From Cumene, reacted with Propene and Benzene and Phosphoric Acid as a catalyst. This also gives some Acetone.\n\nAlternatives:\nOption 3 - Distill Wood Tar\nOption 4 - React Dichlorobenzene with Sodium Hydroxide\nOption 5 - React Benzene and Oxygen (this requires an EV chemical reactor)\n\n\nOption 1 or 3 are the most recommended due to their simplicity, despite being lossy. Switch to Option 5 once settled in EV.\n\nOption 2 will allow you to not worry about Acetone, but you will be leftover with extra Phenol. You can burn it, or store it for future uses."
         }
       },
       "tasks:9": {
