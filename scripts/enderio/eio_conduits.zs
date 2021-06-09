@@ -93,7 +93,7 @@ val alt_conduit = <enderio:item_power_conduit>.definition;
 // LV-LuV
 for i in 1 to 7 {
     recipes.remove(conduit.makeStack(i));
-    assembler.recipeBuilder().EUt(8).duration(150)
+    assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * pow(2, i))
         .inputs(<ore:foilPlastic> * 4)
         .inputs(superconductors[i])
@@ -104,7 +104,7 @@ for i in 1 to 7 {
 // ZPM-UHV
 for i in 7 to 9 {
     recipes.remove(conduit.makeStack(i));
-    assembler.recipeBuilder().EUt(8).duration(150)
+    assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i])
         .inputs(<ore:foilPolyetheretherketone> * 4)
@@ -115,7 +115,7 @@ for i in 7 to 9 {
 // UEV-UIV
 for i in 0 to 3 {
     recipes.remove(alt_conduit.makeStack(i));
-    assembler.recipeBuilder().EUt(8).duration(150)
+    assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i + 9])        
         .inputs(<ore:foilZylon> * 4)
@@ -126,7 +126,7 @@ for i in 0 to 3 {
 // UMV-MAX
 for i in 12 to 15 {
     recipes.remove(conduit.makeStack(i - 3));
-    assembler.recipeBuilder().EUt(8).duration(150)
+    assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i])        
         .inputs(<ore:foilFullerenePolymerMatrix> * 4)
@@ -138,20 +138,20 @@ for i in 12 to 15 {
 val conduit_foils = [<ore:foilRubber> * 16, <ore:foilPlastic> * 16, <ore:plateStyreneButadieneRubber> * 4] as IIngredient[];
 for i in 1 to 4 {
     assembler.recipeBuilder().EUt(30 * pow(4, (i - 1))).duration(400)
-        .inputs(<ore:itemConduitBinder> * (16 * (i + 1)))
+        .inputs(<ore:itemConduitBinder> * (pow(2, i + 3)))
         .inputs(conveyors[i])   
         .inputs(conduit_foils[i - 1])     
-        .outputs(<enderio:item_item_conduit> * (16 * (i + 1)))
+        .outputs(<enderio:item_item_conduit> * (pow(2, i + 3)))
         .buildAndRegister();
 }
 
 // Ender Fluid Conduits
 for i in 1 to 4 {
-    assembler.recipeBuilder().EUt(8 * pow(4, i)).duration(400)
-        .inputs(<ore:itemConduitBinder> * (16 * (i + 1)))
+    assembler.recipeBuilder().EUt(30 * pow(4, (i - 1))).duration(400)
+        .inputs(<ore:itemConduitBinder> * (pow(2, i + 3)))
         .inputs(pumps[i])   
         .inputs(conduit_foils[i - 1])     
-        .outputs(<enderio:item_liquid_conduit:2> * (16 * (i + 1)))
+        .outputs(<enderio:item_liquid_conduit:2> * (pow(2, i + 3)))
         .buildAndRegister();
 }
 
