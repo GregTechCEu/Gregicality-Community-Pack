@@ -82,9 +82,9 @@ recipes.addShapeless("eio_conduit_facade_hardened", <enderio:item_conduit_facade
 
 // ULV
 assembler.recipeBuilder().EUt(8).duration(150)
-    .inputs(<ore:itemConduitBinder> * 4)
+    .inputs(<ore:itemConduitBinder>)
     .inputs(<ore:boltWroughtIron>)
-    .outputs(<enderio:item_endergy_conduit> * 4)
+    .outputs(<enderio:item_endergy_conduit>)
     .buildAndRegister();
 
 val conduit = <enderio:item_endergy_conduit>.definition;
@@ -97,29 +97,30 @@ for i in 1 to 7 {
         .inputs(<ore:itemConduitBinder> * pow(2, i))
         .inputs(<ore:foilPlastic> * 4)
         .inputs(superconductors[i])
-        .outputs(conduit.makeStack(i) * 8)
+        .outputs(conduit.makeStack(i))
         .buildAndRegister();
 }
 
-// ZPM-UHV
+// ZPM-UV
 for i in 7 to 9 {
     recipes.remove(conduit.makeStack(i));
     assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i])
         .inputs(<ore:foilPolyetheretherketone> * 4)
-        .outputs(conduit.makeStack(i) * 8)
+        .outputs(conduit.makeStack(i))
         .buildAndRegister();
 }
 
-// UEV-UIV
+// UHV-UIV
 for i in 0 to 3 {
     recipes.remove(alt_conduit.makeStack(i));
-    assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
+    assembler.recipeBuilder().EUt(30 * pow(4, i + 8)).duration(150)
+        .inputs(<ore:itemConduitBinder> * 64)
         .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i + 9])        
         .inputs(<ore:foilZylon> * 4)
-        .outputs(alt_conduit.makeStack(i) * 8)
+        .outputs(alt_conduit.makeStack(i))
         .buildAndRegister();
 }
 
@@ -128,9 +129,11 @@ for i in 12 to 15 {
     recipes.remove(conduit.makeStack(i - 3));
     assembler.recipeBuilder().EUt(30 * pow(4, i - 1)).duration(150)
         .inputs(<ore:itemConduitBinder> * 64)
+        .inputs(<ore:itemConduitBinder> * 64)
+        .inputs(<ore:itemConduitBinder> * 64)
         .inputs(superconductors[i])        
         .inputs(<ore:foilFullerenePolymerMatrix> * 4)
-        .outputs(conduit.makeStack(i - 3) * 8)
+        .outputs(conduit.makeStack(i - 3))
         .buildAndRegister();
 }
 
