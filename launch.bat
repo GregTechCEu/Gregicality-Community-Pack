@@ -4,7 +4,7 @@
 
 :: DO NOT EDIT UNLESS YOU KNOW WHAT YOU'RE DOING
 @ECHO OFF
-SET FORGEJAR="forge-1.12.2-14.23.5.2855.jar"
+SET FORGEJAR=forge-1.12.2-14.23.5.2855.jar
 :: these you can edit
 SET MIN_RAM=2048M
 SET MAX_RAM=2048M
@@ -21,3 +21,4 @@ echo.
 echo Launching the server...
 echo.
 echo ^> java %LAUNCHPARAMS%
+java %LAUNCHPARAMS%
