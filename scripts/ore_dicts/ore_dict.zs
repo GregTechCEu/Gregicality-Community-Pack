@@ -5,7 +5,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 import mods.jei.JEI;
 
-static mods as string[] = ["minecraft", "gregtech", "gtadditions", "enderio", "nuclearcraft", "advancedrocketry", "libvulpes"];
+static mods as string[] = ["minecraft", "gregtech", "gtadditions", "enderio", "nuclearcraft"];
 static size as int = mods.length - 1;
 
 function unify_oredicts (oredict as [IOreDictEntry]) {

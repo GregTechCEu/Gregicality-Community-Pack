@@ -11,15 +11,8 @@ var name_removals = [
     // Nuggets
     "gregtech:nugget_disassembling_emerald",
     "gregtech:nugget_disassembling_diamond",
-    "advancedrocketry:unpacknuggetcopper",
-    "advancedrocketry:unpacknuggettin",
-    "advancedrocketry:unpacknuggetiridium",
-    "advancedrocketry:unpacknuggetsteel",
     // Block Unpacking
-    "advancedrocketry:unpacknuggettitanium",
-    "advancedrocketry:unpacknuggetsilicon",
     "nuclearcraft:item.meta_item",
-    "advancedrocketry:unpackblockcopper",
     "nuclearcraft:item.meta_item_1",
     "nuclearcraft:item.meta_item_2",
     "nuclearcraft:item.meta_item_3",
@@ -31,7 +24,6 @@ var name_removals = [
     "nuclearcraft:item.meta_item_9",
     "nuclearcraft:item.meta_item_10",
     "nuclearcraft:item.meta_item_11",
-    "advancedrocketry:unpackblocktin",
     "nuclearcraft:item.meta_item_12",
     "nuclearcraft:item.meta_item_13",
     "nuclearcraft:item.meta_item_14",
@@ -42,7 +34,6 @@ var name_removals = [
     "nuclearcraft:item.meta_item_19",
     "nuclearcraft:item.meta_item_20",
     "nuclearcraft:item.meta_item_21",
-    "advancedrocketry:unpackblockaluminum",
     // Dusts
     "enderio:ender_dust",
     // Glass Panes
@@ -56,26 +47,15 @@ var name_removals = [
     // Chests
     "enderio:tweak_chest_from_wood",
     // Nuggets to Ingots
-    "advancedrocketry:unpackingotcopper",
-    "advancedrocketry:unpackingottin",
-    "advancedrocketry:unpackingotaluminum",
-    "advancedrocketry:unpackingotiridium",
-    "advancedrocketry:unpackingotsteel",
     // Blocks
     "nuclearcraft:tile.compressed",
-    "advancedrocketry:packblockcopper",
     "nuclearcraft:tile.compressed_1",
     "nuclearcraft:tile.compressed_2",
     "nuclearcraft:tile.compressed_3",
     "nuclearcraft:tile.compressed_4",
-    "advancedrocketry:packblocktin",
     "nuclearcraft:tile.compressed_5",
     "nuclearcraft:tile.compressed_6",
     "nuclearcraft:tile.compressed_7",
-    "advancedrocketry:packblockaluminum",
-    "advancedrocketry:packblocksteel",
-    "advancedrocketry:packblockiridium",
-    "advancedrocketry:packblocktitanium",
     "appliedenergistics2:decorative/quartz_block_pure",
     // Other
     "quark:hopper",
