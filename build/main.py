@@ -71,6 +71,7 @@ print("modlist.html done")
 shutil.copy(basePath + "/manifest.json", basePath + "/buildOut/server/manifest.json")
 shutil.copy(basePath + "/LICENSE", basePath + "/buildOut/server/LICENSE")
 shutil.copy(basePath + "/launch.sh", basePath + "/buildOut/server/launch.sh")
+shutil.copy(basePath + "/launch.bat", basePath + "/buildOut/server/launch.bat")
 
 for dir in serverCopyDirs:
     try:
