@@ -4,6 +4,8 @@
 import mods.gtadditions.recipe.Utils;
 import mods.contenttweaker.Fluid;
 import mods.contenttweaker.VanillaFactory;
+import mods.gregtech.material.Material;
+import mods.gregtech.material.MaterialRegistry;
 
 //Registering directly
 
@@ -39,9 +41,15 @@ Utils.registerItem("extreme", 1028, 0x742a3c, "METALLIC", "ingotHot");
 Utils.registerItem("zircaloy", 1029, 0xa3a490, "METALLIC", "plate");
 
 
+// Full GT Materials
+var meteoricIron = MaterialRegistry.createIngotMaterial(650, "meteoric_iron", 0x685e4c, "metallic", 2, [<material:iron> * 1, <material:rare_earth> * 1], 3.0, 400, 1700);
+var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "dull", 2, [<material:rare_earth> * 1], 3.0, 400, 1700); //todo custom Desh element symbol
+
+
 //Adding flags
 
-<material:copper>.addFlags(["GENERATE_SPRING_SMALL"]);
+<material:copper>.addFlags(["GENERATE_SPRING_SMALL", "GENERATE_DOUBLE_PLATE"]);
+<material:tin>.addFlags(["GENERATE_DOUBLE_PLATE"]);
 <material:vanadium>.addFlags(["GENERATE_LONG_ROD", "GENERATE_SPRING", "GENERATE_DENSE"]);
 <material:maraging_steel_a>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
 <material:annealed_copper>.addFlags(["GENERATE_SPRING_SMALL", "GENERATE_SPRING"]);
@@ -52,3 +60,6 @@ Utils.registerItem("zircaloy", 1029, 0xa3a490, "METALLIC", "plate");
 <material:magnesium>.addFlags(["GENERATE_FINE_WIRE"]);
 <material:beryllium>.addFlags(["GENERATE_FINE_WIRE"]);
 <material:gold>.addFlags(["GENERATE_RING"]);
+
+meteoricIron.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "GENERATE_DOUBLE_PLATE", "DISABLE_DECOMPOSITION"]);
+desh.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "GENERATE_DOUBLE_PLATE", "DISABLE_DECOMPOSITION"]);

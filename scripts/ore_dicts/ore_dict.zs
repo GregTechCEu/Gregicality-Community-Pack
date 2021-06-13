@@ -55,6 +55,36 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:blockAluminum>.remove(<ore:blockAluminum>.firstItem);
 <ore:ingotAluminum>.remove(<ore:ingotAluminum>.firstItem);
 
+// Fix Galacticraft Compressed Aluminium
+<ore:compressedAluminium>.add(<ore:compressedAluminum>.firstItem);
+<ore:compressedAluminum>.remove(<ore:compressedAluminum>.firstItem);
+<ore:plateAluminum>.remove(<ore:compressedAluminium>.firstItem);
+
+// Compressed Fixes
+<ore:plateCopper>.remove(<galacticraftcore:basic_item:6>);
+<ore:plateTin>.remove(<galacticraftcore:basic_item:7>);
+<ore:plateAluminium>.remove(<galacticraftcore:basic_item:8>);
+<ore:plateBronze>.remove(<galacticraftcore:basic_item:10>);
+<ore:plateSteel>.remove(<galacticraftcore:basic_item:9>);
+<ore:plateIron>.remove(<galacticraftcore:basic_item:11>);
+<ore:plateMeteoricIron>.remove(<galacticraftcore:item_basic_moon:1>);
+<ore:plateTitanium>.remove(<galacticraftplanets:item_basic_asteroids:6>);
+<ore:plateDesh>.remove(<galacticraftplanets:item_basic_mars:5>);
+
+<ore:compressedCoal>.add(<galaxyspace:compressed_plates>);
+<ore:plateCoal>.remove(<galaxyspace:compressed_plates>);
+
+<ore:compressedCobalt>.add(<galaxyspace:compressed_plates:1>);
+<ore:plateCobaltl>.remove(<galaxyspace:compressed_plates:1>);
+
+<ore:compressedMagnesium>.add(<galaxyspace:compressed_plates:2>);
+<ore:plateMagnesium>.remove(<galaxyspace:compressed_plates:2>);
+
+<ore:compressedNickel>.add(<galaxyspace:compressed_plates:3>);
+<ore:plateNickel>.remove(<galaxyspace:compressed_plates:3>);
+
+
+
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
 <ore:gemCertusQuartz>.remove(<ore:gemCertusQuartz>.firstItem);
