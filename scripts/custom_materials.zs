@@ -42,8 +42,8 @@ Utils.registerItem("zircaloy", 1029, 0xa3a490, "METALLIC", "plate");
 
 
 // Full GT Materials
-var meteoricIron = MaterialRegistry.createIngotMaterial(650, "meteoric_iron", 0x685e4c, "metallic", 2, [<material:iron> * 1, <material:rare_earth> * 1], 3.0, 400, 1700);
-var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "dull", 2, [<material:rare_earth> * 1], 3.0, 400, 1700); //todo custom Desh element symbol
+var meteoricIron = MaterialRegistry.createIngotMaterial(650, "meteoric_iron", 0x685e4c, "metallic", 2, [<material:iron> * 1, <material:rare_earth> * 1], 3.0, 400, 1950);
+var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "dull", 2, [<material:rare_earth> * 1], 3.0, 400, 2150); //todo custom Desh element symbol
 
 
 //Adding flags

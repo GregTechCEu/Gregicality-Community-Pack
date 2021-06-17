@@ -33,7 +33,8 @@ val name_removals = [
     "gregtech:piston_steel",
     "gregtech:piston_titanium",
     "vanillatools:tool.hammer_iron",
-    "vanillatools:tool.hammer_diamond"
+    "vanillatools:tool.hammer_diamond",
+    "galacticraftcore:furnace"
 ] as string[];
 
 for item in name_removals {
@@ -181,4 +182,3 @@ furnace.remove(<metaitem:rubber_drop>);
 
 // Shears
 recipes.addShaped("minecraft_shears", <minecraft:shears>, [[<ore:gregHardHammers>, <ore:plateIron>], [<ore:plateIron>, <ore:gregFiles>]]);
-

@@ -31,10 +31,6 @@ var coin_stainless_steel = VanillaFactory.createItem("coin_stainless_steel");
 coin_stainless_steel.maxStackSize = 64;
 coin_stainless_steel.register();
 
-var heavy_duty_ingot_0 = VanillaFactory.createItem("heavy_duty_ingot_0");
-heavy_duty_ingot_0.maxStackSize = 64;
-heavy_duty_ingot_0.register();
-
 var heavy_duty_ingot_1 = VanillaFactory.createItem("heavy_duty_ingot_1");
 heavy_duty_ingot_1.maxStackSize = 64;
 heavy_duty_ingot_1.register();
@@ -54,3 +50,11 @@ heavy_duty_ingot_4.register();
 var heavy_duty_ingot_5 = VanillaFactory.createItem("heavy_duty_ingot_5");
 heavy_duty_ingot_5.maxStackSize = 64;
 heavy_duty_ingot_5.register();
+
+var heavy_duty_ingot_6 = VanillaFactory.createItem("heavy_duty_ingot_6");
+heavy_duty_ingot_6.maxStackSize = 64;
+heavy_duty_ingot_6.register();
+
+var raw_sdhc_alloy = VanillaFactory.createItem("raw_sdhc_alloy");
+raw_sdhc_alloy.maxStackSize = 64;
+raw_sdhc_alloy.register();
