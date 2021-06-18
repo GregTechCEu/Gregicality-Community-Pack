@@ -3,6 +3,11 @@ import enum
 import os
 import json
 
+## INSTRUCTIONS:
+## export https://docs.google.com/spreadsheets/d/1DW3775gVhuu3Ykqf6XYTzyc1TFKSU1DC7L549F1EYP8 as csv and copy it into build/worldgen.csv
+## Then run script and commit
+## Any changes to ore gen, please add to the spreadsheet
+
 basePath = os.path.realpath(__file__)[:-18] + ".."
 
 dimNames = ["OVERWORLD", "NETHER", "END", "MOON", "MARS", "CERES", "ASTEROIDS", "MERCURY", "VENUS", "IO", "EUROPA", "GANYMEDE", "ENCELADUS", "TITAN", "TRITON", "PLUTO", "HAUMEA", "PROXIMA_B", "BARNARDA_C"]
