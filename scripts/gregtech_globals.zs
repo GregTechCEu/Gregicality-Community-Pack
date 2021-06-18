@@ -76,7 +76,7 @@ global circuits as IIngredient[] = [<ore:circuitPrimitive>, <ore:circuitBasic>, 
     <ore:circuitAdvanced>, <ore:circuitExtreme>, <ore:circuitElite>, 
     <ore:circuitMaster>, <ore:circuitUltimate>, <ore:circuitSuperconductor>, 
     <ore:circuitInfinite>, <ore:circuitUev>, <ore:circuitUiv>, 
-    <ore:circuitUmv>];
+    <ore:circuitUmv>, <ore:circuitUxv>];
 
 global conveyors as IIngredient[] = [null, <metaitem:conveyor.module.lv>, <metaitem:conveyor.module.mv>, <metaitem:conveyor.module.hv>, 
     <metaitem:conveyor.module.ev>, <metaitem:conveyor.module.iv>, <metaitem:conveyor.module.luv>, 
@@ -143,6 +143,12 @@ global tieredPlates as IIngredient[] = [<ore:plateWroughtIron>, <ore:plateSteel>
     <ore:plateOsmiridium>, <ore:plateTritanium>, <ore:plateSeaborgium>,
     <ore:plateBohrium>, <ore:plateQuantum>, <ore:plateQuantum>,
     <ore:plateQuantum>];
+
+global tieredLongSticks as IIngredient[] = [<ore:stickLongWroughtIron>, <ore:stickLongSteel>, <ore:stickLongAluminium>, <ore:stickLongStainlessSteel>, 
+    <ore:stickLongTitanium>, <ore:stickLongTungstenSteel>, <ore:stickLongRhodiumPlatedPalladium>, 
+    <ore:stickLongOsmiridium>, <ore:stickLongTritanium>, <ore:stickLongSeaborgium>,
+    <ore:stickLongBohrium>, <ore:stickLongQuantum>, <ore:stickLongQuantum>,
+    <ore:stickLongQuantum>];
 	
 global tieredGlass as IIngredient[] = [<ore:blockGlass>, <ore:blockGlass>, <gtadditions:ga_transparent_casing>, <gtadditions:ga_transparent_casing:1>, 
     <gtadditions:ga_transparent_casing:2>, <gtadditions:ga_transparent_casing:3>, <gtadditions:ga_transparent_casing:4>, 
