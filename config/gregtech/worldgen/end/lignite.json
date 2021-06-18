@@ -1,0 +1,40 @@
+{
+    "weight": 80,
+    "max_height": 80,
+    "min_height": 50,
+    "generator": {
+        "type": "ellipsoid",
+        "radius": [
+            16,
+            16
+        ]
+    },
+    "density": 0.6,
+    "vein_populator": {
+        "type": "surface_rock",
+        "material": "lignite"
+    },
+    "dimension_filter": [
+        "dimension_id:1"
+    ],
+    "filler": {
+        "type": "simple",
+        "value": {
+            "type": "weight_random",
+            "values": [
+                {
+                    "weight": "80",
+                    "value": "ore:lignite"
+                },
+                {
+                    "weight": "10",
+                    "value": "ore:coal"
+                },
+                {
+                    "weight": "10",
+                    "value": "ore:talc"
+                }
+            ]
+        }
+    }
+}
