@@ -86,3 +86,10 @@ for row in data:
     with open(basePath + "/config/gregtech/worldgen/" + firstDim + "/" + row[0].lower().replace(" ", "-") + ".json", "w") as jsonFile:
         json.dump(vein, jsonFile, indent=4)
 
+dims = {"dims": []}
+for i in dimNames:
+    dims["dims"].append({"dimID": Dims[i].value, "dimName": i.replace("_", " ").title()})
+
+with open(basePath + "/config/gregtech/dimensions.json", "w") as jsonFile:
+    json.dump(dims, jsonFile, indent=4)
+
