@@ -225,25 +225,25 @@ for i in 1 to singlePlates.length {
 function generate_compressed_recipe (input as IIngredient, output as IOreDictEntry) {
     implosion_compressor.recipeBuilder().duration(20).EUt(30)
         .property("explosives", <gtadditions:ga_explosive:5> * 4)
-        .inputs(input * 2)
+        .inputs(input)
         .outputs(output.firstItem)
         .buildAndRegister();
 
     implosion_compressor.recipeBuilder().duration(20).EUt(30)
         .property("explosives", 2)
-        .inputs(input * 2)
+        .inputs(input)
         .outputs(output.firstItem)
         .buildAndRegister();
 
     implosion_compressor.recipeBuilder().duration(20).EUt(30)
         .property("explosives", <metaitem:dynamite> * 2)
-        .inputs(input * 2)
+        .inputs(input)
         .outputs(output.firstItem)
         .buildAndRegister();
 
     implosion_compressor.recipeBuilder().duration(20).EUt(30)
         .property("explosives", <gtadditions:ga_explosive:4> * 2)
-        .inputs(input * 2)
+        .inputs(input)
         .outputs(output.firstItem)
         .buildAndRegister();
 }
