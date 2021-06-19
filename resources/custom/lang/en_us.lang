@@ -30,6 +30,14 @@ metaitem.extreme_dust.name=Extreme Alloy Dust
 metaitem.extreme_ingot_hot.name=Hot Extreme Alloy Ingot
 metaitem.zircaloy_plate.name=Zircaloy Plate
 
+# Full Materials
+material.meteoric_iron=Meteoric Iron
+material.desh=Desh
+material.quantium=Quantium
+material.ledox=Ledox
+material.mysterious_crystal=Mysterious Crystal
+material.oriharukon=Oriharukon
+
 
 # DevTech
 # Super Chests
@@ -65,6 +73,9 @@ devtech.machine.stock_manipulator.zpm.name=Elite Stock Manipulator III
 devtech.machine.stock_manipulator.uv.name=Elite Stock Manipulator IV
 recipemap.stock_manipulator.name=Stock Market Manipulation
 
+# Rocket Assembler
+devtech.machine.rocket_assembler.uv.name=Rocket Assembling Machine
+
 # EnderIO
 item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
 item.item_capacitor_energetic_silver.name=Endergetic Capacitor V2.0
@@ -93,3 +104,22 @@ enderio.item_endergy_conduit_stellar.name=MAX Energy Conduit
 
 # Nuclearcraft
 item.nuclearcraft.compound.energetic_blend.name=Extreme Blend
+
+# Galacticraft
+tile.landing_pad.buggy_fueler.name=Buggy Launch Pad
+item.nose_cone.name=Tier 1 Rocket Nose Cone
+item.heavy_nose_cone.name=Tier 3 Rocket Nose Cone
+item.engine_t2.name=Tier 2 Rocket Engine
+item.engine.tier1booster.name=Tier 1 Rocket Booster
+item.rocket_fins.name=Tier 1 Rocket Fins
+item.rocket_fins_t2.name=Tier 3 Rocket Fins
+
+
+# GalaxySpace
+tile.advanced_landing_pad.name=Advanced Launch Pad
+tile.enceladus_crystal.name=Unknown Crystal
+tile.europa_surface_ice_2.name=Europa Surface Ice
+item.rocket_cone.name=Advanced Rocket Nose Cose
+item.rocket_engine.name=Advanced Rocket Engine
+item.rocket_booster.name=Advanced Rocket Booster
+item.rocket_stabiliser.name=Advanced Rocket Fins

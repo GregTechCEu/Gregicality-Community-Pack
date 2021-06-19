@@ -25,7 +25,32 @@ val removals = [
     "galaxyspace:dungeon_blocks",
     "galacticraftplanets:walkway_0",
     "galacticraftplanets:walkway_2",
-    "galacticraftplanets:walkway_2_alt"
+    "galacticraftplanets:walkway_2_alt",
+    "galacticraftcore:cobblestone",
+    "galacticraftcore:cobblestone_alt",
+    "galaxyspace:decoblocks",
+    "galaxyspace:decoblocks_1",
+    "galaxyspace:decoblocks_2",
+    "galaxyspace:decoblocks_3",
+    "galacticraftcore:meteor_chunk_0",
+    "galacticraftcore:food_4",
+    "galaxyspace:gs_basic_7",
+    "galacticraftcore:canister_0",
+    "galacticraftcore:food_9",
+    "galacticraftcore:food_3",
+    "galacticraftcore:food_2",
+    "galacticraftcore:food_1",
+    "galacticraftcore:food_0",
+    "galacticraftcore:basic_item_18",
+    "galacticraftcore:basic_item_17",
+    "galacticraftcore:basic_item_16",
+    "galacticraftcore:basic_item_15",
+    "galacticraftcore:food_6",
+    "galacticraftcore:food_5",
+    "galacticraftcore:food_8",
+    "galacticraftcore:flag",
+    "galacticraftcore:prelaunch_checklist",
+    "galacticraftplanets:grapple"
 ] as string[];
 
 for item in removals {
@@ -38,12 +63,48 @@ val disables = [
     <galacticraftcore:aluminum_wire:2>,
     <galacticraftcore:aluminum_wire:3>,
     <galacticraftcore:grating>,
-    <galacticraftplanets:walkway:1>
+    <galacticraftplanets:walkway:1>,
+    <galacticraftcore:emergency_kit>,
+    <galaxyspace:gs_basic:20>,
+    <galaxyspace:gs_basic:28>,
+    <galacticraftcore:sensor_glasses>,
+    <galacticraftcore:steel_pickaxe>,
+    <galacticraftcore:steel_axe>,
+    <galacticraftcore:steel_hoe>,
+    <galacticraftcore:steel_shovel>,
+    <galacticraftcore:steel_sword>,
+    <galacticraftcore:steel_helmet>,
+    <galacticraftcore:steel_chestplate>,
+    <galacticraftcore:steel_leggings>,
+    <galacticraftcore:steel_boots>,
+    <galacticraftplanets:titanium_helmet>,
+    <galacticraftplanets:titanium_chestplate>,
+    <galacticraftplanets:titanium_leggings>,
+    <galacticraftplanets:titanium_boots>,
+    <galacticraftplanets:titanium_axe>,
+    <galacticraftplanets:titanium_pickaxe>,
+    <galacticraftplanets:titanium_shovel>,
+    <galacticraftplanets:titanium_hoe>,
+    <galacticraftplanets:titanium_sword>,
+    <galaxyspace:cobalt_helmet>,
+    <galaxyspace:cobalt_chest>,
+    <galaxyspace:cobalt_legs>,
+    <galaxyspace:cobalt_boots>,
+    <galaxyspace:cobalt_sword>,
+    <galaxyspace:cobalt_axe>,
+    <galaxyspace:cobalt_pickaxe>,
+    <galaxyspace:cobalt_spade>,
+    <galaxyspace:cobalt_hoe>,
+    <galaxyspace:jetpack:200>,
+    <galaxyspace:gs_basic:9>,
+    <galacticraftcore:canister:1>
 ] as IItemStack[];
 
 for item in disables {
     mods.jei.JEI.removeAndHide(item);
 }
+
+furnace.remove(<galacticraftcore:meteor_chunk:1>, <galacticraftcore:meteor_chunk>);
 
 // Fluid Pipe
 extruder.recipeBuilder().duration(120).EUt(120)
@@ -72,7 +133,7 @@ recipes.addShaped("gc_vacuum_glass_strong", <galacticraftcore:space_glass_strong
 ]);
 
 // Tin Wall Block
-recipes.addShaped("gc_tin_wall_block", <galacticraftcore:basic_block_core:4>, [
+recipes.addShaped("gc_tin_wall_block", <galacticraftcore:basic_block_core:4> * 8, [
     [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
     [<ore:stoneSmooth>, <ore:plateTin>, <ore:stoneSmooth>],
     [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>]
@@ -274,7 +335,7 @@ recipes.addShaped("gc_io_dungeon_top", <galaxyspace:ioblocks:8> * 4, [
 furnace.addRecipe(<galaxyspace:ioblocks:9>, <galaxyspace:ioblocks:1>);
 
 // Walkway
-recipes.addShaped("gc_walkway", <galacticraftplanets:walkway>, [
+recipes.addShaped("gc_walkway", <galacticraftplanets:walkway> * 4, [
     [<ore:plateSteel>, <ore:frameGtSteel>, <ore:plateSteel>],
     [<ore:stickSteel>, <ore:plateSteel>, <ore:stickSteel>]
 ]);
@@ -291,3 +352,131 @@ canner.recipeBuilder().duration(100).EUt(4)
     .outputs(<galacticraftplanets:walkway>)
     .outputs(<galacticraftcore:fluid_pipe>)
     .buildAndRegister();
+
+// Cobalt Decoration Block
+recipes.addShaped("gc_cobalt_decoration_block", <galaxyspace:decoblocks> * 8, [
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:plateCobalt>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>]
+]);
+
+// Magnesium Decoration Block
+recipes.addShaped("gc_magnesium_decoration_block", <galaxyspace:decoblocks:1> * 8, [
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:plateMagnesium>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>]
+]);
+
+// Nickel Decoration Block
+recipes.addShaped("gc_nickel_decoration_block", <galaxyspace:decoblocks:2> * 8, [
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:plateNickel>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>]
+]);
+
+// Copper Decoration Block
+recipes.addShaped("gc_copper_decoration_block", <galaxyspace:decoblocks:3> * 8, [
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:plateCopper>, <ore:stoneSmooth>],
+    [<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>]
+]);
+
+// Cheese Slice
+cutting_saw.recipeBuilder().duration(80).EUt(4)
+    .inputs(<galacticraftcore:cheese>)
+    .outputs(<galacticraftcore:food:4> * 6)
+    .buildAndRegister();
+
+// Animal Cage
+recipes.addShaped("gs_animal_cage", <galaxyspace:gs_basic:32>, [
+    [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
+    [<enderio:block_dark_iron_bars>, null, <ore:plateSteel>],
+    [<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]
+]);
+
+// Tin Canister
+extruder.recipeBuilder().duration(200).EUt(30)
+    .inputs(<ore:plateTin> * 2)
+    .notConsumable(<metaitem:shape.extruder.cell>)
+    .outputs(<galacticraftcore:canister>)
+    .buildAndRegister();
+
+// Canned Food
+val food = [
+    <minecraft:apple>,
+    <galacticraftcore:food:6>,
+    <minecraft:potato>,
+    <minecraft:melon>,
+    <minecraft:carrot>
+] as IItemStack[];
+
+val canned = [
+    <galacticraftcore:food>,
+    <galacticraftcore:food:9>,
+    <galacticraftcore:food:3>,
+    <galacticraftcore:food:2>,
+    <galacticraftcore:food:1>
+] as IItemStack[];
+
+for i, item in food {
+    canner.recipeBuilder().duration(200).EUt(4)
+        .inputs(item)
+        .inputs(<galacticraftcore:canister>)
+        .outputs(canned[i])
+        .buildAndRegister();
+}
+
+// Ground Beef
+lathe.recipeBuilder().duration(100).EUt(16)
+    .inputs(<minecraft:beef>)
+    .outputs(<galacticraftcore:food:6> * 2)
+    .chancedOutput(<galacticraftcore:food:6>, 5000, 2500)
+    .buildAndRegister();
+
+// Bun
+furnace.addRecipe(<galacticraftcore:food:5>, <metaitem:component.dough>);
+
+// Cheeseburger
+forming_press.recipeBuilder().duration(100).EUt(16)
+    .inputs(<galacticraftcore:food:5> * 5)
+    .inputs(<galacticraftcore:food:4>)
+    .inputs(<galacticraftcore:food:7>)
+    .outputs(<galacticraftcore:food:8>)
+    .buildAndRegister();
+
+// Flag
+recipes.addShaped("gc_flag", <galacticraftcore:flag>, [
+    [<galacticraftcore:steel_pole>, <galacticraftcore:canvas>, <galacticraftcore:canvas>],
+    [<galacticraftcore:steel_pole>, <galacticraftcore:canvas>, <galacticraftcore:canvas>],
+    [<galacticraftcore:steel_pole>, <ore:gregWireCutters>, <ore:gregBlades>]
+]);
+
+// Pre-Flight Checklist
+laser_engraver.recipeBuilder().duration(100).EUt(30)
+    .inputs(<ore:craftingBook>)
+    .notConsumable(<ore:craftingLensWhite>)
+    .outputs(<galacticraftcore:prelaunch_checklist>)
+    .buildAndRegister();
+
+// Dark Decoration Block
+recipes.addShaped("gc_dark_decoration_block", <galacticraftplanets:asteroids_block:6>, [
+    [<ore:stone>, <ore:stone>, <ore:stone>],
+    [<ore:stone>, <ore:plateSteel>, <ore:stone>],
+    [<ore:stone>, <ore:stone>, <ore:stone>]
+]);
+
+recipes.addShaped("gc_dark_decoration_block_slab", <galacticraftcore:slab_gc_half:6> * 6, [
+    [<galacticraftplanets:asteroids_block:6>, <galacticraftplanets:asteroids_block:6>, <galacticraftplanets:asteroids_block:6>]
+]);
+
+recipes.addShaped("gc_dark_decoration_block_slab_reverse", <galacticraftplanets:asteroids_block:6>, [
+    [<galacticraftcore:slab_gc_half:6>],
+    [<galacticraftcore:slab_gc_half:6>]
+]);
+
+// Grapple
+recipes.addShaped("gc_grapple", <galacticraftplanets:grapple>.withTag({Unbreakable: 1 as byte}), [
+    [<ore:gregHardHammers>, <ore:boltSteel>, <ore:boltSteel>],
+    [<ore:gregWireCutters>, <ore:wireFineSteel>, <ore:boltSteel>],
+    [<ore:ringSteel>, <ore:wireFineSteel>, <ore:gregFiles>]
+]);

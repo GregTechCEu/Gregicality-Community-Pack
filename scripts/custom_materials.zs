@@ -42,8 +42,12 @@ Utils.registerItem("zircaloy", 1029, 0xa3a490, "METALLIC", "plate");
 
 
 // Full GT Materials
-var meteoricIron = MaterialRegistry.createIngotMaterial(650, "meteoric_iron", 0x685e4c, "metallic", 2, [<material:iron> * 1, <material:rare_earth> * 1], 3.0, 400, 1950);
-var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "dull", 2, [<material:rare_earth> * 1], 3.0, 400, 2150); //todo custom Desh element symbol
+var meteoricIron = MaterialRegistry.createIngotMaterial(650, "meteoric_iron", 0x685e4c, "METALLIC", 2, [<material:iron> * 1, <material:rare_earth> * 1], 3.0f, 2.5f, 400, 1950); // Todo custom magic (Ma) element symbol - Moon
+var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "DULL", 2, [<material:rare_earth> * 1], 3.0f, 3.7f, 400, 2150); //todo custom Desh (De) element symbol - Mars
+var quantium = MaterialRegistry.createIngotMaterial(652, "quantium", 0x04cc0c, "SHINY", 2, [<material:rare_earth> * 1], 6.0f, 1.2f, 1900, 5400); //todo custom Quantium (Qt) element symbol - Venus
+var ledox = MaterialRegistry.createIngotMaterial(653, "ledox", 0x046de6, "METALLIC", 2, [<material:lead> * 1, <material:rare_earth> * 1], 4.0f, 0.6f, 1200); //todo custom Space (Sp) element symbol - Europa
+var mysterious_crystal = MaterialRegistry.createGemMaterial(654, "mysterious_crystal", 0x14846c, "DIAMOND", 2, [<material:rare_earth> * 1], 4.0f, 4.0f, 1200); //todo custom Mysterious (My) element symbol - Enceladus
+var oriharukon = MaterialRegistry.createIngotMaterial(655, "oriharukon", 0x14846c, "SHINY", 2, [<material:rare_earth> * 1], 4.0f, 3.8f, 1200, 5350); //todo custom Oriharukon (Oh) element symbol - Mercury
 
 
 //Adding flags
@@ -61,5 +65,9 @@ var desh = MaterialRegistry.createIngotMaterial(651, "desh", 0x242424, "dull", 2
 <material:beryllium>.addFlags(["GENERATE_FINE_WIRE"]);
 <material:gold>.addFlags(["GENERATE_RING"]);
 
-meteoricIron.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "GENERATE_DOUBLE_PLATE", "DISABLE_DECOMPOSITION"]);
+meteoricIron.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "GENERATE_FINE_WIRE", "GENERATE_DOUBLE_PLATE", "DISABLE_DECOMPOSITION"]);
 desh.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "GENERATE_DOUBLE_PLATE", "DISABLE_DECOMPOSITION"]);
+quantium.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "DISABLE_DECOMPOSITION"]);
+ledox.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "DISABLE_DECOMPOSITION"]);
+mysterious_crystal.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "DISABLE_DECOMPOSITION"]);
+oriharukon.addFlags(["GENERATE_ORE", "GENERATE_PLATE", "DISABLE_DECOMPOSITION"]);

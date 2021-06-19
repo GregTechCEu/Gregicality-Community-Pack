@@ -80,7 +80,11 @@ val disables = [
     <galaxyspace:adv_circuit_fabricator>,
     <galaxyspace:energy_pad>,
     <galaxyspace:modification_table>,
-    <galaxyspace:rocket_assembler>
+    <galaxyspace:rocket_assembler>,
+    <galaxyspace:radiation_stabiliser>,
+    <galacticraftcore:fluid_tank>,
+    <galacticraftplanets:mars_machine:8>,
+    <galacticraftcore:rocket_workbench>
 ] as IItemStack[];
 
 for item in disables {
@@ -101,17 +105,25 @@ recipes.addShaped("gc_buggy_pad", <galacticraftcore:landing_pad:1> * 3, [
     [<ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>]
 ]);
 
+// Advanced Launch Pad
+recipes.addShaped("gs_launch_pad_advanced", <galaxyspace:advanced_landing_pad> * 5, [
+    [<ore:compressedTitanium>, <ore:compressedTitanium>, <ore:compressedTitanium>],
+    [<metaitem:plate.iridium_alloy>, <metaitem:plate.iridium_alloy>, <metaitem:plate.iridium_alloy>],
+    [<ore:blockHastelloyN>, <ore:blockHastelloyN>, <ore:blockHastelloyN>]
+]);
+
+
 // Oxygen Bubble Distributor
 recipes.addShaped("gc_oxygen_bubble_distributor", <galacticraftcore:distributor>, [
-    [<ore:compressedAluminium>, <galacticraftcore:air_fan>, <ore:compressedAluminium>],
+    [<ore:compressedAluminium>, <ore:rotorSteel>, <ore:compressedAluminium>],
     [<galacticraftcore:air_vent>, motors[3], <galacticraftcore:air_vent>],
-    [<ore:compressedSteel>, <galacticraftcore:air_fan>, <ore:compressedSteel>]
+    [<ore:compressedSteel>, <ore:rotorSteel>, <ore:compressedSteel>]
 ]);
 
 // Oxygen Collector
 recipes.addShaped("gc_oxygen_collector", <galacticraftcore:collector>, [
     [<ore:compressedAluminium>, <galacticraftcore:oxygen_concentrator>, <ore:compressedAluminium>],
-    [<galacticraftcore:air_vent>, <galacticraftcore:air_fan>, motors[3]],
+    [<galacticraftcore:air_vent>, <ore:rotorSteel>, motors[3]],
     [<ore:compressedSteel>, <ore:cableGtDoubleAluminium>, <ore:compressedSteel>]
 ]);
 
@@ -125,7 +137,7 @@ recipes.addShaped("gc_oxygen_compressor", <galacticraftcore:oxygen_compressor>, 
 // Oxygen Decompressor
 recipes.addShaped("gc_oxygen_decompressor", <galacticraftcore:oxygen_compressor:4>, [
     [<ore:compressedAluminium>, <galacticraftcore:oxygen_concentrator>, <ore:compressedAluminium>],
-    [motors[3], <metaitem:large_fluid_cell.steel>, <galacticraftcore:air_fan>],
+    [motors[3], <metaitem:large_fluid_cell.steel>, <ore:rotorSteel>],
     [<ore:compressedSteel>, <ore:compressedBronze>, <ore:compressedSteel>]
 ]);
 
@@ -145,7 +157,7 @@ recipes.addShaped("gc_oxygen_detector", <galacticraftcore:oxygen_detector>, [
 
 // Fuel Loader
 recipes.addShaped("gc_fuel_loader", <galacticraftcore:fuel_loader>, [
-    [<ore:compressedSteel>, <ore:waferBasic>, <ore:compressedSteel>],
+    [<ore:compressedSteel>, circuits[1], <ore:compressedSteel>],
     [pumps[3], <metaitem:large_fluid_cell.steel>, motors[3]],
     [<ore:compressedAluminium>, <ore:pipeMediumSteel>, <ore:compressedAluminium>]
 ]);
@@ -165,7 +177,7 @@ recipes.addShaped("gc_cargo_unloader", <galacticraftcore:cargo:4>, [
 ]);
 
 // NASA Workbench
-recipes.addShaped("gc_nasa_workbench", <galacticraftcore:rocket_workbench>, [
+recipes.addShaped("gc_nasa_workbench", <meta_tile_entity:devtech:rocket_assembler.uv>, [
     [robotArms[3], robotArms[3], robotArms[3]],
     [circuits[5], <metaitem:display>, circuits[5]],
     [<ore:frameGtRedSteel>, <meta_tile_entity:gregtech:assembler.hv>, <ore:frameGtRedSteel>]
@@ -181,35 +193,35 @@ recipes.addShaped("gc_air_lock_frame", <galacticraftcore:air_lock_frame>, [
 // Air Lock Controller
 recipes.addShaped("gc_air_lock_controller", <galacticraftcore:air_lock_frame:1>, [
     [<ore:compressedMeteoricIron>, <galacticraftcore:oxygen_concentrator>, <ore:compressedMeteoricIron>],
-    [<galacticraftcore:air_vent>, <ore:waferAdvanced>, <galacticraftcore:air_vent>],
+    [<galacticraftcore:air_vent>, circuits[3], <galacticraftcore:air_vent>],
     [<ore:compressedAluminium>, <ore:wireGtSingleRedAlloy>, <ore:compressedAluminium>]
 ]);
 
 // Spin Thruster
 recipes.addShaped("gc_spin_thruster", <galacticraftcore:spin_thruster>, [
     [<ore:compressedTitanium>, <ore:compressedTitanium>, <ore:compressedTitanium>],
-    [<metaitem:fluid_cell>, <ore:waferAdvanced>, <metaitem:fluid_cell>],
+    [<metaitem:fluid_cell>, circuits[3], <metaitem:fluid_cell>],
     [<galacticraftcore:engine>, <galacticraftcore:heavy_plating>, <galacticraftcore:engine>]
 ]);
 
 // Display Screen
 recipes.addShaped("gc_display_screen", <galacticraftcore:view_screen>, [
     [<ore:compressedSteel>, <ore:compressedSteel>, <ore:compressedSteel>],
-    [<ore:waferBasic>, <metaitem:display>, <ore:waferBasic>],
+    [circuits[3], <metaitem:display>, circuits[3]],
     [<ore:compressedSteel>, <ore:compressedSteel>, <ore:compressedSteel>]
 ]);
 
 // Telemetry Unit
 recipes.addShaped("gc_telemetry_unit", <galacticraftcore:telemetry>, [
     [sensors[3], <ore:compressedTin>, emitters[3]],
-    [<ore:waferBasic>, <ore:compressedTin>, <ore:waferBasic>],
+    [circuits[3], <ore:compressedTin>, circuits[3]],
     [<ore:compressedTin>, <ore:compressedCopper>, <ore:compressedTin>]
 ]);
 
 // Terraformer
 recipes.addShaped("gc_terraformer", <galacticraftplanets:mars_machine>, [
     [<ore:compressedTitanium>, <galacticraftcore:oxygen_concentrator>, <ore:compressedTitanium>],
-    [<ore:compressedDesh>, <gregtech:turbine_casing:2>, <ore:compressedDesh>],
+    [<ore:compressedDesh>, <ore:gearTitanium>, <ore:compressedDesh>],
     [motors[3], <meta_tile_entity:devtech:super.tank.ulv>, pumps[3]]
 ]);
 
@@ -218,13 +230,6 @@ recipes.addShaped("gc_cryogenic_chamber", <galacticraftplanets:mars_machine:4>, 
     [<galacticraftplanets:item_basic_asteroids:5>, <gregtech:meta_item_1:32762>.withTag({Fluid: {FluidName: "cryotheum", Amount: 1000}}), <galacticraftplanets:item_basic_asteroids:5>],
     [<galacticraftplanets:item_basic_mars:3>, <metaitem:memory_foam_block>, <galacticraftplanets:item_basic_mars:3>],
     [<galacticraftplanets:item_basic_asteroids:5>, <minecraft:clock>, <galacticraftplanets:item_basic_asteroids:5>]
-]);
-
-// Launch Controller
-recipes.addShaped("gc_launch_controller", <galacticraftplanets:mars_machine:8>, [
-    [<ore:waferAdvanced>, sensors[3], <ore:waferAdvanced>],
-    [<ore:compressedDesh>, hulls[3], <ore:compressedDesh>],
-    [<ore:cableGtDoubleAluminium>, <ore:compressedDesh>, <ore:cableGtDoubleAluminium>]
 ]);
 
 // Astro Miner Base

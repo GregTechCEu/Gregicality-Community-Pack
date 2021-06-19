@@ -58,3 +58,19 @@ heavy_duty_ingot_6.register();
 var raw_sdhc_alloy = VanillaFactory.createItem("raw_sdhc_alloy");
 raw_sdhc_alloy.maxStackSize = 64;
 raw_sdhc_alloy.register();
+
+var fuel_canister_t3 = VanillaFactory.createItem("fuel_canister_t3");
+fuel_canister_t3.maxStackSize = 64;
+fuel_canister_t3.register();
+
+var fuel_canister_t5 = VanillaFactory.createItem("fuel_canister_t5");
+fuel_canister_t5.maxStackSize = 64;
+fuel_canister_t5.register();
+
+var ledox_compressed = VanillaFactory.createItem("ledox_compressed");
+ledox_compressed.maxStackSize = 64;
+ledox_compressed.register();
+
+var quantium_compressed = VanillaFactory.createItem("quantium_compressed");
+quantium_compressed.maxStackSize = 64;
+quantium_compressed.register();

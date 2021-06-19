@@ -83,7 +83,23 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:compressedNickel>.add(<galaxyspace:compressed_plates:3>);
 <ore:plateNickel>.remove(<galaxyspace:compressed_plates:3>);
 
+<ore:compressedTitanium>.add(<galacticraftplanets:item_basic_asteroids:6>);
 
+<ore:compressedLedox>.add(<contenttweaker:ledox_compressed>);
+
+<ore:compressedQuantium>.add(<contenttweaker:quantium_compressed>);
+
+// Galacticraft Titanium Block //todo - this might not actually be working!
+<ore:blockTitanium>.remove(<galacticraftplanets:asteroids_block:7>);
+
+// Galacticraft Lead Block //todo - this might not actually be working!
+<ore:blockLead>.remove(<galacticraftplanets:venus:12>);
+
+// Galacticraft Titanium Dust //todo - this might not actually be working!
+<ore:dustTitanium>.remove(<galacticraftplanets:item_basic_asteroids:9>);
+
+// GalaxySpace Tree Juice
+<ore:slimeball>.remove(<galaxyspace:br_basic:2>);
 
 // Certus Compatability
 <ore:crystalCertusQuartz>.add(<metaitem:gemCertusQuartz>);
