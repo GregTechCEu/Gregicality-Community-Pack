@@ -31,7 +31,8 @@ var stock_manipulator = IRecipeMap.recipeMapBuilder("stock_manipulator")
 var rocket_assembler = IRecipeMap.recipeMapBuilder("rocket_assembler")
     .minInputs(1)
     .maxInputs(9)
-    .maxFluidInputs(1)
+    .minOutputs(1)
+    .maxOutputs(1)
     .setProgressBar(GUITextures.get("progress_bar_arrow"), MoveType.HORIZONTAL)
     .build();
 
