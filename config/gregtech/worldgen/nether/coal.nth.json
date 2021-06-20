@@ -4,7 +4,7 @@
     "max_height": 100,
     "min_height": 50,
     "generator": {
-        "type": "ellipsoid",
+        "type": "ga_simple",
         "radius": [
             16,
             16
