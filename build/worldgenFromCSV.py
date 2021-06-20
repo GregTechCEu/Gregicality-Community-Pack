@@ -11,6 +11,7 @@ import json
 basePath = os.path.realpath(__file__)[:-18] + ".."
 
 dimNames = ["OVERWORLD", "NETHER", "END", "MOON", "MARS", "CERES", "ASTEROIDS", "MERCURY", "VENUS", "IO", "EUROPA", "GANYMEDE", "ENCELADUS", "TITAN", "TRITON", "PLUTO", "HAUMEA", "PROXIMA_B", "BARNARDA_C"]
+dimNamesSmall = ["OW", "NTH", "END", "MOON", "MARS", "CER", "AST", "MER", "VEN", "IO", "EURO", "GAN", "ENC", "TIT", "TRI", "PLU", "HAU", "PB", "BC"]
 class Dims(enum.Enum):
     OVERWORLD = 0
     NETHER = -1
@@ -45,7 +46,11 @@ for dim in Dims:
 data.pop(0)
 print(type(data[0][4]))
 for row in data:
-    firstDim = ""
+    dimList = []
+    dimNameList = []
+    dimNameSmallList = []
+
+    print("\n" + row[0] + ":")
 
     vein = {}
     vein["weight"] = int(row[6])
@@ -60,11 +65,13 @@ for row in data:
     vein["dimension_filter"] = []
     vein["filler"] = {"type": "simple", "value": {"type": "weight_random", "values": []}}
     
-    for i in range(0, 18):
+    for i in range(0, 19):
         if row[i + 12].lower() == "x":
-            if firstDim == "":
-                firstDim = Dims[dimNames[i]].name.lower()
-            vein["dimension_filter"].append("dimension_id:" + str(Dims[dimNames[i]].value))
+            dimList.append(Dims[dimNames[i]].value)
+            print(Dims[dimNames[i]].value)
+            dimNameList.append(Dims[dimNames[i]].name.lower())
+            print(Dims[dimNames[i]].name.lower())
+            dimNameSmallList.append(dimNamesSmall[i].lower())
 
     for i in range(1,5):
         try:
@@ -80,11 +87,11 @@ for row in data:
                 vein["filler"]["value"]["values"].append(ore)
         except IndexError as e:
             print(row[i])
-        
-    print(vein)
-
-    with open(basePath + "/config/gregtech/worldgen/" + firstDim + "/" + row[0].lower().replace(" ", "-") + ".json", "w") as jsonFile:
-        json.dump(vein, jsonFile, indent=4)
+            
+    for i in range(len(dimList)):
+        with open(basePath + "/config/gregtech/worldgen/" + dimNameList[i] + "/" + row[0].lower().replace(" ", "-") + "." + dimNameSmallList[i] + ".json", "w") as jsonFile:
+            vein["dimension_filter"] = ["dimension_id:" + str(Dims[dimNameList[i].upper()].value)]
+            json.dump(vein, jsonFile, indent=4)
 
 dims = {"dims": []}
 for i in dimNames:
