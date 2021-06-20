@@ -1,25 +1,21 @@
 {
-<<<<<<< HEAD
-    "name": "precious-metal",
-=======
->>>>>>> e5fab87 (Fix problems with worldgen **hopefully**)
     "weight": 30,
-    "max_height": 60,
+    "max_height": 50,
     "min_height": 20,
     "generator": {
         "type": "ellipsoid",
         "radius": [
-            15,
-            15
+            12,
+            12
         ]
     },
-    "density": 0.4,
+    "density": 0.3,
     "vein_populator": {
         "type": "surface_rock",
-        "material": "precious_metal"
+        "material": "olivine"
     },
     "dimension_filter": [
-        "dimension_id:-1018"
+        "dimension_id:-28"
     ],
     "filler": {
         "type": "simple",
@@ -27,16 +23,20 @@
             "type": "weight_random",
             "values": [
                 {
-                    "weight": "50",
-                    "value": "ore:precious_metal"
+                    "weight": "33",
+                    "value": "ore:olivine"
                 },
                 {
-                    "weight": "30",
-                    "value": "ore:copper"
+                    "weight": "23",
+                    "value": "ore:magnesite"
+                },
+                {
+                    "weight": "23",
+                    "value": "ore:prasiolite"
                 },
                 {
                     "weight": "20",
-                    "value": "ore:magnetite"
+                    "value": "ore:soapstone"
                 }
             ]
         }

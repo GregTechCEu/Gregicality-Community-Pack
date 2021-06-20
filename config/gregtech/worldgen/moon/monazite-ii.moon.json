@@ -1,25 +1,21 @@
 {
-<<<<<<< HEAD
-    "name": "precious-metal",
-=======
->>>>>>> e5fab87 (Fix problems with worldgen **hopefully**)
-    "weight": 30,
-    "max_height": 60,
+    "weight": 25,
+    "max_height": 40,
     "min_height": 20,
     "generator": {
         "type": "ellipsoid",
         "radius": [
-            15,
-            15
+            13,
+            13
         ]
     },
     "density": 0.4,
     "vein_populator": {
         "type": "surface_rock",
-        "material": "precious_metal"
+        "material": "monazite"
     },
     "dimension_filter": [
-        "dimension_id:-1018"
+        "dimension_id:-28"
     ],
     "filler": {
         "type": "simple",
@@ -27,16 +23,16 @@
             "type": "weight_random",
             "values": [
                 {
-                    "weight": "50",
-                    "value": "ore:precious_metal"
+                    "weight": "40",
+                    "value": "ore:bastnasite"
                 },
                 {
-                    "weight": "30",
-                    "value": "ore:copper"
+                    "weight": "40",
+                    "value": "ore:monazite"
                 },
                 {
                     "weight": "20",
-                    "value": "ore:magnetite"
+                    "value": "ore:neodymium"
                 }
             ]
         }
