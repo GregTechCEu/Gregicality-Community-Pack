@@ -4,7 +4,7 @@
     "max_height": 50,
     "min_height": 30,
     "generator": {
-        "type": "ga_simple",
+        "type": "ellipsoid",
         "radius": [
             15,
             15
@@ -19,7 +19,7 @@
         "dimension_id:-1017"
     ],
     "filler": {
-        "type": "simple",
+        "type": "ga_simple",
         "value": {
             "type": "weight_random",
             "values": [
