@@ -56,7 +56,7 @@ for row in data:
     vein["weight"] = int(row[6])
     vein["max_height"] = int(row[7].split("-")[1])
     vein["min_height"] = int(row[7].split("-")[0])
-    vein["generator"] = {"type": "ellipsoid","radius": [0,0]}
+    vein["generator"] = {"type": "ga_simple", "radius": [0, 0]}
     vein["generator"]["radius"][0] = int(row[8].split("-")[0])
     vein["generator"]["radius"][1] = int(row[8].split("-")[0])
     vein["density"] = float(row[9])
@@ -68,9 +68,7 @@ for row in data:
     for i in range(0, 19):
         if row[i + 12].lower() == "x":
             dimList.append(Dims[dimNames[i]].value)
-            print(Dims[dimNames[i]].value)
             dimNameList.append(Dims[dimNames[i]].name.lower())
-            print(Dims[dimNames[i]].name.lower())
             dimNameSmallList.append(dimNamesSmall[i].lower())
 
     for i in range(1,5):
@@ -81,13 +79,14 @@ for row in data:
                 ore = {}
                 ore["weight"] = (row[i].split(")")[0][1:])
                 ore["value"] = "ore:" + row[i].split(")")[1].lower().strip().replace(" ", "_")
-                ore["value"].replace("poor_", "poor:")
-                ore["value"].replace("rich_", "rich:")
-                ore["value"].replace("pure_", "pure:")
+                ore["value"] = ore["value"].replace("poor_", "poor:")
+                ore["value"] = ore["value"].replace("rich_", "rich:")
+                ore["value"] = ore["value"].replace("pure_", "pure:")
                 vein["filler"]["value"]["values"].append(ore)
         except IndexError as e:
             print(row[i])
             
+    print(vein)
     for i in range(len(dimList)):
         with open(basePath + "/config/gregtech/worldgen/" + dimNameList[i] + "/" + row[0].lower().replace(" ", "-") + "." + dimNameSmallList[i] + ".json", "w") as jsonFile:
             vein["dimension_filter"] = ["dimension_id:" + str(Dims[dimNameList[i].upper()].value)]

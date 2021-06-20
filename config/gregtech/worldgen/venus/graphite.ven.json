@@ -3,7 +3,7 @@
     "max_height": 30,
     "min_height": 10,
     "generator": {
-        "type": "ellipsoid",
+        "type": "ga_simple",
         "radius": [
             17,
             17
@@ -32,11 +32,11 @@
                 },
                 {
                     "weight": "20",
-                    "value": "ore:rich_graphite"
+                    "value": "ore:rich:graphite"
                 },
                 {
                     "weight": "5",
-                    "value": "ore:pure_graphite"
+                    "value": "ore:pure:graphite"
                 }
             ]
         }

@@ -3,7 +3,7 @@
     "max_height": 40,
     "min_height": 20,
     "generator": {
-        "type": "ellipsoid",
+        "type": "ga_simple",
         "radius": [
             16,
             16
@@ -36,7 +36,7 @@
                 },
                 {
                     "weight": "10",
-                    "value": "ore:rich_bauxite"
+                    "value": "ore:rich:bauxite"
                 }
             ]
         }
