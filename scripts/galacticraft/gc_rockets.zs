@@ -599,7 +599,7 @@ recipes.addShaped("gs_fuel_canister_t1", <galaxyspace:rocket_modules:3>, [
 
 
 // Tier 2 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(1920)
+rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galacticraftcore:nose_cone>)           // t1 nose cone
     .inputs(heavy_duty_plates[0] * 2)               // t1 plates
     .inputs(heavy_duty_plates[1] * 10)              // t2 plates
@@ -629,7 +629,7 @@ recipes.addShaped("gc_rocket_booster_t2", <galacticraftcore:engine:1>, [
 
 
 // Tier 3 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(7680)
+rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galacticraftplanets:heavy_nose_cone>)              // t3 nose cone
     .inputs(heavy_duty_plates[1] * 2)                           // t1 plates
     .inputs(heavy_duty_plates[2] * 12)                          // t2 plates
@@ -680,7 +680,7 @@ recipes.addShaped("gs_fuel_canister_t3", <contenttweaker:fuel_canister_t3>, [
 
 
 // Tier 4 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(30720)
+rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:5>)                   // t4 nose cone
     .inputs(heavy_duty_plates[2] * 4)                       // t3 plates
     .inputs(heavy_duty_plates[3] * 12)                      // t4 plates
@@ -724,7 +724,7 @@ recipes.addShaped("gc_rocket_booster_t4", <galaxyspace:rocket_parts:8>, [
 
 
 // Tier 5 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(122880)
+rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:10>)                  // t5 nose cone
     .inputs(heavy_duty_plates[3] * 4)                       // t4 plates
     .inputs(heavy_duty_plates[4] * 12)                      // t5 plates
@@ -775,7 +775,7 @@ recipes.addShaped("gs_fuel_canister_t5", <contenttweaker:fuel_canister_t5>, [
 
 
 // Tier 6 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(491520)
+rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:15>)                  // t6 nose cone
     .inputs(heavy_duty_plates[4] * 4)                       // t5 plates
     .inputs(heavy_duty_plates[5] * 12)                      // t6 plates

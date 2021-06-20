@@ -60,13 +60,14 @@ global mixer as RecipeMap =                         RecipeMap.getByName("mixer")
 global packer as RecipeMap =                        RecipeMap.getByName("packer");
 global polarizer as RecipeMap =                     RecipeMap.getByName("polarizer");
 global pyro as RecipeMap =                          RecipeMap.getByName("pyro");
+global rocket_assembler as RecipeMap =              RecipeMap.getByName("rocket_assembler");
 global sifter as RecipeMap =                        RecipeMap.getByName("sifter");
 global stellar_forge as RecipeMap =                 RecipeMap.getByName("stellar_forge");
+global stock_manipulator as RecipeMap =             RecipeMap.getByName("stock_manipulator");
 global thermal_centrifuge as RecipeMap =            RecipeMap.getByName("thermal_centrifuge");
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global vacuum_freezer as RecipeMap =                RecipeMap.getByName("vacuum_freezer");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
-global stock_manipulator as RecipeMap =             RecipeMap.getByName("stock_manipulator");
 
 // Tiered Components
 
