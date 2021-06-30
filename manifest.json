@@ -15,12 +15,12 @@
     "author": "hjae",
     "externalDeps":[
         {
-            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v41/appliedenergistics2-rv6-stable-7.omni-fixes-v41.jar",
+            "url" : "https://github.com/PrototypeTrousers/Applied-Energistics-2/releases/download/omni-fixes-v43/appliedenergistics2-rv6-stable-7.omni-fixes-v43h.jar",
             "hash" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "name": "Applied Energistics 2 Trousers Edition"
         }
     ],
-    "name": "GCM2",
+    "name": "GCM",
     "files":[
         {
             "projectID":461660,
@@ -189,22 +189,17 @@
         },
         {
             "projectID":293327,
-            "fileID":3333883,
+            "fileID":3369653,
             "required":true
         },
         {
             "projectID":364851,
-            "fileID":3335532,
+            "fileID":3367402,
             "required":true
         },
         {
             "projectID":310812,
             "fileID":2783832,
-            "required":true
-        },
-        {
-            "projectID":386188,
-            "fileID":3317496,
             "required":true
         },
         {
@@ -354,7 +349,7 @@
         },
         {
             "projectID":220954,
-            "fileID":3308463,
+            "fileID":3368737,
             "required":true
         },
         {
@@ -534,7 +529,7 @@
         },
         {
             "projectID":477021,
-            "fileID":3357505,
+            "fileID":3363353,
             "required":true
         },
         {
