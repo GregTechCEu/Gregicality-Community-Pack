@@ -1,0 +1,411 @@
+{
+    "populate": {
+        "oilsands": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_oilsands_0",
+                        "weight": "100"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 10,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "tin-ii": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_tin_0",
+                        "weight": "60"
+                    },
+                    {
+                        "name": "gregtech:ore_cassiterite_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_apatite_0",
+                        "weight": "10"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 20,
+            "max-height": 80,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "precious-metal": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_precious_metal_0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_copper_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_magnetite_0",
+                        "weight": "20"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 20,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "monazite-ii": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_bastnasite_0",
+                        "weight": "40"
+                    },
+                    {
+                        "name": "gregtech:ore_monazite_0",
+                        "weight": "40"
+                    },
+                    {
+                        "name": "gregtech:ore_neodymium_0",
+                        "weight": "20"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 20,
+            "max-height": 40,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "platinum": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_platinum_metallic_powder_0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_palladium_metallic_powder_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_rarest_metal_residue_0",
+                        "weight": "20"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 40,
+            "max-height": 50,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "pyrochlore": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_pyrochlore_0",
+                        "weight": "70"
+                    },
+                    {
+                        "name": "gregtech:ore_zircon_0",
+                        "weight": "15"
+                    },
+                    {
+                        "name": "gregtech:ore_pitchblende_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_zirkelite_0",
+                        "weight": "5"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "tungstate-ii": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_tungstate_0",
+                        "weight": "40"
+                    },
+                    {
+                        "name": "gregtech:ore_scheelite_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_molybdenite_0",
+                        "weight": "15"
+                    },
+                    {
+                        "name": "gregtech:ore_lead_0",
+                        "weight": "15"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 10,
+            "max-height": 70,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "caliche": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_caliche_0",
+                        "weight": "75"
+                    },
+                    {
+                        "name": "gregtech:ore_fluorite_0",
+                        "weight": "15"
+                    },
+                    {
+                        "name": "gregtech:ore_barite_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_witherite_0",
+                        "weight": "5"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 50,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "sphalerite-ii": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_sphalerite_0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_nether_quartz_0",
+                        "weight": "25"
+                    },
+                    {
+                        "name": "gregtech:ore_certus_quartz_0",
+                        "weight": "25"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 20,
+            "max-height": 50,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "naquadah-c": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_naquadic_c._0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_naquadriatic_compound_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_enriched_naquadic_c._0",
+                        "weight": "40"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 40,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        },
+        "naquadria-c": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_naquadriatic_c._0",
+                        "weight": "70"
+                    },
+                    {
+                        "name": "gregtech:ore_enriched_naquadriatic_compound_0",
+                        "weight": "30"
+                    }
+                ],
+                "material": {
+                    "name": "galaxyspace:titanblocks",
+                    "properties": {
+                        "type": "titan_stone"
+                    }
+                },
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 40,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -1018
+                ]
+            }
+        }
+    }
+}
