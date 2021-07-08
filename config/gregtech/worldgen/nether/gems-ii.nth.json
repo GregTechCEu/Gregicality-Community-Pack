@@ -1,4 +1,5 @@
 {
+    "name": "gems-ii",
     "weight": 20,
     "max_height": 60,
     "min_height": 30,

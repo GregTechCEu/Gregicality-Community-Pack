@@ -1,4 +1,5 @@
 {
+    "name": "galena",
     "weight": 50,
     "max_height": 60,
     "min_height": 30,

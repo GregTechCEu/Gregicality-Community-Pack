@@ -1,0 +1,238 @@
+{
+    "populate": {
+        "galena": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_galena_0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_silver_0",
+                        "weight": "20"
+                    },
+                    {
+                        "name": "gregtech:ore_lead_0",
+                        "weight": "20"
+                    },
+                    {
+                        "name": "gregtech:ore_precious_metal_0",
+                        "weight": "10"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        },
+        "lapis": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_lapis_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_sodalite_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_lazurite_0",
+                        "weight": "25"
+                    },
+                    {
+                        "name": "gregtech:ore_calcite_0",
+                        "weight": "15"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 10,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        },
+        "gems": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_almandine_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_sapphire_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_green_sapphire_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_garnet_sand_0",
+                        "weight": "10"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        },
+        "uraninite": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_uraninite_0",
+                        "weight": "50"
+                    },
+                    {
+                        "name": "gregtech:ore_pitchblende_0",
+                        "weight": "30"
+                    },
+                    {
+                        "name": "gregtech:ore_thorium_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_lead_0",
+                        "weight": "10"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 40,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        },
+        "bauxite-ii": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_bauxite_0",
+                        "weight": "60"
+                    },
+                    {
+                        "name": "gregtech:ore_ilmenite_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_aluminium_0",
+                        "weight": "20"
+                    },
+                    {
+                        "name": "gregtech:ore_rutile_0",
+                        "weight": "10"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 20,
+            "max-height": 40,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        },
+        "pyrochlore": {
+            "distribution": "uniform",
+            "generator": {
+                "block": [
+                    {
+                        "name": "gregtech:ore_pyrochlore_0",
+                        "weight": "70"
+                    },
+                    {
+                        "name": "gregtech:ore_zircon_0",
+                        "weight": "15"
+                    },
+                    {
+                        "name": "gregtech:ore_pitchblende_0",
+                        "weight": "10"
+                    },
+                    {
+                        "name": "gregtech:ore_zirkelite_0",
+                        "weight": "5"
+                    }
+                ],
+                "material": [
+                    "minecraft:stone",
+                    0
+                ],
+                "cluster-size": 16
+            },
+            "cluster-count": 1,
+            "min-height": 30,
+            "max-height": 60,
+            "retrogen": "true",
+            "biome": "all",
+            "dimension": {
+                "restriction": "whitelist",
+                "value": [
+                    -20
+                ]
+            }
+        }
+    }
+}

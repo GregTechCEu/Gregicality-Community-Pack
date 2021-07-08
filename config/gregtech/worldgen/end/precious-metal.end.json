@@ -1,4 +1,5 @@
 {
+    "name": "precious-metal",
     "weight": 30,
     "max_height": 60,
     "min_height": 20,

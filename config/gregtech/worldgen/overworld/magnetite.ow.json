@@ -1,4 +1,5 @@
 {
+    "name": "magnetite",
     "weight": 40,
     "max_height": 120,
     "min_height": 50,

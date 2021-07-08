@@ -1,4 +1,5 @@
 {
+    "name": "chalcopyrite",
     "weight": 80,
     "max_height": 40,
     "min_height": 10,

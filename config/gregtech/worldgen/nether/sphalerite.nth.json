@@ -1,4 +1,5 @@
 {
+    "name": "sphalerite",
     "weight": 80,
     "max_height": 80,
     "min_height": 20,

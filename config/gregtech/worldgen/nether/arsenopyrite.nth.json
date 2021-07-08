@@ -1,4 +1,5 @@
 {
+    "name": "arsenopyrite",
     "weight": 60,
     "max_height": 40,
     "min_height": 10,

@@ -1,4 +1,5 @@
 {
+    "name": "limonite",
     "weight": 80,
     "max_height": 55,
     "min_height": 15,
