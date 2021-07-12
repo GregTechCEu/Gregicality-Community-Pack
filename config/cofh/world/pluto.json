@@ -21,10 +21,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -60,10 +62,12 @@
                         "weight": "15"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -99,10 +103,12 @@
                         "weight": "15"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -134,10 +140,12 @@
                         "weight": "20"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -173,10 +181,12 @@
                         "weight": "35"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -212,10 +222,12 @@
                         "weight": "20"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -247,10 +259,12 @@
                         "weight": "40"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -282,10 +296,12 @@
                         "weight": "40"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -313,10 +329,12 @@
                         "weight": "30"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:pluto_blocks",
+                    "properties": {
+                        "type": "pluto_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
