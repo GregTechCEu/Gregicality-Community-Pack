@@ -21,10 +21,12 @@
                         "weight": "5"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:mars_blocks",
+                    "properties": {
+                        "type": "mars_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -60,10 +62,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:mars_blocks",
+                    "properties": {
+                        "type": "mars_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -95,10 +99,12 @@
                         "weight": "30"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:mars_blocks",
+                    "properties": {
+                        "type": "mars_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -130,10 +136,12 @@
                         "weight": "3"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:mars_blocks",
+                    "properties": {
+                        "type": "mars_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -169,10 +177,12 @@
                         "weight": "5"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:mars_blocks",
+                    "properties": {
+                        "type": "mars_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,

@@ -18,7 +18,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -59,7 +59,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -100,7 +100,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -137,7 +137,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -174,7 +174,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -215,7 +215,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -256,7 +256,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }
@@ -293,7 +293,7 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ioblocks",
+                    "name": "galaxyspace:io_blocks",
                     "properties": {
                         "type": "io_stone"
                     }

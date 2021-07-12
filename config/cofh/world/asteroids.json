@@ -21,10 +21,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -60,10 +62,12 @@
                         "weight": "15"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -99,10 +103,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -138,10 +144,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -177,10 +185,12 @@
                         "weight": "10"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,
@@ -216,10 +226,12 @@
                         "weight": "5"
                     }
                 ],
-                "material": [
-                    "minecraft:stone",
-                    0
-                ],
+                "material": {
+                    "name": "galaxyspace:asteroids_blocks",
+                    "properties": {
+                        "type": "asteroids_stone"
+                    }
+                },
                 "cluster-size": 16
             },
             "cluster-count": 1,

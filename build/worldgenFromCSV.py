@@ -14,40 +14,15 @@ dimNames = ["OVERWORLD", "NETHER", "END", "MOON", "MARS", "CERES", "ASTEROIDS", 
             "EUROPA", "GANYMEDE", "ENCELADUS", "TITAN", "TRITON", "PLUTO", "HAUMEA", "PROXIMA_B", "BARNARDA_C"]
 dimNamesSmall = ["OW", "NTH", "END", "MOON", "MARS", "CER", "AST", "MER",
                  "VEN", "IO", "EURO", "GAN", "ENC", "TIT", "TRI", "PLU", "HAU", "PB", "BC"]
-dimBaseBlock = {"OW": ["minecraft:stone", 0],
-                "NTH": ["minecraft:stone", 0],
-                "END": ["minecraft:stone", 0],
-                "MOON": ["minecraft:stone", 0],
-                "MARS": ["minecraft:stone", 0],
-                "CER": {
-    "name": "galaxyspace:ceresblocks",
-   	"properties": {
-            "type": "ceres_subgrunt"
-        }
-},
-    "AST": ["minecraft:stone", 0],
-    "MER": ["minecraft:stone", 0],
-    "VEN": ["minecraft:stone", 0],
-    "IO": {
-    "name": "galaxyspace:ioblocks",
-	"properties": {
-            "type": "io_stone"
-	}
-},
-    "EURO": ["minecraft:stone", 0],
-    "GAN": ["minecraft:stone", 0],
-    "ENC": ["minecraft:stone", 0],
-    "TIT": {
-    "name": "galaxyspace:titanblocks",
-	"properties": {
-            "type": "titan_stone"
-        }
-},
-    "TRI": ["minecraft:stone", 0],
-    "PLU": ["minecraft:stone", 0],
-    "HAU": ["minecraft:stone", 0],
-    "PB": ["minecraft:stone", 0],
-    "BC": ["minecraft:stone", 0]}
+
+def get_material(planet_name):
+    data = {
+            "name": "galaxyspace:" + planet_name + "_blocks",
+            "properties": {
+                "type": planet_name + "_stone"
+                }
+    }
+    return data
 
 
 class Dims(enum.Enum):
@@ -114,7 +89,7 @@ def gt_to_cofh(vein):
         "distribution": "uniform",
         "generator": {
             "block": blocks,
-            "material": dimBaseBlock[dimNamesSmall[dim_index]],
+            "material": get_material(dimNames[dim_index].lower()),
             "cluster-size": 16
         },
         "cluster-count": 1,

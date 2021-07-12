@@ -18,9 +18,9 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ceresblocks",
+                    "name": "galaxyspace:ceres_blocks",
                     "properties": {
-                        "type": "ceres_subgrunt"
+                        "type": "ceres_stone"
                     }
                 },
                 "cluster-size": 16
@@ -55,9 +55,9 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ceresblocks",
+                    "name": "galaxyspace:ceres_blocks",
                     "properties": {
-                        "type": "ceres_subgrunt"
+                        "type": "ceres_stone"
                     }
                 },
                 "cluster-size": 16
@@ -92,9 +92,9 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ceresblocks",
+                    "name": "galaxyspace:ceres_blocks",
                     "properties": {
-                        "type": "ceres_subgrunt"
+                        "type": "ceres_stone"
                     }
                 },
                 "cluster-size": 16
@@ -133,9 +133,9 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ceresblocks",
+                    "name": "galaxyspace:ceres_blocks",
                     "properties": {
-                        "type": "ceres_subgrunt"
+                        "type": "ceres_stone"
                     }
                 },
                 "cluster-size": 16
@@ -174,9 +174,9 @@
                     }
                 ],
                 "material": {
-                    "name": "galaxyspace:ceresblocks",
+                    "name": "galaxyspace:ceres_blocks",
                     "properties": {
-                        "type": "ceres_subgrunt"
+                        "type": "ceres_stone"
                     }
                 },
                 "cluster-size": 16
