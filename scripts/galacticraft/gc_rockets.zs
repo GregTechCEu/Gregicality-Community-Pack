@@ -278,7 +278,7 @@ val compressed_plates = [
 
 // Compressed Plates
 for i in 0 to double_plates.length{
-    generate_compressed_recipe(double_plates[i] * 2, compressed_plates[i]);
+    generate_compressed_recipe(double_plates[i], compressed_plates[i]);
 }
 
 // Raw SDHC-120 Alloy
