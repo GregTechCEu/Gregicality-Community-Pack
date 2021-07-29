@@ -1,8 +1,8 @@
 {
-    "name": "emerald",
-    "weight": 40,
-    "max_height": 60,
-    "min_height": 50,
+    "name": "uraninite",
+    "weight": 60,
+    "max_height": 40,
+    "min_height": 30,
     "generator": {
         "type": "ellipsoid",
         "radius": [
@@ -10,13 +10,13 @@
             12
         ]
     },
-    "density": 0.3,
+    "density": 0.7,
     "vein_populator": {
         "type": "surface_rock",
-        "material": "emerald"
+        "material": "lead"
     },
     "dimension_filter": [
-        "dimension_id:1"
+        "dimension_id:-28"
     ],
     "filler": {
         "type": "simple",
@@ -25,15 +25,19 @@
             "values": [
                 {
                     "weight": "50",
-                    "value": "ore:beryllium"
+                    "value": "ore:uraninite"
                 },
                 {
                     "weight": "30",
-                    "value": "ore:emerald"
+                    "value": "ore:pitchblende"
                 },
                 {
-                    "weight": "20",
+                    "weight": "10",
                     "value": "ore:thorium"
+                },
+                {
+                    "weight": "10",
+                    "value": "ore:lead"
                 }
             ]
         }

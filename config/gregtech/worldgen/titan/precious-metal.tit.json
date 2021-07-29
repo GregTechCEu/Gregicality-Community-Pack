@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
     "name": "precious-metal",
-=======
->>>>>>> e5fab87 (Fix problems with worldgen **hopefully**)
     "weight": 30,
     "max_height": 60,
     "min_height": 20,
