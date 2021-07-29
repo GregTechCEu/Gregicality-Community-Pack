@@ -19,7 +19,7 @@
         "dimension_id:-1"
     ],
     "filler": {
-        "type": "ga_simple",
+        "type": "simple",
         "value": {
             "type": "weight_random",
             "values": [

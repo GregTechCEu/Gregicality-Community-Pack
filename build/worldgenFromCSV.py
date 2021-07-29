@@ -15,14 +15,15 @@ dimNames = ["OVERWORLD", "NETHER", "END", "MOON", "MARS", "CERES", "ASTEROIDS", 
 dimNamesSmall = ["OW", "NTH", "END", "MOON", "MARS", "CER", "AST", "MER",
                  "VEN", "IO", "EURO", "GAN", "ENC", "TIT", "TRI", "PLU", "HAU", "PB", "BC"]
 
+
 def get_material(planet_name):
-    data = {
-            "name": "galaxyspace:" + planet_name + "_blocks",
-            "properties": {
-                "type": planet_name + "_stone"
-                }
+    material = {
+        "name": "galaxyspace:" + planet_name + "_blocks",
+        "properties": {
+            "type": planet_name + "_stone"
+        }
     }
-    return data
+    return material
 
 
 class Dims(enum.Enum):
@@ -50,25 +51,9 @@ class Dims(enum.Enum):
 with open(basePath + '/build/worldgen.csv') as csvfile:
     data = list(csv.reader(csvfile))
 
-cofh_json = {
-    "moon": {"populate": {}},
-    "mars": {"populate": {}},
-    "ceres": {"populate": {}},
-    "asteroids": {"populate": {}},
-    "mercury": {"populate": {}},
-    "venus": {"populate": {}},
-    "io": {"populate": {}},
-    "europa": {"populate": {}},
-    "ganymede": {"populate": {}},
-    "enceladus": {"populate": {}},
-    "titan": {"populate": {}},
-    "triton": {"populate": {}},
-    "pluto": {"populate": {}},
-    "haumea": {"populate": {}},
-    "proxima_b": {"populate": {}},
-    "barnarda_c": {"populate": {}}}
+cofh_json = {}
 
-for dim in dimNames[:3]:
+for dim in dimNames:
     try:
         os.makedirs(basePath + "/config/gregtech/worldgen/" + dim.lower())
     except FileExistsError as e:
@@ -137,25 +122,27 @@ for row in data:
     for i in range(1, 5):
         try:
             if row[i][0] != "(":
-                1+1
+                1 + 1
             else:
                 ore = {}
                 ore["weight"] = (row[i].split(")")[0][1:])
                 ore["value"] = "ore:" + \
-                    row[i].split(")")[1].lower().strip().replace(" ", "_")
-                ore["value"] = ore["value"].replace("poor_", "poor:")
-                ore["value"] = ore["value"].replace("rich_", "rich:")
-                ore["value"] = ore["value"].replace("pure_", "pure:")
+                               row[i].split(")")[1].lower().strip().replace(" ", "_")
+                ore["value"] = ore["value"].replace("poor_", "")
+                ore["value"] = ore["value"].replace("rich_", "")
+                ore["value"] = ore["value"].replace("pure_", "")
                 vein["filler"]["value"]["values"].append(ore)
         except IndexError as e:
             print(row[i])
 
     for i in range(len(dimList)):
-        if not(dimList[i] == 0 or dimList[i] == -1 or dimList[i] == 1):
-            vein["dimension_filter"] = dimNameList[i].upper()
-            gt_to_cofh(vein)
-        else:
-            with open(basePath + "/config/gregtech/worldgen/" + dimNameList[i] + "/" + row[0].lower().replace(" ", "-") + "." + dimNameSmallList[i] + ".json", "w") as jsonFile:
+        #if not (dimList[i] == 0 or dimList[i] == -1 or dimList[i] == 1):
+        #    vein["dimension_filter"] = dimNameList[i].upper()
+        #    gt_to_cofh(vein)
+        if True:
+            with open(basePath + "/config/gregtech/worldgen/" + dimNameList[i] + "/" + row[0].lower().replace(" ",
+                                                                                                              "-") + "." +
+                      dimNameSmallList[i] + ".json", "w") as jsonFile:
                 vein["dimension_filter"] = ["dimension_id:" +
                                             str(Dims[dimNameList[i].upper()].value)]
                 json.dump(vein, jsonFile, indent=4)
@@ -167,7 +154,6 @@ for i in dimNames:
 
 with open(basePath + "/config/gregtech/dimensions.json", "w") as jsonFile:
     json.dump(dims, jsonFile, indent=4)
-
 
 for i in cofh_json:
     with open(basePath + "/config/cofh/world/" + i + ".json", "w") as jsonFile:
