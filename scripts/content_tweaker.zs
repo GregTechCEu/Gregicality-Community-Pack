@@ -74,3 +74,7 @@ ledox_compressed.register();
 var quantium_compressed = VanillaFactory.createItem("quantium_compressed");
 quantium_compressed.maxStackSize = 64;
 quantium_compressed.register();
+
+var floppa = VanillaFactory.createItem("floppa");
+floppa.maxStackSize = 64;
+floppa.register();

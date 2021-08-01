@@ -254,3 +254,11 @@ recipes.addShapeless("EB_randomizer_bag", <effortlessbuilding:randomizer_bag>, [
 recipes.addShapeless("EB_upgrade1", <effortlessbuilding:reach_upgrade1>, [robotArms[1], <ore:stickLongSteel>]);
 recipes.addShapeless("EB_upgrade2", <effortlessbuilding:reach_upgrade2>, [robotArms[2], <ore:stickLongAluminium>]);
 recipes.addShapeless("EB_upgrade3", <effortlessbuilding:reach_upgrade3>, [robotArms[3], <ore:stickLongStainlessSteel>]);
+
+// Floppa
+compressor.recipeBuilder()
+    .inputs(<ore:circuitAdvanced> * 64)
+    .outputs(<contenttweaker:floppa>)
+    .EUt(120)
+    .duration(100)
+    .buildAndRegister();
