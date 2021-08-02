@@ -29,6 +29,26 @@ metaitem.extreme_plate.name=Extreme Alloy Plate
 metaitem.extreme_dust.name=Extreme Alloy Dust
 metaitem.extreme_ingot_hot.name=Hot Extreme Alloy Ingot
 metaitem.zircaloy_plate.name=Zircaloy Plate
+metaitem.moon_stone_dust.name=Moon Stone Dust
+metaitem.mars_stone_dust.name=Mars Stone Dust
+metaitem.ceres_stone_dust.name=Ceres Stone Dust
+metaitem.asteroid_stone_dust.name=Asteroid Stone Dust
+metaitem.mercury_stone_dust.name=Mercury Stone Dust
+metaitem.mercury_core_dust.name=Mercury Core Dust
+metaitem.venus_stone_dust.name=Venus Stone Dust
+metaitem.io_stone_dust.name=Io Stone Dust
+metaitem.europa_stone_dust.name=Europa Stone Dust
+metaitem.europa_ice_dust.name=Europa Ice Dust
+metaitem.ganymede_stone_dust.name=Ganymede Stone Dust
+metaitem.enceladus_stone_dust.name=Enceladus Stone Dust
+metaitem.enceladus_slush_dust.name=Enceladus Slush Dust
+metaitem.titan_stone_dust.name=Titan Stone Dust
+metaitem.triton_stone_dust.name=Triton Stone Dust
+metaitem.pluto_stone_dust.name=Pluto Stone Dust
+metaitem.pluto_ice_dust.name=Pluto Ice Dust
+metaitem.haumea_stone_dust.name=Haumea Stone Dust
+metaitem.proxima_b_stone_dust.name=Proxima B Stone Dust
+metaitem.barnarda_c_stone_dust.name=Barnarda C Stone Dust
 
 # Full Materials
 material.meteoric_iron=Meteoric Iron

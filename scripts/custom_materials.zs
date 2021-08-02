@@ -39,6 +39,26 @@ Utils.registerItem("extreme", 1026, 0x742a3c, "METALLIC", "plate");
 Utils.registerItem("extreme", 1027, 0x742a3c, "METALLIC", "dust");
 Utils.registerItem("extreme", 1028, 0x742a3c, "METALLIC", "ingotHot");
 Utils.registerItem("zircaloy", 1029, 0xa3a490, "METALLIC", "plate");
+Utils.registerItem("moon_stone", 130, 0xA8A8A3, "DULL", "dust");
+Utils.registerItem("mars_stone", 131, 0x522511, "DULL", "dust");
+Utils.registerItem("ceres_stone", 132, 0x828286, "DULL", "dust");
+Utils.registerItem("asteroid_stone", 133, 0x3A3A3A, "DULL", "dust");
+Utils.registerItem("mercury_stone", 134, 0x927759, "DULL", "dust");
+Utils.registerItem("mercury_core", 135, 0x35343, "DULL", "dust");
+Utils.registerItem("venus_stone", 136, 0x584942, "DULL", "dust");
+Utils.registerItem("io_stone", 137, 0xCECE8A, "DULL", "dust");
+Utils.registerItem("europa_stone", 138, 0x48483F, "DULL", "dust");
+Utils.registerItem("europa_ice", 139, 0xB99F90, "DULL", "dust");
+Utils.registerItem("ganymede_stone", 140, 0x6E6E6E, "DULL", "dust");
+Utils.registerItem("enceladus_stone", 141, 0x7d583B, "DULL", "dust");
+Utils.registerItem("enceladus_slush", 142, 0xE3FBF1, "DULL", "dust");
+Utils.registerItem("titan_stone", 143, 0x28160E, "DULL", "dust");
+Utils.registerItem("triton_stone", 144, 0x484859, "DULL", "dust");
+Utils.registerItem("pluto_stone", 145, 0xA07A5A, "DULL", "dust");
+Utils.registerItem("pluto_ice", 146, 0xFAF1D7, "DULL", "dust");
+Utils.registerItem("haumea_stone", 147, 0x25292A, "DULL", "dust");
+Utils.registerItem("proxima_b_stone", 148, 0x2E2623, "DULL", "dust");
+Utils.registerItem("barnarda_c_stone", 149, 0x6D7244, "DULL", "dust");
 
 
 // Full GT Materials
