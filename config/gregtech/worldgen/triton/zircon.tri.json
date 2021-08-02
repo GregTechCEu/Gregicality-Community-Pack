@@ -4,15 +4,12 @@
     "max_height": 40,
     "min_height": 10,
     "generator": {
-        "type": "ellipsoid",
         "radius": [
-            14,
             14
         ]
     },
     "density": 0.4,
     "vein_populator": {
-        "type": "surface_rock",
         "material": "zircon"
     },
     "dimension_filter": [

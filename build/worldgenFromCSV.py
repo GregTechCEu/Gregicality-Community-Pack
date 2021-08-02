@@ -103,8 +103,10 @@ for row in data:
     vein["weight"] = int(row[6])
     vein["max_height"] = int(row[7].split("-")[1])
     vein["min_height"] = int(row[7].split("-")[0])
+    vein["generator"] = {"radius": [0]}
     vein["generator"]["radius"][0] = int(row[8].split("-")[0])
     vein["density"] = float(row[9])
+    vein["vein_populator"] = {}
     vein["vein_populator"]["material"] = "_".join(row[5].lower().split())
     vein["dimension_filter"] = []
     vein["filler"] = {"type": "ga_simple", "value": {

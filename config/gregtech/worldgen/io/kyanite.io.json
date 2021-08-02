@@ -4,15 +4,12 @@
     "max_height": 40,
     "min_height": 20,
     "generator": {
-        "type": "ellipsoid",
         "radius": [
-            10,
             10
         ]
     },
     "density": 0.4,
     "vein_populator": {
-        "type": "surface_rock",
         "material": "kyanite"
     },
     "dimension_filter": [

@@ -4,15 +4,12 @@
     "max_height": 60,
     "min_height": 20,
     "generator": {
-        "type": "ellipsoid",
         "radius": [
-            15,
             15
         ]
     },
     "density": 0.4,
     "vein_populator": {
-        "type": "surface_rock",
         "material": "precious_metal"
     },
     "dimension_filter": [
