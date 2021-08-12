@@ -1,3 +1,105 @@
+// Maceration
+
+macerator.recipeBuilder()
+    .inputs(<galacticraftcore:basic_block_moon:4>)
+    .outputs(<metaitem:moon_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galacticraftplanets:mars:9>)
+    .outputs(<metaitem:mars_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:ceresblocks:1>)
+    .outputs(<metaitem:ceres_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galacticraftplanets:asteroids_block:1>)
+    .outputs(<metaitem:asteroid_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:mercuryblocks:2>)
+    .outputs(<metaitem:mercury_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galacticraftplanets:venus>)
+    .outputs(<metaitem:venus_stone_dust:1>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:ioblocks:1>)
+    .outputs(<metaitem:io_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:europablocks:1>)
+    .outputs(<metaitem:europa_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:europablocks:0>)
+    .outputs(<metaitem:europa_ice_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:europablocks:2>)
+    .outputs(<metaitem:europa_ice_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:europablocks:6>)
+    .outputs(<metaitem:europa_ice_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:ceresblocks:1>)
+    .outputs(<metaitem:ganymede_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:enceladusblocks:1>)
+    .outputs(<metaitem:enceladus_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:enceladusblocks:0>)
+    .outputs(<metaitem:enceladus_slush_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:titanblocks:2>)
+    .outputs(<metaitem:titan_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:tritonblocks:1>)
+    .outputs(<metaitem:triton_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:plutoblocks:5>)
+    .outputs(<metaitem:pluto_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:haumeablocks:1>)
+    .outputs(<metaitem:haumea_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:proxima_b_blocks:2>)
+    .outputs(<metaitem:proxima_b_stone_dust>)
+    .buildAndRegister();
+
+macerator.recipeBuilder()
+    .inputs(<galaxyspace:barnarda_c_blocks:1>)
+    .outputs(<metaitem:barnarda_c_stone_dust>)
+    .buildAndRegister();
+
 
 
 // Decomp
@@ -52,16 +154,6 @@ centrifuge.recipeBuilder().EUt(256).duration(1000)
     .fluidOutputs(<fluid:helium3> * 50)
     .buildAndRegister();
 
-centrifuge.recipeBuilder().EUt(256).duration(1000)
-    .inputs(<metaitem:mercury_core_dust>)
-    .chancedOutput(<metaitem:dustSmallIlmenite>, 5000, 250)
-    .chancedOutput(<metaitem:dustSmallTungstate>, 3000, 250)
-    //.chancedOutput(<metaitem:dustSmallDraconium>, 1000, 250)
-    .chancedOutput(<metaitem:dustTinyTitanium>, 750, 100)
-    .chancedOutput(<metaitem:dustTinyOlivine>, 500, 100)
-    .chancedOutput(<metaitem:dustTinyDiamond>, 250, 100)
-    .fluidOutputs(<fluid:helium> * 250)
-    .buildAndRegister();
 
 centrifuge.recipeBuilder().EUt(256).duration(1000)
     .inputs(<metaitem:venus_stone_dust>)
