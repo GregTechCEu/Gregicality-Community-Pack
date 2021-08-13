@@ -107,7 +107,7 @@ function unify (ore as IOreDictEntry, p as int) {
 // Galacticraft Titanium Block
 <ore:blockTitanium>.remove(<galacticraftplanets:asteroids_block:7>);
 
-// Galacticraft Lead Block //todo - this might not actually be working!
+// Galacticraft Lead Block
 <ore:blockLead>.remove(<galacticraftplanets:venus:12>);
 
 // Galacticraft Titanium Dust //todo - this might not actually be working!

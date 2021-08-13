@@ -57,6 +57,12 @@ var name_removals = [
     "nuclearcraft:tile.compressed_6",
     "nuclearcraft:tile.compressed_7",
     "appliedenergistics2:decorative/quartz_block_pure",
+    "galacticraftplanets:venus_12",
+    "galacticraftcore:basic_block_core_13",
+    "galacticraftplanets:asteroids_block_7",
+    "galaxyspace:decoblocks_4",
+    "galaxyspace:decoblocks_5",
+    "galaxyspace:decoblocks_6",
     // Other
     "quark:hopper",
     "enderio:tweak_wood_hopper",
