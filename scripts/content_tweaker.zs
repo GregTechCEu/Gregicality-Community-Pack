@@ -78,3 +78,32 @@ quantium_compressed.register();
 var floppa = VanillaFactory.createItem("floppa");
 floppa.maxStackSize = 64;
 floppa.register();
+
+var astro_miner_schematic = VanillaFactory.createItem("astro_miner_schematic");
+astro_miner_schematic.maxStackSize = 1;
+astro_miner_schematic.register();
+
+var t1_rocket_schematic = VanillaFactory.createItem("t1_rocket_schematic");
+t1_rocket_schematic.maxStackSize = 1;
+t1_rocket_schematic.register();
+
+var t2_rocket_schematic = VanillaFactory.createItem("t2_rocket_schematic");
+t2_rocket_schematic.maxStackSize = 1;
+t2_rocket_schematic.register();
+
+var t3_rocket_schematic = VanillaFactory.createItem("t3_rocket_schematic");
+t3_rocket_schematic.maxStackSize = 1;
+t3_rocket_schematic.register();
+
+var t4_rocket_schematic = VanillaFactory.createItem("t4_rocket_schematic");
+t4_rocket_schematic.maxStackSize = 1;
+t4_rocket_schematic.register();
+
+var t5_rocket_schematic = VanillaFactory.createItem("t5_rocket_schematic");
+t5_rocket_schematic.maxStackSize = 1;
+t5_rocket_schematic.register();
+
+var t6_rocket_schematic = VanillaFactory.createItem("t6_rocket_schematic");
+t6_rocket_schematic.maxStackSize = 1;
+t6_rocket_schematic.register();
+

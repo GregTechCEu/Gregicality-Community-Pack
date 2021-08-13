@@ -56,7 +56,7 @@ macerator.recipeBuilder()
     .buildAndRegister();
 
 macerator.recipeBuilder()
-    .inputs(<galaxyspace:ceresblocks:1>)
+    .inputs(<galaxyspace:ganymedeblocks:1>)
     .outputs(<metaitem:ganymede_stone_dust>)
     .buildAndRegister();
 

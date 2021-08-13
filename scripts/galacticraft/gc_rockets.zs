@@ -542,14 +542,14 @@ recipes.addShaped("gs_space_boots", <galaxyspace:space_suit_feet:200>, [
 
 // Tier 1 Rocket
 rocket_assembler.recipeBuilder().duration(1200).EUt(480)
-    .inputs(<galacticraftcore:nose_cone>)           // t1 nose cone
-    .inputs(<galaxyspace:compressed_plates:4> * 4)  // sdhc
-    .inputs(heavy_duty_plates[0] * 8)               // t1 plates
-    .inputs(<galacticraftcore:rocket_fins> * 4)     // t1 fins
-    .inputs(<galacticraftcore:engine>)              // t1 engine
-    .inputs(<galaxyspace:rocket_modules:3>)         // t1 fuel canister
-    .inputs(<galaxyspace:rocket_modules>)           // t1 lander
-    .notConsumable(<metaitem:schematic>)            // schematic
+    .inputs(<galacticraftcore:nose_cone>)                 // t1 nose cone
+    .inputs(<galaxyspace:compressed_plates:4> * 4)        // sdhc
+    .inputs(heavy_duty_plates[0] * 8)                     // t1 plates
+    .inputs(<galacticraftcore:rocket_fins> * 4)           // t1 fins
+    .inputs(<galacticraftcore:engine>)                    // t1 engine
+    .inputs(<galaxyspace:rocket_modules:3>)               // t1 fuel canister
+    .inputs(<galaxyspace:rocket_modules>)                 // t1 lander
+    .notConsumable(<contenttweaker:t1_rocket_schematic>)  // schematic
     .outputs(<galacticraftcore:rocket_t1:3>)
     .buildAndRegister();
 
@@ -599,16 +599,16 @@ recipes.addShaped("gs_fuel_canister_t1", <galaxyspace:rocket_modules:3>, [
 
 
 // Tier 2 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
-    .inputs(<galacticraftcore:nose_cone>)           // t1 nose cone
-    .inputs(heavy_duty_plates[0] * 2)               // t1 plates
-    .inputs(heavy_duty_plates[1] * 10)              // t2 plates
-    .inputs(<galacticraftcore:rocket_fins> * 4)     // t1 fins
-    .inputs(<galacticraftcore:engine:1> * 2)        // t2 booster
-    .inputs(<galacticraftcore:engine> * 2)          // t1 engine
-    .inputs(<galaxyspace:rocket_modules:3> * 2)     // t1 fuel canister
-    .inputs(<galaxyspace:rocket_modules:1>)         // t2 lander
-    .notConsumable(<metaitem:schematic>)            // schamtic
+rocket_assembler.recipeBuilder().duration(1200).EUt(1920)
+    .inputs(<galacticraftcore:nose_cone>)                // t1 nose cone
+    .inputs(heavy_duty_plates[0] * 2)                    // t1 plates
+    .inputs(heavy_duty_plates[1] * 10)                   // t2 plates
+    .inputs(<galacticraftcore:rocket_fins> * 4)          // t1 fins
+    .inputs(<galacticraftcore:engine:1> * 2)             // t2 booster
+    .inputs(<galacticraftcore:engine> * 2)               // t1 engine
+    .inputs(<galaxyspace:rocket_modules:3> * 2)          // t1 fuel canister
+    .inputs(<galaxyspace:rocket_modules:1>)              // t2 lander
+    .notConsumable(<contenttweaker:t2_rocket_schematic>) // schamtic
     .outputs(<galacticraftplanets:rocket_t2:3>)
     .buildAndRegister();
 
@@ -629,7 +629,7 @@ recipes.addShaped("gc_rocket_booster_t2", <galacticraftcore:engine:1>, [
 
 
 // Tier 3 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
+rocket_assembler.recipeBuilder().duration(1200).EUt(7680)
     .inputs(<galacticraftplanets:heavy_nose_cone>)              // t3 nose cone
     .inputs(heavy_duty_plates[1] * 2)                           // t1 plates
     .inputs(heavy_duty_plates[2] * 12)                          // t2 plates
@@ -638,7 +638,7 @@ rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galacticraftplanets:item_basic_asteroids:1>)       // t3 engine
     .inputs(<contenttweaker:fuel_canister_t3> * 2)              // t3 fuel canister
     .inputs(<galaxyspace:rocket_modules:2>)                     // t3 lander
-    .notConsumable(<metaitem:schematic>)                        // schematic
+    .notConsumable(<contenttweaker:t3_rocket_schematic>)        // schematic
     .outputs(<galacticraftplanets:rocket_t3:3>)
     .buildAndRegister();
 
@@ -680,7 +680,7 @@ recipes.addShaped("gs_fuel_canister_t3", <contenttweaker:fuel_canister_t3>, [
 
 
 // Tier 4 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
+rocket_assembler.recipeBuilder().duration(1200).EUt(30720)
     .inputs(<galaxyspace:rocket_parts:5>)                   // t4 nose cone
     .inputs(heavy_duty_plates[2] * 4)                       // t3 plates
     .inputs(heavy_duty_plates[3] * 12)                      // t4 plates
@@ -689,7 +689,7 @@ rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:7>)                   // t4 engine
     .inputs(<contenttweaker:fuel_canister_t3> * 4)          // t3 fuel canister
     .inputs(<galaxyspace:rocket_modules:2>)                 // t3 lander
-    .notConsumable(<metaitem:schematic>)                    // schematic
+    .notConsumable(<contenttweaker:t4_rocket_schematic>)    // schematic
     .outputs(<galaxyspace:rocket_tier_4:3>)
     .buildAndRegister();
 
@@ -724,7 +724,7 @@ recipes.addShaped("gc_rocket_booster_t4", <galaxyspace:rocket_parts:8>, [
 
 
 // Tier 5 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
+rocket_assembler.recipeBuilder().duration(1200).EUt(122880)
     .inputs(<galaxyspace:rocket_parts:10>)                  // t5 nose cone
     .inputs(heavy_duty_plates[3] * 4)                       // t4 plates
     .inputs(heavy_duty_plates[4] * 12)                      // t5 plates
@@ -733,7 +733,7 @@ rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:12>)                  // t5 engine
     .inputs(<contenttweaker:fuel_canister_t5> * 4)          // t5 fuel canister
     .inputs(<galaxyspace:rocket_modules:2>)                 // t3 lander
-    .notConsumable(<metaitem:schematic>)                    // schematic
+    .notConsumable(<contenttweaker:t5_rocket_schematic>)    // schematic
     .outputs(<galaxyspace:rocket_tier_5:3>)
     .buildAndRegister();
 
@@ -775,7 +775,7 @@ recipes.addShaped("gs_fuel_canister_t5", <contenttweaker:fuel_canister_t5>, [
 
 
 // Tier 6 Rocket
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
+rocket_assembler.recipeBuilder().duration(1200).EUt(491520)
     .inputs(<galaxyspace:rocket_parts:15>)                  // t6 nose cone
     .inputs(heavy_duty_plates[4] * 4)                       // t5 plates
     .inputs(heavy_duty_plates[5] * 12)                      // t6 plates
@@ -784,7 +784,7 @@ rocket_assembler.recipeBuilder().duration(1200).EUt(480)
     .inputs(<galaxyspace:rocket_parts:17>)                  // t6 engine
     .inputs(<contenttweaker:fuel_canister_t5> * 4)          // t5 fuel canister
     .inputs(<galaxyspace:rocket_modules:2>)                 // t3 lander
-    .notConsumable(<metaitem:schematic>)                    // schematic
+    .notConsumable(<contenttweaker:t6_rocket_schematic>)    // schematic
     .outputs(<galaxyspace:rocket_tier_6:3>)
     .buildAndRegister();
 
@@ -837,13 +837,13 @@ recipes.addShaped("gc_buggy_storage_box", <galacticraftcore:buggymat:2>, [
 
 
 // Astro Miner
-rocket_assembler.recipeBuilder().duration(1200).EUt(480)
-    .inputs(<galacticraftcore:heavy_plating> * 16)           // t1 plates
+rocket_assembler.recipeBuilder().duration(1200).EUt(1920)
+    .inputs(<galacticraftcore:heavy_plating> * 16)          // t1 plates
     .inputs(<galacticraftplanets:item_basic_asteroids:8>)   // beam core
     .inputs(<galacticraftplanets:orion_drive>)              // orion drive
     .inputs(<meta_tile_entity:devtech:super.chest.ulv>)     // super chest I
     .inputs(<galacticraftcore:engine>)                      // t1 engine
-    .notConsumable(<metaitem:schematic>)                    // schematic
+    .notConsumable(<contenttweaker:astro_miner_schematic>)  // schematic
     .outputs(<galacticraftplanets:astro_miner>)
     .buildAndRegister();
 
@@ -853,3 +853,54 @@ recipes.addShaped("gc_orion_drive", <galacticraftplanets:orion_drive>, [
     [circuits[6], <ore:frameGtRedSteel>, circuits[6]],
     [<ore:compressedSteel>, <galacticraftplanets:item_basic_asteroids:8>, <ore:compressedSteel>]
 ]);
+
+// Schematics
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:mars_stone_dust> * 64)
+    .inputs(<metaitem:ceres_stone_dust> * 64)
+    .inputs(<metaitem:asteroid_stone_dust> * 64)
+    .outputs(<contenttweaker:astro_miner_schematic>)
+    .circuit(2)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:dustStone> * 64)
+    .inputs(<metaitem:dustNetherrack> * 64)
+    .inputs(<metaitem:dustEndstone> * 64)
+    .outputs(<contenttweaker:t1_rocket_schematic>)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:moon_stone_dust> * 64)
+    .outputs(<contenttweaker:t2_rocket_schematic>)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:mars_stone_dust> * 64)
+    .inputs(<metaitem:ceres_stone_dust> * 64)
+    .inputs(<metaitem:asteroid_stone_dust> * 64)
+    .outputs(<contenttweaker:t3_rocket_schematic>)
+    .circuit(1)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:mercury_stone_dust> * 64)
+    .inputs(<metaitem:venus_stone_dust> * 64)
+    .outputs(<contenttweaker:t4_rocket_schematic>)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:io_stone_dust> * 64)
+    .inputs(<metaitem:europa_stone_dust> * 64)
+    .inputs(<metaitem:europa_ice_dust> * 64)
+    .inputs(<metaitem:ganymede_stone_dust> * 64)
+    .outputs(<contenttweaker:t5_rocket_schematic>)
+    .buildAndRegister();
+
+assembler.recipeBuilder().duration(1200).EUt(120)
+    .inputs(<metaitem:enceladus_slush_dust> * 64)
+    .inputs(<metaitem:enceladus_stone_dust> * 64)
+    .inputs(<metaitem:titan_stone_dust> * 64)
+    .outputs(<contenttweaker:t6_rocket_schematic>)
+    .buildAndRegister();
