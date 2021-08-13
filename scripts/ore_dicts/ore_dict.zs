@@ -55,20 +55,35 @@ function unify (ore as IOreDictEntry, p as int) {
 <ore:blockAluminum>.remove(<ore:blockAluminum>.firstItem);
 <ore:ingotAluminum>.remove(<ore:ingotAluminum>.firstItem);
 
-// Fix Galacticraft Compressed Aluminium
-<ore:compressedAluminium>.add(<ore:compressedAluminum>.firstItem);
-<ore:compressedAluminum>.remove(<ore:compressedAluminum>.firstItem);
-<ore:plateAluminum>.remove(<ore:compressedAluminium>.firstItem);
+// Fix Galacticraft Compressed Plates
 
 // Compressed Fixes
+<ore:compressedCopper>.add(<galacticraftcore:basic_item:6>);
 <ore:plateCopper>.remove(<galacticraftcore:basic_item:6>);
+
+<ore:compressedTin>.add(<galacticraftcore:basic_item:7>);
 <ore:plateTin>.remove(<galacticraftcore:basic_item:7>);
+
+<ore:compressedAluminium>.add(<galacticraftcore:basic_item:8>);
+<ore:plateAluminum>.remove(<galacticraftcore:basic_item:8>);
 <ore:plateAluminium>.remove(<galacticraftcore:basic_item:8>);
+
+<ore:compressedBronze>.add(<galacticraftcore:basic_item:10>);
 <ore:plateBronze>.remove(<galacticraftcore:basic_item:10>);
+
+<ore:compressedSteel>.add(<galacticraftcore:basic_item:9>);
 <ore:plateSteel>.remove(<galacticraftcore:basic_item:9>);
+
+<ore:compressedIron>.add(<galacticraftcore:basic_item:11>);
 <ore:plateIron>.remove(<galacticraftcore:basic_item:11>);
+
+<ore:compressedMeteoricIron>.add(<galacticraftcore:item_basic_moon:1>);
 <ore:plateMeteoricIron>.remove(<galacticraftcore:item_basic_moon:1>);
+
+<ore:compressedTitanium>.add(<galacticraftplanets:item_basic_asteroids:6>);
 <ore:plateTitanium>.remove(<galacticraftplanets:item_basic_asteroids:6>);
+
+<ore:compressedDesh>.add(<galacticraftplanets:item_basic_mars:5>);
 <ore:plateDesh>.remove(<galacticraftplanets:item_basic_mars:5>);
 
 <ore:compressedCoal>.add(<galaxyspace:compressed_plates>);
@@ -89,7 +104,7 @@ function unify (ore as IOreDictEntry, p as int) {
 
 <ore:compressedQuantium>.add(<contenttweaker:quantium_compressed>);
 
-// Galacticraft Titanium Block //todo - this might not actually be working!
+// Galacticraft Titanium Block
 <ore:blockTitanium>.remove(<galacticraftplanets:asteroids_block:7>);
 
 // Galacticraft Lead Block //todo - this might not actually be working!
