@@ -95,6 +95,7 @@ recipemap.stock_manipulator.name=Stock Market Manipulation
 
 # Rocket Assembler
 devtech.machine.rocket_assembler.uv.name=Rocket Assembling Machine
+recipemap.rocket_assembler.name=Rocket Assembling
 
 # EnderIO
 item.item_basic_capacitor.basic.name=Vibrant Capacitor V1.0
