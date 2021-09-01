@@ -6,7 +6,8 @@
     "generator": {
         "radius": [
             12
-        ]
+        ],
+        "type": "ellipsoid"
     },
     "density": 0.3,
     "vein_populator": {
