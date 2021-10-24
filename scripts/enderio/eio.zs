@@ -168,12 +168,6 @@ forge_hammer.recipeBuilder().EUt(2).duration(400)
     .outputs(<ore:ingotConstructionAlloy>.firstItem * 9)
     .buildAndRegister();
 
-large_forge_hammer.recipeBuilder().EUt(2).duration(400)
-    .inputs(<ore:blockConstructionAlloy>)
-    .fluidInputs([<fluid:lubricant> * 2])
-    .outputs(<ore:ingotConstructionAlloy>.firstItem * 9)
-    .buildAndRegister();
-
 // Simple Chassis Parts
 metal_bender.recipeBuilder().EUt(30).duration(200)
     .inputs(<ore:ingotConstructionAlloy> * 16)
@@ -617,12 +611,6 @@ while i < 6 {
     i += 2;
 }
 
-// Cake Base
-alloy_smelter.recipeBuilder().EUt(20).duration(1200)
-    .inputs(<ore:dustRegularWheat> * 3, <ore:egg>)
-    .outputs(<ore:itemCakeBase>.firstItem)
-    .buildAndRegister();
-
 // Infinity Rod
 alloy_smelter.recipeBuilder().EUt(24).duration(600)
     .inputs(<ore:stickLongSteelMagnetic> * 2, <ore:stickLongIronMagnetic> * 2)
@@ -775,12 +763,6 @@ forge_hammer.recipeBuilder().EUt(2).duration(400)
     .outputs(<ore:ingotDarkSteel>.firstItem * 9)
     .buildAndRegister();
 
-large_forge_hammer.recipeBuilder().EUt(2).duration(400)
-    .inputs(<ore:blockDarkSteel>)
-    .fluidInputs([<fluid:lubricant> * 2])
-    .outputs(<ore:ingotDarkSteel>.firstItem * 9)
-    .buildAndRegister();
-
 extruder.recipeBuilder().EUt(48).duration(150)
     .inputs(<ore:ingotDarkSteel>)
     .notConsumable(<metaitem:shape.extruder.rod>)
@@ -854,12 +836,6 @@ compressor.recipeBuilder().EUt(2).duration(400)
 
 forge_hammer.recipeBuilder().EUt(2).duration(400)
     .inputs(<ore:blockEndSteel>)
-    .outputs(<ore:ingotEndSteel>.firstItem * 9)
-    .buildAndRegister();
-
-large_forge_hammer.recipeBuilder().EUt(2).duration(400)
-    .inputs(<ore:blockEndSteel>)
-    .fluidInputs([<fluid:lubricant> * 2])
     .outputs(<ore:ingotEndSteel>.firstItem * 9)
     .buildAndRegister();
 
